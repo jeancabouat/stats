@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cec167b031805768b47eeea19b820f2a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_cec167b031805768b47eeea19b820f2a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cec167b031805768b47eeea19b820f2a = L.map(
+                "map_cec167b031805768b47eeea19b820f2a",
+                {
+                    center: [49.32443957576913, -0.40934845646115897],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_958169dcc987453e8b793f86fe80fe2c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_958169dcc987453e8b793f86fe80fe2c.addTo(map_cec167b031805768b47eeea19b820f2a);
+        
+    
+        function geo_json_917bbff30f586211ea1582b7816e3ae4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_917bbff30f586211ea1582b7816e3ae4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_917bbff30f586211ea1582b7816e3ae4 = L.geoJson(null, {
+                onEachFeature: geo_json_917bbff30f586211ea1582b7816e3ae4_onEachFeature,
+            
+                style: geo_json_917bbff30f586211ea1582b7816e3ae4_styler,
+        });
+
+        function geo_json_917bbff30f586211ea1582b7816e3ae4_add (data) {
+            geo_json_917bbff30f586211ea1582b7816e3ae4
+                .addData(data);
+        }
+            geo_json_917bbff30f586211ea1582b7816e3ae4_add({"bbox": [-0.421577082944422, 49.30160412090604, -0.397653, 49.33399756487061], "features": [{"bbox": [-0.421577082944422, 49.30160412090604, -0.397653, 49.33399756487061], "geometry": {"coordinates": [[[[-0.411737328016936, 49.30345946326409], [-0.411231, 49.302493], [-0.411260165320345, 49.30160412090604], [-0.411737328016936, 49.30345946326409]]], [[[-0.420628147761508, 49.3285766791623], [-0.421577082944422, 49.332239528425966], [-0.417805595061269, 49.33156041106573], [-0.418123045657107, 49.33362798597208], [-0.416640520361205, 49.33399756487061], [-0.397653, 49.333415], [-0.404251, 49.316885], [-0.408532, 49.313281], [-0.410377, 49.308485], [-0.411936, 49.308588], [-0.412174105764341, 49.305157777615996], [-0.414664106086753, 49.313655830402915], [-0.41542506684343, 49.32696654924455], [-0.417822373122301, 49.32770156098898], [-0.418233727321077, 49.32242462930468], [-0.419176083026512, 49.32778569643791], [-0.420628147761508, 49.3285766791623]], [[-0.402614075691408, 49.332392908296946], [-0.402423804978338, 49.3325759989831], [-0.402412155120663, 49.33283579080927], [-0.402791747765863, 49.33263795974829], [-0.402614075691408, 49.332392908296946]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_06fe11c8162f862b6ac693556d59c6c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d855eeb540b7041a4af8354565ef55b2 = $(`<div id="html_d855eeb540b7041a4af8354565ef55b2" style="width: 100.0%; height: 100.0%;">Bernières-sur-Mer - 0002</div>`)[0];
+                popup_06fe11c8162f862b6ac693556d59c6c3.setContent(html_d855eeb540b7041a4af8354565ef55b2);
+            
+        
+
+        geo_json_917bbff30f586211ea1582b7816e3ae4.bindPopup(popup_06fe11c8162f862b6ac693556d59c6c3)
+        ;
+
+        
+    
+    
+            geo_json_917bbff30f586211ea1582b7816e3ae4.addTo(map_cec167b031805768b47eeea19b820f2a);
+        
+</script>
+</html>

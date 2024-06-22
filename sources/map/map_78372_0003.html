@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_52a7a7a77124d1812b5d72589701018e {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_52a7a7a77124d1812b5d72589701018e" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_52a7a7a77124d1812b5d72589701018e = L.map(
+                "map_52a7a7a77124d1812b5d72589701018e",
+                {
+                    center: [48.88131795527627, 2.1026564282255897],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1cabab1853e9c2ed0fefae0342dd4b0f = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_1cabab1853e9c2ed0fefae0342dd4b0f.addTo(map_52a7a7a77124d1812b5d72589701018e);
+        
+    
+        function geo_json_10cfae6f684da9a3e339809fbab8e986_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_10cfae6f684da9a3e339809fbab8e986_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_10cfae6f684da9a3e339809fbab8e986 = L.geoJson(null, {
+                onEachFeature: geo_json_10cfae6f684da9a3e339809fbab8e986_onEachFeature,
+            
+                style: geo_json_10cfae6f684da9a3e339809fbab8e986_styler,
+        });
+
+        function geo_json_10cfae6f684da9a3e339809fbab8e986_add (data) {
+            geo_json_10cfae6f684da9a3e339809fbab8e986
+                .addData(data);
+        }
+            geo_json_10cfae6f684da9a3e339809fbab8e986_add({"bbox": [2.099888235813913, 48.8748822012487, 2.106184858915888, 48.885443], "features": [{"bbox": [2.099888235813913, 48.8748822012487, 2.106184858915888, 48.885443], "geometry": {"coordinates": [[[[2.099888235813913, 48.87562362830121], [2.100601490677443, 48.875637214108146], [2.100993534318027, 48.87529129324879], [2.100485934690763, 48.8748822012487], [2.099888235813913, 48.87562362830121]]], [[[2.101468086137465, 48.87720622476272], [2.102824641812072, 48.8777437371166], [2.103242673891407, 48.87753994647793], [2.10077296685938, 48.876368318693046], [2.101468086137465, 48.87720622476272]]], [[[2.10104047750329, 48.88308643340639], [2.100132744247491, 48.884512972984496], [2.102291, 48.885443], [2.106184858915888, 48.88020639940859], [2.104025418010344, 48.87826305135027], [2.103590654039585, 48.87986504101466], [2.101325878096808, 48.87897706501372], [2.10104047750329, 48.88308643340639]], [[2.10321073634395, 48.8816275400216], [2.103538205126737, 48.88126732436066], [2.103459843639026, 48.881798058178404], [2.10321073634395, 48.8816275400216]], [[2.104694312679636, 48.87975845119569], [2.104457197720665, 48.87971585262082], [2.104859920215953, 48.87937381433715], [2.104694312679636, 48.87975845119569]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b1954e3a182397e329ae8b5d0c716d3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35106dd13be1dbfc1e772229778d2bc2 = $(`<div id="html_35106dd13be1dbfc1e772229778d2bc2" style="width: 100.0%; height: 100.0%;">Marly-le-Roi - 0003</div>`)[0];
+                popup_b1954e3a182397e329ae8b5d0c716d3d.setContent(html_35106dd13be1dbfc1e772229778d2bc2);
+            
+        
+
+        geo_json_10cfae6f684da9a3e339809fbab8e986.bindPopup(popup_b1954e3a182397e329ae8b5d0c716d3d)
+        ;
+
+        
+    
+    
+            geo_json_10cfae6f684da9a3e339809fbab8e986.addTo(map_52a7a7a77124d1812b5d72589701018e);
+        
+</script>
+</html>

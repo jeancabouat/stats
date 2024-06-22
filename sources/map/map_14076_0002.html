@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d1daddee4f283a4b7a842e52ae4a852c {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d1daddee4f283a4b7a842e52ae4a852c" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d1daddee4f283a4b7a842e52ae4a852c = L.map(
+                "map_d1daddee4f283a4b7a842e52ae4a852c",
+                {
+                    center: [49.23713005197727, -0.30808066904524367],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_074c16c3b460e8b78a8703759ace6ef9 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_074c16c3b460e8b78a8703759ace6ef9.addTo(map_d1daddee4f283a4b7a842e52ae4a852c);
+        
+    
+        function geo_json_09ab1277abc0c47fd0292ea5bc1030d1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_09ab1277abc0c47fd0292ea5bc1030d1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_09ab1277abc0c47fd0292ea5bc1030d1 = L.geoJson(null, {
+                onEachFeature: geo_json_09ab1277abc0c47fd0292ea5bc1030d1_onEachFeature,
+            
+                style: geo_json_09ab1277abc0c47fd0292ea5bc1030d1_styler,
+        });
+
+        function geo_json_09ab1277abc0c47fd0292ea5bc1030d1_add (data) {
+            geo_json_09ab1277abc0c47fd0292ea5bc1030d1
+                .addData(data);
+        }
+            geo_json_09ab1277abc0c47fd0292ea5bc1030d1_add({"bbox": [-0.323351, 49.230079061118346, -0.292411912149493, 49.246127], "features": [{"bbox": [-0.323351, 49.230079061118346, -0.292411912149493, 49.246127], "geometry": {"coordinates": [[[-0.306039658829584, 49.2308427405448], [-0.311543531922736, 49.235131575969085], [-0.317383647957322, 49.23296253547664], [-0.321957423384178, 49.23312535026478], [-0.323351, 49.235845], [-0.320781, 49.236468], [-0.322167, 49.237964], [-0.318012, 49.238981], [-0.309739, 49.246127], [-0.299479737028834, 49.240178393146685], [-0.298682381205165, 49.23502764692144], [-0.292411912149493, 49.232977378160584], [-0.295296627866378, 49.23036737788036], [-0.300674348235152, 49.23186171901882], [-0.304533264224532, 49.230079061118346], [-0.306039658829584, 49.2308427405448]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72952c0f7e0af682e04688f9a397e514 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_16bec62004c775d168e6fc968b24e9e8 = $(`<div id="html_16bec62004c775d168e6fc968b24e9e8" style="width: 100.0%; height: 100.0%;">Blainville-sur-Orne - 0002</div>`)[0];
+                popup_72952c0f7e0af682e04688f9a397e514.setContent(html_16bec62004c775d168e6fc968b24e9e8);
+            
+        
+
+        geo_json_09ab1277abc0c47fd0292ea5bc1030d1.bindPopup(popup_72952c0f7e0af682e04688f9a397e514)
+        ;
+
+        
+    
+    
+            geo_json_09ab1277abc0c47fd0292ea5bc1030d1.addTo(map_d1daddee4f283a4b7a842e52ae4a852c);
+        
+</script>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d81bd109b6251f667447cb4a8364c823 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_d81bd109b6251f667447cb4a8364c823" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d81bd109b6251f667447cb4a8364c823 = L.map(
+                "map_d81bd109b6251f667447cb4a8364c823",
+                {
+                    center: [48.981123233764585, 1.9665271863846019],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a4fd5ad4b816ac1510c8af5b383fc36c = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_a4fd5ad4b816ac1510c8af5b383fc36c.addTo(map_d81bd109b6251f667447cb4a8364c823);
+        
+    
+        function geo_json_963b5bf13866b55dccbef81cf8766f0c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_963b5bf13866b55dccbef81cf8766f0c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_963b5bf13866b55dccbef81cf8766f0c = L.geoJson(null, {
+                onEachFeature: geo_json_963b5bf13866b55dccbef81cf8766f0c_onEachFeature,
+            
+                style: geo_json_963b5bf13866b55dccbef81cf8766f0c_styler,
+        });
+
+        function geo_json_963b5bf13866b55dccbef81cf8766f0c_add (data) {
+            geo_json_963b5bf13866b55dccbef81cf8766f0c
+                .addData(data);
+        }
+            geo_json_963b5bf13866b55dccbef81cf8766f0c_add({"bbox": [1.959544653719839, 48.97739378493462, 1.973262830666246, 48.9851205453582], "features": [{"bbox": [1.959544653719839, 48.97739378493462, 1.973262830666246, 48.9851205453582], "geometry": {"coordinates": [[[[1.961321251218574, 48.978901807798856], [1.961958378348929, 48.98073153011392], [1.962870854113972, 48.97898983109196], [1.959544653719839, 48.97739378493462], [1.961321251218574, 48.978901807798856]]], [[[1.97248872077469, 48.98130237518901], [1.972554398584277, 48.98170307065266], [1.973262830666246, 48.98174432955166], [1.97294699134072, 48.981242236208445], [1.97248872077469, 48.98130237518901]]], [[[1.964225915895903, 48.97832927956266], [1.963506291318565, 48.98012743109435], [1.964942541337414, 48.98085153009364], [1.962328006920415, 48.98289902422145], [1.964629616627803, 48.9851205453582], [1.971965538698853, 48.98177704086496], [1.972355147706313, 48.98040790888515], [1.968954228611062, 48.97948755840689], [1.970631334300446, 48.97836115921889], [1.964225915895903, 48.97832927956266]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_283914453a69b497ebae23711093211e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_242e305c2b36a2591710893fafec88a4 = $(`<div id="html_242e305c2b36a2591710893fafec88a4" style="width: 100.0%; height: 100.0%;">Verneuil-sur-Seine - 0002</div>`)[0];
+                popup_283914453a69b497ebae23711093211e.setContent(html_242e305c2b36a2591710893fafec88a4);
+            
+        
+
+        geo_json_963b5bf13866b55dccbef81cf8766f0c.bindPopup(popup_283914453a69b497ebae23711093211e)
+        ;
+
+        
+    
+    
+            geo_json_963b5bf13866b55dccbef81cf8766f0c.addTo(map_d81bd109b6251f667447cb4a8364c823);
+        
+</script>
+</html>

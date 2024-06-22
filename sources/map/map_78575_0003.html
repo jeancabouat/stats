@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_dabf5b66326d812d132b5f482db5bfaa {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_dabf5b66326d812d132b5f482db5bfaa" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_dabf5b66326d812d132b5f482db5bfaa = L.map(
+                "map_dabf5b66326d812d132b5f482db5bfaa",
+                {
+                    center: [48.71446954467127, 2.0914238807826253],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db46a5fc93fb32ef521c5f1630202121 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_db46a5fc93fb32ef521c5f1630202121.addTo(map_dabf5b66326d812d132b5f482db5bfaa);
+        
+    
+        function geo_json_656bb676d01e3cf6f59d7de13bd1ca71_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_656bb676d01e3cf6f59d7de13bd1ca71_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_656bb676d01e3cf6f59d7de13bd1ca71 = L.geoJson(null, {
+                onEachFeature: geo_json_656bb676d01e3cf6f59d7de13bd1ca71_onEachFeature,
+            
+                style: geo_json_656bb676d01e3cf6f59d7de13bd1ca71_styler,
+        });
+
+        function geo_json_656bb676d01e3cf6f59d7de13bd1ca71_add (data) {
+            geo_json_656bb676d01e3cf6f59d7de13bd1ca71
+                .addData(data);
+        }
+            geo_json_656bb676d01e3cf6f59d7de13bd1ca71_add({"bbox": [2.072951151015285, 48.707720219563726, 2.110339, 48.721317], "features": [{"bbox": [2.072951151015285, 48.707720219563726, 2.110339, 48.721317], "geometry": {"coordinates": [[[2.073183673310334, 48.713057357563905], [2.072951151015285, 48.714746275801055], [2.075366, 48.714945], [2.08336, 48.721317], [2.103365, 48.714703], [2.10762, 48.717758], [2.110339, 48.714724], [2.104308598035194, 48.707720219563726], [2.099288743825912, 48.7090842782142], [2.094886889928601, 48.714449272516916], [2.08610677337642, 48.709973596819744], [2.0798786616246, 48.7121015142762], [2.074784676974951, 48.710967679129595], [2.073183673310334, 48.713057357563905]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1088f2f76e9508e42f68780cb46f03bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d96e1e487d97d40339a80b741dde8b5a = $(`<div id="html_d96e1e487d97d40339a80b741dde8b5a" style="width: 100.0%; height: 100.0%;">Saint-Rémy-lès-Chevreuse - 0003</div>`)[0];
+                popup_1088f2f76e9508e42f68780cb46f03bd.setContent(html_d96e1e487d97d40339a80b741dde8b5a);
+            
+        
+
+        geo_json_656bb676d01e3cf6f59d7de13bd1ca71.bindPopup(popup_1088f2f76e9508e42f68780cb46f03bd)
+        ;
+
+        
+    
+    
+            geo_json_656bb676d01e3cf6f59d7de13bd1ca71.addTo(map_dabf5b66326d812d132b5f482db5bfaa);
+        
+</script>
+</html>

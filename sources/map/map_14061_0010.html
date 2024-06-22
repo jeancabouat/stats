@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ea79d72ac2175fa1551254f02d45b7c9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_ea79d72ac2175fa1551254f02d45b7c9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ea79d72ac2175fa1551254f02d45b7c9 = L.map(
+                "map_ea79d72ac2175fa1551254f02d45b7c9",
+                {
+                    center: [48.96618305118194, -0.9028217343739664],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b86733ca1ae1d54a8c538a0c14c43f67 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_b86733ca1ae1d54a8c538a0c14c43f67.addTo(map_ea79d72ac2175fa1551254f02d45b7c9);
+        
+    
+        function geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fc544c7a14a5f6a54f12c52f46ffda7c = L.geoJson(null, {
+                onEachFeature: geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_onEachFeature,
+            
+                style: geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_styler,
+        });
+
+        function geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_add (data) {
+            geo_json_fc544c7a14a5f6a54f12c52f46ffda7c
+                .addData(data);
+        }
+            geo_json_fc544c7a14a5f6a54f12c52f46ffda7c_add({"bbox": [-0.958263179518836, 48.89054208964119, -0.747210461941719, 48.99448079234745], "features": [{"bbox": [-0.958263179518836, 48.89054208964119, -0.747210461941719, 48.99448079234745], "geometry": {"coordinates": [[[[-0.877739397106104, 48.89076554180064], [-0.87798570232731, 48.89054208964119], [-0.877590923482866, 48.89093685751978], [-0.877739397106104, 48.89076554180064]]], [[[-0.888262254935998, 48.913417435372544], [-0.889919275415798, 48.91681677749594], [-0.887258269268912, 48.916650063857816], [-0.888262254935998, 48.913417435372544]]], [[[-0.824406386562894, 48.9150885178042], [-0.823492044366064, 48.91584766754896], [-0.82301468591449, 48.91511590460679], [-0.823059884818571, 48.914835985525144], [-0.824406386562894, 48.9150885178042]]], [[[-0.953608753443035, 48.93345648264516], [-0.958263179518836, 48.93807004371324], [-0.95548936972977, 48.94169274371398], [-0.94749517498858, 48.94485598186809], [-0.944610089573193, 48.94214263375839], [-0.945360681287805, 48.93310093143696], [-0.953608753443035, 48.93345648264516]]], [[[-0.788725, 48.934908], [-0.79417, 48.935287], [-0.796188, 48.937402], [-0.795861, 48.935719], [-0.797506832984172, 48.93514842228029], [-0.798376484207301, 48.937167221753754], [-0.796154975644053, 48.94105801358786], [-0.79116006302417, 48.94384461100461], [-0.787002329955912, 48.93573706321638], [-0.788725, 48.934908]]], [[[-0.808722067186834, 48.96191166890624], [-0.802532274979974, 48.96344707282494], [-0.801256053757265, 48.96231985204956], [-0.802990695376515, 48.95950702722202], [-0.807597900020458, 48.95870293961906], [-0.808722067186834, 48.96191166890624]]], [[[-0.749041564962472, 48.968624849738276], [-0.747210461941719, 48.96779734345372], [-0.75003539383055, 48.95671756838118], [-0.753624898178936, 48.960136117347375], [-0.749041564962472, 48.968624849738276]]], [[[-0.857139015049009, 48.97772165954579], [-0.852824988589763, 48.97470613844712], [-0.851317878295827, 48.97069703646213], [-0.862584213115976, 48.964722356031025], [-0.865116474090782, 48.96836746712972], [-0.863406012280274, 48.97291041481639], [-0.857139015049009, 48.97772165954579]]], [[[-0.943464001140117, 48.962044453885554], [-0.943884071624316, 48.96752386478703], [-0.941777, 48.969904], [-0.931106, 48.977582], [-0.928196, 48.9815], [-0.916034, 48.988625], [-0.910706703716875, 48.99448079234745], [-0.903495399537841, 48.99160868568618], [-0.908408926421293, 48.98548503595931], [-0.913625901187126, 48.984837685736835], [-0.901785859338457, 48.97058589252116], [-0.903493397704605, 48.96131764098182], [-0.909527765252913, 48.96500323278718], [-0.913960195926962, 48.96345947048143], [-0.914382909406009, 48.96804922712897], [-0.918118310870949, 48.96636695235536], [-0.919302100558893, 48.96486678869783], [-0.916898386217944, 48.96239569011149], [-0.918330148800895, 48.95861167432433], [-0.915156278771512, 48.95286346847445], [-0.918355490547971, 48.95043109122196], [-0.922549691103943, 48.952018140621604], [-0.924429130377945, 48.955508527844756], [-0.921073699582517, 48.958615197217334], [-0.927685387130255, 48.965875645491415], [-0.933270706553796, 48.96661963712183], [-0.937005574398188, 48.9622072449792], [-0.943464001140117, 48.962044453885554]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_44123993633d6023ee7720e40841c4d8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0ff5595e66069c4516c5ecfe49d1a18 = $(`<div id="html_a0ff5595e66069c4516c5ecfe49d1a18" style="width: 100.0%; height: 100.0%;">Souleuvre-en-Bocage - 0010</div>`)[0];
+                popup_44123993633d6023ee7720e40841c4d8.setContent(html_a0ff5595e66069c4516c5ecfe49d1a18);
+            
+        
+
+        geo_json_fc544c7a14a5f6a54f12c52f46ffda7c.bindPopup(popup_44123993633d6023ee7720e40841c4d8)
+        ;
+
+        
+    
+    
+            geo_json_fc544c7a14a5f6a54f12c52f46ffda7c.addTo(map_ea79d72ac2175fa1551254f02d45b7c9);
+        
+</script>
+</html>

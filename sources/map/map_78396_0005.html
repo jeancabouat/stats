@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_58f5301c813fa06b111c33920183e460 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_58f5301c813fa06b111c33920183e460" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_58f5301c813fa06b111c33920183e460 = L.map(
+                "map_58f5301c813fa06b111c33920183e460",
+                {
+                    center: [48.93566760395504, 2.1346949818026717],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_402cceaa7618d2728c66f7bc22285aaa = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_402cceaa7618d2728c66f7bc22285aaa.addTo(map_58f5301c813fa06b111c33920183e460);
+        
+    
+        function geo_json_3e644006cb87453d89f3620d95cf3bb2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3e644006cb87453d89f3620d95cf3bb2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3e644006cb87453d89f3620d95cf3bb2 = L.geoJson(null, {
+                onEachFeature: geo_json_3e644006cb87453d89f3620d95cf3bb2_onEachFeature,
+            
+                style: geo_json_3e644006cb87453d89f3620d95cf3bb2_styler,
+        });
+
+        function geo_json_3e644006cb87453d89f3620d95cf3bb2_add (data) {
+            geo_json_3e644006cb87453d89f3620d95cf3bb2
+                .addData(data);
+        }
+            geo_json_3e644006cb87453d89f3620d95cf3bb2_add({"bbox": [2.128438683451147, 48.92766166863607, 2.142555, 48.94335772178754], "features": [{"bbox": [2.128438683451147, 48.92766166863607, 2.142555, 48.94335772178754], "geometry": {"coordinates": [[[[2.135088220409581, 48.930420278785064], [2.130786046742967, 48.92766166863607], [2.129620677966503, 48.93199811765708], [2.132502134457517, 48.93273086741735], [2.135088220409581, 48.930420278785064]]], [[[2.12953384827781, 48.939765254119386], [2.128438683451147, 48.941261009702224], [2.130101462171817, 48.94335772178754], [2.142555, 48.935174], [2.135761980368897, 48.930845058784385], [2.134223738974674, 48.9379737314682], [2.12953384827781, 48.939765254119386]]], [[[2.129874527268967, 48.93693298534998], [2.130336143162533, 48.938174294292935], [2.131174957588259, 48.93805743090652], [2.130870158366475, 48.93727720330026], [2.129874527268967, 48.93693298534998]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e99f00451f24540157c28d6f4735aafd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c3e86bdd226156aee2bbe358ba9427c = $(`<div id="html_9c3e86bdd226156aee2bbe358ba9427c" style="width: 100.0%; height: 100.0%;">Le Mesnil-le-Roi - 0005</div>`)[0];
+                popup_e99f00451f24540157c28d6f4735aafd.setContent(html_9c3e86bdd226156aee2bbe358ba9427c);
+            
+        
+
+        geo_json_3e644006cb87453d89f3620d95cf3bb2.bindPopup(popup_e99f00451f24540157c28d6f4735aafd)
+        ;
+
+        
+    
+    
+            geo_json_3e644006cb87453d89f3620d95cf3bb2.addTo(map_58f5301c813fa06b111c33920183e460);
+        
+</script>
+</html>
