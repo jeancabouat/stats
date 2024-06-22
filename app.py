@@ -3,7 +3,7 @@ import pandas as pd
 
 
 # 1.Liste des départements
-file_path = '/sources/dataset_dpt_circo_bv_test.csv'
+file_path = 'sources/dataset_dpt_circo_bv_test.csv'
 df = pd.read_csv(file_path,low_memory=False)
 df.rename(columns={'codeDepartement': 'id_dep','nomDepartement': 'dep_name'}, inplace=True)
 df['id_dep'] = df['id_dep'].astype(str)
@@ -53,23 +53,23 @@ def read_html_file(filename):
 
 
 # Read the HTML content from the file
-html_content = read_html_file('/sources/circo/map/map_' + circo_id_selected + '.html')
+html_content = read_html_file('sources/circo/map/map_' + circo_id_selected + '.html')
 # Display the HTML content in Streamlit
 st.components.v1.html(html_content, width=700, height=500)
 
 st.write("")
 
-df_circo_selected = pd.read_csv('/sources/circo/data/data_' + circo_id_selected + '.csv')
+df_circo_selected = pd.read_csv('sources/circo/data/data_' + circo_id_selected + '.csv')
 df_circo_selected = df_circo_selected.set_index(df_circo_selected.columns[0]).T
 st.dataframe(df_circo_selected)
 
 
 # Read the HTML content from the file
-html_content = read_html_file('/sources/bv/map/map_' + bv_id_selected + '.html')
+html_content = read_html_file('sources/bv/map/map_' + bv_id_selected + '.html')
 # Display the HTML content in Streamlit
 st.components.v1.html(html_content, width=700, height=500)
 
 
-df_bv_selected = pd.read_csv('/sources/bv/data/data_' + bv_id_selected + '.csv')
+df_bv_selected = pd.read_csv('sources/bv/data/data_' + bv_id_selected + '.csv')
 df_bv_selected = df_bv_selected.set_index(df_bv_selected.columns[0]).T
 st.dataframe(df_bv_selected)
