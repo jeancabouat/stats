@@ -12,7 +12,7 @@ def read_html_file(filename):
 
 
 # Stats definitions
-df_stats_def = pd.read_excel('sources/stats_def.xlsx')
+df_stats_def = pd.read_csv('/kaggle/input/stats-def/stats_def.csv')
 df_stats_def_demo = df_stats_def[(df_stats_def['Catégorie'] == 'Démographie') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_acti = df_stats_def[(df_stats_def['Catégorie'] == 'Activité') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_qualif = df_stats_def[(df_stats_def['Catégorie'] == 'Qualification') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
