@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
 
-# Load the HTML file
+# Load the HTML file (map)
 def read_html_file(filename):
     with open(filename, 'r') as f:
         return f.read()
