@@ -83,7 +83,7 @@ with data_container2:
 
 # a.Carte
 #Read the HTML content from the file
-html_content = read_html_file('/kaggle/working/circo/map/map_' + dpt_id_selected + '.html')
+html_content = read_html_file('output/legis/circo/map/map_' + dpt_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container1 = st.container()
 
@@ -189,7 +189,7 @@ circo_id_selected = str(circo_selected).split(" - ")[0]
 
 # a.Carte
 # Read the HTML content from the file
-html_content2 = read_html_file('/kaggle/working/bv/map/map_' + circo_id_selected + '.html')
+html_content2 = read_html_file('output/legis/bv/map/map_' + circo_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container2 = st.container()
 with map_container2:
