@@ -5,7 +5,7 @@ import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
 
-# Load the HTML file (map)
+# Load the HTML file
 def read_html_file(filename):
     with open(filename, 'r') as f:
         return f.read()
@@ -26,18 +26,18 @@ df_stats_def_autres = df_stats_def[(df_stats_def['Catégorie'] == 'Autres') | (d
 
     
 # 1.Liste des départements
-file_path = 'output/dataset_dpt_circo_bv_test.csv'
+file_path = 'output/legis/dataset_dpt_circo_bv_test.csv'
 df = pd.read_csv(file_path,low_memory=False)
 df.rename(columns={'codeDepartement': 'id_dep','nomDepartement': 'dep_name'}, inplace=True)
 df['id_dep'] = df['id_dep'].astype(str)
 df['id_circo'] = df['id_circo'].astype(str)
 df['id_bv'] = df['id_bv'].astype(str)
 
-df_dpt = df.drop(columns=['id_circo','nomCirconscription','codeCommune','nomCommune','numeroBureauVote','codeBureauVote','id_bv']).drop_duplicates()
+df_dpt = df.drop(columns=['id_circo','libCirco','codeCommune','nomCommune','numeroBureauVote','codeBureauVote','id_bv','libBv']).drop_duplicates()
 df_dpt['id_dep'] = df_dpt['id_dep'].astype(str)
 df_dpt.sort_values(by='id_dep',inplace=True)
 df_dpt['id_dep'] = df_dpt['id_dep'].astype(str)
-df_dpt['dep_lib'] = df_dpt['id_dep'].str.cat(df_dpt['dep_name'], sep = ' - ')
+df_dpt['dep_lib'] = df_dpt['id_dep'].str.cat(df_dpt['libDep'], sep = ' - ')
 
 dpt = df_dpt['dep_lib'].drop_duplicates().sort_values()
 dpt_selected = st.sidebar.selectbox('Sélection du département:', dpt)
@@ -46,11 +46,11 @@ dpt_id_selected = dpt_selected.split(" - ")[0]
 
 #dpt_id_selected = '14'
 
-file_path_dpt_resultats = 'output/dpt/data/resultats_' + dpt_id_selected + '.csv'
+file_path_dpt_resultats = 'output/legis/dpt/data/resultats_' + dpt_id_selected + '.csv'
 dpt_resultats = pd.read_csv(file_path_dpt_resultats,low_memory=False)
 
 # a. Résultats - Stats descriptives - DPT
-dpt_resultats_overview = dpt_resultats[['Libellé département', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
+dpt_resultats_overview = dpt_resultats[['libDepartement', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
 dpt_resultats_overview = dpt_resultats_overview.drop_duplicates()
 
 data_container = st.container()
@@ -60,17 +60,18 @@ with data_container:
 
 # b. Résultats (top10) - DPT
 dpt_resultats_details = dpt_resultats[['indicateur','valeur']]
-dpt_resultats_details['id_liste'] = dpt_resultats_details['indicateur'].str[-2:]
-dpt_resultats_details['id_liste'] = dpt_resultats_details['id_liste'].str.strip()
+dpt_resultats_details['id_candidat'] = dpt_resultats_details['indicateur'].str[-2:]
+dpt_resultats_details['id_candidat'] = dpt_resultats_details['id_candidat'].str.strip()
 
 dpt_resultats_details['indicateur'] = dpt_resultats_details['indicateur'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
 dpt_resultats_details['indicateur']= dpt_resultats_details['indicateur'].apply(lambda x: x[:-1] if isinstance(x, str) else x)
 
-dpt_resultats_details = dpt_resultats_details.pivot(index ='id_liste', columns='indicateur', values='valeur')
+dpt_resultats_details = dpt_resultats_details.pivot(index ='id_candidat', columns='indicateur', values='valeur')
 dpt_resultats_details = pd.DataFrame(dpt_resultats_details.to_records())
-dpt_resultats_details["Voix"] = dpt_resultats_details["Voix"].astype(int)
+dpt_resultats_details["Voix"] = dpt_resultats_details["Voix"].fillna(0).astype(float).round().astype(int)
 dpt_resultats_details = dpt_resultats_details.nlargest(10, 'Voix')
-dpt_resultats_details = dpt_resultats_details[['Libellé de liste','Nuance liste', 'Voix','% Voix/exprimés','% Voix/inscrits']]   
+dpt_resultats_details = dpt_resultats_details[['Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+dpt_resultats_details = dpt_resultats_details.dropna(axis=0, subset=['Nuance candidat'])
 
 data_container2 = st.container()
 with data_container2:
@@ -82,7 +83,7 @@ with data_container2:
 
 # a.Carte
 #Read the HTML content from the file
-html_content = read_html_file('output/circo/map/map_' + dpt_id_selected + '.html')
+html_content = read_html_file('/kaggle/working/circo/map/map_' + dpt_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container1 = st.container()
 
@@ -91,7 +92,7 @@ with map_container1:
     st.components.v1.html(html_content,height=500)
 
 # b.Stats des circonscriptions du département sélectionné
-file_path_circo_stats = 'output/circo/data/stats_' + dpt_id_selected + '.csv'
+file_path_circo_stats = 'output/legis/circo/data/stats_' + dpt_id_selected + '.csv'
 df_stats_circo_selected = pd.read_csv(file_path_circo_stats,low_memory=False)
 
 df_stats_circo_demo = df_stats_circo_selected[['Nom de la circonscription','Inscrit_22','pop_légal_19','pop_légal_13','tvar_pop','pop_pole_aav','pop_cour_aav','pop_horsaav','pop_urb','pop_rur_periu','pop_rur_non_periu','age_moyen','dec90','dec75','dec50','dec25','dec10']]
@@ -140,11 +141,11 @@ with st.expander("Statistiques descriptives:"):
         st.dataframe(df_stats_def_autres,hide_index=True)
 
 # c.Résultats des circonscriptions du département sélectionné
-file_path_circo_resultats = 'output/circo/data/resultats_' + dpt_id_selected + '.csv'
+file_path_circo_resultats = 'output/legis/circo/data/resultats_' + dpt_id_selected + '.csv'
 df_resultats_circo_selected = pd.read_csv(file_path_circo_resultats,low_memory=False)
 
     # i. Stats descriptives
-circo_resultats_overview = df_resultats_circo_selected[['Libellé circonscription législative', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
+circo_resultats_overview = df_resultats_circo_selected[['libCirco', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
 circo_resultats_overview = circo_resultats_overview.drop_duplicates()
 data_container3 = st.container()
 with data_container3:
@@ -152,9 +153,9 @@ with data_container3:
     st.dataframe(circo_resultats_overview,hide_index=True)
 
     # ii. Résultats (top10)
-circo_resultats_details = df_resultats_circo_selected[['id_circo','Libellé circonscription législative','indicateur','valeur']]
-circo_resultats_details['id_liste'] = circo_resultats_details['indicateur'].str[-2:]
-circo_resultats_details['id_liste'] = circo_resultats_details['id_liste'].str.strip()
+circo_resultats_details = df_resultats_circo_selected[['id_circo','libCirco','indicateur','valeur']]
+circo_resultats_details['id_candidat'] = circo_resultats_details['indicateur'].str[-2:]
+circo_resultats_details['id_candidat'] = circo_resultats_details['id_candidat'].str.strip()
 
 circo_resultats_details['indicateur'] = circo_resultats_details['indicateur'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
 circo_resultats_details['indicateur']= circo_resultats_details['indicateur'].apply(lambda x: x[:-1] if isinstance(x, str) else x)
@@ -164,19 +165,20 @@ circo_resultats_details['indicateur']= circo_resultats_details['indicateur'].app
 with st.expander("Circonscriptions - Résultats européennes (top10):"):
     groups = circo_resultats_details.groupby('id_circo')
     for name,group in groups:
-            tmp_details_circo = group.pivot(index = ['id_circo','id_liste'], columns='indicateur', values='valeur')
-            tmp_details_circo = pd.DataFrame(tmp_details_circo.to_records())
-            tmp_details_circo["Voix"] = tmp_details_circo["Voix"].astype(int)
-            tmp_details_circo = tmp_details_circo.nlargest(10, 'Voix')
-            tmp_details_circo = tmp_details_circo[['id_liste','Libellé de liste','Nuance liste', 'Voix','% Voix/exprimés','% Voix/inscrits']]
-            st.write(name)
-            st.dataframe(tmp_details_circo,hide_index=True)   
+        tmp_details_circo = group.pivot(index = ['id_circo','id_candidat'], columns='indicateur', values='valeur')
+        tmp_details_circo = pd.DataFrame(tmp_details_circo.to_records())
+        tmp_details_circo["Voix"] = tmp_details_circo["Voix"].fillna(0).astype(float).round().astype(int)
+        tmp_details_circo = tmp_details_circo.nlargest(10, 'Voix')
+        tmp_details_circo = tmp_details_circo[['id_candidat','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+        tmp_details_circo = tmp_details_circo.dropna(axis=0, subset=['Nuance candidat'])
+        st.write(name)
+        st.dataframe(tmp_details_circo,hide_index=True)   
 
 # d.Liste des circonscriptions du département sélectionné
-df_circo = df[df['id_dep'] == dpt_id_selected].drop(columns=['codeCommune','nomCommune','numeroBureauVote','codeBureauVote','id_bv']).drop_duplicates()
+df_circo = df[df['id_dep'] == dpt_id_selected].drop(columns=['codeCommune','nomCommune','numeroBureauVote','codeBureauVote','id_bv','libBv']).drop_duplicates()
 df_circo['id_circo'] = df_circo['id_circo'].astype(str)
 df_circo.sort_values(by='id_circo',inplace=True)
-df_circo['circo_lib'] = df_circo['id_circo'].str.cat(df_circo['nomCirconscription'], sep = ' - ')
+df_circo['circo_lib'] = df_circo['id_circo'].str.cat(df_circo['libCirco'], sep = ' - ')
 
 circo =  df_circo['circo_lib'].drop_duplicates().sort_values()
 circo_selected = st.sidebar.selectbox('Sélection de la circonscription:', circo)
@@ -187,7 +189,7 @@ circo_id_selected = str(circo_selected).split(" - ")[0]
 
 # a.Carte
 # Read the HTML content from the file
-html_content2 = read_html_file('output/bv/map/map_' + circo_id_selected + '.html')
+html_content2 = read_html_file('/kaggle/working/bv/map/map_' + circo_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container2 = st.container()
 with map_container2:
@@ -195,11 +197,11 @@ with map_container2:
     st.components.v1.html(html_content2,height=500)
 
 # b.Résultats des circonscriptions du département sélectionné
-file_path_bv_resultats = 'output/bv/data/resultats_' + circo_id_selected + '.csv'
+file_path_bv_resultats = 'output/legis/bv/data/resultats_' + circo_id_selected + '.csv'
 df_resultats_bv_selected = pd.read_csv(file_path_bv_resultats,low_memory=False)
 
     # i. Stats descriptives
-bv_resultats_overview = df_resultats_bv_selected[['codeBureauVote','bv_lib', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
+bv_resultats_overview = df_resultats_bv_selected[['id_bv','libBv', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
 bv_resultats_overview = bv_resultats_overview.drop_duplicates()
 data_container3 = st.container()
 with data_container3:
@@ -207,28 +209,28 @@ with data_container3:
     st.dataframe(bv_resultats_overview,hide_index=True)
 
     # ii. Résultats (top10)
-bv_resultats_details = df_resultats_bv_selected[['codeBureauVote','bv_lib','indicateur','valeur']]
-bv_resultats_details['id_liste'] = bv_resultats_details['indicateur'].str[-2:]
-bv_resultats_details['id_liste'] = bv_resultats_details['id_liste'].str.strip()
+bv_resultats_details = df_resultats_bv_selected[['id_bv','libBv','indicateur','valeur']]
+bv_resultats_details['id_candidat'] = bv_resultats_details['indicateur'].str[-2:]
+bv_resultats_details['id_candidat'] = bv_resultats_details['id_candidat'].str.strip()
 
 bv_resultats_details['indicateur'] = bv_resultats_details['indicateur'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
 bv_resultats_details['indicateur']= bv_resultats_details['indicateur'].apply(lambda x: x[:-1] if isinstance(x, str) else x)
 
 
 
-bv =  bv_resultats_details['codeBureauVote'].drop_duplicates().sort_values()
+bv =  bv_resultats_details['id_bv'].drop_duplicates().sort_values()
 bv_selected = st.sidebar.selectbox('Sélection du bureau de vote:', bv)
 # ID BV
 bv_id_selected = bv_selected
 
-df_bv = bv_resultats_details[bv_resultats_details['codeBureauVote'] == bv_id_selected]
+df_bv = bv_resultats_details[bv_resultats_details['id_bv'] == bv_id_selected]
 
-tmp_details_bv = df_bv.pivot(index = ['codeBureauVote','id_liste'], columns='indicateur', values='valeur')
+tmp_details_bv = df_bv.pivot(index = ['id_bv','id_candidat'], columns='indicateur', values='valeur')
 tmp_details_bv = pd.DataFrame(tmp_details_bv.to_records())
-tmp_details_bv["Voix"] = tmp_details_bv["Voix"].astype(int)
+tmp_details_bv["Voix"] = tmp_details_bv["Voix"].fillna(0).astype(float).round().astype(int)
 tmp_details_bv = tmp_details_bv.nlargest(10, 'Voix')
-tmp_details_bv = tmp_details_bv[['codeBureauVote','id_liste','Libellé de liste','Nuance liste', 'Voix','% Voix/exprimés','% Voix/inscrits']]
-
+tmp_details_bv = tmp_details_bv[['id_bv','id_candidat','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+tmp_details_bv = tmp_details_bv.dropna(axis=0, subset=['Nuance candidat'])
 
 data_container4 = st.container()
 with data_container4:
