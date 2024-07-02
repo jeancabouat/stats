@@ -55,7 +55,7 @@ dpt_resultats_overview = dpt_resultats_overview.drop_duplicates()
 
 data_container = st.container()
 with data_container:
-    st.write("Département - Elections européennes:")
+    st.write("Département - Elections législatives:")
     st.dataframe(dpt_resultats_overview,hide_index=True)
 
 # b. Résultats (top10) - DPT
@@ -75,7 +75,7 @@ dpt_resultats_details = dpt_resultats_details.dropna(axis=0, subset=['Nuance can
 
 data_container2 = st.container()
 with data_container2:
-    st.write("Département - Résultats européennes (top10):")
+    st.write("Département - Résultats législatives (top10):")
     st.dataframe(dpt_resultats_details,hide_index=True)
 
     
@@ -149,7 +149,7 @@ circo_resultats_overview = df_resultats_circo_selected[['libCirco', 'Inscrits', 
 circo_resultats_overview = circo_resultats_overview.drop_duplicates()
 data_container3 = st.container()
 with data_container3:
-    st.write("Circonscriptions - Elections européennes:")
+    st.write("Circonscriptions - Elections législatives:")
     st.dataframe(circo_resultats_overview,hide_index=True)
 
     # ii. Résultats (top10)
@@ -162,7 +162,7 @@ circo_resultats_details['indicateur']= circo_resultats_details['indicateur'].app
 
 #circo_resultats_details
 
-with st.expander("Circonscriptions - Résultats européennes (top10):"):
+with st.expander("Circonscriptions - Résultats législatives (top10):"):
     groups = circo_resultats_details.groupby('id_circo')
     for name,group in groups:
         tmp_details_circo = group.pivot(index = ['id_circo','id_candidat'], columns='indicateur', values='valeur')
@@ -205,7 +205,7 @@ bv_resultats_overview = df_resultats_bv_selected[['id_bv','libBv', 'Inscrits', '
 bv_resultats_overview = bv_resultats_overview.drop_duplicates()
 data_container3 = st.container()
 with data_container3:
-    st.write("Bureaux de votes - Elections européennes:")
+    st.write("Bureaux de votes - Elections législatives:")
     st.dataframe(bv_resultats_overview,hide_index=True)
 
     # ii. Résultats (top10)
@@ -234,5 +234,5 @@ tmp_details_bv = tmp_details_bv.dropna(axis=0, subset=['Nuance candidat'])
 
 data_container4 = st.container()
 with data_container4:
-    st.write("Bureau de vote sélectionné - Résultats européennes (top10):")
+    st.write("Bureau de vote sélectionné - Résultats législatives (top10):")
     st.dataframe(tmp_details_bv,hide_index=True)
