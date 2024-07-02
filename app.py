@@ -169,7 +169,7 @@ with st.expander("Circonscriptions - Résultats législatives (top10):"):
         tmp_details_circo = pd.DataFrame(tmp_details_circo.to_records())
         tmp_details_circo["Voix"] = tmp_details_circo["Voix"].fillna(0).astype(float).round().astype(int)
         tmp_details_circo = tmp_details_circo.nlargest(10, 'Voix')
-        tmp_details_circo = tmp_details_circo[['id_candidat','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+        tmp_details_circo = tmp_details_circo[['Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
         tmp_details_circo = tmp_details_circo.dropna(axis=0, subset=['Nuance candidat'])
         st.write(name)
         st.dataframe(tmp_details_circo,hide_index=True)   
@@ -229,7 +229,7 @@ tmp_details_bv = df_bv.pivot(index = ['id_bv','id_candidat'], columns='indicateu
 tmp_details_bv = pd.DataFrame(tmp_details_bv.to_records())
 tmp_details_bv["Voix"] = tmp_details_bv["Voix"].fillna(0).astype(float).round().astype(int)
 tmp_details_bv = tmp_details_bv.nlargest(10, 'Voix')
-tmp_details_bv = tmp_details_bv[['id_bv','id_candidat','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+tmp_details_bv = tmp_details_bv[['id_bv','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
 tmp_details_bv = tmp_details_bv.dropna(axis=0, subset=['Nuance candidat'])
 
 data_container4 = st.container()
