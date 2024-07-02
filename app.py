@@ -216,20 +216,18 @@ bv_resultats_details['id_candidat'] = bv_resultats_details['id_candidat'].str.st
 bv_resultats_details['indicateur'] = bv_resultats_details['indicateur'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
 bv_resultats_details['indicateur']= bv_resultats_details['indicateur'].apply(lambda x: x[:-1] if isinstance(x, str) else x)
 
-
-
-bv =  bv_resultats_details['id_bv'].drop_duplicates().sort_values()
+bv =  bv_resultats_details['libBv'].drop_duplicates().sort_values()
 bv_selected = st.sidebar.selectbox('Sélection du bureau de vote:', bv)
 # ID BV
 bv_id_selected = bv_selected
 
-df_bv = bv_resultats_details[bv_resultats_details['id_bv'] == bv_id_selected]
+df_bv = bv_resultats_details[bv_resultats_details['libBv'] == bv_id_selected]
 
-tmp_details_bv = df_bv.pivot(index = ['id_bv','id_candidat'], columns='indicateur', values='valeur')
+tmp_details_bv = df_bv.pivot(index = ['libBv','id_candidat'], columns='indicateur', values='valeur')
 tmp_details_bv = pd.DataFrame(tmp_details_bv.to_records())
 tmp_details_bv["Voix"] = tmp_details_bv["Voix"].fillna(0).astype(float).round().astype(int)
 tmp_details_bv = tmp_details_bv.nlargest(10, 'Voix')
-tmp_details_bv = tmp_details_bv[['id_bv','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
+tmp_details_bv = tmp_details_bv[['libBv','Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
 tmp_details_bv = tmp_details_bv.dropna(axis=0, subset=['Nuance candidat'])
 
 data_container4 = st.container()
