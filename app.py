@@ -201,7 +201,7 @@ file_path_bv_resultats = 'output/legis/bv/data/resultats_' + circo_id_selected +
 df_resultats_bv_selected = pd.read_csv(file_path_bv_resultats,low_memory=False)
 
     # i. Stats descriptives
-bv_resultats_overview = df_resultats_bv_selected[['id_bv','libBv', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
+bv_resultats_overview = df_resultats_bv_selected[['libBv', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
 bv_resultats_overview = bv_resultats_overview.drop_duplicates()
 data_container3 = st.container()
 with data_container3:
