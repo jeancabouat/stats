@@ -17,7 +17,7 @@ df_stats_def_demo = df_stats_def[(df_stats_def['Catégorie'] == 'Démographie') 
 df_stats_def_acti = df_stats_def[(df_stats_def['Catégorie'] == 'Activité') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_qualif = df_stats_def[(df_stats_def['Catégorie'] == 'Qualification') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_secteur = df_stats_def[(df_stats_def['Catégorie'] == 'Secteur') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
-df_stats_def_log = df_stats_def[(df_stats_def['Catégorie'] == 'Logements') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
+df_stats_def_log = df_stats_def[(df_stats_def['Catégorie'] == 'Logement') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_fam = df_stats_def[(df_stats_def['Catégorie'] == 'Famille') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_mob = df_stats_def[(df_stats_def['Catégorie'] == 'Mobilité') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 df_stats_def_rev = df_stats_def[(df_stats_def['Catégorie'] == 'Revenus') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
