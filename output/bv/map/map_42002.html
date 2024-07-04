@@ -1,0 +1,2480 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_33f1af6f91eb9106125e6c13ee7a5d93 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_33f1af6f91eb9106125e6c13ee7a5d93" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_33f1af6f91eb9106125e6c13ee7a5d93 = L.map(
+                "map_33f1af6f91eb9106125e6c13ee7a5d93",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4b11c946a97a86c57598dc9a7d2ed771 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_4b11c946a97a86c57598dc9a7d2ed771.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_4443f616568196627a267aafcedace88_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4443f616568196627a267aafcedace88_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4443f616568196627a267aafcedace88 = L.geoJson(null, {
+                onEachFeature: geo_json_4443f616568196627a267aafcedace88_onEachFeature,
+            
+                style: geo_json_4443f616568196627a267aafcedace88_styler,
+        });
+
+        function geo_json_4443f616568196627a267aafcedace88_add (data) {
+            geo_json_4443f616568196627a267aafcedace88
+                .addData(data);
+        }
+            geo_json_4443f616568196627a267aafcedace88_add({"bbox": [4.371979204416303, 45.42315040972166, 4.384090445759184, 45.45660493948431], "features": [{"bbox": [4.371979204416303, 45.42315040972166, 4.384090445759184, 45.45660493948431], "geometry": {"coordinates": [[[[4.374369135539957, 45.42315040972166], [4.371979204416303, 45.42399799701643], [4.372575417120694, 45.42546875975711], [4.375845744972578, 45.42431505941499], [4.374369135539957, 45.42315040972166]]], [[[4.376799825860129, 45.43015306362365], [4.380562849458993, 45.43258874953183], [4.379304738478831, 45.43473433195954], [4.381966781369636, 45.43373961548278], [4.381208352703163, 45.43194056575544], [4.384090445759184, 45.42856784289325], [4.384032258023142, 45.42522586586044], [4.381731064798318, 45.42411949525773], [4.379465010952793, 45.428099479338194], [4.373635563319427, 45.4268434771145], [4.375175173966885, 45.42877558309944], [4.377274524437686, 45.428269946857995], [4.376799825860129, 45.43015306362365]]], [[[4.3787735, 45.43288213636364], [4.3787735, 45.432616609375], [4.378309181620088, 45.43296847564727], [4.378353594099686, 45.43299665615462], [4.3787735, 45.43288213636364]]], [[[4.380420021925984, 45.45660493948431], [4.380571427956896, 45.456187058838935], [4.379934569644746, 45.45654348982845], [4.380420021925984, 45.45660493948431]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_dc913686163f741ea3cf8a51dfb473c9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95d611b1065530ad88e780af4c3bd908 = $(`<div id="html_95d611b1065530ad88e780af4c3bd908" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0001</div>`)[0];
+                popup_dc913686163f741ea3cf8a51dfb473c9.setContent(html_95d611b1065530ad88e780af4c3bd908);
+            
+        
+
+        geo_json_4443f616568196627a267aafcedace88.bindPopup(popup_dc913686163f741ea3cf8a51dfb473c9)
+        ;
+
+        
+    
+    
+            geo_json_4443f616568196627a267aafcedace88.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_7b1b0ab29d1952732344d591c8fe24c8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7b1b0ab29d1952732344d591c8fe24c8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7b1b0ab29d1952732344d591c8fe24c8 = L.geoJson(null, {
+                onEachFeature: geo_json_7b1b0ab29d1952732344d591c8fe24c8_onEachFeature,
+            
+                style: geo_json_7b1b0ab29d1952732344d591c8fe24c8_styler,
+        });
+
+        function geo_json_7b1b0ab29d1952732344d591c8fe24c8_add (data) {
+            geo_json_7b1b0ab29d1952732344d591c8fe24c8
+                .addData(data);
+        }
+            geo_json_7b1b0ab29d1952732344d591c8fe24c8_add({"bbox": [4.395738894004143, 45.42576050917683, 4.404742343384974, 45.43352933555571], "features": [{"bbox": [4.395738894004143, 45.42576050917683, 4.404742343384974, 45.43352933555571], "geometry": {"coordinates": [[[4.398970007283912, 45.42726247313046], [4.400175229993964, 45.429567826735074], [4.395738894004143, 45.43247122576176], [4.397385755751267, 45.43352933555571], [4.404742343384974, 45.42748005415181], [4.402626419386747, 45.42576050917683], [4.398970007283912, 45.42726247313046]], [[4.403061015436466, 45.42623655798278], [4.40332553536042, 45.42636261992237], [4.403278051011042, 45.426576029617266], [4.402954084468661, 45.426559837652874], [4.403061015436466, 45.42623655798278]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c0fe2cf32b875367cf9a247314047ec8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3b98e8faa0297cde24a0239c45d09d55 = $(`<div id="html_3b98e8faa0297cde24a0239c45d09d55" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0010</div>`)[0];
+                popup_c0fe2cf32b875367cf9a247314047ec8.setContent(html_3b98e8faa0297cde24a0239c45d09d55);
+            
+        
+
+        geo_json_7b1b0ab29d1952732344d591c8fe24c8.bindPopup(popup_c0fe2cf32b875367cf9a247314047ec8)
+        ;
+
+        
+    
+    
+            geo_json_7b1b0ab29d1952732344d591c8fe24c8.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_fd24730d8b997ea4099625f5ae2b172c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fd24730d8b997ea4099625f5ae2b172c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fd24730d8b997ea4099625f5ae2b172c = L.geoJson(null, {
+                onEachFeature: geo_json_fd24730d8b997ea4099625f5ae2b172c_onEachFeature,
+            
+                style: geo_json_fd24730d8b997ea4099625f5ae2b172c_styler,
+        });
+
+        function geo_json_fd24730d8b997ea4099625f5ae2b172c_add (data) {
+            geo_json_fd24730d8b997ea4099625f5ae2b172c
+                .addData(data);
+        }
+            geo_json_fd24730d8b997ea4099625f5ae2b172c_add({"bbox": [4.393603022517913, 45.371547, 4.488878, 45.436076590777475], "features": [{"bbox": [4.393603022517913, 45.371547, 4.488878, 45.436076590777475], "geometry": {"coordinates": [[[[4.433603, 45.407847], [4.425112831364746, 45.40739456521063], [4.42447088947543, 45.41159106136309], [4.434068611689803, 45.417317538973705], [4.440247308899003, 45.41704294124192], [4.446998633031196, 45.419421184854656], [4.447611928186086, 45.424251575423], [4.452890992262586, 45.42834829499874], [4.467574553715357, 45.42587233885393], [4.469275, 45.423715], [4.47821, 45.42067], [4.480952, 45.417282], [4.475545, 45.394157], [4.488878, 45.384075], [4.482723, 45.384258], [4.476472, 45.37908], [4.470598, 45.38163], [4.468667, 45.375136], [4.465113, 45.372451], [4.465918, 45.371547], [4.455113, 45.380937], [4.447605, 45.383689], [4.44658, 45.385553], [4.448112, 45.386921], [4.446212, 45.389251], [4.447941, 45.390133], [4.445593, 45.393178], [4.446682, 45.395372], [4.448092, 45.395182], [4.446782, 45.398341], [4.445921, 45.39927], [4.442904, 45.397099], [4.441267, 45.396206], [4.440296, 45.396167], [4.441051, 45.403715], [4.437335, 45.408926], [4.436826, 45.407127], [4.433603, 45.407847]], [[4.458451571608503, 45.4077156402576], [4.452941516396946, 45.40858908857238], [4.450577206675056, 45.4033741916012], [4.453314654304786, 45.3973586718882], [4.459270518850275, 45.391313752730106], [4.464564349117294, 45.39961510118319], [4.458451571608503, 45.4077156402576]]], [[[4.399274678416973, 45.41367819080067], [4.399206752571157, 45.41356673965558], [4.399088888888882, 45.414319], [4.399236026688108, 45.414235929581984], [4.399274678416973, 45.41367819080067]]], [[[4.400011481483364, 45.41739540658738], [4.399645929700303, 45.41753783142121], [4.400409846427976, 45.41760341980969], [4.400011481483364, 45.41739540658738]]], [[[4.395815895570475, 45.420259489787924], [4.396036555721258, 45.41986511903472], [4.395984189247173, 45.419651099531926], [4.395698957911931, 45.420023740469894], [4.395815895570475, 45.420259489787924]]], [[[4.398262405195226, 45.42556989208068], [4.398520276334694, 45.42547112412822], [4.398703297420469, 45.42525406192146], [4.398204726915512, 45.425185507858544], [4.398262405195226, 45.42556989208068]]], [[[4.39601922353213, 45.425892618816455], [4.395943443521031, 45.42609901848711], [4.396276615230286, 45.42635069495814], [4.396205007089415, 45.42593316441365], [4.39601922353213, 45.425892618816455]]], [[[4.403357871481343, 45.42641341400075], [4.403061015436466, 45.42623655798278], [4.402954084468661, 45.426559837652874], [4.403278051011042, 45.426576029617266], [4.403357871481343, 45.42641341400075]]], [[[4.393674896624466, 45.43188549296766], [4.393603022517913, 45.431857427840335], [4.393609791171492, 45.43198603225806], [4.393687240157483, 45.43191120866142], [4.393674896624466, 45.43188549296766]]], [[[4.450196518170102, 45.43326810735405], [4.450332870663432, 45.4335480581254], [4.450772523255769, 45.433287523255814], [4.450196518170102, 45.43326810735405]]], [[[4.405856096015071, 45.43572947745705], [4.405762957481323, 45.43604553772731], [4.406002324743008, 45.436076590777475], [4.406005641511205, 45.436075093714784], [4.405856096015071, 45.43572947745705]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6be1dfc8c99dfd64b37c397d7ca97a3d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bbd4629938e14e72b61fe4eeb683de3 = $(`<div id="html_3bbd4629938e14e72b61fe4eeb683de3" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0100</div>`)[0];
+                popup_6be1dfc8c99dfd64b37c397d7ca97a3d.setContent(html_3bbd4629938e14e72b61fe4eeb683de3);
+            
+        
+
+        geo_json_fd24730d8b997ea4099625f5ae2b172c.bindPopup(popup_6be1dfc8c99dfd64b37c397d7ca97a3d)
+        ;
+
+        
+    
+    
+            geo_json_fd24730d8b997ea4099625f5ae2b172c.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_7be96913f9d963071a0c4407c21ddb84_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7be96913f9d963071a0c4407c21ddb84_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7be96913f9d963071a0c4407c21ddb84 = L.geoJson(null, {
+                onEachFeature: geo_json_7be96913f9d963071a0c4407c21ddb84_onEachFeature,
+            
+                style: geo_json_7be96913f9d963071a0c4407c21ddb84_styler,
+        });
+
+        function geo_json_7be96913f9d963071a0c4407c21ddb84_add (data) {
+            geo_json_7be96913f9d963071a0c4407c21ddb84
+                .addData(data);
+        }
+            geo_json_7be96913f9d963071a0c4407c21ddb84_add({"bbox": [4.368414292931218, 45.43252490323338, 4.407047203333334, 45.448522694109506], "features": [{"bbox": [4.368414292931218, 45.43252490323338, 4.407047203333334, 45.448522694109506], "geometry": {"coordinates": [[[[4.396451209938553, 45.43611499320237], [4.397118346153849, 45.43966506153846], [4.403502125331746, 45.43948837928783], [4.395778536327338, 45.43252490323338], [4.396451209938553, 45.43611499320237]]], [[[4.406921190330525, 45.436729390235186], [4.406822107137244, 45.43704046132684], [4.407047203333334, 45.43707678666667], [4.406966881706794, 45.43672479043221], [4.406921190330525, 45.436729390235186]]], [[[4.368437781809217, 45.447813539735094], [4.368414292931218, 45.44817327268039], [4.368879446298657, 45.448522694109506], [4.368715027466247, 45.447917565004644], [4.368437781809217, 45.447813539735094]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8f8906ca538a074106ca6f6f92208bc5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bb9d11971e96b5a90c51be6c96f43977 = $(`<div id="html_bb9d11971e96b5a90c51be6c96f43977" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0011</div>`)[0];
+                popup_8f8906ca538a074106ca6f6f92208bc5.setContent(html_bb9d11971e96b5a90c51be6c96f43977);
+            
+        
+
+        geo_json_7be96913f9d963071a0c4407c21ddb84.bindPopup(popup_8f8906ca538a074106ca6f6f92208bc5)
+        ;
+
+        
+    
+    
+            geo_json_7be96913f9d963071a0c4407c21ddb84.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_80782605e58f56f3401e40d4e087c3d4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_80782605e58f56f3401e40d4e087c3d4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_80782605e58f56f3401e40d4e087c3d4 = L.geoJson(null, {
+                onEachFeature: geo_json_80782605e58f56f3401e40d4e087c3d4_onEachFeature,
+            
+                style: geo_json_80782605e58f56f3401e40d4e087c3d4_styler,
+        });
+
+        function geo_json_80782605e58f56f3401e40d4e087c3d4_add (data) {
+            geo_json_80782605e58f56f3401e40d4e087c3d4
+                .addData(data);
+        }
+            geo_json_80782605e58f56f3401e40d4e087c3d4_add({"bbox": [4.383374421052632, 45.43165357311852, 4.409099062219877, 45.44225314912281], "features": [{"bbox": [4.383374421052632, 45.43165357311852, 4.409099062219877, 45.44225314912281], "geometry": {"coordinates": [[[[4.400652543267756, 45.43593453585783], [4.402153523573621, 45.43884296856849], [4.407377621971325, 45.43721193225929], [4.4085391690695, 45.43590895065031], [4.40569309928397, 45.43502306031753], [4.409099062219877, 45.433047784933144], [4.407662264907398, 45.43165357311852], [4.400045392298009, 45.43460363654891], [4.400652543267756, 45.43593453585783]], [[4.406002324743008, 45.436076590777475], [4.405762957481323, 45.43604553772731], [4.405856096015071, 45.43572947745705], [4.406005641511205, 45.436075093714784], [4.406002324743008, 45.436076590777475]]], [[[4.38341173059533, 45.44204815674453], [4.383374421052632, 45.44213147368422], [4.383739447368419, 45.44225314912281], [4.383762661192696, 45.44216963272054], [4.38341173059533, 45.44204815674453]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_26d6a6731ab9028638f738e3dba292da = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f8dc90a2f0c69e0fd4083718cd9ce5cf = $(`<div id="html_f8dc90a2f0c69e0fd4083718cd9ce5cf" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0012</div>`)[0];
+                popup_26d6a6731ab9028638f738e3dba292da.setContent(html_f8dc90a2f0c69e0fd4083718cd9ce5cf);
+            
+        
+
+        geo_json_80782605e58f56f3401e40d4e087c3d4.bindPopup(popup_26d6a6731ab9028638f738e3dba292da)
+        ;
+
+        
+    
+    
+            geo_json_80782605e58f56f3401e40d4e087c3d4.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_12d28d8aa6bfb576be4d0e1c3377afaf = L.geoJson(null, {
+                onEachFeature: geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_onEachFeature,
+            
+                style: geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_styler,
+        });
+
+        function geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_add (data) {
+            geo_json_12d28d8aa6bfb576be4d0e1c3377afaf
+                .addData(data);
+        }
+            geo_json_12d28d8aa6bfb576be4d0e1c3377afaf_add({"bbox": [4.405662891840131, 45.43360380281146, 4.415526193190837, 45.44083157417258], "features": [{"bbox": [4.405662891840131, 45.43360380281146, 4.415526193190837, 45.44083157417258], "geometry": {"coordinates": [[[[4.408142889984147, 45.43360380281146], [4.405662891840131, 45.43517328111936], [4.4085391690695, 45.43590895065031], [4.409163374546839, 45.43973007842014], [4.412314691456308, 45.43887118621359], [4.41323148384162, 45.435530312344014], [4.408142889984147, 45.43360380281146]]], [[[4.414034733344094, 45.439506139328394], [4.413491945462115, 45.439048765195665], [4.413178135988611, 45.43912110498741], [4.413340755286129, 45.43946708525703], [4.414034733344094, 45.439506139328394]]], [[[4.414288550429402, 45.43959024116237], [4.414229352413257, 45.43992206314713], [4.41474071188721, 45.43978703869716], [4.414548934302394, 45.439668750349114], [4.414288550429402, 45.43959024116237]]], [[[4.415206435147348, 45.44040080925936], [4.415079990441697, 45.44067882550321], [4.415423411588001, 45.44083157417258], [4.415526193190837, 45.44039997871898], [4.415206435147348, 45.44040080925936]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3adc7a1d72d410d9a53cfaf8b423a48e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e25a7ece246a4f7cb6cfffbde5b3bb1 = $(`<div id="html_5e25a7ece246a4f7cb6cfffbde5b3bb1" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0013</div>`)[0];
+                popup_3adc7a1d72d410d9a53cfaf8b423a48e.setContent(html_5e25a7ece246a4f7cb6cfffbde5b3bb1);
+            
+        
+
+        geo_json_12d28d8aa6bfb576be4d0e1c3377afaf.bindPopup(popup_3adc7a1d72d410d9a53cfaf8b423a48e)
+        ;
+
+        
+    
+    
+            geo_json_12d28d8aa6bfb576be4d0e1c3377afaf.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_54c9e2994126c8ec120c4e8cd17ae124_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_54c9e2994126c8ec120c4e8cd17ae124_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_54c9e2994126c8ec120c4e8cd17ae124 = L.geoJson(null, {
+                onEachFeature: geo_json_54c9e2994126c8ec120c4e8cd17ae124_onEachFeature,
+            
+                style: geo_json_54c9e2994126c8ec120c4e8cd17ae124_styler,
+        });
+
+        function geo_json_54c9e2994126c8ec120c4e8cd17ae124_add (data) {
+            geo_json_54c9e2994126c8ec120c4e8cd17ae124
+                .addData(data);
+        }
+            geo_json_54c9e2994126c8ec120c4e8cd17ae124_add({"bbox": [4.39788897832174, 45.427202092232584, 4.410503511778106, 45.43466289835462], "features": [{"bbox": [4.39788897832174, 45.427202092232584, 4.410503511778106, 45.43466289835462], "geometry": {"coordinates": [[[4.400900975942559, 45.430320977454016], [4.39788897832174, 45.43210525115165], [4.397919211862381, 45.43466289835462], [4.408631354520403, 45.432329956038956], [4.410503511778106, 45.43031469593757], [4.405776201169055, 45.427202092232584], [4.402810591668898, 45.42784500272513], [4.400900975942559, 45.430320977454016]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_487ca515f2984b6791cf7669b1df3beb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_246b495a4a3e75dfca6a1dbaa2e4154a = $(`<div id="html_246b495a4a3e75dfca6a1dbaa2e4154a" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0015</div>`)[0];
+                popup_487ca515f2984b6791cf7669b1df3beb.setContent(html_246b495a4a3e75dfca6a1dbaa2e4154a);
+            
+        
+
+        geo_json_54c9e2994126c8ec120c4e8cd17ae124.bindPopup(popup_487ca515f2984b6791cf7669b1df3beb)
+        ;
+
+        
+    
+    
+            geo_json_54c9e2994126c8ec120c4e8cd17ae124.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_71f45785cdd821c7ad6517b6475dc4fb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_71f45785cdd821c7ad6517b6475dc4fb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_71f45785cdd821c7ad6517b6475dc4fb = L.geoJson(null, {
+                onEachFeature: geo_json_71f45785cdd821c7ad6517b6475dc4fb_onEachFeature,
+            
+                style: geo_json_71f45785cdd821c7ad6517b6475dc4fb_styler,
+        });
+
+        function geo_json_71f45785cdd821c7ad6517b6475dc4fb_add (data) {
+            geo_json_71f45785cdd821c7ad6517b6475dc4fb
+                .addData(data);
+        }
+            geo_json_71f45785cdd821c7ad6517b6475dc4fb_add({"bbox": [4.408976943016729, 45.43036428774975, 4.415270339179353, 45.436695156845396], "features": [{"bbox": [4.408976943016729, 45.43036428774975, 4.415270339179353, 45.436695156845396], "geometry": {"coordinates": [[[[4.408976943016729, 45.43076724831963], [4.409044617825997, 45.43330373958123], [4.411639205758457, 45.43504094695986], [4.415270339179353, 45.43445513534084], [4.411257403957174, 45.43036428774975], [4.408976943016729, 45.43076724831963]]], [[[4.412585730666666, 45.435742555333334], [4.412311341849374, 45.436100679635594], [4.412699467692425, 45.436695156845396], [4.41319776553488, 45.435572807759264], [4.412585730666666, 45.435742555333334]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a54e29c46ed43aed8512d7706420b2a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b37ca819f3f2825609d4fa3e7fc7d118 = $(`<div id="html_b37ca819f3f2825609d4fa3e7fc7d118" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0016</div>`)[0];
+                popup_a54e29c46ed43aed8512d7706420b2a1.setContent(html_b37ca819f3f2825609d4fa3e7fc7d118);
+            
+        
+
+        geo_json_71f45785cdd821c7ad6517b6475dc4fb.bindPopup(popup_a54e29c46ed43aed8512d7706420b2a1)
+        ;
+
+        
+    
+    
+            geo_json_71f45785cdd821c7ad6517b6475dc4fb.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_39e243cd86c99fb08b4a141b625199c1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_39e243cd86c99fb08b4a141b625199c1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_39e243cd86c99fb08b4a141b625199c1 = L.geoJson(null, {
+                onEachFeature: geo_json_39e243cd86c99fb08b4a141b625199c1_onEachFeature,
+            
+                style: geo_json_39e243cd86c99fb08b4a141b625199c1_styler,
+        });
+
+        function geo_json_39e243cd86c99fb08b4a141b625199c1_add (data) {
+            geo_json_39e243cd86c99fb08b4a141b625199c1
+                .addData(data);
+        }
+            geo_json_39e243cd86c99fb08b4a141b625199c1_add({"bbox": [4.409587576540755, 45.42924684365325, 4.420724487461848, 45.436706971905544], "features": [{"bbox": [4.409587576540755, 45.42924684365325, 4.420724487461848, 45.436706971905544], "geometry": {"coordinates": [[[[4.410483778666789, 45.43025778953556], [4.410684636717603, 45.42934837382007], [4.409664385448921, 45.42924684365325], [4.409587576540755, 45.42947727037774], [4.410483778666789, 45.43025778953556]]], [[[4.411703732386602, 45.43135764919985], [4.415316023433462, 45.43433109200186], [4.41348885668618, 45.43409654201267], [4.412715064942999, 45.436706971905544], [4.417353837791572, 45.434759718761946], [4.416562922736845, 45.43262787713189], [4.413818378357627, 45.43234109439755], [4.411844046379933, 45.43019571424392], [4.411703732386602, 45.43135764919985]]], [[[4.419635954224748, 45.43496211834369], [4.420724487461848, 45.43428200811157], [4.418477837263113, 45.433917489310694], [4.419077679013597, 45.43521337763889], [4.419635954224748, 45.43496211834369]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_280a9810f94df33a64d4816a8a8c65e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_778094c0336d3d52f414c1c58840a634 = $(`<div id="html_778094c0336d3d52f414c1c58840a634" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0017</div>`)[0];
+                popup_280a9810f94df33a64d4816a8a8c65e5.setContent(html_778094c0336d3d52f414c1c58840a634);
+            
+        
+
+        geo_json_39e243cd86c99fb08b4a141b625199c1.bindPopup(popup_280a9810f94df33a64d4816a8a8c65e5)
+        ;
+
+        
+    
+    
+            geo_json_39e243cd86c99fb08b4a141b625199c1.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775 = L.geoJson(null, {
+                onEachFeature: geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_onEachFeature,
+            
+                style: geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_styler,
+        });
+
+        function geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_add (data) {
+            geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775
+                .addData(data);
+        }
+            geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775_add({"bbox": [4.412379468520465, 45.433917489310694, 4.423777801987065, 45.43901437298437], "features": [{"bbox": [4.412379468520465, 45.433917489310694, 4.423777801987065, 45.43901437298437], "geometry": {"coordinates": [[[4.414475497008409, 45.43624258743689], [4.412379468520465, 45.43878616631689], [4.417786245523642, 45.43901437298437], [4.41892135149341, 45.437470521291324], [4.423777801987065, 45.43712662355735], [4.422093751260202, 45.43411575113226], [4.419143425814076, 45.43524326669025], [4.418477837263113, 45.433917489310694], [4.416594616191905, 45.43428634332833], [4.414475497008409, 45.43624258743689]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5df223feea729f569f1a0bd84be899e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a261a20983759874fe424fd68f62f81 = $(`<div id="html_7a261a20983759874fe424fd68f62f81" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0018</div>`)[0];
+                popup_5df223feea729f569f1a0bd84be899e5.setContent(html_7a261a20983759874fe424fd68f62f81);
+            
+        
+
+        geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775.bindPopup(popup_5df223feea729f569f1a0bd84be899e5)
+        ;
+
+        
+    
+    
+            geo_json_4f3224da5b1e5c85a5cec6c4ae9ed775.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_2271d665eb300e7b7d7212d104bc2f8b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2271d665eb300e7b7d7212d104bc2f8b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2271d665eb300e7b7d7212d104bc2f8b = L.geoJson(null, {
+                onEachFeature: geo_json_2271d665eb300e7b7d7212d104bc2f8b_onEachFeature,
+            
+                style: geo_json_2271d665eb300e7b7d7212d104bc2f8b_styler,
+        });
+
+        function geo_json_2271d665eb300e7b7d7212d104bc2f8b_add (data) {
+            geo_json_2271d665eb300e7b7d7212d104bc2f8b
+                .addData(data);
+        }
+            geo_json_2271d665eb300e7b7d7212d104bc2f8b_add({"bbox": [4.404538271029288, 45.42398963609838, 4.416128748596399, 45.42953554578784], "features": [{"bbox": [4.404538271029288, 45.42398963609838, 4.416128748596399, 45.42953554578784], "geometry": {"coordinates": [[[4.406913349488615, 45.42587590417291], [4.404538271029288, 45.427344507433], [4.409206527605434, 45.42953554578784], [4.409740882725133, 45.425524246737666], [4.416128748596399, 45.42705274051221], [4.414109375701636, 45.424913141747965], [4.409157410091313, 45.42398963609838], [4.406913349488615, 45.42587590417291]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f26ed9283fbf1d5a305246eb7ba8428b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a64013461e9e567b6acabf21a71d7fdf = $(`<div id="html_a64013461e9e567b6acabf21a71d7fdf" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0019</div>`)[0];
+                popup_f26ed9283fbf1d5a305246eb7ba8428b.setContent(html_a64013461e9e567b6acabf21a71d7fdf);
+            
+        
+
+        geo_json_2271d665eb300e7b7d7212d104bc2f8b.bindPopup(popup_f26ed9283fbf1d5a305246eb7ba8428b)
+        ;
+
+        
+    
+    
+            geo_json_2271d665eb300e7b7d7212d104bc2f8b.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_ec252bda364ba76f0edc89f7dcc4a946_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ec252bda364ba76f0edc89f7dcc4a946_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ec252bda364ba76f0edc89f7dcc4a946 = L.geoJson(null, {
+                onEachFeature: geo_json_ec252bda364ba76f0edc89f7dcc4a946_onEachFeature,
+            
+                style: geo_json_ec252bda364ba76f0edc89f7dcc4a946_styler,
+        });
+
+        function geo_json_ec252bda364ba76f0edc89f7dcc4a946_add (data) {
+            geo_json_ec252bda364ba76f0edc89f7dcc4a946
+                .addData(data);
+        }
+            geo_json_ec252bda364ba76f0edc89f7dcc4a946_add({"bbox": [4.368326851155358, 45.433732219217895, 4.385753105728919, 45.44099435156249], "features": [{"bbox": [4.368326851155358, 45.433732219217895, 4.385753105728919, 45.44099435156249], "geometry": {"coordinates": [[[4.371364417385632, 45.43462307209817], [4.369394553098597, 45.43381942516552], [4.368326851155358, 45.43619760599017], [4.369667721441211, 45.438838847910176], [4.373306851541758, 45.43903204842026], [4.375890945312489, 45.44099435156249], [4.385753105728919, 45.43631713949698], [4.383245701505619, 45.43591077180771], [4.381966781369636, 45.43373961548278], [4.378048318932838, 45.43630759824047], [4.377741880879496, 45.43378161362496], [4.376361082681785, 45.433732219217895], [4.376706012939086, 45.4357888783025], [4.371364417385632, 45.43462307209817]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_eeb49be8dadfe4d121a7499feff751a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_923ec26d9e3eac9249c6fe7931c2541e = $(`<div id="html_923ec26d9e3eac9249c6fe7931c2541e" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0002</div>`)[0];
+                popup_eeb49be8dadfe4d121a7499feff751a7.setContent(html_923ec26d9e3eac9249c6fe7931c2541e);
+            
+        
+
+        geo_json_ec252bda364ba76f0edc89f7dcc4a946.bindPopup(popup_eeb49be8dadfe4d121a7499feff751a7)
+        ;
+
+        
+    
+    
+            geo_json_ec252bda364ba76f0edc89f7dcc4a946.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_a63ba09a0e929db5b809b81f105b10f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a63ba09a0e929db5b809b81f105b10f6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a63ba09a0e929db5b809b81f105b10f6 = L.geoJson(null, {
+                onEachFeature: geo_json_a63ba09a0e929db5b809b81f105b10f6_onEachFeature,
+            
+                style: geo_json_a63ba09a0e929db5b809b81f105b10f6_styler,
+        });
+
+        function geo_json_a63ba09a0e929db5b809b81f105b10f6_add (data) {
+            geo_json_a63ba09a0e929db5b809b81f105b10f6
+                .addData(data);
+        }
+            geo_json_a63ba09a0e929db5b809b81f105b10f6_add({"bbox": [4.409664385448921, 45.42559930981242, 4.420766703687051, 45.43472385320298], "features": [{"bbox": [4.409664385448921, 45.42559930981242, 4.420766703687051, 45.43472385320298], "geometry": {"coordinates": [[[[4.409675513481353, 45.42559930981242], [4.409664385448921, 45.42924684365325], [4.416562922736845, 45.43262787713189], [4.417780972341267, 45.43472385320298], [4.417153248933386, 45.42749988416934], [4.409675513481353, 45.42559930981242]]], [[[4.420766703687051, 45.43374022283423], [4.419759472193294, 45.43342126619454], [4.41954605026078, 45.43356985108427], [4.420682802813658, 45.434231975175514], [4.420766703687051, 45.43374022283423]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8100fe1465d53271e029ebbb46afa862 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f3f90339f497c7091d66b046d1823c34 = $(`<div id="html_f3f90339f497c7091d66b046d1823c34" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0020</div>`)[0];
+                popup_8100fe1465d53271e029ebbb46afa862.setContent(html_f3f90339f497c7091d66b046d1823c34);
+            
+        
+
+        geo_json_a63ba09a0e929db5b809b81f105b10f6.bindPopup(popup_8100fe1465d53271e029ebbb46afa862)
+        ;
+
+        
+    
+    
+            geo_json_a63ba09a0e929db5b809b81f105b10f6.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_58d712c6cfa7b23f6d98bcb3116c7dad = L.geoJson(null, {
+                onEachFeature: geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_onEachFeature,
+            
+                style: geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_styler,
+        });
+
+        function geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_add (data) {
+            geo_json_58d712c6cfa7b23f6d98bcb3116c7dad
+                .addData(data);
+        }
+            geo_json_58d712c6cfa7b23f6d98bcb3116c7dad_add({"bbox": [4.410975972989196, 45.42231406708981, 4.42420925945904, 45.43409760414982], "features": [{"bbox": [4.410975972989196, 45.42231406708981, 4.42420925945904, 45.43409760414982], "geometry": {"coordinates": [[[4.413117575317759, 45.42231406708981], [4.410975972989196, 45.42469315426171], [4.414109375701636, 45.424913141747965], [4.417153248933386, 45.42749988416934], [4.416780776512977, 45.43058550100793], [4.418567934958931, 45.433852829963385], [4.422142779308715, 45.43409760414982], [4.42420925945904, 45.43058232434281], [4.420626579803651, 45.429273655987494], [4.4237253171136, 45.427113540352345], [4.421316452141322, 45.427042894269285], [4.420887434248829, 45.42460664694342], [4.418673755261867, 45.42507338356404], [4.413117575317759, 45.42231406708981]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c8d8c7ad7c0bfda3ddec22030f8e9d89 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a00bb6aa4dd893fcb63b6546fd5b56e1 = $(`<div id="html_a00bb6aa4dd893fcb63b6546fd5b56e1" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0021</div>`)[0];
+                popup_c8d8c7ad7c0bfda3ddec22030f8e9d89.setContent(html_a00bb6aa4dd893fcb63b6546fd5b56e1);
+            
+        
+
+        geo_json_58d712c6cfa7b23f6d98bcb3116c7dad.bindPopup(popup_c8d8c7ad7c0bfda3ddec22030f8e9d89)
+        ;
+
+        
+    
+    
+            geo_json_58d712c6cfa7b23f6d98bcb3116c7dad.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_ab0e21bff8e72b60b1c9388cb1b51519_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ab0e21bff8e72b60b1c9388cb1b51519_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ab0e21bff8e72b60b1c9388cb1b51519 = L.geoJson(null, {
+                onEachFeature: geo_json_ab0e21bff8e72b60b1c9388cb1b51519_onEachFeature,
+            
+                style: geo_json_ab0e21bff8e72b60b1c9388cb1b51519_styler,
+        });
+
+        function geo_json_ab0e21bff8e72b60b1c9388cb1b51519_add (data) {
+            geo_json_ab0e21bff8e72b60b1c9388cb1b51519
+                .addData(data);
+        }
+            geo_json_ab0e21bff8e72b60b1c9388cb1b51519_add({"bbox": [4.391192650434411, 45.42215879196081, 4.398035077882162, 45.43284434868039], "features": [{"bbox": [4.391192650434411, 45.42215879196081, 4.398035077882162, 45.43284434868039], "geometry": {"coordinates": [[[[4.398035077882162, 45.42224709156808], [4.397891574412911, 45.42215879196081], [4.397514408640129, 45.42244599158595], [4.397633652985339, 45.4224510943845], [4.398035077882162, 45.42224709156808]]], [[[4.391657731019987, 45.429691458222536], [4.391192650434411, 45.43284434868039], [4.39528154746021, 45.4316944515709], [4.394548641433244, 45.42853924249908], [4.395825528423775, 45.425614957364324], [4.391657731019987, 45.429691458222536]]], [[[4.392885591668412, 45.432725650762166], [4.393082861267405, 45.432551434853416], [4.392918316432056, 45.43243651465095], [4.39281729138863, 45.43247759816863], [4.392885591668412, 45.432725650762166]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8a68437a2a668efea75b70344648a2f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_44e1f33f462ea545dc42474dbea02bb0 = $(`<div id="html_44e1f33f462ea545dc42474dbea02bb0" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0022</div>`)[0];
+                popup_8a68437a2a668efea75b70344648a2f1.setContent(html_44e1f33f462ea545dc42474dbea02bb0);
+            
+        
+
+        geo_json_ab0e21bff8e72b60b1c9388cb1b51519.bindPopup(popup_8a68437a2a668efea75b70344648a2f1)
+        ;
+
+        
+    
+    
+            geo_json_ab0e21bff8e72b60b1c9388cb1b51519.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3e8c45409a8bfa60aba4c5f28f62aa26 = L.geoJson(null, {
+                onEachFeature: geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_onEachFeature,
+            
+                style: geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_styler,
+        });
+
+        function geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_add (data) {
+            geo_json_3e8c45409a8bfa60aba4c5f28f62aa26
+                .addData(data);
+        }
+            geo_json_3e8c45409a8bfa60aba4c5f28f62aa26_add({"bbox": [4.390755148080444, 45.423049034518414, 4.396914271311119, 45.428629593274316], "features": [{"bbox": [4.390755148080444, 45.423049034518414, 4.396914271311119, 45.428629593274316], "geometry": {"coordinates": [[[[4.391733211452524, 45.424105787841974], [4.391154744011978, 45.425444360029935], [4.393363932747259, 45.428629593274316], [4.396914271311119, 45.42444052358287], [4.395138149984024, 45.423049034518414], [4.391733211452524, 45.424105787841974]], [[4.393204161019707, 45.426757210862554], [4.392564971981376, 45.42651326001657], [4.393497644304237, 45.42623066062767], [4.393204161019707, 45.426757210862554]], [[4.393862045482635, 45.42741113160606], [4.393785231355939, 45.42733701271187], [4.393931111240129, 45.427265100092896], [4.393962370290459, 45.427380435209635], [4.393862045482635, 45.42741113160606]]], [[[4.390755148080444, 45.42671087446677], [4.390882222795917, 45.42719476937541], [4.391559078002718, 45.42670536558108], [4.391116111993735, 45.42670253536648], [4.390755148080444, 45.42671087446677]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_314c854bd60319e43071c760871159a4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_885e00b6b0d4289e14e5fa5f36d8ef50 = $(`<div id="html_885e00b6b0d4289e14e5fa5f36d8ef50" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0023</div>`)[0];
+                popup_314c854bd60319e43071c760871159a4.setContent(html_885e00b6b0d4289e14e5fa5f36d8ef50);
+            
+        
+
+        geo_json_3e8c45409a8bfa60aba4c5f28f62aa26.bindPopup(popup_314c854bd60319e43071c760871159a4)
+        ;
+
+        
+    
+    
+            geo_json_3e8c45409a8bfa60aba4c5f28f62aa26.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_db3957ab67e76944d102cb53b181c7c5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_db3957ab67e76944d102cb53b181c7c5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_db3957ab67e76944d102cb53b181c7c5 = L.geoJson(null, {
+                onEachFeature: geo_json_db3957ab67e76944d102cb53b181c7c5_onEachFeature,
+            
+                style: geo_json_db3957ab67e76944d102cb53b181c7c5_styler,
+        });
+
+        function geo_json_db3957ab67e76944d102cb53b181c7c5_add (data) {
+            geo_json_db3957ab67e76944d102cb53b181c7c5
+                .addData(data);
+        }
+            geo_json_db3957ab67e76944d102cb53b181c7c5_add({"bbox": [4.386696614918326, 45.42267625654152, 4.393962370290459, 45.42803556928122], "features": [{"bbox": [4.386696614918326, 45.42267625654152, 4.393962370290459, 45.42803556928122], "geometry": {"coordinates": [[[[4.388408265900099, 45.42496673931011], [4.386696614918326, 45.427705944787164], [4.39373133652182, 45.42803556928122], [4.391154744011978, 45.425444360029935], [4.392319787263918, 45.42280568663691], [4.390339792441586, 45.42267625654152], [4.388408265900099, 45.42496673931011]], [[4.391559078002718, 45.42670536558108], [4.390882222795917, 45.42719476937541], [4.390555302919709, 45.426898427605586], [4.390755148080444, 45.42671087446677], [4.391559078002718, 45.42670536558108]]], [[[4.392614065903754, 45.426469600331586], [4.393501494723244, 45.42676453435279], [4.393623988386517, 45.42643135158869], [4.393151664597364, 45.42621183997232], [4.392614065903754, 45.426469600331586]]], [[[4.393862045482635, 45.42741113160606], [4.393962370290459, 45.427380435209635], [4.393931111240129, 45.427265100092896], [4.393785231355939, 45.42733701271187], [4.393862045482635, 45.42741113160606]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e20d356620e3202b7b2c33c9b85082e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53e979b86c7eec914331563988964a81 = $(`<div id="html_53e979b86c7eec914331563988964a81" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0024</div>`)[0];
+                popup_e20d356620e3202b7b2c33c9b85082e4.setContent(html_53e979b86c7eec914331563988964a81);
+            
+        
+
+        geo_json_db3957ab67e76944d102cb53b181c7c5.bindPopup(popup_e20d356620e3202b7b2c33c9b85082e4)
+        ;
+
+        
+    
+    
+            geo_json_db3957ab67e76944d102cb53b181c7c5.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8a6a400fcc9bb916681ab5ffca27d7cf = L.geoJson(null, {
+                onEachFeature: geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_onEachFeature,
+            
+                style: geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_styler,
+        });
+
+        function geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_add (data) {
+            geo_json_8a6a400fcc9bb916681ab5ffca27d7cf
+                .addData(data);
+        }
+            geo_json_8a6a400fcc9bb916681ab5ffca27d7cf_add({"bbox": [4.389245357270589, 45.41757973263604, 4.394650906911747, 45.423047519381655], "features": [{"bbox": [4.389245357270589, 45.41757973263604, 4.394650906911747, 45.423047519381655], "geometry": {"coordinates": [[[4.390496002196947, 45.418441367485094], [4.389245357270589, 45.41949674120717], [4.390878543674293, 45.422553563257075], [4.393639609805211, 45.423047519381655], [4.394650906911747, 45.41981281416433], [4.393104474576362, 45.41987613663433], [4.392692976377065, 45.41757973263604], [4.390496002196947, 45.418441367485094]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6bb32a8c07ac41f871eced9f29fe96e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f52ca81593678f0b57b639be1ac95edf = $(`<div id="html_f52ca81593678f0b57b639be1ac95edf" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0025</div>`)[0];
+                popup_6bb32a8c07ac41f871eced9f29fe96e8.setContent(html_f52ca81593678f0b57b639be1ac95edf);
+            
+        
+
+        geo_json_8a6a400fcc9bb916681ab5ffca27d7cf.bindPopup(popup_6bb32a8c07ac41f871eced9f29fe96e8)
+        ;
+
+        
+    
+    
+            geo_json_8a6a400fcc9bb916681ab5ffca27d7cf.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_cd2b033d4cfd7742e47033d2ada46492_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cd2b033d4cfd7742e47033d2ada46492_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cd2b033d4cfd7742e47033d2ada46492 = L.geoJson(null, {
+                onEachFeature: geo_json_cd2b033d4cfd7742e47033d2ada46492_onEachFeature,
+            
+                style: geo_json_cd2b033d4cfd7742e47033d2ada46492_styler,
+        });
+
+        function geo_json_cd2b033d4cfd7742e47033d2ada46492_add (data) {
+            geo_json_cd2b033d4cfd7742e47033d2ada46492
+                .addData(data);
+        }
+            geo_json_cd2b033d4cfd7742e47033d2ada46492_add({"bbox": [4.37795166070747, 45.418801571061344, 4.3911187555332, 45.42374217159962], "features": [{"bbox": [4.37795166070747, 45.418801571061344, 4.3911187555332, 45.42374217159962], "geometry": {"coordinates": [[[4.383893680791957, 45.42044084653987], [4.382683467720896, 45.42162673669081], [4.381198358375972, 45.41884667375098], [4.37795166070747, 45.41983124721019], [4.383218427803571, 45.42337119374305], [4.386783154846678, 45.422272717809854], [4.388718699629512, 45.42374217159962], [4.3911187555332, 45.42199617404427], [4.388280254486998, 45.419127265470415], [4.384862746258092, 45.418801571061344], [4.383893680791957, 45.42044084653987]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c5b0d2604769c40cb57f5a9ff1832ede = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ebe58b3924f3bb7ac33544e35fb27206 = $(`<div id="html_ebe58b3924f3bb7ac33544e35fb27206" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0026</div>`)[0];
+                popup_c5b0d2604769c40cb57f5a9ff1832ede.setContent(html_ebe58b3924f3bb7ac33544e35fb27206);
+            
+        
+
+        geo_json_cd2b033d4cfd7742e47033d2ada46492.bindPopup(popup_c5b0d2604769c40cb57f5a9ff1832ede)
+        ;
+
+        
+    
+    
+            geo_json_cd2b033d4cfd7742e47033d2ada46492.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_5890f1d290e745753b5889b54badb140_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5890f1d290e745753b5889b54badb140_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5890f1d290e745753b5889b54badb140 = L.geoJson(null, {
+                onEachFeature: geo_json_5890f1d290e745753b5889b54badb140_onEachFeature,
+            
+                style: geo_json_5890f1d290e745753b5889b54badb140_styler,
+        });
+
+        function geo_json_5890f1d290e745753b5889b54badb140_add (data) {
+            geo_json_5890f1d290e745753b5889b54badb140
+                .addData(data);
+        }
+            geo_json_5890f1d290e745753b5889b54badb140_add({"bbox": [4.374369135539957, 45.41517531346991, 4.391670508056182, 45.43953095431751], "features": [{"bbox": [4.374369135539957, 45.41517531346991, 4.391670508056182, 45.43953095431751], "geometry": {"coordinates": [[[[4.380130833041385, 45.41517531346991], [4.382280116881165, 45.4177495037118], [4.383395648662833, 45.415783368218996], [4.380130833041385, 45.41517531346991]]], [[[4.382923490462431, 45.42164975841027], [4.384368917912623, 45.420411643179335], [4.384862746258092, 45.418801571061344], [4.381198358375972, 45.41884667375098], [4.382923490462431, 45.42164975841027]]], [[[4.377549458479733, 45.42527189054873], [4.377276153496771, 45.42826238792187], [4.379880796292271, 45.427857432872706], [4.381731064798318, 45.42411949525773], [4.384032258023142, 45.42522586586044], [4.384705329375561, 45.427516176981506], [4.389339193764605, 45.42358631803975], [4.386783154846678, 45.422272717809854], [4.383218427803571, 45.42337119374305], [4.37795166070747, 45.41983124721019], [4.377566697449184, 45.42222738632711], [4.374369135539957, 45.42315040972166], [4.377549458479733, 45.42527189054873]], [[4.383734194956186, 45.42418926790146], [4.383689546472302, 45.424321675674754], [4.383044417142004, 45.42366443695586], [4.383734194956186, 45.42418926790146]]], [[[4.391158828680775, 45.43947866809245], [4.391543845428939, 45.43953095431751], [4.391670508056182, 45.439420630235915], [4.39116726140315, 45.43913095622826], [4.391158828680775, 45.43947866809245]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5d45699704d37e6825c59c9a424dc578 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f9930de794f45584c600941a68a12c4b = $(`<div id="html_f9930de794f45584c600941a68a12c4b" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0027</div>`)[0];
+                popup_5d45699704d37e6825c59c9a424dc578.setContent(html_f9930de794f45584c600941a68a12c4b);
+            
+        
+
+        geo_json_5890f1d290e745753b5889b54badb140.bindPopup(popup_5d45699704d37e6825c59c9a424dc578)
+        ;
+
+        
+    
+    
+            geo_json_5890f1d290e745753b5889b54badb140.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_8ea70240170884a5f83e00fb850d63ed_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8ea70240170884a5f83e00fb850d63ed_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8ea70240170884a5f83e00fb850d63ed = L.geoJson(null, {
+                onEachFeature: geo_json_8ea70240170884a5f83e00fb850d63ed_onEachFeature,
+            
+                style: geo_json_8ea70240170884a5f83e00fb850d63ed_styler,
+        });
+
+        function geo_json_8ea70240170884a5f83e00fb850d63ed_add (data) {
+            geo_json_8ea70240170884a5f83e00fb850d63ed
+                .addData(data);
+        }
+            geo_json_8ea70240170884a5f83e00fb850d63ed_add({"bbox": [4.358302, 45.41538539281809, 4.407937316454097, 45.46350942118411], "features": [{"bbox": [4.358302, 45.41538539281809, 4.407937316454097, 45.46350942118411], "geometry": {"coordinates": [[[[4.365441681309194, 45.41999804765627], [4.358302, 45.421215], [4.36011, 45.424349], [4.362195, 45.424521], [4.361549, 45.425914], [4.36596, 45.43113], [4.366446, 45.433425], [4.364126, 45.433472], [4.364480871941659, 45.43554107496148], [4.368326851155358, 45.43619760599017], [4.369394553098597, 45.43381942516552], [4.376706012939086, 45.4357888783025], [4.376361082681785, 45.433732219217895], [4.37904869170193, 45.4360076766931], [4.380562849458993, 45.43258874953183], [4.376426715392894, 45.43105259216727], [4.377274524437686, 45.428269946857995], [4.375175173966885, 45.42877558309944], [4.373635563319427, 45.4268434771145], [4.3772083132831, 45.42662076688386], [4.377372179373141, 45.42449441834432], [4.372575417120694, 45.42546875975711], [4.371979204416303, 45.42399799701643], [4.377566697449184, 45.42222738632711], [4.379084425929347, 45.41538539281809], [4.365441681309194, 45.41999804765627]], [[4.378353594099686, 45.43299665615462], [4.378309181620088, 45.43296847564727], [4.3787735, 45.432616609375], [4.3787735, 45.43288213636364], [4.378353594099686, 45.43299665615462]]], [[[4.386109089727326, 45.43599424571971], [4.386048179240268, 45.436185208327785], [4.386158814285713, 45.43623209428572], [4.386218850230394, 45.43603997926266], [4.386109089727326, 45.43599424571971]]], [[[4.387267043424323, 45.43684256327546], [4.387410891304348, 45.437190195652164], [4.387531027514405, 45.436734382457026], [4.387267043424323, 45.43684256327546]]], [[[4.369010113728044, 45.43755451260518], [4.368547015984429, 45.43695537057276], [4.366432489415213, 45.43799125531062], [4.369667721441211, 45.438838847910176], [4.369010113728044, 45.43755451260518]]], [[[4.406834299723774, 45.46265448732888], [4.407086988800057, 45.46350942118411], [4.407937316454097, 45.46344667113796], [4.407487822261579, 45.462091424630145], [4.406834299723774, 45.46265448732888]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72942c71e7774a0eb14e6b5524451dc4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_265ee145eae17aa9d63410dfe0fce074 = $(`<div id="html_265ee145eae17aa9d63410dfe0fce074" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0028</div>`)[0];
+                popup_72942c71e7774a0eb14e6b5524451dc4.setContent(html_265ee145eae17aa9d63410dfe0fce074);
+            
+        
+
+        geo_json_8ea70240170884a5f83e00fb850d63ed.bindPopup(popup_72942c71e7774a0eb14e6b5524451dc4)
+        ;
+
+        
+    
+    
+            geo_json_8ea70240170884a5f83e00fb850d63ed.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_c16f50a004f12fe19b00712af3e2a21a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c16f50a004f12fe19b00712af3e2a21a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c16f50a004f12fe19b00712af3e2a21a = L.geoJson(null, {
+                onEachFeature: geo_json_c16f50a004f12fe19b00712af3e2a21a_onEachFeature,
+            
+                style: geo_json_c16f50a004f12fe19b00712af3e2a21a_styler,
+        });
+
+        function geo_json_c16f50a004f12fe19b00712af3e2a21a_add (data) {
+            geo_json_c16f50a004f12fe19b00712af3e2a21a
+                .addData(data);
+        }
+            geo_json_c16f50a004f12fe19b00712af3e2a21a_add({"bbox": [4.381208352703163, 45.41875396188795, 4.40846387833039, 45.43551599229944], "features": [{"bbox": [4.381208352703163, 45.41875396188795, 4.40846387833039, 45.43551599229944], "geometry": {"coordinates": [[[[4.408103610266159, 45.419670667300394], [4.40846387833039, 45.418998493257895], [4.40840393807093, 45.41875396188795], [4.407849495488553, 45.419198030181015], [4.408103610266159, 45.419670667300394]]], [[[4.382203592506938, 45.43101219808048], [4.381208352703163, 45.43194056575544], [4.382289544690241, 45.434717781383654], [4.385267288184391, 45.43551599229944], [4.385995601555424, 45.42949372176079], [4.384142129997349, 45.42834977167785], [4.382203592506938, 45.43101219808048]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1d1e1c43b0a22cd383afb4c3f647a189 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21c3f6abd9e24e9711eadacf101e9b01 = $(`<div id="html_21c3f6abd9e24e9711eadacf101e9b01" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0003</div>`)[0];
+                popup_1d1e1c43b0a22cd383afb4c3f647a189.setContent(html_21c3f6abd9e24e9711eadacf101e9b01);
+            
+        
+
+        geo_json_c16f50a004f12fe19b00712af3e2a21a.bindPopup(popup_1d1e1c43b0a22cd383afb4c3f647a189)
+        ;
+
+        
+    
+    
+            geo_json_c16f50a004f12fe19b00712af3e2a21a.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_ada04667dee11245b02a8ec39b3d6ffb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ada04667dee11245b02a8ec39b3d6ffb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ada04667dee11245b02a8ec39b3d6ffb = L.geoJson(null, {
+                onEachFeature: geo_json_ada04667dee11245b02a8ec39b3d6ffb_onEachFeature,
+            
+                style: geo_json_ada04667dee11245b02a8ec39b3d6ffb_styler,
+        });
+
+        function geo_json_ada04667dee11245b02a8ec39b3d6ffb_add (data) {
+            geo_json_ada04667dee11245b02a8ec39b3d6ffb
+                .addData(data);
+        }
+            geo_json_ada04667dee11245b02a8ec39b3d6ffb_add({"bbox": [4.383896075504321, 45.437360311207115, 4.390908611095092, 45.43892845199075], "features": [{"bbox": [4.383896075504321, 45.437360311207115, 4.390908611095092, 45.43892845199075], "geometry": {"coordinates": [[[4.383896075504321, 45.437360311207115], [4.389971646551582, 45.43892845199075], [4.390908611095092, 45.4376689389734], [4.388531240099124, 45.43819958620926], [4.383896075504321, 45.437360311207115]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bc82d6609c46f3eb8bc5dfc89f52f5ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d7ac73a9e8044f720c6a0e010ab456d9 = $(`<div id="html_d7ac73a9e8044f720c6a0e010ab456d9" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0031</div>`)[0];
+                popup_bc82d6609c46f3eb8bc5dfc89f52f5ee.setContent(html_d7ac73a9e8044f720c6a0e010ab456d9);
+            
+        
+
+        geo_json_ada04667dee11245b02a8ec39b3d6ffb.bindPopup(popup_bc82d6609c46f3eb8bc5dfc89f52f5ee)
+        ;
+
+        
+    
+    
+            geo_json_ada04667dee11245b02a8ec39b3d6ffb.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_77043b8ec3dad44393bdf6fb5631cfc2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_77043b8ec3dad44393bdf6fb5631cfc2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_77043b8ec3dad44393bdf6fb5631cfc2 = L.geoJson(null, {
+                onEachFeature: geo_json_77043b8ec3dad44393bdf6fb5631cfc2_onEachFeature,
+            
+                style: geo_json_77043b8ec3dad44393bdf6fb5631cfc2_styler,
+        });
+
+        function geo_json_77043b8ec3dad44393bdf6fb5631cfc2_add (data) {
+            geo_json_77043b8ec3dad44393bdf6fb5631cfc2
+                .addData(data);
+        }
+            geo_json_77043b8ec3dad44393bdf6fb5631cfc2_add({"bbox": [4.363165409053687, 45.43554107496148, 4.381941525470474, 45.443598241489], "features": [{"bbox": [4.363165409053687, 45.43554107496148, 4.381941525470474, 45.443598241489], "geometry": {"coordinates": [[[[4.366490405577752, 45.43601415154065], [4.364480871941659, 45.43554107496148], [4.363165409053687, 45.438577755713695], [4.368547015984429, 45.43695537057276], [4.366490405577752, 45.43601415154065]]], [[[4.381760353919615, 45.44134814034652], [4.381941525470474, 45.44098163238157], [4.381914751351354, 45.440865089434894], [4.381527552117269, 45.44128748859934], [4.381760353919615, 45.44134814034652]]], [[[4.369547348288218, 45.441509184541616], [4.370006602309531, 45.443598241489], [4.375591585402535, 45.44086484427434], [4.372107188909544, 45.43887430501321], [4.370023282067396, 45.439099561939], [4.369547348288218, 45.441509184541616]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8cb71166f2244c7465ecb493c60355c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5e76f6c5b93639e1b78e367fc0bf1c02 = $(`<div id="html_5e76f6c5b93639e1b78e367fc0bf1c02" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0039</div>`)[0];
+                popup_8cb71166f2244c7465ecb493c60355c3.setContent(html_5e76f6c5b93639e1b78e367fc0bf1c02);
+            
+        
+
+        geo_json_77043b8ec3dad44393bdf6fb5631cfc2.bindPopup(popup_8cb71166f2244c7465ecb493c60355c3)
+        ;
+
+        
+    
+    
+            geo_json_77043b8ec3dad44393bdf6fb5631cfc2.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_325a5168bd021d6743e910177ac9c8ee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_325a5168bd021d6743e910177ac9c8ee_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_325a5168bd021d6743e910177ac9c8ee = L.geoJson(null, {
+                onEachFeature: geo_json_325a5168bd021d6743e910177ac9c8ee_onEachFeature,
+            
+                style: geo_json_325a5168bd021d6743e910177ac9c8ee_styler,
+        });
+
+        function geo_json_325a5168bd021d6743e910177ac9c8ee_add (data) {
+            geo_json_325a5168bd021d6743e910177ac9c8ee
+                .addData(data);
+        }
+            geo_json_325a5168bd021d6743e910177ac9c8ee_add({"bbox": [4.38574162348947, 45.42792720074688, 4.390255583852916, 45.43764221322466], "features": [{"bbox": [4.38574162348947, 45.42792720074688, 4.390255583852916, 45.43764221322466], "geometry": {"coordinates": [[[4.38574162348947, 45.43640782972724], [4.387741742266895, 45.43764221322466], [4.390255583852916, 45.42815399719325], [4.389234333181522, 45.42792720074688], [4.38574162348947, 45.43640782972724]], [[4.386109089727326, 45.43599424571971], [4.386218850230394, 45.43603997926266], [4.386158814285713, 45.43623209428572], [4.386048179240268, 45.436185208327785], [4.386109089727326, 45.43599424571971]], [[4.387531027514405, 45.436734382457026], [4.387532737704917, 45.437095426229504], [4.387410891304348, 45.437190195652164], [4.387259578002182, 45.436814493288175], [4.387531027514405, 45.436734382457026]], [[4.387879562594881, 45.433585979271285], [4.387742943694413, 45.43349619321905], [4.388164171442492, 45.433214031091154], [4.388266057402337, 45.4334145062229], [4.387879562594881, 45.433585979271285]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9dd50707c0c3bb3126cefb31e5426d59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d333e2e08780b94a66a9d5e77c10e06 = $(`<div id="html_5d333e2e08780b94a66a9d5e77c10e06" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0004</div>`)[0];
+                popup_9dd50707c0c3bb3126cefb31e5426d59.setContent(html_5d333e2e08780b94a66a9d5e77c10e06);
+            
+        
+
+        geo_json_325a5168bd021d6743e910177ac9c8ee.bindPopup(popup_9dd50707c0c3bb3126cefb31e5426d59)
+        ;
+
+        
+    
+    
+            geo_json_325a5168bd021d6743e910177ac9c8ee.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_3a57d2c54335bda4fae3776a4abbc806_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3a57d2c54335bda4fae3776a4abbc806_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3a57d2c54335bda4fae3776a4abbc806 = L.geoJson(null, {
+                onEachFeature: geo_json_3a57d2c54335bda4fae3776a4abbc806_onEachFeature,
+            
+                style: geo_json_3a57d2c54335bda4fae3776a4abbc806_styler,
+        });
+
+        function geo_json_3a57d2c54335bda4fae3776a4abbc806_add (data) {
+            geo_json_3a57d2c54335bda4fae3776a4abbc806
+                .addData(data);
+        }
+            geo_json_3a57d2c54335bda4fae3776a4abbc806_add({"bbox": [4.384403372492211, 45.42756439358476, 4.389234333181522, 45.43631713949698], "features": [{"bbox": [4.384403372492211, 45.42756439358476, 4.389234333181522, 45.43631713949698], "geometry": {"coordinates": [[[4.384403372492211, 45.42756439358476], [4.386501794914581, 45.43137838430381], [4.384728144295225, 45.43374161989395], [4.385753105728919, 45.43631713949698], [4.389234333181522, 45.42792720074688], [4.384403372492211, 45.42756439358476]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1a30c6a1109a2d4d6d6cbbb505acf85f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_805bc7f6d6c97e154a8795e8798c8c2b = $(`<div id="html_805bc7f6d6c97e154a8795e8798c8c2b" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0005</div>`)[0];
+                popup_1a30c6a1109a2d4d6d6cbbb505acf85f.setContent(html_805bc7f6d6c97e154a8795e8798c8c2b);
+            
+        
+
+        geo_json_3a57d2c54335bda4fae3776a4abbc806.bindPopup(popup_1a30c6a1109a2d4d6d6cbbb505acf85f)
+        ;
+
+        
+    
+    
+            geo_json_3a57d2c54335bda4fae3776a4abbc806.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_9d373385cde36dfda26bd0222b3e0875_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9d373385cde36dfda26bd0222b3e0875_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9d373385cde36dfda26bd0222b3e0875 = L.geoJson(null, {
+                onEachFeature: geo_json_9d373385cde36dfda26bd0222b3e0875_onEachFeature,
+            
+                style: geo_json_9d373385cde36dfda26bd0222b3e0875_styler,
+        });
+
+        function geo_json_9d373385cde36dfda26bd0222b3e0875_add (data) {
+            geo_json_9d373385cde36dfda26bd0222b3e0875
+                .addData(data);
+        }
+            geo_json_9d373385cde36dfda26bd0222b3e0875_add({"bbox": [4.390350305946792, 45.432962684818165, 4.395338200578989, 45.439268999172874], "features": [{"bbox": [4.390350305946792, 45.432962684818165, 4.395338200578989, 45.439268999172874], "geometry": {"coordinates": [[[[4.392597862035789, 45.432962684818165], [4.392569505217927, 45.433001581338246], [4.39274270407696, 45.43314813421897], [4.392775670488738, 45.43309914246811], [4.392597862035789, 45.432962684818165]]], [[[4.390361517556922, 45.43740283312939], [4.390350305946792, 45.4388474440362], [4.395338200578989, 45.439268999172874], [4.393481140920551, 45.43688306364241], [4.390361517556922, 45.43740283312939]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c8a3bf87a74d1974a747e0b5b1b7b176 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1231f69347da42cf55a7ab34625a0074 = $(`<div id="html_1231f69347da42cf55a7ab34625a0074" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0051</div>`)[0];
+                popup_c8a3bf87a74d1974a747e0b5b1b7b176.setContent(html_1231f69347da42cf55a7ab34625a0074);
+            
+        
+
+        geo_json_9d373385cde36dfda26bd0222b3e0875.bindPopup(popup_c8a3bf87a74d1974a747e0b5b1b7b176)
+        ;
+
+        
+    
+    
+            geo_json_9d373385cde36dfda26bd0222b3e0875.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_65dd45b2fa9dda7a293efff89e59d22a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_65dd45b2fa9dda7a293efff89e59d22a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_65dd45b2fa9dda7a293efff89e59d22a = L.geoJson(null, {
+                onEachFeature: geo_json_65dd45b2fa9dda7a293efff89e59d22a_onEachFeature,
+            
+                style: geo_json_65dd45b2fa9dda7a293efff89e59d22a_styler,
+        });
+
+        function geo_json_65dd45b2fa9dda7a293efff89e59d22a_add (data) {
+            geo_json_65dd45b2fa9dda7a293efff89e59d22a
+                .addData(data);
+        }
+            geo_json_65dd45b2fa9dda7a293efff89e59d22a_add({"bbox": [4.403159145268544, 45.435968617092996, 4.415206435147348, 45.441978708223004], "features": [{"bbox": [4.403159145268544, 45.435968617092996, 4.415206435147348, 45.441978708223004], "geometry": {"coordinates": [[[[4.405238664994424, 45.43771108751394], [4.403159145268544, 45.43813894680308], [4.403502125331746, 45.43948837928783], [4.406241099298474, 45.4391691736596], [4.410095924086492, 45.441978708223004], [4.412119302696845, 45.44042001777293], [4.411354051150668, 45.43889269901428], [4.409163374546839, 45.43973007842014], [4.408488596615672, 45.435968617092996], [4.405238664994424, 45.43771108751394]]], [[[4.413050213959369, 45.43882583290621], [4.412379468520465, 45.43878616631689], [4.412314691456308, 45.43887118621359], [4.413083691433129, 45.43931472923107], [4.413050213959369, 45.43882583290621]]], [[[4.414590756490069, 45.44044437975836], [4.415206435147348, 45.44040080925936], [4.41474071188721, 45.43978703869716], [4.414093734109529, 45.44015855456934], [4.414590756490069, 45.44044437975836]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ff262e847fd3ea5f78ccc233716da8c6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a180d65215a40839b8f255e9fe731b6a = $(`<div id="html_a180d65215a40839b8f255e9fe731b6a" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0052</div>`)[0];
+                popup_ff262e847fd3ea5f78ccc233716da8c6.setContent(html_a180d65215a40839b8f255e9fe731b6a);
+            
+        
+
+        geo_json_65dd45b2fa9dda7a293efff89e59d22a.bindPopup(popup_ff262e847fd3ea5f78ccc233716da8c6)
+        ;
+
+        
+    
+    
+            geo_json_65dd45b2fa9dda7a293efff89e59d22a.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_8e1be70487f0353b533c51c78c7d2f52_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8e1be70487f0353b533c51c78c7d2f52_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8e1be70487f0353b533c51c78c7d2f52 = L.geoJson(null, {
+                onEachFeature: geo_json_8e1be70487f0353b533c51c78c7d2f52_onEachFeature,
+            
+                style: geo_json_8e1be70487f0353b533c51c78c7d2f52_styler,
+        });
+
+        function geo_json_8e1be70487f0353b533c51c78c7d2f52_add (data) {
+            geo_json_8e1be70487f0353b533c51c78c7d2f52
+                .addData(data);
+        }
+            geo_json_8e1be70487f0353b533c51c78c7d2f52_add({"bbox": [4.387658574685242, 45.43233069677696, 4.39268869519419, 45.43819958620926], "features": [{"bbox": [4.387658574685242, 45.43233069677696, 4.39268869519419, 45.43819958620926], "geometry": {"coordinates": [[[4.388763589233152, 45.433334035863666], [4.387658574685242, 45.43754180358339], [4.388531240099124, 45.43819958620926], [4.39268869519419, 45.434045908215346], [4.390691015626884, 45.43233069677696], [4.388763589233152, 45.433334035863666]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b7367e6d8b9c24e9840b28be7ea1cb1a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f3501124d4ca0acf460a2dd1fc4eb58 = $(`<div id="html_2f3501124d4ca0acf460a2dd1fc4eb58" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0006</div>`)[0];
+                popup_b7367e6d8b9c24e9840b28be7ea1cb1a.setContent(html_2f3501124d4ca0acf460a2dd1fc4eb58);
+            
+        
+
+        geo_json_8e1be70487f0353b533c51c78c7d2f52.bindPopup(popup_b7367e6d8b9c24e9840b28be7ea1cb1a)
+        ;
+
+        
+    
+    
+            geo_json_8e1be70487f0353b533c51c78c7d2f52.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_068523a67dc3beeaf34f95b3c402fe6d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_068523a67dc3beeaf34f95b3c402fe6d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_068523a67dc3beeaf34f95b3c402fe6d = L.geoJson(null, {
+                onEachFeature: geo_json_068523a67dc3beeaf34f95b3c402fe6d_onEachFeature,
+            
+                style: geo_json_068523a67dc3beeaf34f95b3c402fe6d_styler,
+        });
+
+        function geo_json_068523a67dc3beeaf34f95b3c402fe6d_add (data) {
+            geo_json_068523a67dc3beeaf34f95b3c402fe6d
+                .addData(data);
+        }
+            geo_json_068523a67dc3beeaf34f95b3c402fe6d_add({"bbox": [4.389327911653963, 45.42777553635176, 4.393334101185051, 45.43393127945495], "features": [{"bbox": [4.389327911653963, 45.42777553635176, 4.393334101185051, 45.43393127945495], "geometry": {"coordinates": [[[[4.389828352131937, 45.430383128798276], [4.389327911653963, 45.433712383178005], [4.391162236190241, 45.43277072739658], [4.392506635176314, 45.42777553635176], [4.390260428248563, 45.42814890870015], [4.389828352131937, 45.430383128798276]]], [[[4.3930974206983, 45.4323112518804], [4.391756382060621, 45.43283510162332], [4.392574837483848, 45.43393127945495], [4.393334101185051, 45.43245558751139], [4.3930974206983, 45.4323112518804]], [[4.393082861267405, 45.432551434853416], [4.393041386023087, 45.43263947879309], [4.392837859603198, 45.43270243294279], [4.39281729138863, 45.43247759816863], [4.393082861267405, 45.432551434853416]], [[4.392569505217927, 45.433001581338246], [4.392597862035789, 45.432962684818165], [4.392775670488738, 45.43309914246811], [4.39274270407696, 45.43314813421897], [4.392569505217927, 45.433001581338246]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_96e1aacdd4dd2dcdc8cfe8df3d1db947 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_344fb6a655f10756d76a27c1f27a44ed = $(`<div id="html_344fb6a655f10756d76a27c1f27a44ed" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0007</div>`)[0];
+                popup_96e1aacdd4dd2dcdc8cfe8df3d1db947.setContent(html_344fb6a655f10756d76a27c1f27a44ed);
+            
+        
+
+        geo_json_068523a67dc3beeaf34f95b3c402fe6d.bindPopup(popup_96e1aacdd4dd2dcdc8cfe8df3d1db947)
+        ;
+
+        
+    
+    
+            geo_json_068523a67dc3beeaf34f95b3c402fe6d.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d1bc858515244cd44df6b820f260fb48_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d1bc858515244cd44df6b820f260fb48_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d1bc858515244cd44df6b820f260fb48 = L.geoJson(null, {
+                onEachFeature: geo_json_d1bc858515244cd44df6b820f260fb48_onEachFeature,
+            
+                style: geo_json_d1bc858515244cd44df6b820f260fb48_styler,
+        });
+
+        function geo_json_d1bc858515244cd44df6b820f260fb48_add (data) {
+            geo_json_d1bc858515244cd44df6b820f260fb48
+                .addData(data);
+        }
+            geo_json_d1bc858515244cd44df6b820f260fb48_add({"bbox": [4.411354051150668, 45.437470521291324, 4.422666168005135, 45.441756105859156], "features": [{"bbox": [4.411354051150668, 45.437470521291324, 4.422666168005135, 45.441756105859156], "geometry": {"coordinates": [[[[4.413050213959369, 45.43882583290621], [4.413178135988611, 45.43912110498741], [4.413478335365848, 45.43904720975609], [4.41320590189243, 45.43873239774237], [4.413050213959369, 45.43882583290621]]], [[[4.414034733344094, 45.439506139328394], [4.411354051150668, 45.43889269901428], [4.412724771490868, 45.44143581254733], [4.415979503025865, 45.441756105859156], [4.420762644429926, 45.44061724853802], [4.421051470876716, 45.438628264922414], [4.422315661680938, 45.43986545605265], [4.422666168005135, 45.437761466336305], [4.41892135149341, 45.437470521291324], [4.414034733344094, 45.439506139328394]], [[4.414288550429402, 45.43959024116237], [4.415526193190837, 45.44039997871898], [4.415423411588001, 45.44083157417258], [4.414093734109529, 45.44015855456934], [4.414288550429402, 45.43959024116237]], [[4.418622255398407, 45.4392956862606], [4.418770954310026, 45.43884310370115], [4.419397398205112, 45.43948268977584], [4.419125233802649, 45.43971445039073], [4.418622255398407, 45.4392956862606]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_80618999ef500f17905a256b1391dcf1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7a2e9f73ae5e4b1f8519a909a3d4d1d2 = $(`<div id="html_7a2e9f73ae5e4b1f8519a909a3d4d1d2" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0071</div>`)[0];
+                popup_80618999ef500f17905a256b1391dcf1.setContent(html_7a2e9f73ae5e4b1f8519a909a3d4d1d2);
+            
+        
+
+        geo_json_d1bc858515244cd44df6b820f260fb48.bindPopup(popup_80618999ef500f17905a256b1391dcf1)
+        ;
+
+        
+    
+    
+            geo_json_d1bc858515244cd44df6b820f260fb48.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d13c268ff1596bd73740bba2154b6209_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d13c268ff1596bd73740bba2154b6209_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d13c268ff1596bd73740bba2154b6209 = L.geoJson(null, {
+                onEachFeature: geo_json_d13c268ff1596bd73740bba2154b6209_onEachFeature,
+            
+                style: geo_json_d13c268ff1596bd73740bba2154b6209_styler,
+        });
+
+        function geo_json_d13c268ff1596bd73740bba2154b6209_add (data) {
+            geo_json_d13c268ff1596bd73740bba2154b6209
+                .addData(data);
+        }
+            geo_json_d13c268ff1596bd73740bba2154b6209_add({"bbox": [4.379686625045558, 45.3988309707543, 4.416816778110831, 45.42348613326966], "features": [{"bbox": [4.379686625045558, 45.3988309707543, 4.416816778110831, 45.42348613326966], "geometry": {"coordinates": [[[[4.383324, 45.402271], [4.379686625045558, 45.40694507785739], [4.383076165067228, 45.40700350804078], [4.382363821599391, 45.408507817005116], [4.386266929189738, 45.410361017811944], [4.387157977781892, 45.412545676359166], [4.391092445328254, 45.41268156520278], [4.392229166209828, 45.410933588752805], [4.390202945401715, 45.40610070953413], [4.39080127450375, 45.3988309707543], [4.382198, 45.401386], [4.383324, 45.402271]], [[4.387918225306124, 45.40799307020408], [4.388905825813348, 45.408105519631135], [4.388630372001611, 45.409501795841194], [4.387299319199369, 45.40892277495391], [4.387918225306124, 45.40799307020408]]], [[[4.416816778110831, 45.423222631209924], [4.416632806556277, 45.42270243577982], [4.416385258725468, 45.42348613326966], [4.416816778110831, 45.423222631209924]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9c6fcb31ec3dfeac53ab952ff6abee36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5fab34a4539bbbe2dc4dba35799b288f = $(`<div id="html_5fab34a4539bbbe2dc4dba35799b288f" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0077</div>`)[0];
+                popup_9c6fcb31ec3dfeac53ab952ff6abee36.setContent(html_5fab34a4539bbbe2dc4dba35799b288f);
+            
+        
+
+        geo_json_d13c268ff1596bd73740bba2154b6209.bindPopup(popup_9c6fcb31ec3dfeac53ab952ff6abee36)
+        ;
+
+        
+    
+    
+            geo_json_d13c268ff1596bd73740bba2154b6209.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_47de779b859fbd286d84aa2253c5685a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_47de779b859fbd286d84aa2253c5685a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_47de779b859fbd286d84aa2253c5685a = L.geoJson(null, {
+                onEachFeature: geo_json_47de779b859fbd286d84aa2253c5685a_onEachFeature,
+            
+                style: geo_json_47de779b859fbd286d84aa2253c5685a_styler,
+        });
+
+        function geo_json_47de779b859fbd286d84aa2253c5685a_add (data) {
+            geo_json_47de779b859fbd286d84aa2253c5685a
+                .addData(data);
+        }
+            geo_json_47de779b859fbd286d84aa2253c5685a_add({"bbox": [4.377669232904072, 45.40700350804078, 4.3921813872998, 45.41462637080706], "features": [{"bbox": [4.377669232904072, 45.40700350804078, 4.3921813872998, 45.41462637080706], "geometry": {"coordinates": [[[[4.380725104479964, 45.4070984102955], [4.377669232904072, 45.40958044550282], [4.380820084045984, 45.408970579230285], [4.386756808943361, 45.412186782913466], [4.386266929189738, 45.410361017811944], [4.382363821599391, 45.408507817005116], [4.383076165067228, 45.40700350804078], [4.380725104479964, 45.4070984102955]]], [[[4.387338445378594, 45.41252560092393], [4.390693709495388, 45.41462637080706], [4.3921813872998, 45.41354095097268], [4.38976670143552, 45.41226249562399], [4.387338445378594, 45.41252560092393]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1f89a7819e87d4d92740bd6bcbe7fc2b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a3e37e24f2a536445fb289ad37eacb95 = $(`<div id="html_a3e37e24f2a536445fb289ad37eacb95" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0078</div>`)[0];
+                popup_1f89a7819e87d4d92740bd6bcbe7fc2b.setContent(html_a3e37e24f2a536445fb289ad37eacb95);
+            
+        
+
+        geo_json_47de779b859fbd286d84aa2253c5685a.bindPopup(popup_1f89a7819e87d4d92740bd6bcbe7fc2b)
+        ;
+
+        
+    
+    
+            geo_json_47de779b859fbd286d84aa2253c5685a.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_62b85396e62345a920ecfcbba51968d4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_62b85396e62345a920ecfcbba51968d4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_62b85396e62345a920ecfcbba51968d4 = L.geoJson(null, {
+                onEachFeature: geo_json_62b85396e62345a920ecfcbba51968d4_onEachFeature,
+            
+                style: geo_json_62b85396e62345a920ecfcbba51968d4_styler,
+        });
+
+        function geo_json_62b85396e62345a920ecfcbba51968d4_add (data) {
+            geo_json_62b85396e62345a920ecfcbba51968d4
+                .addData(data);
+        }
+            geo_json_62b85396e62345a920ecfcbba51968d4_add({"bbox": [4.39080127450375, 45.395121, 4.410456452335596, 45.435842321280994], "features": [{"bbox": [4.39080127450375, 45.395121, 4.410456452335596, 45.435842321280994], "geometry": {"coordinates": [[[[4.392119, 45.39846], [4.39080127450375, 45.3988309707543], [4.390840292041857, 45.40993401984407], [4.393335588766969, 45.4129314256311], [4.395697241353368, 45.41321805169172], [4.399397254475089, 45.40844259362028], [4.401591282483037, 45.40169611544785], [4.403765091971776, 45.403370227772896], [4.406907398974219, 45.40321904176015], [4.410456452335596, 45.397553273404846], [4.405356, 45.395121], [4.401857, 45.396442], [4.401851, 45.398814], [4.39947, 45.399628], [4.395496, 45.4002], [4.393778, 45.397716], [4.392119, 45.39846]]], [[[4.392691275, 45.43541549375001], [4.392408926594046, 45.435037551446605], [4.391995369149654, 45.43576712628371], [4.39261053146224, 45.435842321280994], [4.392691275, 45.43541549375001]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a724e638de1b0df682274622a48ec972 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fc894dd529589931e9802de90c513363 = $(`<div id="html_fc894dd529589931e9802de90c513363" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0079</div>`)[0];
+                popup_a724e638de1b0df682274622a48ec972.setContent(html_fc894dd529589931e9802de90c513363);
+            
+        
+
+        geo_json_62b85396e62345a920ecfcbba51968d4.bindPopup(popup_a724e638de1b0df682274622a48ec972)
+        ;
+
+        
+    
+    
+            geo_json_62b85396e62345a920ecfcbba51968d4.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_138948ccaa782bf93756121d536e53a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_138948ccaa782bf93756121d536e53a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_138948ccaa782bf93756121d536e53a9 = L.geoJson(null, {
+                onEachFeature: geo_json_138948ccaa782bf93756121d536e53a9_onEachFeature,
+            
+                style: geo_json_138948ccaa782bf93756121d536e53a9_styler,
+        });
+
+        function geo_json_138948ccaa782bf93756121d536e53a9_add (data) {
+            geo_json_138948ccaa782bf93756121d536e53a9
+                .addData(data);
+        }
+            geo_json_138948ccaa782bf93756121d536e53a9_add({"bbox": [4.390235266710651, 45.43252490323338, 4.396539909923251, 45.43964891630149], "features": [{"bbox": [4.390235266710651, 45.43252490323338, 4.396539909923251, 45.43964891630149], "geometry": {"coordinates": [[[[4.392730175589543, 45.43336645092415], [4.391260220348021, 45.43683316833647], [4.393481140920551, 45.43688306364241], [4.396539909923251, 45.43964891630149], [4.395778536327338, 45.43252490323338], [4.392730175589543, 45.43336645092415]]], [[[4.39027467846844, 45.436644051880535], [4.390235266710651, 45.43709919411572], [4.390623524597324, 45.437190031604345], [4.390410202486769, 45.436660610266244], [4.39027467846844, 45.436644051880535]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0c7fd3bbc0e430426af39d2bf74cd43b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fdb4acff8a6a29b4dd8b6ed8fadad6e = $(`<div id="html_8fdb4acff8a6a29b4dd8b6ed8fadad6e" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0008</div>`)[0];
+                popup_0c7fd3bbc0e430426af39d2bf74cd43b.setContent(html_8fdb4acff8a6a29b4dd8b6ed8fadad6e);
+            
+        
+
+        geo_json_138948ccaa782bf93756121d536e53a9.bindPopup(popup_0c7fd3bbc0e430426af39d2bf74cd43b)
+        ;
+
+        
+    
+    
+            geo_json_138948ccaa782bf93756121d536e53a9.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_b3973bd54305a3314df19dd8df62a339_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b3973bd54305a3314df19dd8df62a339_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b3973bd54305a3314df19dd8df62a339 = L.geoJson(null, {
+                onEachFeature: geo_json_b3973bd54305a3314df19dd8df62a339_onEachFeature,
+            
+                style: geo_json_b3973bd54305a3314df19dd8df62a339_styler,
+        });
+
+        function geo_json_b3973bd54305a3314df19dd8df62a339_add (data) {
+            geo_json_b3973bd54305a3314df19dd8df62a339
+                .addData(data);
+        }
+            geo_json_b3973bd54305a3314df19dd8df62a339_add({"bbox": [4.378432374903413, 45.408105519631135, 4.397466621526052, 45.41872516013688], "features": [{"bbox": [4.378432374903413, 45.408105519631135, 4.397466621526052, 45.41872516013688], "geometry": {"coordinates": [[[[4.38765590033784, 45.408424233108114], [4.387299319199369, 45.40892277495391], [4.388630372001611, 45.409501795841194], [4.388905825813348, 45.408105519631135], [4.38765590033784, 45.408424233108114]]], [[[4.392188939173573, 45.414329281506234], [4.395816822375395, 45.414101435464325], [4.397466621526052, 45.41091643430357], [4.395697241353368, 45.41321805169172], [4.393335588766969, 45.4129314256311], [4.392229166209828, 45.410933588752805], [4.391092445328254, 45.41268156520278], [4.392188939173573, 45.414329281506234]]], [[[4.382136679635133, 45.418326333686856], [4.380130833041385, 45.41517531346991], [4.379128743323696, 45.415334359181436], [4.378432374903413, 45.41872516013688], [4.382136679635133, 45.418326333686856]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6e28fffb00b578eb53bcd4a3dd2fcc81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ddc33ed67af72e38d6a2f573a92e6b2 = $(`<div id="html_9ddc33ed67af72e38d6a2f573a92e6b2" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0080</div>`)[0];
+                popup_6e28fffb00b578eb53bcd4a3dd2fcc81.setContent(html_9ddc33ed67af72e38d6a2f573a92e6b2);
+            
+        
+
+        geo_json_b3973bd54305a3314df19dd8df62a339.bindPopup(popup_6e28fffb00b578eb53bcd4a3dd2fcc81)
+        ;
+
+        
+    
+    
+            geo_json_b3973bd54305a3314df19dd8df62a339.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d0922fb29060ec2f14cefe2c969c18d5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d0922fb29060ec2f14cefe2c969c18d5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d0922fb29060ec2f14cefe2c969c18d5 = L.geoJson(null, {
+                onEachFeature: geo_json_d0922fb29060ec2f14cefe2c969c18d5_onEachFeature,
+            
+                style: geo_json_d0922fb29060ec2f14cefe2c969c18d5_styler,
+        });
+
+        function geo_json_d0922fb29060ec2f14cefe2c969c18d5_add (data) {
+            geo_json_d0922fb29060ec2f14cefe2c969c18d5
+                .addData(data);
+        }
+            geo_json_d0922fb29060ec2f14cefe2c969c18d5_add({"bbox": [4.382136679635133, 45.412188152807246, 4.393815906149098, 45.41949674120717], "features": [{"bbox": [4.382136679635133, 45.412188152807246, 4.393815906149098, 45.41949674120717], "geometry": {"coordinates": [[[4.386665094555229, 45.412188152807246], [4.384515264484753, 45.412838792473515], [4.382136679635133, 45.418326333686856], [4.389245357270589, 45.41949674120717], [4.393300289473687, 45.41805692105263], [4.393815906149098, 45.414965704339345], [4.386665094555229, 45.412188152807246]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_65084dd0bf0e2c37435be5dc5c065679 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f95f6c0dbc58cc4226cc5b51085cc309 = $(`<div id="html_f95f6c0dbc58cc4226cc5b51085cc309" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0081</div>`)[0];
+                popup_65084dd0bf0e2c37435be5dc5c065679.setContent(html_f95f6c0dbc58cc4226cc5b51085cc309);
+            
+        
+
+        geo_json_d0922fb29060ec2f14cefe2c969c18d5.bindPopup(popup_65084dd0bf0e2c37435be5dc5c065679)
+        ;
+
+        
+    
+    
+            geo_json_d0922fb29060ec2f14cefe2c969c18d5.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_83d64571ec8082a820b5230b7b6c8b5a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_83d64571ec8082a820b5230b7b6c8b5a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_83d64571ec8082a820b5230b7b6c8b5a = L.geoJson(null, {
+                onEachFeature: geo_json_83d64571ec8082a820b5230b7b6c8b5a_onEachFeature,
+            
+                style: geo_json_83d64571ec8082a820b5230b7b6c8b5a_styler,
+        });
+
+        function geo_json_83d64571ec8082a820b5230b7b6c8b5a_add (data) {
+            geo_json_83d64571ec8082a820b5230b7b6c8b5a
+                .addData(data);
+        }
+            geo_json_83d64571ec8082a820b5230b7b6c8b5a_add({"bbox": [4.373731454618354, 45.40878958674743, 4.386473044663586, 45.41627880968154], "features": [{"bbox": [4.373731454618354, 45.40878958674743, 4.386473044663586, 45.41627880968154], "geometry": {"coordinates": [[[4.376896, 45.411401], [4.373731454618354, 45.41627880968154], [4.380976760743414, 45.41469413718456], [4.383395648662833, 45.415783368218996], [4.384515264484753, 45.412838792473515], [4.386473044663586, 45.412137075708394], [4.379627217602375, 45.40878958674743], [4.376896, 45.411401]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f8898db0824e914fc4ca5ad41f445473 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f357a7ca4a10cbbba2b34656edd945e = $(`<div id="html_8f357a7ca4a10cbbba2b34656edd945e" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0082</div>`)[0];
+                popup_f8898db0824e914fc4ca5ad41f445473.setContent(html_8f357a7ca4a10cbbba2b34656edd945e);
+            
+        
+
+        geo_json_83d64571ec8082a820b5230b7b6c8b5a.bindPopup(popup_f8898db0824e914fc4ca5ad41f445473)
+        ;
+
+        
+    
+    
+            geo_json_83d64571ec8082a820b5230b7b6c8b5a.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d84dd3885c036798a2a4a580e54914bd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d84dd3885c036798a2a4a580e54914bd_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d84dd3885c036798a2a4a580e54914bd = L.geoJson(null, {
+                onEachFeature: geo_json_d84dd3885c036798a2a4a580e54914bd_onEachFeature,
+            
+                style: geo_json_d84dd3885c036798a2a4a580e54914bd_styler,
+        });
+
+        function geo_json_d84dd3885c036798a2a4a580e54914bd_add (data) {
+            geo_json_d84dd3885c036798a2a4a580e54914bd
+                .addData(data);
+        }
+            geo_json_d84dd3885c036798a2a4a580e54914bd_add({"bbox": [4.394379853789432, 45.414006280899805, 4.406461938415744, 45.41916411569452], "features": [{"bbox": [4.394379853789432, 45.414006280899805, 4.406461938415744, 45.41916411569452], "geometry": {"coordinates": [[[[4.398237834916382, 45.414006280899805], [4.398101156959314, 45.41439315910064], [4.398245245931041, 45.41443577696551], [4.398383360003152, 45.414278458379314], [4.398237834916382, 45.414006280899805]]], [[[4.395639018679772, 45.41514099262105], [4.394379853789432, 45.41551223332457], [4.395706016929755, 45.41696394954576], [4.404779837404754, 45.41916411569452], [4.406461938415744, 45.415655617856885], [4.403781271942727, 45.41581098816946], [4.403307447979016, 45.414335438543326], [4.401453119217742, 45.41562841912037], [4.395639018679772, 45.41514099262105]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d933ae628095a8783ac7bfb7af541dae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_33a59abfe084b7ef453985166f2c344f = $(`<div id="html_33a59abfe084b7ef453985166f2c344f" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0083</div>`)[0];
+                popup_d933ae628095a8783ac7bfb7af541dae.setContent(html_33a59abfe084b7ef453985166f2c344f);
+            
+        
+
+        geo_json_d84dd3885c036798a2a4a580e54914bd.bindPopup(popup_d933ae628095a8783ac7bfb7af541dae)
+        ;
+
+        
+    
+    
+            geo_json_d84dd3885c036798a2a4a580e54914bd.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_34f3d37f54527ef2b06b4914b5c1b87d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_34f3d37f54527ef2b06b4914b5c1b87d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_34f3d37f54527ef2b06b4914b5c1b87d = L.geoJson(null, {
+                onEachFeature: geo_json_34f3d37f54527ef2b06b4914b5c1b87d_onEachFeature,
+            
+                style: geo_json_34f3d37f54527ef2b06b4914b5c1b87d_styler,
+        });
+
+        function geo_json_34f3d37f54527ef2b06b4914b5c1b87d_add (data) {
+            geo_json_34f3d37f54527ef2b06b4914b5c1b87d
+                .addData(data);
+        }
+            geo_json_34f3d37f54527ef2b06b4914b5c1b87d_add({"bbox": [4.39381212941572, 45.41179935419266, 4.403067618767494, 45.41562841912037], "features": [{"bbox": [4.39381212941572, 45.41179935419266, 4.403067618767494, 45.41562841912037], "geometry": {"coordinates": [[[[4.396377962616838, 45.413103706345304], [4.39381212941572, 45.415034092834915], [4.401453119217742, 45.41562841912037], [4.403067618767494, 45.41433669121251], [4.400302045920998, 45.41216897304011], [4.400523458644355, 45.41353470985031], [4.397694347329675, 45.41179935419266], [4.396377962616838, 45.413103706345304]], [[4.399274678416973, 45.41367819080067], [4.399236026688108, 45.414235929581984], [4.399088888888882, 45.414319], [4.399206752571157, 45.41356673965558], [4.399274678416973, 45.41367819080067]], [[4.398342954653764, 45.414378168354425], [4.398101156959314, 45.41439315910064], [4.398237834916382, 45.414006280899805], [4.398357790460406, 45.41418139848233], [4.398342954653764, 45.414378168354425]]], [[[4.399433906893759, 45.41508620144202], [4.399085381080796, 45.41497744161386], [4.399094931799975, 45.415239131319304], [4.399340894094477, 45.415155705511815], [4.399433906893759, 45.41508620144202]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_672245d35996b4d14431b48d66e5549f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4e41a3350191ffd83559dfd96102b45f = $(`<div id="html_4e41a3350191ffd83559dfd96102b45f" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0084</div>`)[0];
+                popup_672245d35996b4d14431b48d66e5549f.setContent(html_4e41a3350191ffd83559dfd96102b45f);
+            
+        
+
+        geo_json_34f3d37f54527ef2b06b4914b5c1b87d.bindPopup(popup_672245d35996b4d14431b48d66e5549f)
+        ;
+
+        
+    
+    
+            geo_json_34f3d37f54527ef2b06b4914b5c1b87d.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_75aa3f9cae79640dd4705506013c5b84_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_75aa3f9cae79640dd4705506013c5b84_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_75aa3f9cae79640dd4705506013c5b84 = L.geoJson(null, {
+                onEachFeature: geo_json_75aa3f9cae79640dd4705506013c5b84_onEachFeature,
+            
+                style: geo_json_75aa3f9cae79640dd4705506013c5b84_styler,
+        });
+
+        function geo_json_75aa3f9cae79640dd4705506013c5b84_add (data) {
+            geo_json_75aa3f9cae79640dd4705506013c5b84
+                .addData(data);
+        }
+            geo_json_75aa3f9cae79640dd4705506013c5b84_add({"bbox": [4.397694347329675, 45.397182, 4.425112831364746, 45.41853983243792], "features": [{"bbox": [4.397694347329675, 45.397182, 4.425112831364746, 45.41853983243792], "geometry": {"coordinates": [[[[4.399525726164137, 45.40718178901861], [4.397694347329675, 45.41179935419266], [4.400523458644355, 45.41353470985031], [4.400900286502489, 45.412301489839855], [4.403781271942727, 45.41581098816946], [4.406461938415744, 45.415655617856885], [4.408747497754926, 45.41210454084066], [4.412295116295738, 45.41114388784995], [4.411693652406087, 45.40886044629629], [4.413966218175793, 45.41207152661235], [4.42447088947543, 45.41159106136309], [4.425112831364746, 45.40739456521063], [4.416505, 45.405637], [4.422143, 45.402842], [4.416895, 45.401866], [4.421265, 45.399747], [4.422715, 45.397722], [4.421237, 45.397182], [4.416184, 45.40047], [4.410881, 45.401615], [4.411807, 45.400023], [4.410456452335596, 45.397553273404846], [4.406907398974219, 45.40321904176015], [4.403765091971776, 45.403370227772896], [4.401591282483037, 45.40169611544785], [4.399525726164137, 45.40718178901861]], [[4.402996264829765, 45.40482987309348], [4.403084346302673, 45.405214575953664], [4.402944483930455, 45.40555995016684], [4.402629159403128, 45.40513977096163], [4.402996264829765, 45.40482987309348]]], [[[4.405968765933642, 45.41794776749905], [4.405418517895752, 45.41734346000482], [4.405446150107633, 45.41853983243792], [4.405968765933642, 45.41794776749905]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3d764aebe0efad29bbf077dc16c8df69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_498764aa2f52e4a2b43e49dd978d079e = $(`<div id="html_498764aa2f52e4a2b43e49dd978d079e" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0085</div>`)[0];
+                popup_3d764aebe0efad29bbf077dc16c8df69.setContent(html_498764aa2f52e4a2b43e49dd978d079e);
+            
+        
+
+        geo_json_75aa3f9cae79640dd4705506013c5b84.bindPopup(popup_3d764aebe0efad29bbf077dc16c8df69)
+        ;
+
+        
+    
+    
+            geo_json_75aa3f9cae79640dd4705506013c5b84.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d2817bae1147c79bae904b1e2d5df454_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d2817bae1147c79bae904b1e2d5df454_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d2817bae1147c79bae904b1e2d5df454 = L.geoJson(null, {
+                onEachFeature: geo_json_d2817bae1147c79bae904b1e2d5df454_onEachFeature,
+            
+                style: geo_json_d2817bae1147c79bae904b1e2d5df454_styler,
+        });
+
+        function geo_json_d2817bae1147c79bae904b1e2d5df454_add (data) {
+            geo_json_d2817bae1147c79bae904b1e2d5df454
+                .addData(data);
+        }
+            geo_json_d2817bae1147c79bae904b1e2d5df454_add({"bbox": [4.393104474576362, 45.41715187240514, 4.397334052209232, 45.42334078651055], "features": [{"bbox": [4.393104474576362, 45.41715187240514, 4.397334052209232, 45.42334078651055], "geometry": {"coordinates": [[[[4.396308665652261, 45.417842670258295], [4.396279792912422, 45.41889363798764], [4.396465030001711, 45.41898604165954], [4.396618270833335, 45.418347538194446], [4.396308665652261, 45.417842670258295]]], [[[4.393300289473687, 45.41805692105263], [4.393104474576362, 45.41987613663433], [4.394650906911747, 45.41981281416433], [4.393639609805211, 45.423047519381655], [4.395661371437483, 45.42334078651055], [4.397334052209232, 45.42140632861105], [4.393882550017541, 45.41715187240514], [4.393300289473687, 45.41805692105263]], [[4.394715887096769, 45.4187635], [4.394629199176849, 45.41882904452482], [4.3945525, 45.418724], [4.394618698067633, 45.41869090096619], [4.394715887096769, 45.4187635]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e61cac26d6ab38b744d3eb9e19e24100 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff761678732c629470372fd82986d8de = $(`<div id="html_ff761678732c629470372fd82986d8de" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0086</div>`)[0];
+                popup_e61cac26d6ab38b744d3eb9e19e24100.setContent(html_ff761678732c629470372fd82986d8de);
+            
+        
+
+        geo_json_d2817bae1147c79bae904b1e2d5df454.bindPopup(popup_e61cac26d6ab38b744d3eb9e19e24100)
+        ;
+
+        
+    
+    
+            geo_json_d2817bae1147c79bae904b1e2d5df454.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_f1ee3f90df27e4240957db9cedb93c7d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_f1ee3f90df27e4240957db9cedb93c7d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f1ee3f90df27e4240957db9cedb93c7d = L.geoJson(null, {
+                onEachFeature: geo_json_f1ee3f90df27e4240957db9cedb93c7d_onEachFeature,
+            
+                style: geo_json_f1ee3f90df27e4240957db9cedb93c7d_styler,
+        });
+
+        function geo_json_f1ee3f90df27e4240957db9cedb93c7d_add (data) {
+            geo_json_f1ee3f90df27e4240957db9cedb93c7d
+                .addData(data);
+        }
+            geo_json_f1ee3f90df27e4240957db9cedb93c7d_add({"bbox": [4.393587910788384, 45.415034092834915, 4.399497236061849, 45.420980542274954], "features": [{"bbox": [4.393587910788384, 45.415034092834915, 4.399497236061849, 45.420980542274954], "geometry": {"coordinates": [[[4.393587910788384, 45.41708818879668], [4.396556311548732, 45.420980542274954], [4.398645891748345, 45.42072807130293], [4.399497236061849, 45.41736116713477], [4.395706016929755, 45.41696394954576], [4.39381212941572, 45.415034092834915], [4.393587910788384, 45.41708818879668]], [[4.397103364408333, 45.420097043005846], [4.397233474945932, 45.42053556370667], [4.396917321620646, 45.42015795231265], [4.397103364408333, 45.420097043005846]], [[4.398820484196948, 45.417646244800345], [4.398329746098232, 45.41750249953074], [4.398383117920372, 45.41730430132981], [4.398862414133172, 45.41754010481419], [4.398820484196948, 45.417646244800345]], [[4.398184939560439, 45.41783241208792], [4.398257483477576, 45.417671203383165], [4.398713798288275, 45.41789643569357], [4.398635484598181, 45.418015633736594], [4.398184939560439, 45.41783241208792]], [[4.396473823962169, 45.41802494018218], [4.396618270833335, 45.418347538194446], [4.396465030001711, 45.41898604165954], [4.396308665652261, 45.417842670258295], [4.396473823962169, 45.41802494018218]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f4a4183166a9867438077ee694f8a3eb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ee987c1988f86bffcb22b6c1ab052d05 = $(`<div id="html_ee987c1988f86bffcb22b6c1ab052d05" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0087</div>`)[0];
+                popup_f4a4183166a9867438077ee694f8a3eb.setContent(html_ee987c1988f86bffcb22b6c1ab052d05);
+            
+        
+
+        geo_json_f1ee3f90df27e4240957db9cedb93c7d.bindPopup(popup_f4a4183166a9867438077ee694f8a3eb)
+        ;
+
+        
+    
+    
+            geo_json_f1ee3f90df27e4240957db9cedb93c7d.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_981e0d28dedd9e93319325c93a94f923_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_981e0d28dedd9e93319325c93a94f923_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_981e0d28dedd9e93319325c93a94f923 = L.geoJson(null, {
+                onEachFeature: geo_json_981e0d28dedd9e93319325c93a94f923_onEachFeature,
+            
+                style: geo_json_981e0d28dedd9e93319325c93a94f923_styler,
+        });
+
+        function geo_json_981e0d28dedd9e93319325c93a94f923_add (data) {
+            geo_json_981e0d28dedd9e93319325c93a94f923
+                .addData(data);
+        }
+            geo_json_981e0d28dedd9e93319325c93a94f923_add({"bbox": [4.395661371437483, 45.41753783142121, 4.404779837404754, 45.42427770566578], "features": [{"bbox": [4.395661371437483, 45.41753783142121, 4.404779837404754, 45.42427770566578], "geometry": {"coordinates": [[[4.396822939728017, 45.42222462016988], [4.395661371437483, 45.42334078651055], [4.396913963526779, 45.42427770566578], [4.404779837404754, 45.41916411569452], [4.399645929700303, 45.41753783142121], [4.396822939728017, 45.42222462016988]], [[4.397514408640129, 45.42244599158595], [4.397891574412911, 45.42215879196081], [4.398027869436202, 45.42216215727003], [4.398035077882162, 45.42224709156808], [4.397514408640129, 45.42244599158595]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f4f65ccacb8c92b3c7239094ffc5671e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ad088736fc3c9fbbfb24ba9678d4d9fa = $(`<div id="html_ad088736fc3c9fbbfb24ba9678d4d9fa" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0088</div>`)[0];
+                popup_f4f65ccacb8c92b3c7239094ffc5671e.setContent(html_ad088736fc3c9fbbfb24ba9678d4d9fa);
+            
+        
+
+        geo_json_981e0d28dedd9e93319325c93a94f923.bindPopup(popup_f4f65ccacb8c92b3c7239094ffc5671e)
+        ;
+
+        
+    
+    
+            geo_json_981e0d28dedd9e93319325c93a94f923.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_bb47ca70b26fc184e04f657bb7c10096_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_bb47ca70b26fc184e04f657bb7c10096_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bb47ca70b26fc184e04f657bb7c10096 = L.geoJson(null, {
+                onEachFeature: geo_json_bb47ca70b26fc184e04f657bb7c10096_onEachFeature,
+            
+                style: geo_json_bb47ca70b26fc184e04f657bb7c10096_styler,
+        });
+
+        function geo_json_bb47ca70b26fc184e04f657bb7c10096_add (data) {
+            geo_json_bb47ca70b26fc184e04f657bb7c10096
+                .addData(data);
+        }
+            geo_json_bb47ca70b26fc184e04f657bb7c10096_add({"bbox": [4.39795883996941, 45.41541263764012, 4.406798475494328, 45.42436397228471], "features": [{"bbox": [4.39795883996941, 45.41541263764012, 4.406798475494328, 45.42436397228471], "geometry": {"coordinates": [[[4.399965606843812, 45.42126381290942], [4.39795883996941, 45.42436397228471], [4.405785103846453, 45.423404383459896], [4.406798475494328, 45.41541263764012], [4.404255279298418, 45.42036149249486], [4.399965606843812, 45.42126381290942]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_acfd5f519180f20c01255ad3de494f46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_538d4da364a369704178c63be529de91 = $(`<div id="html_538d4da364a369704178c63be529de91" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0089</div>`)[0];
+                popup_acfd5f519180f20c01255ad3de494f46.setContent(html_538d4da364a369704178c63be529de91);
+            
+        
+
+        geo_json_bb47ca70b26fc184e04f657bb7c10096.bindPopup(popup_acfd5f519180f20c01255ad3de494f46)
+        ;
+
+        
+    
+    
+            geo_json_bb47ca70b26fc184e04f657bb7c10096.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_41565291c9ab07942c7e3dfc450fd321_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_41565291c9ab07942c7e3dfc450fd321_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_41565291c9ab07942c7e3dfc450fd321 = L.geoJson(null, {
+                onEachFeature: geo_json_41565291c9ab07942c7e3dfc450fd321_onEachFeature,
+            
+                style: geo_json_41565291c9ab07942c7e3dfc450fd321_styler,
+        });
+
+        function geo_json_41565291c9ab07942c7e3dfc450fd321_add (data) {
+            geo_json_41565291c9ab07942c7e3dfc450fd321
+                .addData(data);
+        }
+            geo_json_41565291c9ab07942c7e3dfc450fd321_add({"bbox": [4.393524078660435, 45.42758431632459, 4.399907065906932, 45.43247122576176], "features": [{"bbox": [4.393524078660435, 45.42758431632459, 4.399907065906932, 45.43247122576176], "geometry": {"coordinates": [[[4.393524078660435, 45.43154647352025], [4.395738894004143, 45.43247122576176], [4.399907065906932, 45.428627244157184], [4.398210921448642, 45.42758431632459], [4.39528154746021, 45.4316944515709], [4.393524078660435, 45.43154647352025]], [[4.393674896624466, 45.43188549296766], [4.393687240157483, 45.43191120866142], [4.393609791171492, 45.43198603225806], [4.393603022517913, 45.431857427840335], [4.393674896624466, 45.43188549296766]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9e8fc499154924d42d344d5a5f876bc0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c25955cb74b8c080777295deb630355c = $(`<div id="html_c25955cb74b8c080777295deb630355c" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0009</div>`)[0];
+                popup_9e8fc499154924d42d344d5a5f876bc0.setContent(html_c25955cb74b8c080777295deb630355c);
+            
+        
+
+        geo_json_41565291c9ab07942c7e3dfc450fd321.bindPopup(popup_9e8fc499154924d42d344d5a5f876bc0)
+        ;
+
+        
+    
+    
+            geo_json_41565291c9ab07942c7e3dfc450fd321.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b68e5b6a0c5a5503b20d76f1c133aec4 = L.geoJson(null, {
+                onEachFeature: geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_onEachFeature,
+            
+                style: geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_styler,
+        });
+
+        function geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_add (data) {
+            geo_json_b68e5b6a0c5a5503b20d76f1c133aec4
+                .addData(data);
+        }
+            geo_json_b68e5b6a0c5a5503b20d76f1c133aec4_add({"bbox": [4.395191279194521, 45.423832528787244, 4.402587320932988, 45.43038192193166], "features": [{"bbox": [4.395191279194521, 45.423832528787244, 4.402587320932988, 45.43038192193166], "geometry": {"coordinates": [[[4.395248238429181, 45.427278491935475], [4.395191279194521, 45.43038192193166], [4.402587320932988, 45.42541983202855], [4.397644671714004, 45.423832528787244], [4.395248238429181, 45.427278491935475]], [[4.398433260749718, 45.42513846030871], [4.398703297420469, 45.42525406192146], [4.398262405195226, 45.42556989208068], [4.398204726915512, 45.425185507858544], [4.398433260749718, 45.42513846030871]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_92f0e8d71ee19b4a9e41e38dddf676ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_656955ab79beba180a328a3bef85a52a = $(`<div id="html_656955ab79beba180a328a3bef85a52a" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0090</div>`)[0];
+                popup_92f0e8d71ee19b4a9e41e38dddf676ec.setContent(html_656955ab79beba180a328a3bef85a52a);
+            
+        
+
+        geo_json_b68e5b6a0c5a5503b20d76f1c133aec4.bindPopup(popup_92f0e8d71ee19b4a9e41e38dddf676ec)
+        ;
+
+        
+    
+    
+            geo_json_b68e5b6a0c5a5503b20d76f1c133aec4.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_7c0696776c0bddfd80fc21a94240dd59_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7c0696776c0bddfd80fc21a94240dd59_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7c0696776c0bddfd80fc21a94240dd59 = L.geoJson(null, {
+                onEachFeature: geo_json_7c0696776c0bddfd80fc21a94240dd59_onEachFeature,
+            
+                style: geo_json_7c0696776c0bddfd80fc21a94240dd59_styler,
+        });
+
+        function geo_json_7c0696776c0bddfd80fc21a94240dd59_add (data) {
+            geo_json_7c0696776c0bddfd80fc21a94240dd59
+                .addData(data);
+        }
+            geo_json_7c0696776c0bddfd80fc21a94240dd59_add({"bbox": [4.401259045797604, 45.41957424383501, 4.410551842553771, 45.4274085689204], "features": [{"bbox": [4.401259045797604, 45.41957424383501, 4.410551842553771, 45.4274085689204], "geometry": {"coordinates": [[[[4.402735313397488, 45.424264500461184], [4.401259045797604, 45.424302357012046], [4.404099269744545, 45.4274085689204], [4.408529753233934, 45.42529061422932], [4.40664507417893, 45.42376007870894], [4.408542743664806, 45.42250568335063], [4.407444782816362, 45.42086663589042], [4.408751309286806, 45.41957424383501], [4.406779499422131, 45.41986864706005], [4.405785103846453, 45.423404383459896], [4.402735313397488, 45.424264500461184]]], [[[4.410551842553771, 45.424432738025295], [4.410265026605611, 45.42374831885288], [4.40979178854445, 45.423807336994464], [4.409903353545604, 45.424420944500824], [4.410551842553771, 45.424432738025295]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_87e9e8b75d6966c27c2533762c66dc35 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_645eb40addf21a240ce4988e01b1daeb = $(`<div id="html_645eb40addf21a240ce4988e01b1daeb" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0091</div>`)[0];
+                popup_87e9e8b75d6966c27c2533762c66dc35.setContent(html_645eb40addf21a240ce4988e01b1daeb);
+            
+        
+
+        geo_json_7c0696776c0bddfd80fc21a94240dd59.bindPopup(popup_87e9e8b75d6966c27c2533762c66dc35)
+        ;
+
+        
+    
+    
+            geo_json_7c0696776c0bddfd80fc21a94240dd59.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_9690e9dcef3e6e4e680495a7c5ec0119_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9690e9dcef3e6e4e680495a7c5ec0119_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9690e9dcef3e6e4e680495a7c5ec0119 = L.geoJson(null, {
+                onEachFeature: geo_json_9690e9dcef3e6e4e680495a7c5ec0119_onEachFeature,
+            
+                style: geo_json_9690e9dcef3e6e4e680495a7c5ec0119_styler,
+        });
+
+        function geo_json_9690e9dcef3e6e4e680495a7c5ec0119_add (data) {
+            geo_json_9690e9dcef3e6e4e680495a7c5ec0119
+                .addData(data);
+        }
+            geo_json_9690e9dcef3e6e4e680495a7c5ec0119_add({"bbox": [4.40715336660269, 45.42044271685298, 4.41374042009707, 45.42454593980666], "features": [{"bbox": [4.40715336660269, 45.42044271685298, 4.41374042009707, 45.42454593980666], "geometry": {"coordinates": [[[4.408291497671175, 45.42044271685298], [4.40715336660269, 45.42454593980666], [4.410916432644048, 45.42450800643227], [4.41374042009707, 45.42251931296064], [4.408291497671175, 45.42044271685298]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b6d44149f201f92adb7384f3417ea1c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_34e1b236531119b391c27750dfee55d4 = $(`<div id="html_34e1b236531119b391c27750dfee55d4" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0092</div>`)[0];
+                popup_b6d44149f201f92adb7384f3417ea1c3.setContent(html_34e1b236531119b391c27750dfee55d4);
+            
+        
+
+        geo_json_9690e9dcef3e6e4e680495a7c5ec0119.bindPopup(popup_b6d44149f201f92adb7384f3417ea1c3)
+        ;
+
+        
+    
+    
+            geo_json_9690e9dcef3e6e4e680495a7c5ec0119.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_2e1d479533c2ee090137100bd1455444_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2e1d479533c2ee090137100bd1455444_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2e1d479533c2ee090137100bd1455444 = L.geoJson(null, {
+                onEachFeature: geo_json_2e1d479533c2ee090137100bd1455444_onEachFeature,
+            
+                style: geo_json_2e1d479533c2ee090137100bd1455444_styler,
+        });
+
+        function geo_json_2e1d479533c2ee090137100bd1455444_add (data) {
+            geo_json_2e1d479533c2ee090137100bd1455444
+                .addData(data);
+        }
+            geo_json_2e1d479533c2ee090137100bd1455444_add({"bbox": [4.40679146195068, 45.41439854828788, 4.41029238337755, 45.41989205285766], "features": [{"bbox": [4.40679146195068, 45.41439854828788, 4.41029238337755, 45.41989205285766], "geometry": {"coordinates": [[[4.406958338429456, 45.418448350549546], [4.40679146195068, 45.41985608229895], [4.40840393807093, 45.41875396188795], [4.409757787926337, 45.41989205285766], [4.41029238337755, 45.41439854828788], [4.406986851871658, 45.41478193208556], [4.406958338429456, 45.418448350549546]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_da705cc2e6063cd93681a9b6ad137530 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2bce5f1b7a105e8aa4b95f65f649de54 = $(`<div id="html_2bce5f1b7a105e8aa4b95f65f649de54" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0093</div>`)[0];
+                popup_da705cc2e6063cd93681a9b6ad137530.setContent(html_2bce5f1b7a105e8aa4b95f65f649de54);
+            
+        
+
+        geo_json_2e1d479533c2ee090137100bd1455444.bindPopup(popup_da705cc2e6063cd93681a9b6ad137530)
+        ;
+
+        
+    
+    
+            geo_json_2e1d479533c2ee090137100bd1455444.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_886608f8acc4d8a8466dc1e59676833e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_886608f8acc4d8a8466dc1e59676833e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_886608f8acc4d8a8466dc1e59676833e = L.geoJson(null, {
+                onEachFeature: geo_json_886608f8acc4d8a8466dc1e59676833e_onEachFeature,
+            
+                style: geo_json_886608f8acc4d8a8466dc1e59676833e_styler,
+        });
+
+        function geo_json_886608f8acc4d8a8466dc1e59676833e_add (data) {
+            geo_json_886608f8acc4d8a8466dc1e59676833e
+                .addData(data);
+        }
+            geo_json_886608f8acc4d8a8466dc1e59676833e_add({"bbox": [4.383044417142004, 45.41184085517275, 4.417415952259743, 45.424321675674754], "features": [{"bbox": [4.383044417142004, 45.41184085517275, 4.417415952259743, 45.424321675674754], "geometry": {"coordinates": [[[[4.410190921548028, 45.41646961664033], [4.410701322801303, 45.41862827263844], [4.408753560039553, 45.42009200286084], [4.412189389647138, 45.421838671568445], [4.414224880870163, 45.42035266912787], [4.414173735254684, 45.41667678011868], [4.416674194374918, 45.41667125669283], [4.415304883220845, 45.41184085517275], [4.41029238337755, 45.41439854828788], [4.410190921548028, 45.41646961664033]]], [[[4.416746205167513, 45.416891090694826], [4.416421136329794, 45.41800954788223], [4.417415952259743, 45.41788676278366], [4.417377284256977, 45.41781087773508], [4.416746205167513, 45.416891090694826]]], [[[4.383734194956186, 45.42418926790146], [4.383044417142004, 45.42366443695586], [4.383689546472302, 45.424321675674754], [4.383734194956186, 45.42418926790146]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4075b109e990a820e9092ecaa70b22f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_109d25814e5bc4e9e8e7a7ceeb22b65c = $(`<div id="html_109d25814e5bc4e9e8e7a7ceeb22b65c" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0094</div>`)[0];
+                popup_4075b109e990a820e9092ecaa70b22f4.setContent(html_109d25814e5bc4e9e8e7a7ceeb22b65c);
+            
+        
+
+        geo_json_886608f8acc4d8a8466dc1e59676833e.bindPopup(popup_4075b109e990a820e9092ecaa70b22f4)
+        ;
+
+        
+    
+    
+            geo_json_886608f8acc4d8a8466dc1e59676833e.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_d7837ef36ca60585bf264c52b6dac824_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d7837ef36ca60585bf264c52b6dac824_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d7837ef36ca60585bf264c52b6dac824 = L.geoJson(null, {
+                onEachFeature: geo_json_d7837ef36ca60585bf264c52b6dac824_onEachFeature,
+            
+                style: geo_json_d7837ef36ca60585bf264c52b6dac824_styler,
+        });
+
+        function geo_json_d7837ef36ca60585bf264c52b6dac824_add (data) {
+            geo_json_d7837ef36ca60585bf264c52b6dac824
+                .addData(data);
+        }
+            geo_json_d7837ef36ca60585bf264c52b6dac824_add({"bbox": [4.416228099666621, 45.418657272979544, 4.422819998607351, 45.42080907665165], "features": [{"bbox": [4.416228099666621, 45.418657272979544, 4.422819998607351, 45.42080907665165], "geometry": {"coordinates": [[[4.419747235305348, 45.418657272979544], [4.416559870992262, 45.419216744645915], [4.416228099666621, 45.42080907665165], [4.422819998607351, 45.420530541269876], [4.422739153387174, 45.418886958270996], [4.419747235305348, 45.418657272979544]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3b6636338bf40e6ed9359b58cb3139ad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_940d8397574dfc80db3881aabcd196da = $(`<div id="html_940d8397574dfc80db3881aabcd196da" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0095</div>`)[0];
+                popup_3b6636338bf40e6ed9359b58cb3139ad.setContent(html_940d8397574dfc80db3881aabcd196da);
+            
+        
+
+        geo_json_d7837ef36ca60585bf264c52b6dac824.bindPopup(popup_3b6636338bf40e6ed9359b58cb3139ad)
+        ;
+
+        
+    
+    
+            geo_json_d7837ef36ca60585bf264c52b6dac824.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_62a4d70d7c1c4d8c529855385d2a34a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_62a4d70d7c1c4d8c529855385d2a34a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_62a4d70d7c1c4d8c529855385d2a34a9 = L.geoJson(null, {
+                onEachFeature: geo_json_62a4d70d7c1c4d8c529855385d2a34a9_onEachFeature,
+            
+                style: geo_json_62a4d70d7c1c4d8c529855385d2a34a9_styler,
+        });
+
+        function geo_json_62a4d70d7c1c4d8c529855385d2a34a9_add (data) {
+            geo_json_62a4d70d7c1c4d8c529855385d2a34a9
+                .addData(data);
+        }
+            geo_json_62a4d70d7c1c4d8c529855385d2a34a9_add({"bbox": [4.407074537225971, 45.410821403386045, 4.426894931516685, 45.42034105835828], "features": [{"bbox": [4.407074537225971, 45.410821403386045, 4.426894931516685, 45.42034105835828], "geometry": {"coordinates": [[[[4.409768623502667, 45.41158531709285], [4.407074537225971, 45.41472347518268], [4.413966218175793, 45.41207152661235], [4.411294526743105, 45.410821403386045], [4.409768623502667, 45.41158531709285]]], [[[4.415648403628131, 45.413032403628165], [4.417415952259743, 45.41788676278366], [4.426076382453186, 45.42034105835828], [4.426894931516685, 45.4193852988931], [4.425846073135672, 45.412212299938304], [4.417645401208586, 45.41123572055244], [4.415304883220845, 45.41184085517275], [4.415648403628131, 45.413032403628165]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e670b237eeef77fb39793388999bc582 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ddd6ffdd90def5e37ab0b520fde3b8be = $(`<div id="html_ddd6ffdd90def5e37ab0b520fde3b8be" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0096</div>`)[0];
+                popup_e670b237eeef77fb39793388999bc582.setContent(html_ddd6ffdd90def5e37ab0b520fde3b8be);
+            
+        
+
+        geo_json_62a4d70d7c1c4d8c529855385d2a34a9.bindPopup(popup_e670b237eeef77fb39793388999bc582)
+        ;
+
+        
+    
+    
+            geo_json_62a4d70d7c1c4d8c529855385d2a34a9.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_a77568e22baadc2fb0975366e8784594_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a77568e22baadc2fb0975366e8784594_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a77568e22baadc2fb0975366e8784594 = L.geoJson(null, {
+                onEachFeature: geo_json_a77568e22baadc2fb0975366e8784594_onEachFeature,
+            
+                style: geo_json_a77568e22baadc2fb0975366e8784594_styler,
+        });
+
+        function geo_json_a77568e22baadc2fb0975366e8784594_add (data) {
+            geo_json_a77568e22baadc2fb0975366e8784594
+                .addData(data);
+        }
+            geo_json_a77568e22baadc2fb0975366e8784594_add({"bbox": [4.413283918677235, 45.41667678011868, 4.419604892620215, 45.42096404834578], "features": [{"bbox": [4.413283918677235, 45.41667678011868, 4.419604892620215, 45.42096404834578], "geometry": {"coordinates": [[[4.416213898526451, 45.416752898526454], [4.414173735254684, 45.41667678011868], [4.413283918677235, 45.41830337945531], [4.415591242918962, 45.42096404834578], [4.416559870992262, 45.419216744645915], [4.419604892620215, 45.41861545832069], [4.416421136329794, 45.41800954788223], [4.416213898526451, 45.416752898526454]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ceed4a47a3b4ee0ee8a08029042b8ad6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_046a6bd0d78ddc8f9d0620ae1453c355 = $(`<div id="html_046a6bd0d78ddc8f9d0620ae1453c355" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0097</div>`)[0];
+                popup_ceed4a47a3b4ee0ee8a08029042b8ad6.setContent(html_046a6bd0d78ddc8f9d0620ae1453c355);
+            
+        
+
+        geo_json_a77568e22baadc2fb0975366e8784594.bindPopup(popup_ceed4a47a3b4ee0ee8a08029042b8ad6)
+        ;
+
+        
+    
+    
+            geo_json_a77568e22baadc2fb0975366e8784594.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_00fbd142d1f34fe742467b4e0586462a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_00fbd142d1f34fe742467b4e0586462a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_00fbd142d1f34fe742467b4e0586462a = L.geoJson(null, {
+                onEachFeature: geo_json_00fbd142d1f34fe742467b4e0586462a_onEachFeature,
+            
+                style: geo_json_00fbd142d1f34fe742467b4e0586462a_styler,
+        });
+
+        function geo_json_00fbd142d1f34fe742467b4e0586462a_add (data) {
+            geo_json_00fbd142d1f34fe742467b4e0586462a
+                .addData(data);
+        }
+            geo_json_00fbd142d1f34fe742467b4e0586462a_add({"bbox": [4.413050583823068, 45.42035266912787, 4.423373500119659, 45.425628702277535], "features": [{"bbox": [4.413050583823068, 45.42035266912787, 4.423373500119659, 45.425628702277535], "geometry": {"coordinates": [[[[4.41910693305069, 45.42103611981499], [4.414224880870163, 45.42035266912787], [4.413050583823068, 45.42135262124336], [4.419594670621986, 45.42525798709088], [4.423373500119659, 45.42175854985015], [4.422819998607351, 45.420530541269876], [4.41910693305069, 45.42103611981499]]], [[[4.421295136473788, 45.42511489720683], [4.420940651894528, 45.42478590638157], [4.420701303183795, 45.42528661287987], [4.421381369017869, 45.425628702277535], [4.421295136473788, 45.42511489720683]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_dc92dbc76f8656ef5fefafd0a6d3ed46 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81d595d4e411886c484e2f2d1603206b = $(`<div id="html_81d595d4e411886c484e2f2d1603206b" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0098</div>`)[0];
+                popup_dc92dbc76f8656ef5fefafd0a6d3ed46.setContent(html_81d595d4e411886c484e2f2d1603206b);
+            
+        
+
+        geo_json_00fbd142d1f34fe742467b4e0586462a.bindPopup(popup_dc92dbc76f8656ef5fefafd0a6d3ed46)
+        ;
+
+        
+    
+    
+            geo_json_00fbd142d1f34fe742467b4e0586462a.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+    
+        function geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d = L.geoJson(null, {
+                onEachFeature: geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_onEachFeature,
+            
+                style: geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_styler,
+        });
+
+        function geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_add (data) {
+            geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d
+                .addData(data);
+        }
+            geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d_add({"bbox": [4.420514344845796, 45.41304803285739, 4.435323299590782, 45.426720206061574], "features": [{"bbox": [4.420514344845796, 45.41304803285739, 4.435323299590782, 45.426720206061574], "geometry": {"coordinates": [[[4.42289518237085, 45.42057368119486], [4.422614209854649, 45.42335949930298], [4.420514344845796, 45.423901763787], [4.421526632091755, 45.42526315071552], [4.424908559684877, 45.424445843625854], [4.427382062800188, 45.42630060353763], [4.43226345381526, 45.42445877911646], [4.432140538649082, 45.426720206061574], [4.435323299590782, 45.423590907162094], [4.432162313170539, 45.421598715674705], [4.429306893241439, 45.42233214726635], [4.428636269101649, 45.419848690713714], [4.434068611689803, 45.417317538973705], [4.426470973432, 45.41304803285739], [4.426894931516685, 45.4193852988931], [4.426076382453186, 45.42034105835828], [4.422770873698446, 45.418829288595916], [4.42289518237085, 45.42057368119486]], [[4.426879143771693, 45.421349529991524], [4.428014182813354, 45.420699396869566], [4.427727530310805, 45.422530274143895], [4.426879143771693, 45.421349529991524]], [[4.431686578940377, 45.422380538771066], [4.432130132879791, 45.423431138454674], [4.431355431168635, 45.42439092002621], [4.431382346021966, 45.423094571768125], [4.431686578940377, 45.422380538771066]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ebd55ee3677102e56eb8deadb82e65d1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_926d3f454418765ce5042bf817226f6a = $(`<div id="html_926d3f454418765ce5042bf817226f6a" style="width: 100.0%; height: 100.0%;">Saint-Etienne - 0099</div>`)[0];
+                popup_ebd55ee3677102e56eb8deadb82e65d1.setContent(html_926d3f454418765ce5042bf817226f6a);
+            
+        
+
+        geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d.bindPopup(popup_ebd55ee3677102e56eb8deadb82e65d1)
+        ;
+
+        
+    
+    
+            geo_json_9ffe21a0fd75ce9a38359a67cf1b9b1d.addTo(map_33f1af6f91eb9106125e6c13ee7a5d93);
+        
+</script>
+</html>

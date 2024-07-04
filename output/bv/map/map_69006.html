@@ -1,0 +1,3512 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_5891e2a3ef380cd6eef3bd0bbfbe335f {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_5891e2a3ef380cd6eef3bd0bbfbe335f" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_5891e2a3ef380cd6eef3bd0bbfbe335f = L.map(
+                "map_5891e2a3ef380cd6eef3bd0bbfbe335f",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a0d475a0dd96c4c41e374e1e47586abe = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_a0d475a0dd96c4c41e374e1e47586abe.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_7fd798637a416545dee4212ee57da64c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7fd798637a416545dee4212ee57da64c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7fd798637a416545dee4212ee57da64c = L.geoJson(null, {
+                onEachFeature: geo_json_7fd798637a416545dee4212ee57da64c_onEachFeature,
+            
+                style: geo_json_7fd798637a416545dee4212ee57da64c_styler,
+        });
+
+        function geo_json_7fd798637a416545dee4212ee57da64c_add (data) {
+            geo_json_7fd798637a416545dee4212ee57da64c
+                .addData(data);
+        }
+            geo_json_7fd798637a416545dee4212ee57da64c_add({"bbox": [4.899172902479158, 45.76844133760989, 4.911918829540215, 45.78292964306319], "features": [{"bbox": [4.899172902479158, 45.76844133760989, 4.911918829540215, 45.78292964306319], "geometry": {"coordinates": [[[[4.903182760657914, 45.770872333898794], [4.906615, 45.771003], [4.911918829540215, 45.76844133760989], [4.904714958663392, 45.768528802645186], [4.903182760657914, 45.770872333898794]]], [[[4.901282100495427, 45.77308149334337], [4.899172902479158, 45.77583866657614], [4.901096803693225, 45.77672374924647], [4.900725223737187, 45.77975447642175], [4.903357757164715, 45.78086872043961], [4.904891478947362, 45.77945166842105], [4.907648884315798, 45.78292964306319], [4.906575, 45.776697], [4.902249148853388, 45.771971298782596], [4.901282100495427, 45.77308149334337]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_94601fa3949177fe1e654f4e7de2e62f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd75073451ac20e00d8572f3a6b49588 = $(`<div id="html_bd75073451ac20e00d8572f3a6b49588" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0001</div>`)[0];
+                popup_94601fa3949177fe1e654f4e7de2e62f.setContent(html_bd75073451ac20e00d8572f3a6b49588);
+            
+        
+
+        geo_json_7fd798637a416545dee4212ee57da64c.bindPopup(popup_94601fa3949177fe1e654f4e7de2e62f)
+        ;
+
+        
+    
+    
+            geo_json_7fd798637a416545dee4212ee57da64c.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_28aeb046b27eb9c2c15c4570c87e3c70_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_28aeb046b27eb9c2c15c4570c87e3c70_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_28aeb046b27eb9c2c15c4570c87e3c70 = L.geoJson(null, {
+                onEachFeature: geo_json_28aeb046b27eb9c2c15c4570c87e3c70_onEachFeature,
+            
+                style: geo_json_28aeb046b27eb9c2c15c4570c87e3c70_styler,
+        });
+
+        function geo_json_28aeb046b27eb9c2c15c4570c87e3c70_add (data) {
+            geo_json_28aeb046b27eb9c2c15c4570c87e3c70
+                .addData(data);
+        }
+            geo_json_28aeb046b27eb9c2c15c4570c87e3c70_add({"bbox": [4.888525680945177, 45.76714128999151, 4.894153343687531, 45.77173340516181], "features": [{"bbox": [4.888525680945177, 45.76714128999151, 4.894153343687531, 45.77173340516181], "geometry": {"coordinates": [[[4.889582550398566, 45.76755114670364], [4.888525680945177, 45.76805906715256], [4.890217328144204, 45.77173340516181], [4.894153343687531, 45.77168317429652], [4.89379532488619, 45.76714128999151], [4.889582550398566, 45.76755114670364]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7b9640b17b72ee8ae2de94ad0d56546f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e6f642cdbe79291df8d9db3c660d280 = $(`<div id="html_1e6f642cdbe79291df8d9db3c660d280" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0010</div>`)[0];
+                popup_7b9640b17b72ee8ae2de94ad0d56546f.setContent(html_1e6f642cdbe79291df8d9db3c660d280);
+            
+        
+
+        geo_json_28aeb046b27eb9c2c15c4570c87e3c70.bindPopup(popup_7b9640b17b72ee8ae2de94ad0d56546f)
+        ;
+
+        
+    
+    
+            geo_json_28aeb046b27eb9c2c15c4570c87e3c70.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_65bbf7c70517a56995cf62d1b46a3eee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_65bbf7c70517a56995cf62d1b46a3eee_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_65bbf7c70517a56995cf62d1b46a3eee = L.geoJson(null, {
+                onEachFeature: geo_json_65bbf7c70517a56995cf62d1b46a3eee_onEachFeature,
+            
+                style: geo_json_65bbf7c70517a56995cf62d1b46a3eee_styler,
+        });
+
+        function geo_json_65bbf7c70517a56995cf62d1b46a3eee_add (data) {
+            geo_json_65bbf7c70517a56995cf62d1b46a3eee
+                .addData(data);
+        }
+            geo_json_65bbf7c70517a56995cf62d1b46a3eee_add({"bbox": [4.884019771837735, 45.7633036417567, 4.890501067788257, 45.76746072978714], "features": [{"bbox": [4.884019771837735, 45.7633036417567, 4.890501067788257, 45.76746072978714], "geometry": {"coordinates": [[[[4.889209041223753, 45.7633036417567], [4.888683591367937, 45.7639225838166], [4.88981162484237, 45.763859447184096], [4.889719884567266, 45.76336634748069], [4.889209041223753, 45.7633036417567]]], [[[4.8902894296933, 45.76586190244265], [4.890501067788257, 45.76524700175983], [4.889666610523633, 45.76487148808766], [4.889433509600829, 45.76527799329751], [4.8902894296933, 45.76586190244265]]], [[[4.885630218559787, 45.764812824328764], [4.884559208003671, 45.76659809002759], [4.889442297386349, 45.76746072978714], [4.88874869513052, 45.7656155833234], [4.885630218559787, 45.764812824328764]]], [[[4.884026092933092, 45.7668416128742], [4.884019771837735, 45.76694257481398], [4.884392573618208, 45.76693506502554], [4.884367222551933, 45.76684380118694], [4.884026092933092, 45.7668416128742]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b085ff50e9a6c3b1514492b3cd6b4dce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_74837b5d5d442cf690d9d077c83d92cb = $(`<div id="html_74837b5d5d442cf690d9d077c83d92cb" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0011</div>`)[0];
+                popup_b085ff50e9a6c3b1514492b3cd6b4dce.setContent(html_74837b5d5d442cf690d9d077c83d92cb);
+            
+        
+
+        geo_json_65bbf7c70517a56995cf62d1b46a3eee.bindPopup(popup_b085ff50e9a6c3b1514492b3cd6b4dce)
+        ;
+
+        
+    
+    
+            geo_json_65bbf7c70517a56995cf62d1b46a3eee.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_2bc7f66c142961e0b7c04137117441df_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2bc7f66c142961e0b7c04137117441df_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2bc7f66c142961e0b7c04137117441df = L.geoJson(null, {
+                onEachFeature: geo_json_2bc7f66c142961e0b7c04137117441df_onEachFeature,
+            
+                style: geo_json_2bc7f66c142961e0b7c04137117441df_styler,
+        });
+
+        function geo_json_2bc7f66c142961e0b7c04137117441df_add (data) {
+            geo_json_2bc7f66c142961e0b7c04137117441df
+                .addData(data);
+        }
+            geo_json_2bc7f66c142961e0b7c04137117441df_add({"bbox": [4.87840049999961, 45.767622852943006, 4.889435202662971, 45.77125571986269], "features": [{"bbox": [4.87840049999961, 45.767622852943006, 4.889435202662971, 45.77125571986269], "geometry": {"coordinates": [[[[4.87840049999961, 45.767622852943006], [4.8784005, 45.76838146676737], [4.878634653907159, 45.76836684688596], [4.878586595980313, 45.76779015176374], [4.87840049999961, 45.767622852943006]]], [[[4.885088818011499, 45.7684734654596], [4.885230317127045, 45.77125571986269], [4.889435202662971, 45.76987197868926], [4.887859070911722, 45.76763351118062], [4.885088818011499, 45.7684734654596]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3dd1f7803d2a0b89bca4d4404b81479d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe93ffc0adf74330f41142d90012f55b = $(`<div id="html_fe93ffc0adf74330f41142d90012f55b" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0012</div>`)[0];
+                popup_3dd1f7803d2a0b89bca4d4404b81479d.setContent(html_fe93ffc0adf74330f41142d90012f55b);
+            
+        
+
+        geo_json_2bc7f66c142961e0b7c04137117441df.bindPopup(popup_3dd1f7803d2a0b89bca4d4404b81479d)
+        ;
+
+        
+    
+    
+            geo_json_2bc7f66c142961e0b7c04137117441df.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_5f198ed64c48ed7ac2498e9e1c75e927_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5f198ed64c48ed7ac2498e9e1c75e927_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5f198ed64c48ed7ac2498e9e1c75e927 = L.geoJson(null, {
+                onEachFeature: geo_json_5f198ed64c48ed7ac2498e9e1c75e927_onEachFeature,
+            
+                style: geo_json_5f198ed64c48ed7ac2498e9e1c75e927_styler,
+        });
+
+        function geo_json_5f198ed64c48ed7ac2498e9e1c75e927_add (data) {
+            geo_json_5f198ed64c48ed7ac2498e9e1c75e927
+                .addData(data);
+        }
+            geo_json_5f198ed64c48ed7ac2498e9e1c75e927_add({"bbox": [4.881985105700759, 45.770763938027656, 4.886287913614185, 45.77427633187772], "features": [{"bbox": [4.881985105700759, 45.770763938027656, 4.886287913614185, 45.77427633187772], "geometry": {"coordinates": [[[[4.881985105700759, 45.771960634646895], [4.884773727332826, 45.77380288300622], [4.886287913614185, 45.77125396714372], [4.882450742924853, 45.770763938027656], [4.881985105700759, 45.771960634646895]]], [[[4.883693283813531, 45.774017679716664], [4.883635125134876, 45.77391742523253], [4.883364540546173, 45.774002956538745], [4.883504979621544, 45.77427633187772], [4.883693283813531, 45.774017679716664]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6ff8ec56f832a66b8f51b83120e24905 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eda12852ed973067baf6bb89f634f2b4 = $(`<div id="html_eda12852ed973067baf6bb89f634f2b4" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0013</div>`)[0];
+                popup_6ff8ec56f832a66b8f51b83120e24905.setContent(html_eda12852ed973067baf6bb89f634f2b4);
+            
+        
+
+        geo_json_5f198ed64c48ed7ac2498e9e1c75e927.bindPopup(popup_6ff8ec56f832a66b8f51b83120e24905)
+        ;
+
+        
+    
+    
+            geo_json_5f198ed64c48ed7ac2498e9e1c75e927.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_27fd5c88cb9f13ce21877c90b69d447f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_27fd5c88cb9f13ce21877c90b69d447f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_27fd5c88cb9f13ce21877c90b69d447f = L.geoJson(null, {
+                onEachFeature: geo_json_27fd5c88cb9f13ce21877c90b69d447f_onEachFeature,
+            
+                style: geo_json_27fd5c88cb9f13ce21877c90b69d447f_styler,
+        });
+
+        function geo_json_27fd5c88cb9f13ce21877c90b69d447f_add (data) {
+            geo_json_27fd5c88cb9f13ce21877c90b69d447f
+                .addData(data);
+        }
+            geo_json_27fd5c88cb9f13ce21877c90b69d447f_add({"bbox": [4.879305164547589, 45.76932188186353, 4.882590888556789, 45.77545144219318], "features": [{"bbox": [4.879305164547589, 45.76932188186353, 4.882590888556789, 45.77545144219318], "geometry": {"coordinates": [[[[4.879874783073298, 45.76997178319105], [4.879305164547589, 45.772827716961075], [4.882590888556789, 45.7732894470538], [4.881507895855836, 45.76932188186353], [4.879874783073298, 45.76997178319105]]], [[[4.880166476368521, 45.77542270643967], [4.880405436817494, 45.77545144219318], [4.880561315860422, 45.775106919722504], [4.880135961292275, 45.7750933001038], [4.880166476368521, 45.77542270643967]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9ef8a23377cc06dd3490f2120f1995c4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d07e62e827aca9e78e3f29f51b39a32 = $(`<div id="html_5d07e62e827aca9e78e3f29f51b39a32" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0014</div>`)[0];
+                popup_9ef8a23377cc06dd3490f2120f1995c4.setContent(html_5d07e62e827aca9e78e3f29f51b39a32);
+            
+        
+
+        geo_json_27fd5c88cb9f13ce21877c90b69d447f.bindPopup(popup_9ef8a23377cc06dd3490f2120f1995c4)
+        ;
+
+        
+    
+    
+            geo_json_27fd5c88cb9f13ce21877c90b69d447f.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_cdfea1e4b66d858c8045c08a9b556e16_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cdfea1e4b66d858c8045c08a9b556e16_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cdfea1e4b66d858c8045c08a9b556e16 = L.geoJson(null, {
+                onEachFeature: geo_json_cdfea1e4b66d858c8045c08a9b556e16_onEachFeature,
+            
+                style: geo_json_cdfea1e4b66d858c8045c08a9b556e16_styler,
+        });
+
+        function geo_json_cdfea1e4b66d858c8045c08a9b556e16_add (data) {
+            geo_json_cdfea1e4b66d858c8045c08a9b556e16
+                .addData(data);
+        }
+            geo_json_cdfea1e4b66d858c8045c08a9b556e16_add({"bbox": [4.876955940695763, 45.7712038732375, 4.884715903064707, 45.776144577136435], "features": [{"bbox": [4.876955940695763, 45.7712038732375, 4.884715903064707, 45.776144577136435], "geometry": {"coordinates": [[[4.878168808555119, 45.7712038732375], [4.876955940695763, 45.77307750987448], [4.878424337790872, 45.776144577136435], [4.884715903064707, 45.774533994348495], [4.883352829267146, 45.77314210360243], [4.879821654150199, 45.77328819565217], [4.878168808555119, 45.7712038732375]], [[4.883504979621544, 45.77427633187772], [4.883364540546173, 45.774002956538745], [4.883635125134876, 45.77391742523253], [4.883667989565944, 45.77414763981636], [4.883504979621544, 45.77427633187772]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_049fb323e92cea13455ff9ea3901686d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cad6def2f5d3f2a9d30f88be309c22c6 = $(`<div id="html_cad6def2f5d3f2a9d30f88be309c22c6" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0015</div>`)[0];
+                popup_049fb323e92cea13455ff9ea3901686d.setContent(html_cad6def2f5d3f2a9d30f88be309c22c6);
+            
+        
+
+        geo_json_cdfea1e4b66d858c8045c08a9b556e16.bindPopup(popup_049fb323e92cea13455ff9ea3901686d)
+        ;
+
+        
+    
+    
+            geo_json_cdfea1e4b66d858c8045c08a9b556e16.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_069cec765663692ff6ba0adbc7f3187c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_069cec765663692ff6ba0adbc7f3187c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_069cec765663692ff6ba0adbc7f3187c = L.geoJson(null, {
+                onEachFeature: geo_json_069cec765663692ff6ba0adbc7f3187c_onEachFeature,
+            
+                style: geo_json_069cec765663692ff6ba0adbc7f3187c_styler,
+        });
+
+        function geo_json_069cec765663692ff6ba0adbc7f3187c_add (data) {
+            geo_json_069cec765663692ff6ba0adbc7f3187c
+                .addData(data);
+        }
+            geo_json_069cec765663692ff6ba0adbc7f3187c_add({"bbox": [4.874219126854466, 45.7744467873, 4.882279129482066, 45.77927009681275], "features": [{"bbox": [4.874219126854466, 45.7744467873, 4.882279129482066, 45.77927009681275], "geometry": {"coordinates": [[[4.874745666074073, 45.7744467873], [4.874219126854466, 45.77652809706288], [4.875685904926714, 45.77596198870762], [4.877960624730408, 45.77909050791241], [4.882279129482066, 45.77927009681275], [4.879695166074342, 45.776394709426874], [4.880390625648089, 45.77546146909704], [4.877900087095113, 45.77618858184547], [4.874745666074073, 45.7744467873]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1ddaa2c2cfdc4dc365211c435aaba5bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2064c44f39095728cdd0d70e38cc51f6 = $(`<div id="html_2064c44f39095728cdd0d70e38cc51f6" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0016</div>`)[0];
+                popup_1ddaa2c2cfdc4dc365211c435aaba5bb.setContent(html_2064c44f39095728cdd0d70e38cc51f6);
+            
+        
+
+        geo_json_069cec765663692ff6ba0adbc7f3187c.bindPopup(popup_1ddaa2c2cfdc4dc365211c435aaba5bb)
+        ;
+
+        
+    
+    
+            geo_json_069cec765663692ff6ba0adbc7f3187c.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_7d4752615845cfbed60c7c9d16fa2a80_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7d4752615845cfbed60c7c9d16fa2a80_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7d4752615845cfbed60c7c9d16fa2a80 = L.geoJson(null, {
+                onEachFeature: geo_json_7d4752615845cfbed60c7c9d16fa2a80_onEachFeature,
+            
+                style: geo_json_7d4752615845cfbed60c7c9d16fa2a80_styler,
+        });
+
+        function geo_json_7d4752615845cfbed60c7c9d16fa2a80_add (data) {
+            geo_json_7d4752615845cfbed60c7c9d16fa2a80
+                .addData(data);
+        }
+            geo_json_7d4752615845cfbed60c7c9d16fa2a80_add({"bbox": [4.877414880640693, 45.774533994348495, 4.888541485430404, 45.77855736973123], "features": [{"bbox": [4.877414880640693, 45.774533994348495, 4.888541485430404, 45.77855736973123], "geometry": {"coordinates": [[[[4.888191499996019, 45.7747814396553], [4.8881915, 45.77517915071771], [4.888530576912876, 45.77520673113645], [4.888541485430404, 45.77481402450558], [4.888191499996019, 45.7747814396553]]], [[[4.87783398915057, 45.774962921209315], [4.877414880640693, 45.77581534479829], [4.878424337790872, 45.776144577136435], [4.878032894941634, 45.7750978929961], [4.87783398915057, 45.774962921209315]]], [[[4.880198945014087, 45.77617669072033], [4.882550411355798, 45.77855736973123], [4.886791528128102, 45.776679688227865], [4.884252424748031, 45.77610352148478], [4.884715903064707, 45.774533994348495], [4.880198945014087, 45.77617669072033]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1146871ae028684b8ec46558f6844237 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4571f14bdac71961954efff2bac56f3b = $(`<div id="html_4571f14bdac71961954efff2bac56f3b" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0017</div>`)[0];
+                popup_1146871ae028684b8ec46558f6844237.setContent(html_4571f14bdac71961954efff2bac56f3b);
+            
+        
+
+        geo_json_7d4752615845cfbed60c7c9d16fa2a80.bindPopup(popup_1146871ae028684b8ec46558f6844237)
+        ;
+
+        
+    
+    
+            geo_json_7d4752615845cfbed60c7c9d16fa2a80.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_eb2b2205e102bacd1bd0b3f682d763b6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_eb2b2205e102bacd1bd0b3f682d763b6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_eb2b2205e102bacd1bd0b3f682d763b6 = L.geoJson(null, {
+                onEachFeature: geo_json_eb2b2205e102bacd1bd0b3f682d763b6_onEachFeature,
+            
+                style: geo_json_eb2b2205e102bacd1bd0b3f682d763b6_styler,
+        });
+
+        function geo_json_eb2b2205e102bacd1bd0b3f682d763b6_add (data) {
+            geo_json_eb2b2205e102bacd1bd0b3f682d763b6
+                .addData(data);
+        }
+            geo_json_eb2b2205e102bacd1bd0b3f682d763b6_add({"bbox": [4.877195552116899, 45.7758805, 4.894096463454329, 45.795315], "features": [{"bbox": [4.877195552116899, 45.7758805, 4.894096463454329, 45.795315], "geometry": {"coordinates": [[[[4.89301998499603, 45.776086917544255], [4.89337740939265, 45.77598627722184], [4.893345430232557, 45.7758805], [4.892843418367347, 45.7758805], [4.89301998499603, 45.776086917544255]]], [[[4.88787625373134, 45.78067301492537], [4.88811571091057, 45.7865517054138], [4.881686708983529, 45.786389652964935], [4.877195552116899, 45.794353717338836], [4.879805, 45.795315], [4.883601, 45.793507], [4.883639, 45.789583], [4.892662751218838, 45.7865653161658], [4.894096463454329, 45.782570401240164], [4.892784377290194, 45.78086464031638], [4.88787625373134, 45.78067301492537]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d12db2f930f01b0ae4e6b92f9cf333d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5cf07b79acaa8fc15f8f5728aeacd681 = $(`<div id="html_5cf07b79acaa8fc15f8f5728aeacd681" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0018</div>`)[0];
+                popup_d12db2f930f01b0ae4e6b92f9cf333d4.setContent(html_5cf07b79acaa8fc15f8f5728aeacd681);
+            
+        
+
+        geo_json_eb2b2205e102bacd1bd0b3f682d763b6.bindPopup(popup_d12db2f930f01b0ae4e6b92f9cf333d4)
+        ;
+
+        
+    
+    
+            geo_json_eb2b2205e102bacd1bd0b3f682d763b6.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_d14e0478781b405df6de782b7aecf9df_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d14e0478781b405df6de782b7aecf9df_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d14e0478781b405df6de782b7aecf9df = L.geoJson(null, {
+                onEachFeature: geo_json_d14e0478781b405df6de782b7aecf9df_onEachFeature,
+            
+                style: geo_json_d14e0478781b405df6de782b7aecf9df_styler,
+        });
+
+        function geo_json_d14e0478781b405df6de782b7aecf9df_add (data) {
+            geo_json_d14e0478781b405df6de782b7aecf9df
+                .addData(data);
+        }
+            geo_json_d14e0478781b405df6de782b7aecf9df_add({"bbox": [4.881789527356285, 45.77738974464026, 4.888333185663398, 45.7854417971894], "features": [{"bbox": [4.881789527356285, 45.77738974464026, 4.888333185663398, 45.7854417971894], "geometry": {"coordinates": [[[[4.88526219321292, 45.777586766283534], [4.884955000752241, 45.77738974464026], [4.884893405309597, 45.77782861216911], [4.885070403788232, 45.77790561620207], [4.88526219321292, 45.777586766283534]]], [[[4.883434606888232, 45.77804752867669], [4.881789527356285, 45.77961427693882], [4.884579433744134, 45.78108134304754], [4.883019781018615, 45.7854417971894], [4.888126068723063, 45.784927806589586], [4.888333185663398, 45.77994368679557], [4.883434606888232, 45.77804752867669]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7c6b3dd709f0e1de635024477e732d95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ddc3c7c0065e782ae42f6c96ede2543c = $(`<div id="html_ddc3c7c0065e782ae42f6c96ede2543c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0019</div>`)[0];
+                popup_7c6b3dd709f0e1de635024477e732d95.setContent(html_ddc3c7c0065e782ae42f6c96ede2543c);
+            
+        
+
+        geo_json_d14e0478781b405df6de782b7aecf9df.bindPopup(popup_7c6b3dd709f0e1de635024477e732d95)
+        ;
+
+        
+    
+    
+            geo_json_d14e0478781b405df6de782b7aecf9df.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_4adef413f6ed5bee6c5970226c00e59b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4adef413f6ed5bee6c5970226c00e59b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4adef413f6ed5bee6c5970226c00e59b = L.geoJson(null, {
+                onEachFeature: geo_json_4adef413f6ed5bee6c5970226c00e59b_onEachFeature,
+            
+                style: geo_json_4adef413f6ed5bee6c5970226c00e59b_styler,
+        });
+
+        function geo_json_4adef413f6ed5bee6c5970226c00e59b_add (data) {
+            geo_json_4adef413f6ed5bee6c5970226c00e59b
+                .addData(data);
+        }
+            geo_json_4adef413f6ed5bee6c5970226c00e59b_add({"bbox": [4.892662751218838, 45.753499231903746, 4.907635, 45.787186], "features": [{"bbox": [4.892662751218838, 45.753499231903746, 4.907635, 45.787186], "geometry": {"coordinates": [[[[4.906837128371805, 45.753499231903746], [4.906583830732992, 45.75358426753964], [4.906779474172728, 45.75371150418227], [4.906837128371805, 45.753499231903746]]], [[[4.895997313854749, 45.77986381155022], [4.892662751218838, 45.7865653161658], [4.90091, 45.787186], [4.907635, 45.783068], [4.904891478947362, 45.77945166842105], [4.903357757164715, 45.78086872043961], [4.900725223737187, 45.77975447642175], [4.901096803693225, 45.77672374924647], [4.899172902479158, 45.77583866657614], [4.895997313854749, 45.77986381155022]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_542066a3ca1c7c43848644de1b0d4f21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3797d63daf5ec3b99af3cc05f5894f7a = $(`<div id="html_3797d63daf5ec3b99af3cc05f5894f7a" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0002</div>`)[0];
+                popup_542066a3ca1c7c43848644de1b0d4f21.setContent(html_3797d63daf5ec3b99af3cc05f5894f7a);
+            
+        
+
+        geo_json_4adef413f6ed5bee6c5970226c00e59b.bindPopup(popup_542066a3ca1c7c43848644de1b0d4f21)
+        ;
+
+        
+    
+    
+            geo_json_4adef413f6ed5bee6c5970226c00e59b.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ad9cfdaacc24ba4fdb319f1fbb152737 = L.geoJson(null, {
+                onEachFeature: geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_onEachFeature,
+            
+                style: geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_styler,
+        });
+
+        function geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_add (data) {
+            geo_json_ad9cfdaacc24ba4fdb319f1fbb152737
+                .addData(data);
+        }
+            geo_json_ad9cfdaacc24ba4fdb319f1fbb152737_add({"bbox": [4.870290589512224, 45.77929353729243, 4.888126068723063, 45.789545448295506], "features": [{"bbox": [4.870290589512224, 45.77929353729243, 4.888126068723063, 45.789545448295506], "geometry": {"coordinates": [[[[4.878816005577828, 45.78049718616001], [4.878304426129895, 45.78222794279375], [4.870290589512224, 45.789545448295506], [4.883019781018615, 45.7854417971894], [4.884579433744134, 45.78108134304754], [4.87963620203584, 45.77929353729243], [4.878816005577828, 45.78049718616001]]], [[[4.88550452036619, 45.78583585464295], [4.88811571091057, 45.7865517054138], [4.888126068723063, 45.784927806589586], [4.886650218172558, 45.78424184788302], [4.88550452036619, 45.78583585464295]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a94fa506ecfc7960f5f7abdc1188df82 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d5792e5f183670eb527fa834a4e7ec66 = $(`<div id="html_d5792e5f183670eb527fa834a4e7ec66" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0020</div>`)[0];
+                popup_a94fa506ecfc7960f5f7abdc1188df82.setContent(html_d5792e5f183670eb527fa834a4e7ec66);
+            
+        
+
+        geo_json_ad9cfdaacc24ba4fdb319f1fbb152737.bindPopup(popup_a94fa506ecfc7960f5f7abdc1188df82)
+        ;
+
+        
+    
+    
+            geo_json_ad9cfdaacc24ba4fdb319f1fbb152737.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_2ac5cbfe69efe7db71412514b517e1f0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2ac5cbfe69efe7db71412514b517e1f0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2ac5cbfe69efe7db71412514b517e1f0 = L.geoJson(null, {
+                onEachFeature: geo_json_2ac5cbfe69efe7db71412514b517e1f0_onEachFeature,
+            
+                style: geo_json_2ac5cbfe69efe7db71412514b517e1f0_styler,
+        });
+
+        function geo_json_2ac5cbfe69efe7db71412514b517e1f0_add (data) {
+            geo_json_2ac5cbfe69efe7db71412514b517e1f0
+                .addData(data);
+        }
+            geo_json_2ac5cbfe69efe7db71412514b517e1f0_add({"bbox": [4.873725380294664, 45.77644697022238, 4.879066920157872, 45.785593340054355], "features": [{"bbox": [4.873725380294664, 45.77644697022238, 4.879066920157872, 45.785593340054355], "geometry": {"coordinates": [[[4.876029381831886, 45.77644697022238], [4.873725380294664, 45.77690051104971], [4.874900838113024, 45.78096907306635], [4.876887989550685, 45.781614711598735], [4.874732899137231, 45.785593340054355], [4.879066920157872, 45.77971644960535], [4.876029381831886, 45.77644697022238]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1c76da5ececd0e2f08f44258e3377a1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59cee658148f7037eaaf4b758569fb89 = $(`<div id="html_59cee658148f7037eaaf4b758569fb89" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0021</div>`)[0];
+                popup_1c76da5ececd0e2f08f44258e3377a1d.setContent(html_59cee658148f7037eaaf4b758569fb89);
+            
+        
+
+        geo_json_2ac5cbfe69efe7db71412514b517e1f0.bindPopup(popup_1c76da5ececd0e2f08f44258e3377a1d)
+        ;
+
+        
+    
+    
+            geo_json_2ac5cbfe69efe7db71412514b517e1f0.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_ad8a3669ecd15e344753168947f2abb8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ad8a3669ecd15e344753168947f2abb8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ad8a3669ecd15e344753168947f2abb8 = L.geoJson(null, {
+                onEachFeature: geo_json_ad8a3669ecd15e344753168947f2abb8_onEachFeature,
+            
+                style: geo_json_ad8a3669ecd15e344753168947f2abb8_styler,
+        });
+
+        function geo_json_ad8a3669ecd15e344753168947f2abb8_add (data) {
+            geo_json_ad8a3669ecd15e344753168947f2abb8
+                .addData(data);
+        }
+            geo_json_ad8a3669ecd15e344753168947f2abb8_add({"bbox": [4.869559378603653, 45.771771447529915, 4.874048568144117, 45.77493275728721], "features": [{"bbox": [4.869559378603653, 45.771771447529915, 4.874048568144117, 45.77493275728721], "geometry": {"coordinates": [[[4.86995083890764, 45.771771447529915], [4.869559378603653, 45.773500760121586], [4.871236929538151, 45.77493275728721], [4.874048568144117, 45.77317695792072], [4.86995083890764, 45.771771447529915]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_88837e51dc7528b8860176978cec9d24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b5400975a9d6b8e5cabdc4472069353 = $(`<div id="html_6b5400975a9d6b8e5cabdc4472069353" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0022</div>`)[0];
+                popup_88837e51dc7528b8860176978cec9d24.setContent(html_6b5400975a9d6b8e5cabdc4472069353);
+            
+        
+
+        geo_json_ad8a3669ecd15e344753168947f2abb8.bindPopup(popup_88837e51dc7528b8860176978cec9d24)
+        ;
+
+        
+    
+    
+            geo_json_ad8a3669ecd15e344753168947f2abb8.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_72e5b4ca49b2837429d5ba7a838a0668_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_72e5b4ca49b2837429d5ba7a838a0668_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_72e5b4ca49b2837429d5ba7a838a0668 = L.geoJson(null, {
+                onEachFeature: geo_json_72e5b4ca49b2837429d5ba7a838a0668_onEachFeature,
+            
+                style: geo_json_72e5b4ca49b2837429d5ba7a838a0668_styler,
+        });
+
+        function geo_json_72e5b4ca49b2837429d5ba7a838a0668_add (data) {
+            geo_json_72e5b4ca49b2837429d5ba7a838a0668
+                .addData(data);
+        }
+            geo_json_72e5b4ca49b2837429d5ba7a838a0668_add({"bbox": [4.87012299041639, 45.773284933918234, 4.874820950139957, 45.77652809706288], "features": [{"bbox": [4.87012299041639, 45.773284933918234, 4.874820950139957, 45.77652809706288], "geometry": {"coordinates": [[[4.871912909614046, 45.77441361742819], [4.87012299041639, 45.77482917019168], [4.874219126854466, 45.77652809706288], [4.874820950139957, 45.773284933918234], [4.871912909614046, 45.77441361742819]], [[4.87396729077756, 45.77422696127823], [4.874039282340593, 45.774077294607714], [4.874168412211916, 45.77427247446686], [4.874024444433458, 45.77434501637075], [4.87396729077756, 45.77422696127823]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8a59d22902482af3868b3558f9655b9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55e5cda44ed3743069b1d018d459cd2c = $(`<div id="html_55e5cda44ed3743069b1d018d459cd2c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0023</div>`)[0];
+                popup_8a59d22902482af3868b3558f9655b9b.setContent(html_55e5cda44ed3743069b1d018d459cd2c);
+            
+        
+
+        geo_json_72e5b4ca49b2837429d5ba7a838a0668.bindPopup(popup_8a59d22902482af3868b3558f9655b9b)
+        ;
+
+        
+    
+    
+            geo_json_72e5b4ca49b2837429d5ba7a838a0668.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_3785390158b2e371dd9d5c1e46fd8aa3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3785390158b2e371dd9d5c1e46fd8aa3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3785390158b2e371dd9d5c1e46fd8aa3 = L.geoJson(null, {
+                onEachFeature: geo_json_3785390158b2e371dd9d5c1e46fd8aa3_onEachFeature,
+            
+                style: geo_json_3785390158b2e371dd9d5c1e46fd8aa3_styler,
+        });
+
+        function geo_json_3785390158b2e371dd9d5c1e46fd8aa3_add (data) {
+            geo_json_3785390158b2e371dd9d5c1e46fd8aa3
+                .addData(data);
+        }
+            geo_json_3785390158b2e371dd9d5c1e46fd8aa3_add({"bbox": [4.86735127813067, 45.772001705440736, 4.870817484998835, 45.77685047034039], "features": [{"bbox": [4.86735127813067, 45.772001705440736, 4.870817484998835, 45.77685047034039], "geometry": {"coordinates": [[[4.867776488522366, 45.77296118786428], [4.86735127813067, 45.775624008932624], [4.870817484998835, 45.77685047034039], [4.869638982741412, 45.772001705440736], [4.867776488522366, 45.77296118786428]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4653312add54110cea2241093e003a6e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d87fa92bddb46fa21aac4001781ffa9b = $(`<div id="html_d87fa92bddb46fa21aac4001781ffa9b" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0024</div>`)[0];
+                popup_4653312add54110cea2241093e003a6e.setContent(html_d87fa92bddb46fa21aac4001781ffa9b);
+            
+        
+
+        geo_json_3785390158b2e371dd9d5c1e46fd8aa3.bindPopup(popup_4653312add54110cea2241093e003a6e)
+        ;
+
+        
+    
+    
+            geo_json_3785390158b2e371dd9d5c1e46fd8aa3.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_02f7c2b060950177d64ab1e81746922c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_02f7c2b060950177d64ab1e81746922c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_02f7c2b060950177d64ab1e81746922c = L.geoJson(null, {
+                onEachFeature: geo_json_02f7c2b060950177d64ab1e81746922c_onEachFeature,
+            
+                style: geo_json_02f7c2b060950177d64ab1e81746922c_styler,
+        });
+
+        function geo_json_02f7c2b060950177d64ab1e81746922c_add (data) {
+            geo_json_02f7c2b060950177d64ab1e81746922c
+                .addData(data);
+        }
+            geo_json_02f7c2b060950177d64ab1e81746922c_add({"bbox": [4.864711581809105, 45.775719111210016, 4.881686708983529, 45.794353717338836], "features": [{"bbox": [4.864711581809105, 45.775719111210016, 4.881686708983529, 45.794353717338836], "geometry": {"coordinates": [[[[4.864711581809105, 45.778644438809444], [4.865166431485743, 45.787334982487394], [4.867496209722344, 45.78816983200245], [4.866822312212437, 45.78124957453238], [4.864711581809105, 45.778644438809444]]], [[[4.870528677363327, 45.775719111210016], [4.870817484998835, 45.77685047034039], [4.867949264652606, 45.77585376508502], [4.867036458293295, 45.77737008177974], [4.86924272557097, 45.779163482813274], [4.867794953363167, 45.788349168818314], [4.877195552116899, 45.794353717338836], [4.881686708983529, 45.786389652964935], [4.880208446849733, 45.785417785126114], [4.870290589512224, 45.789545448295506], [4.876887989550685, 45.781614711598735], [4.874900838113024, 45.78096907306635], [4.873725380294664, 45.77690051104971], [4.870528677363327, 45.775719111210016]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_088632e471dd2c131704af8bc89dbfdb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_49a97300ab7060ff5de72728f5eb6a03 = $(`<div id="html_49a97300ab7060ff5de72728f5eb6a03" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0025</div>`)[0];
+                popup_088632e471dd2c131704af8bc89dbfdb.setContent(html_49a97300ab7060ff5de72728f5eb6a03);
+            
+        
+
+        geo_json_02f7c2b060950177d64ab1e81746922c.bindPopup(popup_088632e471dd2c131704af8bc89dbfdb)
+        ;
+
+        
+    
+    
+            geo_json_02f7c2b060950177d64ab1e81746922c.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_7b85c20b9490da341c5ae7bc4d93ada9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7b85c20b9490da341c5ae7bc4d93ada9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7b85c20b9490da341c5ae7bc4d93ada9 = L.geoJson(null, {
+                onEachFeature: geo_json_7b85c20b9490da341c5ae7bc4d93ada9_onEachFeature,
+            
+                style: geo_json_7b85c20b9490da341c5ae7bc4d93ada9_styler,
+        });
+
+        function geo_json_7b85c20b9490da341c5ae7bc4d93ada9_add (data) {
+            geo_json_7b85c20b9490da341c5ae7bc4d93ada9
+                .addData(data);
+        }
+            geo_json_7b85c20b9490da341c5ae7bc4d93ada9_add({"bbox": [4.858795588718447, 45.776456198979005, 4.866822312212437, 45.787334982487394], "features": [{"bbox": [4.858795588718447, 45.776456198979005, 4.866822312212437, 45.787334982487394], "geometry": {"coordinates": [[[4.861467518135056, 45.776486543601294], [4.858795588718447, 45.776456198979005], [4.859902, 45.786944], [4.865166431485743, 45.787334982487394], [4.864696515756324, 45.7786415414916], [4.866822312212437, 45.78124957453238], [4.866742293103681, 45.78008046417716], [4.865186850299509, 45.77817167890486], [4.862644810089102, 45.77832954383305], [4.861467518135056, 45.776486543601294]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_dc51cf34fc1f5c573d3edf21f9957ede = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_721ba0bf764800867fdc90ebd88e5672 = $(`<div id="html_721ba0bf764800867fdc90ebd88e5672" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0026</div>`)[0];
+                popup_dc51cf34fc1f5c573d3edf21f9957ede.setContent(html_721ba0bf764800867fdc90ebd88e5672);
+            
+        
+
+        geo_json_7b85c20b9490da341c5ae7bc4d93ada9.bindPopup(popup_dc51cf34fc1f5c573d3edf21f9957ede)
+        ;
+
+        
+    
+    
+            geo_json_7b85c20b9490da341c5ae7bc4d93ada9.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_11d819028663bc57c58ed6be3d0b294c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_11d819028663bc57c58ed6be3d0b294c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_11d819028663bc57c58ed6be3d0b294c = L.geoJson(null, {
+                onEachFeature: geo_json_11d819028663bc57c58ed6be3d0b294c_onEachFeature,
+            
+                style: geo_json_11d819028663bc57c58ed6be3d0b294c_styler,
+        });
+
+        function geo_json_11d819028663bc57c58ed6be3d0b294c_add (data) {
+            geo_json_11d819028663bc57c58ed6be3d0b294c
+                .addData(data);
+        }
+            geo_json_11d819028663bc57c58ed6be3d0b294c_add({"bbox": [4.862494752255208, 45.77630760205677, 4.86924272557097, 45.788349168818314], "features": [{"bbox": [4.862494752255208, 45.77630760205677, 4.86924272557097, 45.788349168818314], "geometry": {"coordinates": [[[4.863703704951197, 45.77700148179101], [4.862494752255208, 45.776682122222745], [4.862644810089102, 45.77832954383305], [4.865186850299509, 45.77817167890486], [4.866742293103681, 45.78008046417716], [4.867794953363167, 45.788349168818314], [4.86924272557097, 45.779163482813274], [4.86669905731804, 45.77630760205677], [4.863703704951197, 45.77700148179101]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a99f333a2895bdd0640af4e740f0e09d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0d4a5e5dcc39b52ea422ca742cc71aa0 = $(`<div id="html_0d4a5e5dcc39b52ea422ca742cc71aa0" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0027</div>`)[0];
+                popup_a99f333a2895bdd0640af4e740f0e09d.setContent(html_0d4a5e5dcc39b52ea422ca742cc71aa0);
+            
+        
+
+        geo_json_11d819028663bc57c58ed6be3d0b294c.bindPopup(popup_a99f333a2895bdd0640af4e740f0e09d)
+        ;
+
+        
+    
+    
+            geo_json_11d819028663bc57c58ed6be3d0b294c.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_cc12ab6686073c220f8dd6d974e40d4d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cc12ab6686073c220f8dd6d974e40d4d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cc12ab6686073c220f8dd6d974e40d4d = L.geoJson(null, {
+                onEachFeature: geo_json_cc12ab6686073c220f8dd6d974e40d4d_onEachFeature,
+            
+                style: geo_json_cc12ab6686073c220f8dd6d974e40d4d_styler,
+        });
+
+        function geo_json_cc12ab6686073c220f8dd6d974e40d4d_add (data) {
+            geo_json_cc12ab6686073c220f8dd6d974e40d4d
+                .addData(data);
+        }
+            geo_json_cc12ab6686073c220f8dd6d974e40d4d_add({"bbox": [4.860765588562187, 45.77436565629334, 4.865032867925353, 45.77700148179101], "features": [{"bbox": [4.860765588562187, 45.77436565629334, 4.865032867925353, 45.77700148179101], "geometry": {"coordinates": [[[4.860765588562187, 45.77568123745541], [4.863703704951197, 45.77700148179101], [4.865032867925353, 45.77436565629334], [4.860906700589971, 45.774403582595866], [4.860765588562187, 45.77568123745541]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7a0d7b14b79fcbcad17b68bc3cccdee1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d6059f9de4e549c1fdceef6f56fa5037 = $(`<div id="html_d6059f9de4e549c1fdceef6f56fa5037" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0028</div>`)[0];
+                popup_7a0d7b14b79fcbcad17b68bc3cccdee1.setContent(html_d6059f9de4e549c1fdceef6f56fa5037);
+            
+        
+
+        geo_json_cc12ab6686073c220f8dd6d974e40d4d.bindPopup(popup_7a0d7b14b79fcbcad17b68bc3cccdee1)
+        ;
+
+        
+    
+    
+            geo_json_cc12ab6686073c220f8dd6d974e40d4d.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16 = L.geoJson(null, {
+                onEachFeature: geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_onEachFeature,
+            
+                style: geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_styler,
+        });
+
+        function geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_add (data) {
+            geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16
+                .addData(data);
+        }
+            geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16_add({"bbox": [4.86453839634627, 45.773883116433694, 4.867801530997871, 45.77649071669994], "features": [{"bbox": [4.86453839634627, 45.773883116433694, 4.867801530997871, 45.77649071669994], "geometry": {"coordinates": [[[4.865162151877287, 45.7743252285469], [4.86453839634627, 45.776297946234685], [4.867801530997871, 45.77649071669994], [4.867743854513019, 45.773883116433694], [4.865162151877287, 45.7743252285469]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0409b790c807fa2066cd245c5c01e462 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a16f8874698d2c4c159855ff32c7823a = $(`<div id="html_a16f8874698d2c4c159855ff32c7823a" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0029</div>`)[0];
+                popup_0409b790c807fa2066cd245c5c01e462.setContent(html_a16f8874698d2c4c159855ff32c7823a);
+            
+        
+
+        geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16.bindPopup(popup_0409b790c807fa2066cd245c5c01e462)
+        ;
+
+        
+    
+    
+            geo_json_ba542ae57e9c5e0f0dc1c7d96f817f16.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_7f3d284b35fab279e1e1e126db72ee49_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7f3d284b35fab279e1e1e126db72ee49_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7f3d284b35fab279e1e1e126db72ee49 = L.geoJson(null, {
+                onEachFeature: geo_json_7f3d284b35fab279e1e1e126db72ee49_onEachFeature,
+            
+                style: geo_json_7f3d284b35fab279e1e1e126db72ee49_styler,
+        });
+
+        function geo_json_7f3d284b35fab279e1e1e126db72ee49_add (data) {
+            geo_json_7f3d284b35fab279e1e1e126db72ee49
+                .addData(data);
+        }
+            geo_json_7f3d284b35fab279e1e1e126db72ee49_add({"bbox": [4.888402084589385, 45.76395710556968, 4.90750179727538, 45.772482289466566], "features": [{"bbox": [4.888402084589385, 45.76395710556968, 4.90750179727538, 45.772482289466566], "geometry": {"coordinates": [[[[4.888733313501525, 45.76395710556968], [4.888402084589385, 45.76408022531343], [4.888613859679274, 45.765649032887254], [4.889595639166579, 45.764936604998134], [4.888733313501525, 45.76395710556968]]], [[[4.897027215714254, 45.76956317607144], [4.896329398118545, 45.77092913232474], [4.901771238985748, 45.772482289466566], [4.90750179727538, 45.76525164260068], [4.901157483484465, 45.76530720068631], [4.897027215714254, 45.76956317607144]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_182c95a93d83dce32a2c1343a06b700d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39996fdf0096756494aefc95109e3f7c = $(`<div id="html_39996fdf0096756494aefc95109e3f7c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0003</div>`)[0];
+                popup_182c95a93d83dce32a2c1343a06b700d.setContent(html_39996fdf0096756494aefc95109e3f7c);
+            
+        
+
+        geo_json_7f3d284b35fab279e1e1e126db72ee49.bindPopup(popup_182c95a93d83dce32a2c1343a06b700d)
+        ;
+
+        
+    
+    
+            geo_json_7f3d284b35fab279e1e1e126db72ee49.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_98f13845d58b2bb419bcec2872efe5cb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_98f13845d58b2bb419bcec2872efe5cb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_98f13845d58b2bb419bcec2872efe5cb = L.geoJson(null, {
+                onEachFeature: geo_json_98f13845d58b2bb419bcec2872efe5cb_onEachFeature,
+            
+                style: geo_json_98f13845d58b2bb419bcec2872efe5cb_styler,
+        });
+
+        function geo_json_98f13845d58b2bb419bcec2872efe5cb_add (data) {
+            geo_json_98f13845d58b2bb419bcec2872efe5cb
+                .addData(data);
+        }
+            geo_json_98f13845d58b2bb419bcec2872efe5cb_add({"bbox": [4.862581336594401, 45.77187209682594, 4.868087911878679, 45.77438655308302], "features": [{"bbox": [4.862581336594401, 45.77187209682594, 4.868087911878679, 45.77438655308302], "geometry": {"coordinates": [[[4.864398289216832, 45.77200557268168], [4.862581336594401, 45.77438655308302], [4.868087911878679, 45.77245404657014], [4.867042883916499, 45.77187209682594], [4.864398289216832, 45.77200557268168]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5354630df521d2013c051f3759777cd8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe1b63bb9b1b0427a6c007583015c659 = $(`<div id="html_fe1b63bb9b1b0427a6c007583015c659" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0030</div>`)[0];
+                popup_5354630df521d2013c051f3759777cd8.setContent(html_fe1b63bb9b1b0427a6c007583015c659);
+            
+        
+
+        geo_json_98f13845d58b2bb419bcec2872efe5cb.bindPopup(popup_5354630df521d2013c051f3759777cd8)
+        ;
+
+        
+    
+    
+            geo_json_98f13845d58b2bb419bcec2872efe5cb.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_4dd263ecd311d295a02d2c52ed585c6a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4dd263ecd311d295a02d2c52ed585c6a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4dd263ecd311d295a02d2c52ed585c6a = L.geoJson(null, {
+                onEachFeature: geo_json_4dd263ecd311d295a02d2c52ed585c6a_onEachFeature,
+            
+                style: geo_json_4dd263ecd311d295a02d2c52ed585c6a_styler,
+        });
+
+        function geo_json_4dd263ecd311d295a02d2c52ed585c6a_add (data) {
+            geo_json_4dd263ecd311d295a02d2c52ed585c6a
+                .addData(data);
+        }
+            geo_json_4dd263ecd311d295a02d2c52ed585c6a_add({"bbox": [4.858431, 45.77132387776881, 4.863544955376686, 45.776456198979005], "features": [{"bbox": [4.858431, 45.77132387776881, 4.863544955376686, 45.776456198979005], "geometry": {"coordinates": [[[4.861493502982036, 45.77132387776881], [4.858431, 45.772428], [4.858795588718447, 45.776456198979005], [4.863073599190733, 45.773657387457995], [4.863544955376686, 45.77228026879367], [4.861493502982036, 45.77132387776881]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e3ffdce59a8cee864a3edc922e68b8b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf7cc002c98175ca1a2d060105bd5847 = $(`<div id="html_bf7cc002c98175ca1a2d060105bd5847" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0031</div>`)[0];
+                popup_e3ffdce59a8cee864a3edc922e68b8b6.setContent(html_bf7cc002c98175ca1a2d060105bd5847);
+            
+        
+
+        geo_json_4dd263ecd311d295a02d2c52ed585c6a.bindPopup(popup_e3ffdce59a8cee864a3edc922e68b8b6)
+        ;
+
+        
+    
+    
+            geo_json_4dd263ecd311d295a02d2c52ed585c6a.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a = L.geoJson(null, {
+                onEachFeature: geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_onEachFeature,
+            
+                style: geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_styler,
+        });
+
+        function geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_add (data) {
+            geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a
+                .addData(data);
+        }
+            geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a_add({"bbox": [4.861493502982036, 45.77040540655123, 4.868678290353962, 45.77220641804786], "features": [{"bbox": [4.861493502982036, 45.77040540655123, 4.868678290353962, 45.77220641804786], "geometry": {"coordinates": [[[4.863577507365294, 45.77040540655123], [4.861493502982036, 45.77132387776881], [4.868678290353962, 45.77220641804786], [4.868174956657311, 45.770953193742855], [4.863577507365294, 45.77040540655123]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_23903f9198fb9937f730a4d77527d888 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9772666421767188aa94b11f0dbaa083 = $(`<div id="html_9772666421767188aa94b11f0dbaa083" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0032</div>`)[0];
+                popup_23903f9198fb9937f730a4d77527d888.setContent(html_9772666421767188aa94b11f0dbaa083);
+            
+        
+
+        geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a.bindPopup(popup_23903f9198fb9937f730a4d77527d888)
+        ;
+
+        
+    
+    
+            geo_json_5ce4443cd8e8e3d5f2281d5f95541c0a.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a = L.geoJson(null, {
+                onEachFeature: geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_onEachFeature,
+            
+                style: geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_styler,
+        });
+
+        function geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_add (data) {
+            geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a
+                .addData(data);
+        }
+            geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a_add({"bbox": [4.862410722820675, 45.7684169920635, 4.8672885, 45.77075172330516], "features": [{"bbox": [4.862410722820675, 45.7684169920635, 4.8672885, 45.77075172330516], "geometry": {"coordinates": [[[4.863903, 45.768717], [4.862410722820675, 45.770059267634345], [4.867238984203333, 45.77075172330516], [4.8672885, 45.7684169920635], [4.863903, 45.768717]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ffa874acbb40ee317d0a6ac1b525fdb6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9923f47054e95ecc6ffb3169954223b1 = $(`<div id="html_9923f47054e95ecc6ffb3169954223b1" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0033</div>`)[0];
+                popup_ffa874acbb40ee317d0a6ac1b525fdb6.setContent(html_9923f47054e95ecc6ffb3169954223b1);
+            
+        
+
+        geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a.bindPopup(popup_ffa874acbb40ee317d0a6ac1b525fdb6)
+        ;
+
+        
+    
+    
+            geo_json_6ad583d9e6d8a3e43d7a8d1c2a8f4c4a.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_86a65fe77dd1d2f661070adb290147b1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_86a65fe77dd1d2f661070adb290147b1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_86a65fe77dd1d2f661070adb290147b1 = L.geoJson(null, {
+                onEachFeature: geo_json_86a65fe77dd1d2f661070adb290147b1_onEachFeature,
+            
+                style: geo_json_86a65fe77dd1d2f661070adb290147b1_styler,
+        });
+
+        function geo_json_86a65fe77dd1d2f661070adb290147b1_add (data) {
+            geo_json_86a65fe77dd1d2f661070adb290147b1
+                .addData(data);
+        }
+            geo_json_86a65fe77dd1d2f661070adb290147b1_add({"bbox": [4.867789461678452, 45.769724462537674, 4.873721644601477, 45.772214938676484], "features": [{"bbox": [4.867789461678452, 45.769724462537674, 4.873721644601477, 45.772214938676484], "geometry": {"coordinates": [[[4.871428104715672, 45.770210813756144], [4.871550269709703, 45.7709941279517], [4.867789461678452, 45.77146187473736], [4.873354868640981, 45.772214938676484], [4.873721644601477, 45.769724462537674], [4.871428104715672, 45.770210813756144]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_10a9771c3586cee0b53a8b2f37b9bf93 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f68cfdcc64c4c63c92bbd62c0944ff3d = $(`<div id="html_f68cfdcc64c4c63c92bbd62c0944ff3d" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0034</div>`)[0];
+                popup_10a9771c3586cee0b53a8b2f37b9bf93.setContent(html_f68cfdcc64c4c63c92bbd62c0944ff3d);
+            
+        
+
+        geo_json_86a65fe77dd1d2f661070adb290147b1.bindPopup(popup_10a9771c3586cee0b53a8b2f37b9bf93)
+        ;
+
+        
+    
+    
+            geo_json_86a65fe77dd1d2f661070adb290147b1.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34 = L.geoJson(null, {
+                onEachFeature: geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_onEachFeature,
+            
+                style: geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_styler,
+        });
+
+        function geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_add (data) {
+            geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34
+                .addData(data);
+        }
+            geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34_add({"bbox": [4.873354868640981, 45.77016794862545, 4.87739228725514, 45.77575562720059], "features": [{"bbox": [4.873354868640981, 45.77016794862545, 4.87739228725514, 45.77575562720059], "geometry": {"coordinates": [[[4.873715737757199, 45.7704635168044], [4.873354868640981, 45.772214938676484], [4.87739228725514, 45.77575562720059], [4.876505490555094, 45.77016794862545], [4.873715737757199, 45.7704635168044]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_74c9bd68233cfcb13adc13091f61135b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_712f7f0c396587bff8959e6340ae26cd = $(`<div id="html_712f7f0c396587bff8959e6340ae26cd" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0035</div>`)[0];
+                popup_74c9bd68233cfcb13adc13091f61135b.setContent(html_712f7f0c396587bff8959e6340ae26cd);
+            
+        
+
+        geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34.bindPopup(popup_74c9bd68233cfcb13adc13091f61135b)
+        ;
+
+        
+    
+    
+            geo_json_5f5e89b2a4dbfb3521f01d9c5ee5eb34.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_18f89c08edc6e71cc507322f0371823d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_18f89c08edc6e71cc507322f0371823d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_18f89c08edc6e71cc507322f0371823d = L.geoJson(null, {
+                onEachFeature: geo_json_18f89c08edc6e71cc507322f0371823d_onEachFeature,
+            
+                style: geo_json_18f89c08edc6e71cc507322f0371823d_styler,
+        });
+
+        function geo_json_18f89c08edc6e71cc507322f0371823d_add (data) {
+            geo_json_18f89c08edc6e71cc507322f0371823d
+                .addData(data);
+        }
+            geo_json_18f89c08edc6e71cc507322f0371823d_add({"bbox": [4.874776882140205, 45.767703970009194, 4.877879041853106, 45.77194005923847], "features": [{"bbox": [4.874776882140205, 45.767703970009194, 4.877879041853106, 45.77194005923847], "geometry": {"coordinates": [[[4.87543353015261, 45.767703970009194], [4.874776882140205, 45.76998412820604], [4.877879041853106, 45.77194005923847], [4.877263671814668, 45.76781385714285], [4.87543353015261, 45.767703970009194]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f493d74dbcd3d9496d7ed8f5d17d4250 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95e4b29f3fbb41a80e5e654cb3b8d000 = $(`<div id="html_95e4b29f3fbb41a80e5e654cb3b8d000" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0036</div>`)[0];
+                popup_f493d74dbcd3d9496d7ed8f5d17d4250.setContent(html_95e4b29f3fbb41a80e5e654cb3b8d000);
+            
+        
+
+        geo_json_18f89c08edc6e71cc507322f0371823d.bindPopup(popup_f493d74dbcd3d9496d7ed8f5d17d4250)
+        ;
+
+        
+    
+    
+            geo_json_18f89c08edc6e71cc507322f0371823d.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b = L.geoJson(null, {
+                onEachFeature: geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_onEachFeature,
+            
+                style: geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_styler,
+        });
+
+        function geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_add (data) {
+            geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b
+                .addData(data);
+        }
+            geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b_add({"bbox": [4.867401061486222, 45.76710175442686, 4.872129513289114, 45.77089627898923], "features": [{"bbox": [4.867401061486222, 45.76710175442686, 4.872129513289114, 45.77089627898923], "geometry": {"coordinates": [[[[4.8716108510131, 45.76735007896305], [4.871344159246608, 45.76710175442686], [4.871111163657702, 45.767292422729724], [4.8716108510131, 45.76735007896305]]], [[[4.86807634982569, 45.769463834942336], [4.867401061486222, 45.77089627898923], [4.872129513289114, 45.77002926600678], [4.869390791967815, 45.76774974195202], [4.86807634982569, 45.769463834942336]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c1533fa215f4c3e3d1ebd00c873d75af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e9c4acf5984b259e84f045a099461b7 = $(`<div id="html_3e9c4acf5984b259e84f045a099461b7" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0037</div>`)[0];
+                popup_c1533fa215f4c3e3d1ebd00c873d75af.setContent(html_3e9c4acf5984b259e84f045a099461b7);
+            
+        
+
+        geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b.bindPopup(popup_c1533fa215f4c3e3d1ebd00c873d75af)
+        ;
+
+        
+    
+    
+            geo_json_c8dc64a6d0c20e10fdec1ae0ae333f4b.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_5973f04870c22cee29fb974d7703a375_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5973f04870c22cee29fb974d7703a375_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5973f04870c22cee29fb974d7703a375 = L.geoJson(null, {
+                onEachFeature: geo_json_5973f04870c22cee29fb974d7703a375_onEachFeature,
+            
+                style: geo_json_5973f04870c22cee29fb974d7703a375_styler,
+        });
+
+        function geo_json_5973f04870c22cee29fb974d7703a375_add (data) {
+            geo_json_5973f04870c22cee29fb974d7703a375
+                .addData(data);
+        }
+            geo_json_5973f04870c22cee29fb974d7703a375_add({"bbox": [4.865616003717327, 45.76508788546404, 4.870041308790724, 45.76956117103813], "features": [{"bbox": [4.865616003717327, 45.76508788546404, 4.870041308790724, 45.76956117103813], "geometry": {"coordinates": [[[4.86623414313516, 45.767162170379905], [4.865616003717327, 45.76808890165281], [4.868870267742123, 45.76956117103813], [4.870041308790724, 45.76508788546404], [4.86623414313516, 45.767162170379905]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2de2cb6eb99d1b72b27af62d670c5be0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_71192d1b411d5640e07298e0f9c6feb6 = $(`<div id="html_71192d1b411d5640e07298e0f9c6feb6" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0038</div>`)[0];
+                popup_2de2cb6eb99d1b72b27af62d670c5be0.setContent(html_71192d1b411d5640e07298e0f9c6feb6);
+            
+        
+
+        geo_json_5973f04870c22cee29fb974d7703a375.bindPopup(popup_2de2cb6eb99d1b72b27af62d670c5be0)
+        ;
+
+        
+    
+    
+            geo_json_5973f04870c22cee29fb974d7703a375.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_0be3556db875ce326f5cc5b9df636348_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0be3556db875ce326f5cc5b9df636348_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0be3556db875ce326f5cc5b9df636348 = L.geoJson(null, {
+                onEachFeature: geo_json_0be3556db875ce326f5cc5b9df636348_onEachFeature,
+            
+                style: geo_json_0be3556db875ce326f5cc5b9df636348_styler,
+        });
+
+        function geo_json_0be3556db875ce326f5cc5b9df636348_add (data) {
+            geo_json_0be3556db875ce326f5cc5b9df636348
+                .addData(data);
+        }
+            geo_json_0be3556db875ce326f5cc5b9df636348_add({"bbox": [4.869390791967815, 45.76744081746032, 4.875096198142412, 45.76997233316336], "features": [{"bbox": [4.869390791967815, 45.76744081746032, 4.875096198142412, 45.76997233316336], "geometry": {"coordinates": [[[4.870735165035719, 45.76760255271237], [4.869390791967815, 45.76774974195202], [4.87147037946692, 45.76997233316336], [4.875096198142412, 45.76956567492259], [4.875049298185941, 45.76744081746032], [4.870735165035719, 45.76760255271237]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3cae1ac98fd8ea09ce21451fae970962 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52244f936720433e42617e4730e91c8e = $(`<div id="html_52244f936720433e42617e4730e91c8e" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0039</div>`)[0];
+                popup_3cae1ac98fd8ea09ce21451fae970962.setContent(html_52244f936720433e42617e4730e91c8e);
+            
+        
+
+        geo_json_0be3556db875ce326f5cc5b9df636348.bindPopup(popup_3cae1ac98fd8ea09ce21451fae970962)
+        ;
+
+        
+    
+    
+            geo_json_0be3556db875ce326f5cc5b9df636348.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_c4e856cd80a5c7cb45584909370a909f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c4e856cd80a5c7cb45584909370a909f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c4e856cd80a5c7cb45584909370a909f = L.geoJson(null, {
+                onEachFeature: geo_json_c4e856cd80a5c7cb45584909370a909f_onEachFeature,
+            
+                style: geo_json_c4e856cd80a5c7cb45584909370a909f_styler,
+        });
+
+        function geo_json_c4e856cd80a5c7cb45584909370a909f_add (data) {
+            geo_json_c4e856cd80a5c7cb45584909370a909f
+                .addData(data);
+        }
+            geo_json_c4e856cd80a5c7cb45584909370a909f_add({"bbox": [4.893680245603748, 45.76575713674769, 4.900751529520597, 45.77089380012498], "features": [{"bbox": [4.893680245603748, 45.76575713674769, 4.900751529520597, 45.77089380012498], "geometry": {"coordinates": [[[4.894552772685183, 45.7667406361111], [4.893680245603748, 45.77061572626026], [4.895678063173745, 45.77089380012498], [4.900751529520597, 45.76575713674769], [4.894552772685183, 45.7667406361111]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5eb0cb18ee8f4001c6408ff10782791a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2f673ab567884f2c9c3d4e64a8e3ded1 = $(`<div id="html_2f673ab567884f2c9c3d4e64a8e3ded1" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0004</div>`)[0];
+                popup_5eb0cb18ee8f4001c6408ff10782791a.setContent(html_2f673ab567884f2c9c3d4e64a8e3ded1);
+            
+        
+
+        geo_json_c4e856cd80a5c7cb45584909370a909f.bindPopup(popup_5eb0cb18ee8f4001c6408ff10782791a)
+        ;
+
+        
+    
+    
+            geo_json_c4e856cd80a5c7cb45584909370a909f.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_15ca566d51778ee7afa0c1ab3ec393d6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_15ca566d51778ee7afa0c1ab3ec393d6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_15ca566d51778ee7afa0c1ab3ec393d6 = L.geoJson(null, {
+                onEachFeature: geo_json_15ca566d51778ee7afa0c1ab3ec393d6_onEachFeature,
+            
+                style: geo_json_15ca566d51778ee7afa0c1ab3ec393d6_styler,
+        });
+
+        function geo_json_15ca566d51778ee7afa0c1ab3ec393d6_add (data) {
+            geo_json_15ca566d51778ee7afa0c1ab3ec393d6
+                .addData(data);
+        }
+            geo_json_15ca566d51778ee7afa0c1ab3ec393d6_add({"bbox": [4.869396416919654, 45.76505892449855, 4.876207597257609, 45.767703970009194], "features": [{"bbox": [4.869396416919654, 45.76505892449855, 4.876207597257609, 45.767703970009194], "geometry": {"coordinates": [[[4.869399622522326, 45.76573673666529], [4.869396416919654, 45.767610553981775], [4.872212122171502, 45.76659073018606], [4.87543353015261, 45.767703970009194], [4.876207597257609, 45.76505892449855], [4.869399622522326, 45.76573673666529]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f1b7e34532ef7eafa2d95704bdc5eda7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aee46962f23cb27f296bf161a708f17b = $(`<div id="html_aee46962f23cb27f296bf161a708f17b" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0040</div>`)[0];
+                popup_f1b7e34532ef7eafa2d95704bdc5eda7.setContent(html_aee46962f23cb27f296bf161a708f17b);
+            
+        
+
+        geo_json_15ca566d51778ee7afa0c1ab3ec393d6.bindPopup(popup_f1b7e34532ef7eafa2d95704bdc5eda7)
+        ;
+
+        
+    
+    
+            geo_json_15ca566d51778ee7afa0c1ab3ec393d6.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3 = L.geoJson(null, {
+                onEachFeature: geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_onEachFeature,
+            
+                style: geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_styler,
+        });
+
+        function geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_add (data) {
+            geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3
+                .addData(data);
+        }
+            geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3_add({"bbox": [4.870041308790724, 45.761705129148076, 4.879966989631086, 45.76508788546404], "features": [{"bbox": [4.870041308790724, 45.761705129148076, 4.879966989631086, 45.76508788546404], "geometry": {"coordinates": [[[[4.879742099574617, 45.76214743204596], [4.879966989631086, 45.76194690507896], [4.87943090413043, 45.761705129148076], [4.879359093321319, 45.76179132589742], [4.879742099574617, 45.76214743204596]]], [[[4.870345879395246, 45.76320212210641], [4.870041308790724, 45.76508788546404], [4.874170669733101, 45.76508073257757], [4.872125832132144, 45.76215000566707], [4.870345879395246, 45.76320212210641]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_604df8a820a1b5c5f3c5880b7bf5dee2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9a71f4031942fc1567d71c6a5b081a81 = $(`<div id="html_9a71f4031942fc1567d71c6a5b081a81" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0041</div>`)[0];
+                popup_604df8a820a1b5c5f3c5880b7bf5dee2.setContent(html_9a71f4031942fc1567d71c6a5b081a81);
+            
+        
+
+        geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3.bindPopup(popup_604df8a820a1b5c5f3c5880b7bf5dee2)
+        ;
+
+        
+    
+    
+            geo_json_4d84ead0c5cb4a9311c661f1f5bc83b3.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_19e8fa3b78bf4841f576a63c05d31b98_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_19e8fa3b78bf4841f576a63c05d31b98_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_19e8fa3b78bf4841f576a63c05d31b98 = L.geoJson(null, {
+                onEachFeature: geo_json_19e8fa3b78bf4841f576a63c05d31b98_onEachFeature,
+            
+                style: geo_json_19e8fa3b78bf4841f576a63c05d31b98_styler,
+        });
+
+        function geo_json_19e8fa3b78bf4841f576a63c05d31b98_add (data) {
+            geo_json_19e8fa3b78bf4841f576a63c05d31b98
+                .addData(data);
+        }
+            geo_json_19e8fa3b78bf4841f576a63c05d31b98_add({"bbox": [4.877961289677213, 45.76571830334475, 4.880067934178433, 45.768410128631636], "features": [{"bbox": [4.877961289677213, 45.76571830334475, 4.880067934178433, 45.768410128631636], "geometry": {"coordinates": [[[4.878005243073049, 45.765816285894196], [4.877961289677213, 45.76822664177067], [4.880067934178433, 45.768410128631636], [4.879928857042105, 45.76571830334475], [4.878005243073049, 45.765816285894196]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_52b60913bdd2e8e5515b94d81430a111 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7313ce38b725dfd68c349970d6123bd = $(`<div id="html_c7313ce38b725dfd68c349970d6123bd" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0042</div>`)[0];
+                popup_52b60913bdd2e8e5515b94d81430a111.setContent(html_c7313ce38b725dfd68c349970d6123bd);
+            
+        
+
+        geo_json_19e8fa3b78bf4841f576a63c05d31b98.bindPopup(popup_52b60913bdd2e8e5515b94d81430a111)
+        ;
+
+        
+    
+    
+            geo_json_19e8fa3b78bf4841f576a63c05d31b98.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_c37352dc87d206f6a1c2cfd831c42520_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c37352dc87d206f6a1c2cfd831c42520_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c37352dc87d206f6a1c2cfd831c42520 = L.geoJson(null, {
+                onEachFeature: geo_json_c37352dc87d206f6a1c2cfd831c42520_onEachFeature,
+            
+                style: geo_json_c37352dc87d206f6a1c2cfd831c42520_styler,
+        });
+
+        function geo_json_c37352dc87d206f6a1c2cfd831c42520_add (data) {
+            geo_json_c37352dc87d206f6a1c2cfd831c42520
+                .addData(data);
+        }
+            geo_json_c37352dc87d206f6a1c2cfd831c42520_add({"bbox": [4.875763254044614, 45.76505892449855, 4.877961289677213, 45.76822664177067], "features": [{"bbox": [4.875763254044614, 45.76505892449855, 4.877961289677213, 45.76822664177067], "geometry": {"coordinates": [[[4.875942467393515, 45.76628332800082], [4.875763254044614, 45.7675509781233], [4.877961289677213, 45.76822664177067], [4.877920029544016, 45.76549982828637], [4.876207597257609, 45.76505892449855], [4.875942467393515, 45.76628332800082]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_222f269f8432d62407949ff77270d5f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_92b13811fa9de938392458bb7b86c7bb = $(`<div id="html_92b13811fa9de938392458bb7b86c7bb" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0043</div>`)[0];
+                popup_222f269f8432d62407949ff77270d5f4.setContent(html_92b13811fa9de938392458bb7b86c7bb);
+            
+        
+
+        geo_json_c37352dc87d206f6a1c2cfd831c42520.bindPopup(popup_222f269f8432d62407949ff77270d5f4)
+        ;
+
+        
+    
+    
+            geo_json_c37352dc87d206f6a1c2cfd831c42520.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_1697c8adafa2f9104cf96a0c5ef5a073_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1697c8adafa2f9104cf96a0c5ef5a073_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1697c8adafa2f9104cf96a0c5ef5a073 = L.geoJson(null, {
+                onEachFeature: geo_json_1697c8adafa2f9104cf96a0c5ef5a073_onEachFeature,
+            
+                style: geo_json_1697c8adafa2f9104cf96a0c5ef5a073_styler,
+        });
+
+        function geo_json_1697c8adafa2f9104cf96a0c5ef5a073_add (data) {
+            geo_json_1697c8adafa2f9104cf96a0c5ef5a073
+                .addData(data);
+        }
+            geo_json_1697c8adafa2f9104cf96a0c5ef5a073_add({"bbox": [4.875039373442465, 45.76344695090523, 4.878710862229818, 45.765576838002985], "features": [{"bbox": [4.875039373442465, 45.76344695090523, 4.878710862229818, 45.765576838002985], "geometry": {"coordinates": [[[4.875039373442465, 45.76348325958955], [4.875417341401206, 45.765576838002985], [4.877920029544016, 45.76549982828637], [4.878710862229818, 45.76344695090523], [4.875039373442465, 45.76348325958955]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aeeba20da6ae20c5c5dcbd47bcecea8e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3dd902c82c5212b6cfab14750de86c72 = $(`<div id="html_3dd902c82c5212b6cfab14750de86c72" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0044</div>`)[0];
+                popup_aeeba20da6ae20c5c5dcbd47bcecea8e.setContent(html_3dd902c82c5212b6cfab14750de86c72);
+            
+        
+
+        geo_json_1697c8adafa2f9104cf96a0c5ef5a073.bindPopup(popup_aeeba20da6ae20c5c5dcbd47bcecea8e)
+        ;
+
+        
+    
+    
+            geo_json_1697c8adafa2f9104cf96a0c5ef5a073.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7 = L.geoJson(null, {
+                onEachFeature: geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_onEachFeature,
+            
+                style: geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_styler,
+        });
+
+        function geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_add (data) {
+            geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7
+                .addData(data);
+        }
+            geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7_add({"bbox": [4.877278223440356, 45.76808099169989, 4.880412174585898, 45.77115960212889], "features": [{"bbox": [4.877278223440356, 45.76808099169989, 4.880412174585898, 45.77115960212889], "geometry": {"coordinates": [[[4.877278223440356, 45.76898347845232], [4.878890490093967, 45.77115960212889], [4.880412174585898, 45.76916964299745], [4.879465181164538, 45.76808099169989], [4.877278223440356, 45.76898347845232]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9ccf298c547b9465d9992611f598a7f2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_13fe0260f46d2065c328e76566b3f349 = $(`<div id="html_13fe0260f46d2065c328e76566b3f349" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0045</div>`)[0];
+                popup_9ccf298c547b9465d9992611f598a7f2.setContent(html_13fe0260f46d2065c328e76566b3f349);
+            
+        
+
+        geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7.bindPopup(popup_9ccf298c547b9465d9992611f598a7f2)
+        ;
+
+        
+    
+    
+            geo_json_3b5e76f4b2884cd621a3a4485a3a0fa7.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_4fdb62f16f6f93611593e3091324f0bc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4fdb62f16f6f93611593e3091324f0bc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4fdb62f16f6f93611593e3091324f0bc = L.geoJson(null, {
+                onEachFeature: geo_json_4fdb62f16f6f93611593e3091324f0bc_onEachFeature,
+            
+                style: geo_json_4fdb62f16f6f93611593e3091324f0bc_styler,
+        });
+
+        function geo_json_4fdb62f16f6f93611593e3091324f0bc_add (data) {
+            geo_json_4fdb62f16f6f93611593e3091324f0bc
+                .addData(data);
+        }
+            geo_json_4fdb62f16f6f93611593e3091324f0bc_add({"bbox": [4.879990456315968, 45.76532003516835, 4.882798228052238, 45.76916964299745], "features": [{"bbox": [4.879990456315968, 45.76532003516835, 4.882798228052238, 45.76916964299745], "geometry": {"coordinates": [[[4.879990456315968, 45.765984635108744], [4.880412174585898, 45.76916964299745], [4.882798228052238, 45.76887900008764], [4.881476972555635, 45.76532003516835], [4.879990456315968, 45.765984635108744]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4684cf4c277db1b162dc34703e61b387 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82fd6b0fb81abf1cd4b55bc9ed7266d4 = $(`<div id="html_82fd6b0fb81abf1cd4b55bc9ed7266d4" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0046</div>`)[0];
+                popup_4684cf4c277db1b162dc34703e61b387.setContent(html_82fd6b0fb81abf1cd4b55bc9ed7266d4);
+            
+        
+
+        geo_json_4fdb62f16f6f93611593e3091324f0bc.bindPopup(popup_4684cf4c277db1b162dc34703e61b387)
+        ;
+
+        
+    
+    
+            geo_json_4fdb62f16f6f93611593e3091324f0bc.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_3864b5d02f7831ba60e5b3d05f417453_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3864b5d02f7831ba60e5b3d05f417453_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3864b5d02f7831ba60e5b3d05f417453 = L.geoJson(null, {
+                onEachFeature: geo_json_3864b5d02f7831ba60e5b3d05f417453_onEachFeature,
+            
+                style: geo_json_3864b5d02f7831ba60e5b3d05f417453_styler,
+        });
+
+        function geo_json_3864b5d02f7831ba60e5b3d05f417453_add (data) {
+            geo_json_3864b5d02f7831ba60e5b3d05f417453
+                .addData(data);
+        }
+            geo_json_3864b5d02f7831ba60e5b3d05f417453_add({"bbox": [4.88129022556833, 45.769267950151395, 4.885114607219246, 45.77135235794527], "features": [{"bbox": [4.88129022556833, 45.769267950151395, 4.885114607219246, 45.77135235794527], "geometry": {"coordinates": [[[4.881536007569813, 45.769267950151395], [4.88129022556833, 45.77135235794527], [4.885074111580236, 45.77107132005449], [4.885114607219246, 45.76951629379499], [4.881536007569813, 45.769267950151395]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4fb62b773d95160ec1e6f715fc31d8f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db3b39dddfdf4621171310a41a5394f4 = $(`<div id="html_db3b39dddfdf4621171310a41a5394f4" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0047</div>`)[0];
+                popup_4fb62b773d95160ec1e6f715fc31d8f6.setContent(html_db3b39dddfdf4621171310a41a5394f4);
+            
+        
+
+        geo_json_3864b5d02f7831ba60e5b3d05f417453.bindPopup(popup_4fb62b773d95160ec1e6f715fc31d8f6)
+        ;
+
+        
+    
+    
+            geo_json_3864b5d02f7831ba60e5b3d05f417453.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b8f85ce606011ad3e0f65f77cfd8bf14 = L.geoJson(null, {
+                onEachFeature: geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_onEachFeature,
+            
+                style: geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_styler,
+        });
+
+        function geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_add (data) {
+            geo_json_b8f85ce606011ad3e0f65f77cfd8bf14
+                .addData(data);
+        }
+            geo_json_b8f85ce606011ad3e0f65f77cfd8bf14_add({"bbox": [4.882476038348271, 45.76436690797546, 4.886144182676119, 45.76953896501289], "features": [{"bbox": [4.882476038348271, 45.76436690797546, 4.886144182676119, 45.76953896501289], "geometry": {"coordinates": [[[4.883064544324493, 45.76565632006225], [4.882476038348271, 45.76824422131932], [4.883909482734606, 45.76953896501289], [4.886144182676119, 45.767243152790286], [4.884559208003671, 45.76659809002759], [4.884470871631053, 45.76436690797546], [4.883064544324493, 45.76565632006225]], [[4.884392573618208, 45.76693506502554], [4.884019771837735, 45.76694257481398], [4.88402996974116, 45.766826051039004], [4.884367222551933, 45.76684380118694], [4.884392573618208, 45.76693506502554]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7a89fdb1c54f5311dd674ca09c81796f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cef5c36682de2c5a34714a5dbbc7965d = $(`<div id="html_cef5c36682de2c5a34714a5dbbc7965d" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0048</div>`)[0];
+                popup_7a89fdb1c54f5311dd674ca09c81796f.setContent(html_cef5c36682de2c5a34714a5dbbc7965d);
+            
+        
+
+        geo_json_b8f85ce606011ad3e0f65f77cfd8bf14.bindPopup(popup_7a89fdb1c54f5311dd674ca09c81796f)
+        ;
+
+        
+    
+    
+            geo_json_b8f85ce606011ad3e0f65f77cfd8bf14.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_c8a7632f6b893b4621e6c58022052692_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c8a7632f6b893b4621e6c58022052692_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c8a7632f6b893b4621e6c58022052692 = L.geoJson(null, {
+                onEachFeature: geo_json_c8a7632f6b893b4621e6c58022052692_onEachFeature,
+            
+                style: geo_json_c8a7632f6b893b4621e6c58022052692_styler,
+        });
+
+        function geo_json_c8a7632f6b893b4621e6c58022052692_add (data) {
+            geo_json_c8a7632f6b893b4621e6c58022052692
+                .addData(data);
+        }
+            geo_json_c8a7632f6b893b4621e6c58022052692_add({"bbox": [4.881199528319036, 45.76480362309389, 4.883055971308516, 45.76734454823151], "features": [{"bbox": [4.881199528319036, 45.76480362309389, 4.883055971308516, 45.76734454823151], "geometry": {"coordinates": [[[4.881199528319036, 45.76504169882811], [4.881501133440515, 45.76734454823151], [4.882995793108411, 45.76684499313944], [4.883055971308516, 45.76480362309389], [4.881199528319036, 45.76504169882811]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_eb1b5f92d9d31d0512b7be6ee34ff191 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd93019886d033097202ffaf224054ff = $(`<div id="html_bd93019886d033097202ffaf224054ff" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0049</div>`)[0];
+                popup_eb1b5f92d9d31d0512b7be6ee34ff191.setContent(html_bd93019886d033097202ffaf224054ff);
+            
+        
+
+        geo_json_c8a7632f6b893b4621e6c58022052692.bindPopup(popup_eb1b5f92d9d31d0512b7be6ee34ff191)
+        ;
+
+        
+    
+    
+            geo_json_c8a7632f6b893b4621e6c58022052692.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_df74949fa831124277f580436e043014_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_df74949fa831124277f580436e043014_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_df74949fa831124277f580436e043014 = L.geoJson(null, {
+                onEachFeature: geo_json_df74949fa831124277f580436e043014_onEachFeature,
+            
+                style: geo_json_df74949fa831124277f580436e043014_styler,
+        });
+
+        function geo_json_df74949fa831124277f580436e043014_add (data) {
+            geo_json_df74949fa831124277f580436e043014
+                .addData(data);
+        }
+            geo_json_df74949fa831124277f580436e043014_add({"bbox": [4.892658827488768, 45.77020761901082, 4.901771238985748, 45.777337884428604], "features": [{"bbox": [4.892658827488768, 45.77020761901082, 4.901771238985748, 45.777337884428604], "geometry": {"coordinates": [[[4.893701659701746, 45.77210528980469], [4.892658827488768, 45.77550237098292], [4.896198275271409, 45.775536948487314], [4.89746540272168, 45.777337884428604], [4.901771238985748, 45.772482289466566], [4.895103348531687, 45.77020761901082], [4.893701659701746, 45.77210528980469]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_73c3fef2cceb0501886a7679d3f2c26e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43a68bf1125976a65dafc3be4ec1ec83 = $(`<div id="html_43a68bf1125976a65dafc3be4ec1ec83" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0005</div>`)[0];
+                popup_73c3fef2cceb0501886a7679d3f2c26e.setContent(html_43a68bf1125976a65dafc3be4ec1ec83);
+            
+        
+
+        geo_json_df74949fa831124277f580436e043014.bindPopup(popup_73c3fef2cceb0501886a7679d3f2c26e)
+        ;
+
+        
+    
+    
+            geo_json_df74949fa831124277f580436e043014.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_01bbad6994a3c7ab273af174d62d6418_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_01bbad6994a3c7ab273af174d62d6418_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_01bbad6994a3c7ab273af174d62d6418 = L.geoJson(null, {
+                onEachFeature: geo_json_01bbad6994a3c7ab273af174d62d6418_onEachFeature,
+            
+                style: geo_json_01bbad6994a3c7ab273af174d62d6418_styler,
+        });
+
+        function geo_json_01bbad6994a3c7ab273af174d62d6418_add (data) {
+            geo_json_01bbad6994a3c7ab273af174d62d6418
+                .addData(data);
+        }
+            geo_json_01bbad6994a3c7ab273af174d62d6418_add({"bbox": [4.878062855172666, 45.762019925285095, 4.881735231477293, 45.765248258489756], "features": [{"bbox": [4.878062855172666, 45.762019925285095, 4.881735231477293, 45.765248258489756], "geometry": {"coordinates": [[[4.879040078624099, 45.7624253144963], [4.878062855172666, 45.765248258489756], [4.881735231477293, 45.76470808037814], [4.880751660440428, 45.762019925285095], [4.879040078624099, 45.7624253144963]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9ca6c35f2038aeb8140faac6995964f9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8cdf5e61599481905ea5dcb28c5d6c6a = $(`<div id="html_8cdf5e61599481905ea5dcb28c5d6c6a" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0050</div>`)[0];
+                popup_9ca6c35f2038aeb8140faac6995964f9.setContent(html_8cdf5e61599481905ea5dcb28c5d6c6a);
+            
+        
+
+        geo_json_01bbad6994a3c7ab273af174d62d6418.bindPopup(popup_9ca6c35f2038aeb8140faac6995964f9)
+        ;
+
+        
+    
+    
+            geo_json_01bbad6994a3c7ab273af174d62d6418.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_8ffa702762d2f181858197a61d721fd5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8ffa702762d2f181858197a61d721fd5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8ffa702762d2f181858197a61d721fd5 = L.geoJson(null, {
+                onEachFeature: geo_json_8ffa702762d2f181858197a61d721fd5_onEachFeature,
+            
+                style: geo_json_8ffa702762d2f181858197a61d721fd5_styler,
+        });
+
+        function geo_json_8ffa702762d2f181858197a61d721fd5_add (data) {
+            geo_json_8ffa702762d2f181858197a61d721fd5
+                .addData(data);
+        }
+            geo_json_8ffa702762d2f181858197a61d721fd5_add({"bbox": [4.880630591954022, 45.76169977926241, 4.884647935596273, 45.76520161589454], "features": [{"bbox": [4.880630591954022, 45.76169977926241, 4.884647935596273, 45.76520161589454], "geometry": {"coordinates": [[[4.881308942187757, 45.76169977926241], [4.880630591954022, 45.76382695374931], [4.882420825231128, 45.76520161589454], [4.884470871631053, 45.76436690797546], [4.884647935596273, 45.76267631591105], [4.881308942187757, 45.76169977926241]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1033529e2faff90bc6ef518a5f07c311 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_efdfbd687827f951d7e462065bcb4973 = $(`<div id="html_efdfbd687827f951d7e462065bcb4973" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0051</div>`)[0];
+                popup_1033529e2faff90bc6ef518a5f07c311.setContent(html_efdfbd687827f951d7e462065bcb4973);
+            
+        
+
+        geo_json_8ffa702762d2f181858197a61d721fd5.bindPopup(popup_1033529e2faff90bc6ef518a5f07c311)
+        ;
+
+        
+    
+    
+            geo_json_8ffa702762d2f181858197a61d721fd5.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_f9000d987af0598f9d2acaf6d7a486f3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_f9000d987af0598f9d2acaf6d7a486f3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f9000d987af0598f9d2acaf6d7a486f3 = L.geoJson(null, {
+                onEachFeature: geo_json_f9000d987af0598f9d2acaf6d7a486f3_onEachFeature,
+            
+                style: geo_json_f9000d987af0598f9d2acaf6d7a486f3_styler,
+        });
+
+        function geo_json_f9000d987af0598f9d2acaf6d7a486f3_add (data) {
+            geo_json_f9000d987af0598f9d2acaf6d7a486f3
+                .addData(data);
+        }
+            geo_json_f9000d987af0598f9d2acaf6d7a486f3_add({"bbox": [4.884614394900928, 45.762374006415094, 4.88981162484237, 45.765649032887254], "features": [{"bbox": [4.884614394900928, 45.762374006415094, 4.88981162484237, 45.765649032887254], "geometry": {"coordinates": [[[[4.884805629509433, 45.762374006415094], [4.884614394900928, 45.76463076857705], [4.888613859679274, 45.765649032887254], [4.888402084589385, 45.76408022531343], [4.889347523821586, 45.762600529396856], [4.884805629509433, 45.762374006415094]]], [[[4.889666610523633, 45.76487148808766], [4.88981162484237, 45.763859447184096], [4.888733313501525, 45.76395710556968], [4.889595639166579, 45.764936604998134], [4.889666610523633, 45.76487148808766]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c03f90aefa3fa14752699e328790134d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c91e32de36b4162d1108be71eab0855 = $(`<div id="html_0c91e32de36b4162d1108be71eab0855" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0052</div>`)[0];
+                popup_c03f90aefa3fa14752699e328790134d.setContent(html_0c91e32de36b4162d1108be71eab0855);
+            
+        
+
+        geo_json_f9000d987af0598f9d2acaf6d7a486f3.bindPopup(popup_c03f90aefa3fa14752699e328790134d)
+        ;
+
+        
+    
+    
+            geo_json_f9000d987af0598f9d2acaf6d7a486f3.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_ed663b6db9f02e0dbb7bb015c52ff405_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ed663b6db9f02e0dbb7bb015c52ff405_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ed663b6db9f02e0dbb7bb015c52ff405 = L.geoJson(null, {
+                onEachFeature: geo_json_ed663b6db9f02e0dbb7bb015c52ff405_onEachFeature,
+            
+                style: geo_json_ed663b6db9f02e0dbb7bb015c52ff405_styler,
+        });
+
+        function geo_json_ed663b6db9f02e0dbb7bb015c52ff405_add (data) {
+            geo_json_ed663b6db9f02e0dbb7bb015c52ff405
+                .addData(data);
+        }
+            geo_json_ed663b6db9f02e0dbb7bb015c52ff405_add({"bbox": [4.884858706586289, 45.75780978103821, 4.889756314416696, 45.762496866501365], "features": [{"bbox": [4.884858706586289, 45.75780978103821, 4.889756314416696, 45.762496866501365], "geometry": {"coordinates": [[[4.884858706586289, 45.758969786613605], [4.885849870332271, 45.762007380477016], [4.888135485188567, 45.762496866501365], [4.889756314416696, 45.76072018898456], [4.885551692542387, 45.75780978103821], [4.884858706586289, 45.758969786613605]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2dd87445a1cebca2e87ef6d6794923ff = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a55e2a2d6bf342ebb2b3acfdde8c53b4 = $(`<div id="html_a55e2a2d6bf342ebb2b3acfdde8c53b4" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0053</div>`)[0];
+                popup_2dd87445a1cebca2e87ef6d6794923ff.setContent(html_a55e2a2d6bf342ebb2b3acfdde8c53b4);
+            
+        
+
+        geo_json_ed663b6db9f02e0dbb7bb015c52ff405.bindPopup(popup_2dd87445a1cebca2e87ef6d6794923ff)
+        ;
+
+        
+    
+    
+            geo_json_ed663b6db9f02e0dbb7bb015c52ff405.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_0fb129a86ab72da9625c78df52ab3e5d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0fb129a86ab72da9625c78df52ab3e5d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0fb129a86ab72da9625c78df52ab3e5d = L.geoJson(null, {
+                onEachFeature: geo_json_0fb129a86ab72da9625c78df52ab3e5d_onEachFeature,
+            
+                style: geo_json_0fb129a86ab72da9625c78df52ab3e5d_styler,
+        });
+
+        function geo_json_0fb129a86ab72da9625c78df52ab3e5d_add (data) {
+            geo_json_0fb129a86ab72da9625c78df52ab3e5d
+                .addData(data);
+        }
+            geo_json_0fb129a86ab72da9625c78df52ab3e5d_add({"bbox": [4.879156402439025, 45.757230472142446, 4.885226859097133, 45.760256966741814], "features": [{"bbox": [4.879156402439025, 45.757230472142446, 4.885226859097133, 45.760256966741814], "geometry": {"coordinates": [[[[4.879156402439025, 45.758735658536594], [4.879347924078114, 45.75872118306387], [4.879397830275228, 45.75859024637467], [4.879173381671325, 45.75852146373799], [4.879156402439025, 45.758735658536594]]], [[[4.881245468791879, 45.757230472142446], [4.880109289068407, 45.75767458623729], [4.881093000549286, 45.76002325239373], [4.88478854791432, 45.760256966741814], [4.885226859097133, 45.758178807611], [4.881245468791879, 45.757230472142446]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aa4295ef999df0583a74b4f2ade8618c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3fb8851763e8f51ab99e70f40405e17 = $(`<div id="html_d3fb8851763e8f51ab99e70f40405e17" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0054</div>`)[0];
+                popup_aa4295ef999df0583a74b4f2ade8618c.setContent(html_d3fb8851763e8f51ab99e70f40405e17);
+            
+        
+
+        geo_json_0fb129a86ab72da9625c78df52ab3e5d.bindPopup(popup_aa4295ef999df0583a74b4f2ade8618c)
+        ;
+
+        
+    
+    
+            geo_json_0fb129a86ab72da9625c78df52ab3e5d.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_61779bb7a465687b2c4fd5ddbc132933_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_61779bb7a465687b2c4fd5ddbc132933_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_61779bb7a465687b2c4fd5ddbc132933 = L.geoJson(null, {
+                onEachFeature: geo_json_61779bb7a465687b2c4fd5ddbc132933_onEachFeature,
+            
+                style: geo_json_61779bb7a465687b2c4fd5ddbc132933_styler,
+        });
+
+        function geo_json_61779bb7a465687b2c4fd5ddbc132933_add (data) {
+            geo_json_61779bb7a465687b2c4fd5ddbc132933
+                .addData(data);
+        }
+            geo_json_61779bb7a465687b2c4fd5ddbc132933_add({"bbox": [4.880876763805921, 45.75997320000571, 4.886067146572006, 45.76319304596669], "features": [{"bbox": [4.880876763805921, 45.75997320000571, 4.886067146572006, 45.76319304596669], "geometry": {"coordinates": [[[4.881811703696285, 45.75997320000571], [4.880876763805921, 45.76118956725682], [4.883887642909102, 45.76319304596669], [4.886067146572006, 45.761205936265284], [4.881811703696285, 45.75997320000571]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4d2ea324d6a41b8462fe32f73db03b0f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db3fa905c87e9e2f9ba9552e7a887fd6 = $(`<div id="html_db3fa905c87e9e2f9ba9552e7a887fd6" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0055</div>`)[0];
+                popup_4d2ea324d6a41b8462fe32f73db03b0f.setContent(html_db3fa905c87e9e2f9ba9552e7a887fd6);
+            
+        
+
+        geo_json_61779bb7a465687b2c4fd5ddbc132933.bindPopup(popup_4d2ea324d6a41b8462fe32f73db03b0f)
+        ;
+
+        
+    
+    
+            geo_json_61779bb7a465687b2c4fd5ddbc132933.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_3e6b490b2305392932931608812563d2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3e6b490b2305392932931608812563d2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3e6b490b2305392932931608812563d2 = L.geoJson(null, {
+                onEachFeature: geo_json_3e6b490b2305392932931608812563d2_onEachFeature,
+            
+                style: geo_json_3e6b490b2305392932931608812563d2_styler,
+        });
+
+        function geo_json_3e6b490b2305392932931608812563d2_add (data) {
+            geo_json_3e6b490b2305392932931608812563d2
+                .addData(data);
+        }
+            geo_json_3e6b490b2305392932931608812563d2_add({"bbox": [4.874659664897636, 45.76024052183221, 4.881190077003188, 45.76349387853341], "features": [{"bbox": [4.874659664897636, 45.76024052183221, 4.881190077003188, 45.76349387853341], "geometry": {"coordinates": [[[4.876204760680777, 45.76024052183221], [4.874659664897636, 45.76083332946916], [4.876000593903328, 45.76324473196503], [4.877394405272983, 45.76349387853341], [4.881190077003188, 45.761430363123935], [4.876204760680777, 45.76024052183221]], [[4.87943090413043, 45.761705129148076], [4.879719820197041, 45.76175705029628], [4.879966989631086, 45.76194690507896], [4.879742099574617, 45.76214743204596], [4.87943090413043, 45.761705129148076]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_18a86f4561126e8978e55b1d7d528293 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_aa70218125a8d25c4f6ceb0c976ee271 = $(`<div id="html_aa70218125a8d25c4f6ceb0c976ee271" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0056</div>`)[0];
+                popup_18a86f4561126e8978e55b1d7d528293.setContent(html_aa70218125a8d25c4f6ceb0c976ee271);
+            
+        
+
+        geo_json_3e6b490b2305392932931608812563d2.bindPopup(popup_18a86f4561126e8978e55b1d7d528293)
+        ;
+
+        
+    
+    
+            geo_json_3e6b490b2305392932931608812563d2.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_10f22b1f0bbfa893d37942ff173e9b4d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_10f22b1f0bbfa893d37942ff173e9b4d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_10f22b1f0bbfa893d37942ff173e9b4d = L.geoJson(null, {
+                onEachFeature: geo_json_10f22b1f0bbfa893d37942ff173e9b4d_onEachFeature,
+            
+                style: geo_json_10f22b1f0bbfa893d37942ff173e9b4d_styler,
+        });
+
+        function geo_json_10f22b1f0bbfa893d37942ff173e9b4d_add (data) {
+            geo_json_10f22b1f0bbfa893d37942ff173e9b4d
+                .addData(data);
+        }
+            geo_json_10f22b1f0bbfa893d37942ff173e9b4d_add({"bbox": [4.871880610478613, 45.76078623309207, 4.876198, 45.76365860834965], "features": [{"bbox": [4.871880610478613, 45.76078623309207, 4.876198, 45.76365860834965], "geometry": {"coordinates": [[[4.871880610478613, 45.76120635734201], [4.872315606641389, 45.76365860834965], [4.876198, 45.76233909289618], [4.874558167844248, 45.76078623309207], [4.871880610478613, 45.76120635734201]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e96b6e97ea587242c70a757ff854728d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1753739110b5112b495a26b223df70ad = $(`<div id="html_1753739110b5112b495a26b223df70ad" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0057</div>`)[0];
+                popup_e96b6e97ea587242c70a757ff854728d.setContent(html_1753739110b5112b495a26b223df70ad);
+            
+        
+
+        geo_json_10f22b1f0bbfa893d37942ff173e9b4d.bindPopup(popup_e96b6e97ea587242c70a757ff854728d)
+        ;
+
+        
+    
+    
+            geo_json_10f22b1f0bbfa893d37942ff173e9b4d.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_e6389c8f052d8a78182035e3c41f3c02_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e6389c8f052d8a78182035e3c41f3c02_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e6389c8f052d8a78182035e3c41f3c02 = L.geoJson(null, {
+                onEachFeature: geo_json_e6389c8f052d8a78182035e3c41f3c02_onEachFeature,
+            
+                style: geo_json_e6389c8f052d8a78182035e3c41f3c02_styler,
+        });
+
+        function geo_json_e6389c8f052d8a78182035e3c41f3c02_add (data) {
+            geo_json_e6389c8f052d8a78182035e3c41f3c02
+                .addData(data);
+        }
+            geo_json_e6389c8f052d8a78182035e3c41f3c02_add({"bbox": [4.873975061226836, 45.75816835430881, 4.8773301462252, 45.76067508203027], "features": [{"bbox": [4.873975061226836, 45.75816835430881, 4.8773301462252, 45.76067508203027], "geometry": {"coordinates": [[[4.87450565945946, 45.758617732432434], [4.873975061226836, 45.76067508203027], [4.8773301462252, 45.76008033135789], [4.876572397434002, 45.75816835430881], [4.87450565945946, 45.758617732432434]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_354c990e65ecca5e2e1436c0b6c86f3e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_145ac8930f5459673e33850d3f63401c = $(`<div id="html_145ac8930f5459673e33850d3f63401c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0058</div>`)[0];
+                popup_354c990e65ecca5e2e1436c0b6c86f3e.setContent(html_145ac8930f5459673e33850d3f63401c);
+            
+        
+
+        geo_json_e6389c8f052d8a78182035e3c41f3c02.bindPopup(popup_354c990e65ecca5e2e1436c0b6c86f3e)
+        ;
+
+        
+    
+    
+            geo_json_e6389c8f052d8a78182035e3c41f3c02.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_942600043550d12b06214d7ac895dfd0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_942600043550d12b06214d7ac895dfd0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_942600043550d12b06214d7ac895dfd0 = L.geoJson(null, {
+                onEachFeature: geo_json_942600043550d12b06214d7ac895dfd0_onEachFeature,
+            
+                style: geo_json_942600043550d12b06214d7ac895dfd0_styler,
+        });
+
+        function geo_json_942600043550d12b06214d7ac895dfd0_add (data) {
+            geo_json_942600043550d12b06214d7ac895dfd0
+                .addData(data);
+        }
+            geo_json_942600043550d12b06214d7ac895dfd0_add({"bbox": [4.875396, 45.754879, 4.880793899872375, 45.76071559753224], "features": [{"bbox": [4.875396, 45.754879, 4.880793899872375, 45.76071559753224], "geometry": {"coordinates": [[[[4.87655503644238, 45.75526680004225], [4.876562371404496, 45.75492577178564], [4.875396, 45.754879], [4.876123423255816, 45.75542845116279], [4.87655503644238, 45.75526680004225]]], [[[4.87696681132382, 45.75588005790719], [4.877259421199651, 45.76071559753224], [4.880793899872375, 45.76033425237824], [4.880647602055256, 45.75704102605586], [4.87696681132382, 45.75588005790719]], [[4.879397830275228, 45.75859024637467], [4.879347924078114, 45.75872118306387], [4.879078471329048, 45.75869112647374], [4.879173381671325, 45.75852146373799], [4.879397830275228, 45.75859024637467]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e36b476cb92beb4a4acb4a7659328f1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b81e1e89ff7bbb7106d3f63066358699 = $(`<div id="html_b81e1e89ff7bbb7106d3f63066358699" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0059</div>`)[0];
+                popup_e36b476cb92beb4a4acb4a7659328f1d.setContent(html_b81e1e89ff7bbb7106d3f63066358699);
+            
+        
+
+        geo_json_942600043550d12b06214d7ac895dfd0.bindPopup(popup_e36b476cb92beb4a4acb4a7659328f1d)
+        ;
+
+        
+    
+    
+            geo_json_942600043550d12b06214d7ac895dfd0.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518 = L.geoJson(null, {
+                onEachFeature: geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_onEachFeature,
+            
+                style: geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_styler,
+        });
+
+        function geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_add (data) {
+            geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518
+                .addData(data);
+        }
+            geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518_add({"bbox": [4.890053066320776, 45.77529858541693, 4.89746540272168, 45.781404780926245], "features": [{"bbox": [4.890053066320776, 45.77529858541693, 4.89746540272168, 45.781404780926245], "geometry": {"coordinates": [[[4.892085895121946, 45.77598995380636], [4.890053066320776, 45.777226566546354], [4.891793443077212, 45.77711295086387], [4.891732960075689, 45.780410722732995], [4.894506660642379, 45.781404780926245], [4.89746540272168, 45.777337884428604], [4.895405027185011, 45.77529858541693], [4.892085895121946, 45.77598995380636]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6aa5a0764ad9eee705fa2a59aaef04e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4e988aaaf66b0195a6fb451c890cc2a = $(`<div id="html_c4e988aaaf66b0195a6fb451c890cc2a" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0006</div>`)[0];
+                popup_6aa5a0764ad9eee705fa2a59aaef04e5.setContent(html_c4e988aaaf66b0195a6fb451c890cc2a);
+            
+        
+
+        geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518.bindPopup(popup_6aa5a0764ad9eee705fa2a59aaef04e5)
+        ;
+
+        
+    
+    
+            geo_json_ef3bf1ae3a7a1ef7a8559d6aa9e1e518.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_9494d5252c257e531cd51cd0275ea663_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9494d5252c257e531cd51cd0275ea663_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9494d5252c257e531cd51cd0275ea663 = L.geoJson(null, {
+                onEachFeature: geo_json_9494d5252c257e531cd51cd0275ea663_onEachFeature,
+            
+                style: geo_json_9494d5252c257e531cd51cd0275ea663_styler,
+        });
+
+        function geo_json_9494d5252c257e531cd51cd0275ea663_add (data) {
+            geo_json_9494d5252c257e531cd51cd0275ea663
+                .addData(data);
+        }
+            geo_json_9494d5252c257e531cd51cd0275ea663_add({"bbox": [4.876596186918079, 45.75460293917808, 4.881582260284403, 45.75717074866917], "features": [{"bbox": [4.876596186918079, 45.75460293917808, 4.881582260284403, 45.75717074866917], "geometry": {"coordinates": [[[4.876596186918079, 45.75510615491598], [4.880885711236562, 45.75717074866917], [4.881582260284403, 45.75622025459854], [4.881128848270575, 45.75460293917808], [4.876596186918079, 45.75510615491598]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7ff159f99108013045e024e4df28767c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb0bdddc83ca981755fa2bf432b3379a = $(`<div id="html_fb0bdddc83ca981755fa2bf432b3379a" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0060</div>`)[0];
+                popup_7ff159f99108013045e024e4df28767c.setContent(html_fb0bdddc83ca981755fa2bf432b3379a);
+            
+        
+
+        geo_json_9494d5252c257e531cd51cd0275ea663.bindPopup(popup_7ff159f99108013045e024e4df28767c)
+        ;
+
+        
+    
+    
+            geo_json_9494d5252c257e531cd51cd0275ea663.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_509c7bdbd4440b8536b3ca5f871186ee_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_509c7bdbd4440b8536b3ca5f871186ee_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_509c7bdbd4440b8536b3ca5f871186ee = L.geoJson(null, {
+                onEachFeature: geo_json_509c7bdbd4440b8536b3ca5f871186ee_onEachFeature,
+            
+                style: geo_json_509c7bdbd4440b8536b3ca5f871186ee_styler,
+        });
+
+        function geo_json_509c7bdbd4440b8536b3ca5f871186ee_add (data) {
+            geo_json_509c7bdbd4440b8536b3ca5f871186ee
+                .addData(data);
+        }
+            geo_json_509c7bdbd4440b8536b3ca5f871186ee_add({"bbox": [4.881049079284926, 45.75460293917808, 4.884982038444893, 45.75737865683871], "features": [{"bbox": [4.881049079284926, 45.75460293917808, 4.884982038444893, 45.75737865683871], "geometry": {"coordinates": [[[4.881128848270575, 45.75460293917808], [4.881049079284926, 45.75710357430718], [4.884624184553168, 45.75737865683871], [4.884982038444893, 45.754919671675715], [4.881128848270575, 45.75460293917808]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3ab702b457b0d41a3ad08d4e616809fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db0166c52460792c0934b1f5dfb6ea4c = $(`<div id="html_db0166c52460792c0934b1f5dfb6ea4c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0061</div>`)[0];
+                popup_3ab702b457b0d41a3ad08d4e616809fa.setContent(html_db0166c52460792c0934b1f5dfb6ea4c);
+            
+        
+
+        geo_json_509c7bdbd4440b8536b3ca5f871186ee.bindPopup(popup_3ab702b457b0d41a3ad08d4e616809fa)
+        ;
+
+        
+    
+    
+            geo_json_509c7bdbd4440b8536b3ca5f871186ee.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_eabba0d2ef3f07101a67e4c6cf960cc6 = L.geoJson(null, {
+                onEachFeature: geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_onEachFeature,
+            
+                style: geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_styler,
+        });
+
+        function geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_add (data) {
+            geo_json_eabba0d2ef3f07101a67e4c6cf960cc6
+                .addData(data);
+        }
+            geo_json_eabba0d2ef3f07101a67e4c6cf960cc6_add({"bbox": [4.88332296620748, 45.75261919260918, 4.899511975224645, 45.75844418181818], "features": [{"bbox": [4.88332296620748, 45.75261919260918, 4.899511975224645, 45.75844418181818], "geometry": {"coordinates": [[[[4.899511975224645, 45.75308306394951], [4.899494458582801, 45.75261919260918], [4.899040008364312, 45.752759381273236], [4.899430884615381, 45.753052538461546], [4.899511975224645, 45.75308306394951]]], [[[4.884770712295943, 45.755468832568404], [4.884117573446328, 45.758054891492186], [4.886384272727271, 45.75844418181818], [4.887586661495099, 45.75425837016911], [4.88332296620748, 45.75433209094007], [4.884770712295943, 45.755468832568404]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b78c0938f0e8ab5826e57dda596a8dfa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e0bfeb9b5b97dc76ab8ec79c74b4c70e = $(`<div id="html_e0bfeb9b5b97dc76ab8ec79c74b4c70e" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0062</div>`)[0];
+                popup_b78c0938f0e8ab5826e57dda596a8dfa.setContent(html_e0bfeb9b5b97dc76ab8ec79c74b4c70e);
+            
+        
+
+        geo_json_eabba0d2ef3f07101a67e4c6cf960cc6.bindPopup(popup_b78c0938f0e8ab5826e57dda596a8dfa)
+        ;
+
+        
+    
+    
+            geo_json_eabba0d2ef3f07101a67e4c6cf960cc6.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_bd60c760a46499188b9f7cbbac1ddafe_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_bd60c760a46499188b9f7cbbac1ddafe_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bd60c760a46499188b9f7cbbac1ddafe = L.geoJson(null, {
+                onEachFeature: geo_json_bd60c760a46499188b9f7cbbac1ddafe_onEachFeature,
+            
+                style: geo_json_bd60c760a46499188b9f7cbbac1ddafe_styler,
+        });
+
+        function geo_json_bd60c760a46499188b9f7cbbac1ddafe_add (data) {
+            geo_json_bd60c760a46499188b9f7cbbac1ddafe
+                .addData(data);
+        }
+            geo_json_bd60c760a46499188b9f7cbbac1ddafe_add({"bbox": [4.887726340867992, 45.75396852801482, 4.893177293694932, 45.75629055182167], "features": [{"bbox": [4.887726340867992, 45.75396852801482, 4.893177293694932, 45.75629055182167], "geometry": {"coordinates": [[[4.888276469148658, 45.754232381871695], [4.887726340867992, 45.7554045], [4.893162784136035, 45.75629055182167], [4.893177293694932, 45.75396852801482], [4.888276469148658, 45.754232381871695]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e0a2068d66f88bbf6ca4a2b815b73560 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39230843c5d08704d3722a7e2e70ae85 = $(`<div id="html_39230843c5d08704d3722a7e2e70ae85" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0063</div>`)[0];
+                popup_e0a2068d66f88bbf6ca4a2b815b73560.setContent(html_39230843c5d08704d3722a7e2e70ae85);
+            
+        
+
+        geo_json_bd60c760a46499188b9f7cbbac1ddafe.bindPopup(popup_e0a2068d66f88bbf6ca4a2b815b73560)
+        ;
+
+        
+    
+    
+            geo_json_bd60c760a46499188b9f7cbbac1ddafe.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_26fbf2a98c42852ddca83988306acca6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_26fbf2a98c42852ddca83988306acca6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_26fbf2a98c42852ddca83988306acca6 = L.geoJson(null, {
+                onEachFeature: geo_json_26fbf2a98c42852ddca83988306acca6_onEachFeature,
+            
+                style: geo_json_26fbf2a98c42852ddca83988306acca6_styler,
+        });
+
+        function geo_json_26fbf2a98c42852ddca83988306acca6_add (data) {
+            geo_json_26fbf2a98c42852ddca83988306acca6
+                .addData(data);
+        }
+            geo_json_26fbf2a98c42852ddca83988306acca6_add({"bbox": [4.887066683101502, 45.755408499285465, 4.890671576343254, 45.758941803633554], "features": [{"bbox": [4.887066683101502, 45.755408499285465, 4.890671576343254, 45.758941803633554], "geometry": {"coordinates": [[[4.887303672650042, 45.75587492025213], [4.887066683101502, 45.75883970713401], [4.890671576343254, 45.758941803633554], [4.890248235838352, 45.755408499285465], [4.887303672650042, 45.75587492025213]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f65cd45f4a7a723a36c8b84eb9ce7e68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fd2b7578c7ea1ae47b7ef689205a8765 = $(`<div id="html_fd2b7578c7ea1ae47b7ef689205a8765" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0064</div>`)[0];
+                popup_f65cd45f4a7a723a36c8b84eb9ce7e68.setContent(html_fd2b7578c7ea1ae47b7ef689205a8765);
+            
+        
+
+        geo_json_26fbf2a98c42852ddca83988306acca6.bindPopup(popup_f65cd45f4a7a723a36c8b84eb9ce7e68)
+        ;
+
+        
+    
+    
+            geo_json_26fbf2a98c42852ddca83988306acca6.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_58d89d6bc165a8c76c190b09ff66b2c2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_58d89d6bc165a8c76c190b09ff66b2c2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_58d89d6bc165a8c76c190b09ff66b2c2 = L.geoJson(null, {
+                onEachFeature: geo_json_58d89d6bc165a8c76c190b09ff66b2c2_onEachFeature,
+            
+                style: geo_json_58d89d6bc165a8c76c190b09ff66b2c2_styler,
+        });
+
+        function geo_json_58d89d6bc165a8c76c190b09ff66b2c2_add (data) {
+            geo_json_58d89d6bc165a8c76c190b09ff66b2c2
+                .addData(data);
+        }
+            geo_json_58d89d6bc165a8c76c190b09ff66b2c2_add({"bbox": [4.889841020746948, 45.75944560776877, 4.898546058692978, 45.76205706837683], "features": [{"bbox": [4.889841020746948, 45.75944560776877, 4.898546058692978, 45.76205706837683], "geometry": {"coordinates": [[[4.890988423440725, 45.75944560776877], [4.889841020746948, 45.76070505117374], [4.892843860455311, 45.76168838964625], [4.897470930847177, 45.76205706837683], [4.898546058692978, 45.76032268201508], [4.890988423440725, 45.75944560776877]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1a6a0f7681e2b0d4a4546eafc35da27e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ddf576bcd26890d7737d73067769a9e = $(`<div id="html_6ddf576bcd26890d7737d73067769a9e" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0065</div>`)[0];
+                popup_1a6a0f7681e2b0d4a4546eafc35da27e.setContent(html_6ddf576bcd26890d7737d73067769a9e);
+            
+        
+
+        geo_json_58d89d6bc165a8c76c190b09ff66b2c2.bindPopup(popup_1a6a0f7681e2b0d4a4546eafc35da27e)
+        ;
+
+        
+    
+    
+            geo_json_58d89d6bc165a8c76c190b09ff66b2c2.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220 = L.geoJson(null, {
+                onEachFeature: geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_onEachFeature,
+            
+                style: geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_styler,
+        });
+
+        function geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_add (data) {
+            geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220
+                .addData(data);
+        }
+            geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220_add({"bbox": [4.888135485188567, 45.7595038198379, 4.89378110065311, 45.76479696599906], "features": [{"bbox": [4.888135485188567, 45.7595038198379, 4.89378110065311, 45.76479696599906], "geometry": {"coordinates": [[[[4.889696210702154, 45.76066630547986], [4.888135485188567, 45.762496866501365], [4.889725014499542, 45.76479649738258], [4.892425645086168, 45.76479696599906], [4.892639987581019, 45.76298642937014], [4.891185852888961, 45.763650805069865], [4.891929733029145, 45.76129775703754], [4.889022355734966, 45.7595038198379], [4.889696210702154, 45.76066630547986]]], [[[4.892741900236819, 45.76270499390025], [4.893737332277301, 45.763012226011504], [4.89378110065311, 45.76281862621165], [4.892811734303934, 45.76260312087544], [4.892741900236819, 45.76270499390025]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1356224bd1eb31002da6d33bd919dc7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28943309ca4cf98b98a2e655b7169354 = $(`<div id="html_28943309ca4cf98b98a2e655b7169354" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0066</div>`)[0];
+                popup_1356224bd1eb31002da6d33bd919dc7a.setContent(html_28943309ca4cf98b98a2e655b7169354);
+            
+        
+
+        geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220.bindPopup(popup_1356224bd1eb31002da6d33bd919dc7a)
+        ;
+
+        
+    
+    
+            geo_json_60fb5f0ac7da8b4a033bd2c90b1d5220.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_4dc1bf13fe830411ce9f847629d39793_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4dc1bf13fe830411ce9f847629d39793_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4dc1bf13fe830411ce9f847629d39793 = L.geoJson(null, {
+                onEachFeature: geo_json_4dc1bf13fe830411ce9f847629d39793_onEachFeature,
+            
+                style: geo_json_4dc1bf13fe830411ce9f847629d39793_styler,
+        });
+
+        function geo_json_4dc1bf13fe830411ce9f847629d39793_add (data) {
+            geo_json_4dc1bf13fe830411ce9f847629d39793
+                .addData(data);
+        }
+            geo_json_4dc1bf13fe830411ce9f847629d39793_add({"bbox": [4.88874869513052, 45.76412092070434, 4.895816434826828, 45.76755114670364], "features": [{"bbox": [4.88874869513052, 45.76412092070434, 4.895816434826828, 45.76755114670364], "geometry": {"coordinates": [[[4.890401496653263, 45.7651422356091], [4.88874869513052, 45.7656155833234], [4.889582550398566, 45.76755114670364], [4.895816434826828, 45.76572724111041], [4.891854324792292, 45.76412092070434], [4.890401496653263, 45.7651422356091]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_36f88d872736bffc6dafc7b7b9086b15 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25780e644202f71cfed66a0ac829d717 = $(`<div id="html_25780e644202f71cfed66a0ac829d717" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0067</div>`)[0];
+                popup_36f88d872736bffc6dafc7b7b9086b15.setContent(html_25780e644202f71cfed66a0ac829d717);
+            
+        
+
+        geo_json_4dc1bf13fe830411ce9f847629d39793.bindPopup(popup_36f88d872736bffc6dafc7b7b9086b15)
+        ;
+
+        
+    
+    
+            geo_json_4dc1bf13fe830411ce9f847629d39793.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_93b2c78dc8ef3410767ea8f58fad4046_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_93b2c78dc8ef3410767ea8f58fad4046_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_93b2c78dc8ef3410767ea8f58fad4046 = L.geoJson(null, {
+                onEachFeature: geo_json_93b2c78dc8ef3410767ea8f58fad4046_onEachFeature,
+            
+                style: geo_json_93b2c78dc8ef3410767ea8f58fad4046_styler,
+        });
+
+        function geo_json_93b2c78dc8ef3410767ea8f58fad4046_add (data) {
+            geo_json_93b2c78dc8ef3410767ea8f58fad4046
+                .addData(data);
+        }
+            geo_json_93b2c78dc8ef3410767ea8f58fad4046_add({"bbox": [4.891185852888961, 45.761660212625564, 4.896966126206631, 45.76549420237981], "features": [{"bbox": [4.891185852888961, 45.761660212625564, 4.896966126206631, 45.76549420237981], "geometry": {"coordinates": [[[4.893343128784497, 45.761660212625564], [4.891634768144328, 45.761662057853584], [4.891185852888961, 45.763650805069865], [4.892639987581019, 45.76298642937014], [4.894006633959162, 45.76515152322872], [4.896966126206631, 45.76549420237981], [4.895279416120573, 45.764272437090426], [4.896606006446288, 45.76187774151488], [4.893343128784497, 45.761660212625564]], [[4.893781854845562, 45.762776721393415], [4.893737332277301, 45.763012226011504], [4.892741900236819, 45.76270499390025], [4.892811734303934, 45.76260312087544], [4.893781854845562, 45.762776721393415]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bf7b1056d56f7d4748b2843ebc8dd48f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0e6ef57eda87f53d1df60d98dfd651c = $(`<div id="html_f0e6ef57eda87f53d1df60d98dfd651c" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0068</div>`)[0];
+                popup_bf7b1056d56f7d4748b2843ebc8dd48f.setContent(html_f0e6ef57eda87f53d1df60d98dfd651c);
+            
+        
+
+        geo_json_93b2c78dc8ef3410767ea8f58fad4046.bindPopup(popup_bf7b1056d56f7d4748b2843ebc8dd48f)
+        ;
+
+        
+    
+    
+            geo_json_93b2c78dc8ef3410767ea8f58fad4046.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_0d3952e3fb11315f9e4c9250789362d3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0d3952e3fb11315f9e4c9250789362d3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0d3952e3fb11315f9e4c9250789362d3 = L.geoJson(null, {
+                onEachFeature: geo_json_0d3952e3fb11315f9e4c9250789362d3_onEachFeature,
+            
+                style: geo_json_0d3952e3fb11315f9e4c9250789362d3_styler,
+        });
+
+        function geo_json_0d3952e3fb11315f9e4c9250789362d3_add (data) {
+            geo_json_0d3952e3fb11315f9e4c9250789362d3
+                .addData(data);
+        }
+            geo_json_0d3952e3fb11315f9e4c9250789362d3_add({"bbox": [4.895417876373098, 45.7600173117639, 4.901884749885415, 45.7647136317815], "features": [{"bbox": [4.895417876373098, 45.7600173117639, 4.901884749885415, 45.7647136317815], "geometry": {"coordinates": [[[4.895869209952098, 45.76313050984567], [4.895417876373098, 45.76469249121212], [4.896564879316328, 45.7647136317815], [4.901884749885415, 45.762316011381344], [4.898952806621438, 45.7600173117639], [4.895869209952098, 45.76313050984567]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_68d984c6a77aa787bfe110a261449784 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_586750e69c0ab5a04badb5d1a95b62a8 = $(`<div id="html_586750e69c0ab5a04badb5d1a95b62a8" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0069</div>`)[0];
+                popup_68d984c6a77aa787bfe110a261449784.setContent(html_586750e69c0ab5a04badb5d1a95b62a8);
+            
+        
+
+        geo_json_0d3952e3fb11315f9e4c9250789362d3.bindPopup(popup_68d984c6a77aa787bfe110a261449784)
+        ;
+
+        
+    
+    
+            geo_json_0d3952e3fb11315f9e4c9250789362d3.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_b03979125084e1ed002db80179b2dac5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b03979125084e1ed002db80179b2dac5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b03979125084e1ed002db80179b2dac5 = L.geoJson(null, {
+                onEachFeature: geo_json_b03979125084e1ed002db80179b2dac5_onEachFeature,
+            
+                style: geo_json_b03979125084e1ed002db80179b2dac5_styler,
+        });
+
+        function geo_json_b03979125084e1ed002db80179b2dac5_add (data) {
+            geo_json_b03979125084e1ed002db80179b2dac5
+                .addData(data);
+        }
+            geo_json_b03979125084e1ed002db80179b2dac5_add({"bbox": [4.883870384186574, 45.7769985505087, 4.894506660642379, 45.782570401240164], "features": [{"bbox": [4.883870384186574, 45.7769985505087, 4.894506660642379, 45.782570401240164], "geometry": {"coordinates": [[[[4.887190756936582, 45.7769985505087], [4.883870384186574, 45.77827715680596], [4.891329203906622, 45.78101363530253], [4.891793443077212, 45.77711295086387], [4.887190756936582, 45.7769985505087]]], [[[4.894506660642379, 45.781404780926245], [4.893329845405693, 45.78036517284718], [4.892268377428753, 45.78044108342685], [4.894096463454329, 45.782570401240164], [4.894506660642379, 45.781404780926245]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_da49e6f4a63570b07e838bfa163faa47 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0ecaabbf80b141cf7d44d2c53bdebd48 = $(`<div id="html_0ecaabbf80b141cf7d44d2c53bdebd48" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0007</div>`)[0];
+                popup_da49e6f4a63570b07e838bfa163faa47.setContent(html_0ecaabbf80b141cf7d44d2c53bdebd48);
+            
+        
+
+        geo_json_b03979125084e1ed002db80179b2dac5.bindPopup(popup_da49e6f4a63570b07e838bfa163faa47)
+        ;
+
+        
+    
+    
+            geo_json_b03979125084e1ed002db80179b2dac5.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_500822e6b573b52cbf388f28989f81a4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_500822e6b573b52cbf388f28989f81a4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_500822e6b573b52cbf388f28989f81a4 = L.geoJson(null, {
+                onEachFeature: geo_json_500822e6b573b52cbf388f28989f81a4_onEachFeature,
+            
+                style: geo_json_500822e6b573b52cbf388f28989f81a4_styler,
+        });
+
+        function geo_json_500822e6b573b52cbf388f28989f81a4_add (data) {
+            geo_json_500822e6b573b52cbf388f28989f81a4
+                .addData(data);
+        }
+            geo_json_500822e6b573b52cbf388f28989f81a4_add({"bbox": [4.89021993346047, 45.755408499285465, 4.894869512510051, 45.75972199090749], "features": [{"bbox": [4.89021993346047, 45.755408499285465, 4.894869512510051, 45.75972199090749], "geometry": {"coordinates": [[[4.89021993346047, 45.75696520137099], [4.890329500732674, 45.75935822217747], [4.892696991061602, 45.75972199090749], [4.894869512510051, 45.75703324979062], [4.890248235838352, 45.755408499285465], [4.89021993346047, 45.75696520137099]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2b37685aa8b034d665e531b0d5453637 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b0bfdb3772c3f5caf7103c3ea16acc25 = $(`<div id="html_b0bfdb3772c3f5caf7103c3ea16acc25" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0070</div>`)[0];
+                popup_2b37685aa8b034d665e531b0d5453637.setContent(html_b0bfdb3772c3f5caf7103c3ea16acc25);
+            
+        
+
+        geo_json_500822e6b573b52cbf388f28989f81a4.bindPopup(popup_2b37685aa8b034d665e531b0d5453637)
+        ;
+
+        
+    
+    
+            geo_json_500822e6b573b52cbf388f28989f81a4.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8b73eeac578f4e71e14ffd6fbe65ba70 = L.geoJson(null, {
+                onEachFeature: geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_onEachFeature,
+            
+                style: geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_styler,
+        });
+
+        function geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_add (data) {
+            geo_json_8b73eeac578f4e71e14ffd6fbe65ba70
+                .addData(data);
+        }
+            geo_json_8b73eeac578f4e71e14ffd6fbe65ba70_add({"bbox": [4.893162784136035, 45.75203787617441, 4.907042550847493, 45.76215024576286], "features": [{"bbox": [4.893162784136035, 45.75203787617441, 4.907042550847493, 45.76215024576286], "geometry": {"coordinates": [[[[4.89361687585922, 45.753940691582464], [4.893162784136035, 45.75629055182167], [4.894869512510051, 45.75703324979062], [4.893906616251668, 45.75981851217501], [4.900810586447099, 45.760249693373694], [4.899510790227577, 45.75773690275968], [4.902587041196482, 45.75605136818195], [4.90051171776013, 45.75512315511466], [4.902474158159304, 45.75203787617441], [4.89361687585922, 45.753940691582464]]], [[[4.907042550847493, 45.76215024576286], [4.906877779165707, 45.76153796917258], [4.906191795981088, 45.76057081264775], [4.906160538148915, 45.76186553948578], [4.907042550847493, 45.76215024576286]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bb9fae85cb708b2a99e65c1b55a3a0ed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_90f7a385c242c00e813792ef069cf793 = $(`<div id="html_90f7a385c242c00e813792ef069cf793" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0071</div>`)[0];
+                popup_bb9fae85cb708b2a99e65c1b55a3a0ed.setContent(html_90f7a385c242c00e813792ef069cf793);
+            
+        
+
+        geo_json_8b73eeac578f4e71e14ffd6fbe65ba70.bindPopup(popup_bb9fae85cb708b2a99e65c1b55a3a0ed)
+        ;
+
+        
+    
+    
+            geo_json_8b73eeac578f4e71e14ffd6fbe65ba70.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_9bf123c8312374118fdf22e30e779619_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9bf123c8312374118fdf22e30e779619_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9bf123c8312374118fdf22e30e779619 = L.geoJson(null, {
+                onEachFeature: geo_json_9bf123c8312374118fdf22e30e779619_onEachFeature,
+            
+                style: geo_json_9bf123c8312374118fdf22e30e779619_styler,
+        });
+
+        function geo_json_9bf123c8312374118fdf22e30e779619_add (data) {
+            geo_json_9bf123c8312374118fdf22e30e779619
+                .addData(data);
+        }
+            geo_json_9bf123c8312374118fdf22e30e779619_add({"bbox": [4.899636432775046, 45.75290856403269, 4.914062572240516, 45.762555749550415], "features": [{"bbox": [4.899636432775046, 45.75290856403269, 4.914062572240516, 45.762555749550415], "geometry": {"coordinates": [[[[4.913926555177111, 45.75290856403269], [4.913882121323533, 45.75309293198529], [4.914062572240516, 45.753099723148836], [4.913926555177111, 45.75290856403269]]], [[[4.899636432775046, 45.75856909595882], [4.901884749885415, 45.762316011381344], [4.902401718493318, 45.76020165654278], [4.905484422985685, 45.760627749952945], [4.90588537594608, 45.762555749550415], [4.90563220968718, 45.76062861049444], [4.907627316874382, 45.76239195861922], [4.910510178790589, 45.76016266054854], [4.905426043418375, 45.75737974213455], [4.899636432775046, 45.75856909595882]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ef030d4d3d2d5718e5f6a0b415d37e01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c73c864ed3c46dccd99a55544ad90422 = $(`<div id="html_c73c864ed3c46dccd99a55544ad90422" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0072</div>`)[0];
+                popup_ef030d4d3d2d5718e5f6a0b415d37e01.setContent(html_c73c864ed3c46dccd99a55544ad90422);
+            
+        
+
+        geo_json_9bf123c8312374118fdf22e30e779619.bindPopup(popup_ef030d4d3d2d5718e5f6a0b415d37e01)
+        ;
+
+        
+    
+    
+            geo_json_9bf123c8312374118fdf22e30e779619.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0 = L.geoJson(null, {
+                onEachFeature: geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_onEachFeature,
+            
+                style: geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_styler,
+        });
+
+        function geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_add (data) {
+            geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0
+                .addData(data);
+        }
+            geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0_add({"bbox": [4.90051171776013, 45.75104121218093, 4.911240841805225, 45.76101845207126], "features": [{"bbox": [4.90051171776013, 45.75104121218093, 4.911240841805225, 45.76101845207126], "geometry": {"coordinates": [[[[4.910968339999825, 45.753153659999974], [4.910800644680897, 45.7533213553192], [4.910958709127804, 45.75349494395286], [4.911240841805225, 45.753195901114964], [4.910968339999825, 45.753153659999974]]], [[[4.902351270737118, 45.75319736920377], [4.90051171776013, 45.75512315511466], [4.902573555645879, 45.756025287324924], [4.901195818326096, 45.75614555352256], [4.902814552397276, 45.75831208756788], [4.905426043418375, 45.75737974213455], [4.90959175925183, 45.75975186047799], [4.910388326568569, 45.75642087386805], [4.908419678118778, 45.756283327176604], [4.907780915600542, 45.75104121218093], [4.902474158159304, 45.75203787617441], [4.902351270737118, 45.75319736920377]], [[4.906779474172728, 45.75371150418227], [4.906583830732992, 45.75358426753964], [4.906837128371805, 45.753499231903746], [4.906779474172728, 45.75371150418227]]], [[[4.906191795981088, 45.76057081264775], [4.90563220968718, 45.76062861049444], [4.905595824473349, 45.76101845207126], [4.906025738205648, 45.760913758053555], [4.906191795981088, 45.76057081264775]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bbd26f4b3dd6ba48dfc30741cbf61910 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f788dcb6a8c9c827acb71f5a322a4556 = $(`<div id="html_f788dcb6a8c9c827acb71f5a322a4556" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0073</div>`)[0];
+                popup_bbd26f4b3dd6ba48dfc30741cbf61910.setContent(html_f788dcb6a8c9c827acb71f5a322a4556);
+            
+        
+
+        geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0.bindPopup(popup_bbd26f4b3dd6ba48dfc30741cbf61910)
+        ;
+
+        
+    
+    
+            geo_json_45cd5fb0a9a696cbb0ab1d7c787e94d0.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_517d5017f80527c680cd4836f1de5698_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_517d5017f80527c680cd4836f1de5698_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_517d5017f80527c680cd4836f1de5698 = L.geoJson(null, {
+                onEachFeature: geo_json_517d5017f80527c680cd4836f1de5698_onEachFeature,
+            
+                style: geo_json_517d5017f80527c680cd4836f1de5698_styler,
+        });
+
+        function geo_json_517d5017f80527c680cd4836f1de5698_add (data) {
+            geo_json_517d5017f80527c680cd4836f1de5698
+                .addData(data);
+        }
+            geo_json_517d5017f80527c680cd4836f1de5698_add({"bbox": [4.908125227426266, 45.75343087450113, 4.91377036888431, 45.75975186047799], "features": [{"bbox": [4.908125227426266, 45.75343087450113, 4.91377036888431, 45.75975186047799], "geometry": {"coordinates": [[[4.909740182459794, 45.75343087450113], [4.908125227426266, 45.754088603193566], [4.909188405948203, 45.75722027793952], [4.910388326568569, 45.75642087386805], [4.90959175925183, 45.75975186047799], [4.913310612941452, 45.75948965606637], [4.91377036888431, 45.75452101942647], [4.909740182459794, 45.75343087450113]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_30fe8da406b1915bb20ee07456c628c3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62cde915bfee0650af69c290a4724601 = $(`<div id="html_62cde915bfee0650af69c290a4724601" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0074</div>`)[0];
+                popup_30fe8da406b1915bb20ee07456c628c3.setContent(html_62cde915bfee0650af69c290a4724601);
+            
+        
+
+        geo_json_517d5017f80527c680cd4836f1de5698.bindPopup(popup_30fe8da406b1915bb20ee07456c628c3)
+        ;
+
+        
+    
+    
+            geo_json_517d5017f80527c680cd4836f1de5698.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_7d8ae73a98cfd58d2b62bd52445a9706_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7d8ae73a98cfd58d2b62bd52445a9706_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7d8ae73a98cfd58d2b62bd52445a9706 = L.geoJson(null, {
+                onEachFeature: geo_json_7d8ae73a98cfd58d2b62bd52445a9706_onEachFeature,
+            
+                style: geo_json_7d8ae73a98cfd58d2b62bd52445a9706_styler,
+        });
+
+        function geo_json_7d8ae73a98cfd58d2b62bd52445a9706_add (data) {
+            geo_json_7d8ae73a98cfd58d2b62bd52445a9706
+                .addData(data);
+        }
+            geo_json_7d8ae73a98cfd58d2b62bd52445a9706_add({"bbox": [4.907820491215595, 45.748493, 4.918506635522169, 45.75452101942647], "features": [{"bbox": [4.907820491215595, 45.748493, 4.918506635522169, 45.75452101942647], "geometry": {"coordinates": [[[4.907820491215595, 45.75130849749018], [4.908252611831506, 45.75336396471281], [4.91377036888431, 45.75452101942647], [4.916338160446626, 45.75428610639541], [4.915842512749145, 45.75081412632429], [4.918506635522169, 45.75049561762672], [4.916851, 45.748493], [4.907820491215595, 45.75130849749018]], [[4.913840841463409, 45.75303101219512], [4.913926555177111, 45.75290856403269], [4.914062572240516, 45.753099723148836], [4.913882121323533, 45.75309293198529], [4.913840841463409, 45.75303101219512]], [[4.911240841805225, 45.753195901114964], [4.910958709127804, 45.75349494395286], [4.910800644680897, 45.7533213553192], [4.910968339999825, 45.753153659999974], [4.911240841805225, 45.753195901114964]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_62c67b766a5677b80642b5539dafba0a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_29c9b1f5f38581d1d7a583e757bae5fa = $(`<div id="html_29c9b1f5f38581d1d7a583e757bae5fa" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0075</div>`)[0];
+                popup_62c67b766a5677b80642b5539dafba0a.setContent(html_29c9b1f5f38581d1d7a583e757bae5fa);
+            
+        
+
+        geo_json_7d8ae73a98cfd58d2b62bd52445a9706.bindPopup(popup_62c67b766a5677b80642b5539dafba0a)
+        ;
+
+        
+    
+    
+            geo_json_7d8ae73a98cfd58d2b62bd52445a9706.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_02f0fd877d9baf9ef534f1d039497943_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_02f0fd877d9baf9ef534f1d039497943_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_02f0fd877d9baf9ef534f1d039497943 = L.geoJson(null, {
+                onEachFeature: geo_json_02f0fd877d9baf9ef534f1d039497943_onEachFeature,
+            
+                style: geo_json_02f0fd877d9baf9ef534f1d039497943_styler,
+        });
+
+        function geo_json_02f0fd877d9baf9ef534f1d039497943_add (data) {
+            geo_json_02f0fd877d9baf9ef534f1d039497943
+                .addData(data);
+        }
+            geo_json_02f0fd877d9baf9ef534f1d039497943_add({"bbox": [4.9128430723238, 45.75049561762672, 4.921231303016834, 45.75938611383018], "features": [{"bbox": [4.9128430723238, 45.75049561762672, 4.921231303016834, 45.75938611383018], "geometry": {"coordinates": [[[4.916060409686688, 45.75115484870803], [4.916338160446626, 45.75428610639541], [4.914146202806125, 45.75404481409439], [4.9128430723238, 45.75599062053769], [4.91342923169483, 45.75938611383018], [4.915796508160459, 45.75729139578115], [4.918603029127942, 45.75855129306548], [4.919760209441868, 45.756566439647685], [4.921231303016834, 45.75792098647147], [4.918506635522169, 45.75049561762672], [4.916060409686688, 45.75115484870803]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b6d7522abd54ef423a07ef6dc7381b36 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_165342421f4731cf7cf1352542de29c9 = $(`<div id="html_165342421f4731cf7cf1352542de29c9" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0076</div>`)[0];
+                popup_b6d7522abd54ef423a07ef6dc7381b36.setContent(html_165342421f4731cf7cf1352542de29c9);
+            
+        
+
+        geo_json_02f0fd877d9baf9ef534f1d039497943.bindPopup(popup_b6d7522abd54ef423a07ef6dc7381b36)
+        ;
+
+        
+    
+    
+            geo_json_02f0fd877d9baf9ef534f1d039497943.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_cf1b55b3a33fa5e5390366057eab5619_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cf1b55b3a33fa5e5390366057eab5619_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cf1b55b3a33fa5e5390366057eab5619 = L.geoJson(null, {
+                onEachFeature: geo_json_cf1b55b3a33fa5e5390366057eab5619_onEachFeature,
+            
+                style: geo_json_cf1b55b3a33fa5e5390366057eab5619_styler,
+        });
+
+        function geo_json_cf1b55b3a33fa5e5390366057eab5619_add (data) {
+            geo_json_cf1b55b3a33fa5e5390366057eab5619
+                .addData(data);
+        }
+            geo_json_cf1b55b3a33fa5e5390366057eab5619_add({"bbox": [4.895298253585196, 45.76221246457087, 4.902968617835194, 45.76623373814622], "features": [{"bbox": [4.895298253585196, 45.76221246457087, 4.902968617835194, 45.76623373814622], "geometry": {"coordinates": [[[4.89718362498015, 45.764099347387635], [4.895298253585196, 45.76623373814622], [4.899768693947213, 45.76617613322719], [4.902968617835194, 45.763696669613225], [4.902399495111244, 45.76221246457087], [4.89718362498015, 45.764099347387635]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_debc9b5d1cf1fe5e5e790be61201c9ec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_59f01845f3df217078859f36337b8b82 = $(`<div id="html_59f01845f3df217078859f36337b8b82" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0077</div>`)[0];
+                popup_debc9b5d1cf1fe5e5e790be61201c9ec.setContent(html_59f01845f3df217078859f36337b8b82);
+            
+        
+
+        geo_json_cf1b55b3a33fa5e5390366057eab5619.bindPopup(popup_debc9b5d1cf1fe5e5e790be61201c9ec)
+        ;
+
+        
+    
+    
+            geo_json_cf1b55b3a33fa5e5390366057eab5619.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_5de52157dc8c2ec63d9ee0c809357f28_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5de52157dc8c2ec63d9ee0c809357f28_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5de52157dc8c2ec63d9ee0c809357f28 = L.geoJson(null, {
+                onEachFeature: geo_json_5de52157dc8c2ec63d9ee0c809357f28_onEachFeature,
+            
+                style: geo_json_5de52157dc8c2ec63d9ee0c809357f28_styler,
+        });
+
+        function geo_json_5de52157dc8c2ec63d9ee0c809357f28_add (data) {
+            geo_json_5de52157dc8c2ec63d9ee0c809357f28
+                .addData(data);
+        }
+            geo_json_5de52157dc8c2ec63d9ee0c809357f28_add({"bbox": [4.899616364424004, 45.7602323464103, 4.912072641268367, 45.768447567535034], "features": [{"bbox": [4.899616364424004, 45.7602323464103, 4.912072641268367, 45.768447567535034], "geometry": {"coordinates": [[[[4.902383937177319, 45.7602323464103], [4.902968470677115, 45.763698032425026], [4.901157483484465, 45.76530720068631], [4.906583495913602, 45.7645615262697], [4.90750179727538, 45.76525164260068], [4.905071864072686, 45.768447567535034], [4.911915820688409, 45.76843648943289], [4.912072641268367, 45.7669700551011], [4.908725158998075, 45.76461039300047], [4.909726736818984, 45.76202528976275], [4.90588537594608, 45.762555749550415], [4.905484422985685, 45.760627749952945], [4.902383937177319, 45.7602323464103]]], [[[4.90064195865892, 45.76478710011567], [4.900284751828167, 45.765244895066566], [4.899616364424004, 45.765381143009954], [4.901043563419408, 45.765668502517215], [4.90064195865892, 45.76478710011567]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2be1cdfe48e41e1ede2e4da0a7c10530 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd6bacd1e50f31c597c01924ea7f2d58 = $(`<div id="html_dd6bacd1e50f31c597c01924ea7f2d58" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0078</div>`)[0];
+                popup_2be1cdfe48e41e1ede2e4da0a7c10530.setContent(html_dd6bacd1e50f31c597c01924ea7f2d58);
+            
+        
+
+        geo_json_5de52157dc8c2ec63d9ee0c809357f28.bindPopup(popup_2be1cdfe48e41e1ede2e4da0a7c10530)
+        ;
+
+        
+    
+    
+            geo_json_5de52157dc8c2ec63d9ee0c809357f28.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_8df01264e7a62a6c9a8e9cb787d059b4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8df01264e7a62a6c9a8e9cb787d059b4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8df01264e7a62a6c9a8e9cb787d059b4 = L.geoJson(null, {
+                onEachFeature: geo_json_8df01264e7a62a6c9a8e9cb787d059b4_onEachFeature,
+            
+                style: geo_json_8df01264e7a62a6c9a8e9cb787d059b4_styler,
+        });
+
+        function geo_json_8df01264e7a62a6c9a8e9cb787d059b4_add (data) {
+            geo_json_8df01264e7a62a6c9a8e9cb787d059b4
+                .addData(data);
+        }
+            geo_json_8df01264e7a62a6c9a8e9cb787d059b4_add({"bbox": [4.908725158998075, 45.756566439647685, 4.921231303016834, 45.765386889586544], "features": [{"bbox": [4.908725158998075, 45.756566439647685, 4.921231303016834, 45.765386889586544], "geometry": {"coordinates": [[[4.915796508160459, 45.75729139578115], [4.910510178790589, 45.76016266054854], [4.908725158998075, 45.76461039300047], [4.912024421741513, 45.76329182294941], [4.915212620224485, 45.765386889586544], [4.915427658958352, 45.76287245044853], [4.91815202494745, 45.76215561631617], [4.91943341159614, 45.763504342157255], [4.921231303016834, 45.75792098647147], [4.919760209441868, 45.756566439647685], [4.918603029127942, 45.75855129306548], [4.915796508160459, 45.75729139578115]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ac5aaf9fe501a351dc0695c2f57ce4d4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5d5f11cecdde190e3b30925e54acd1f1 = $(`<div id="html_5d5f11cecdde190e3b30925e54acd1f1" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0079</div>`)[0];
+                popup_ac5aaf9fe501a351dc0695c2f57ce4d4.setContent(html_5d5f11cecdde190e3b30925e54acd1f1);
+            
+        
+
+        geo_json_8df01264e7a62a6c9a8e9cb787d059b4.bindPopup(popup_ac5aaf9fe501a351dc0695c2f57ce4d4)
+        ;
+
+        
+    
+    
+            geo_json_8df01264e7a62a6c9a8e9cb787d059b4.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_926fece27b39df6d8ab99d58a93c1418_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_926fece27b39df6d8ab99d58a93c1418_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_926fece27b39df6d8ab99d58a93c1418 = L.geoJson(null, {
+                onEachFeature: geo_json_926fece27b39df6d8ab99d58a93c1418_onEachFeature,
+            
+                style: geo_json_926fece27b39df6d8ab99d58a93c1418_styler,
+        });
+
+        function geo_json_926fece27b39df6d8ab99d58a93c1418_add (data) {
+            geo_json_926fece27b39df6d8ab99d58a93c1418
+                .addData(data);
+        }
+            geo_json_926fece27b39df6d8ab99d58a93c1418_add({"bbox": [4.884571694971016, 45.77433159881619, 4.893131105641669, 45.77744539164521], "features": [{"bbox": [4.884571694971016, 45.77433159881619, 4.893131105641669, 45.77744539164521], "geometry": {"coordinates": [[[4.885273011661805, 45.77462750947522], [4.884571694971016, 45.77637622681666], [4.889408590073265, 45.77744539164521], [4.89284582786551, 45.77601332358621], [4.893131105641669, 45.77433159881619], [4.885273011661805, 45.77462750947522]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d9d22adb8a4286f026a9fe14ad13af73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a72401427b5eec181fd99bd708250495 = $(`<div id="html_a72401427b5eec181fd99bd708250495" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0008</div>`)[0];
+                popup_d9d22adb8a4286f026a9fe14ad13af73.setContent(html_a72401427b5eec181fd99bd708250495);
+            
+        
+
+        geo_json_926fece27b39df6d8ab99d58a93c1418.bindPopup(popup_d9d22adb8a4286f026a9fe14ad13af73)
+        ;
+
+        
+    
+    
+            geo_json_926fece27b39df6d8ab99d58a93c1418.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e0ff22fe2fe82c0e1c46563fd924ef50 = L.geoJson(null, {
+                onEachFeature: geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_onEachFeature,
+            
+                style: geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_styler,
+        });
+
+        function geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_add (data) {
+            geo_json_e0ff22fe2fe82c0e1c46563fd924ef50
+                .addData(data);
+        }
+            geo_json_e0ff22fe2fe82c0e1c46563fd924ef50_add({"bbox": [4.90925378081687, 45.76215561631617, 4.91943341159614, 45.768901], "features": [{"bbox": [4.90925378081687, 45.76215561631617, 4.91943341159614, 45.768901], "geometry": {"coordinates": [[[4.916145933129449, 45.76270615072], [4.915212620224485, 45.765386889586544], [4.912024421741513, 45.76329182294941], [4.90925378081687, 45.76510486877657], [4.912072641268367, 45.7669700551011], [4.911918829540215, 45.76844133760989], [4.91734, 45.768901], [4.91943341159614, 45.763504342157255], [4.91815202494745, 45.76215561631617], [4.916145933129449, 45.76270615072]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3b1b2fed3ce2e7487a18ad119eeb562a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0f14990932672679b5bafefbc1131bab = $(`<div id="html_0f14990932672679b5bafefbc1131bab" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0080</div>`)[0];
+                popup_3b1b2fed3ce2e7487a18ad119eeb562a.setContent(html_0f14990932672679b5bafefbc1131bab);
+            
+        
+
+        geo_json_e0ff22fe2fe82c0e1c46563fd924ef50.bindPopup(popup_3b1b2fed3ce2e7487a18ad119eeb562a)
+        ;
+
+        
+    
+    
+            geo_json_e0ff22fe2fe82c0e1c46563fd924ef50.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+    
+        function geo_json_2543954d0fd2719deb5681343f4086f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2543954d0fd2719deb5681343f4086f6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2543954d0fd2719deb5681343f4086f6 = L.geoJson(null, {
+                onEachFeature: geo_json_2543954d0fd2719deb5681343f4086f6_onEachFeature,
+            
+                style: geo_json_2543954d0fd2719deb5681343f4086f6_styler,
+        });
+
+        function geo_json_2543954d0fd2719deb5681343f4086f6_add (data) {
+            geo_json_2543954d0fd2719deb5681343f4086f6
+                .addData(data);
+        }
+            geo_json_2543954d0fd2719deb5681343f4086f6_add({"bbox": [4.874024444433458, 45.76989025321166, 4.894096984239345, 45.77472719803158], "features": [{"bbox": [4.874024444433458, 45.76989025321166, 4.894096984239345, 45.77472719803158], "geometry": {"coordinates": [[[[4.886194072882079, 45.77227663611977], [4.884885027950488, 45.77472719803158], [4.89371061315854, 45.77422667301511], [4.894096984239345, 45.77301152232584], [4.890217328144204, 45.77173340516181], [4.89007982087625, 45.76989025321166], [4.886194072882079, 45.77227663611977]]], [[[4.874168412211916, 45.77427247446686], [4.874136884878361, 45.77412863100745], [4.874039282340593, 45.774077294607714], [4.874024444433458, 45.77434501637075], [4.874168412211916, 45.77427247446686]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b5a1c2ad15f2bd5eba0efef942b21ecc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_14082d53b1cceef3c6bbbbff42dd63be = $(`<div id="html_14082d53b1cceef3c6bbbbff42dd63be" style="width: 100.0%; height: 100.0%;">Villeurbanne - 0009</div>`)[0];
+                popup_b5a1c2ad15f2bd5eba0efef942b21ecc.setContent(html_14082d53b1cceef3c6bbbbff42dd63be);
+            
+        
+
+        geo_json_2543954d0fd2719deb5681343f4086f6.bindPopup(popup_b5a1c2ad15f2bd5eba0efef942b21ecc)
+        ;
+
+        
+    
+    
+            geo_json_2543954d0fd2719deb5681343f4086f6.addTo(map_5891e2a3ef380cd6eef3bd0bbfbe335f);
+        
+</script>
+</html>

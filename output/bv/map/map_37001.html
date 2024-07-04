@@ -1,0 +1,3125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_525a8399ad80ff4060f67e8f09e53a1a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_525a8399ad80ff4060f67e8f09e53a1a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_525a8399ad80ff4060f67e8f09e53a1a = L.map(
+                "map_525a8399ad80ff4060f67e8f09e53a1a",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6aceb6bc4e2601cd27f3602b8436d34b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_6aceb6bc4e2601cd27f3602b8436d34b.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_220f7077cb4122645f184ef58635668c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_220f7077cb4122645f184ef58635668c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_220f7077cb4122645f184ef58635668c = L.geoJson(null, {
+                onEachFeature: geo_json_220f7077cb4122645f184ef58635668c_onEachFeature,
+            
+                style: geo_json_220f7077cb4122645f184ef58635668c_styler,
+        });
+
+        function geo_json_220f7077cb4122645f184ef58635668c_add (data) {
+            geo_json_220f7077cb4122645f184ef58635668c
+                .addData(data);
+        }
+            geo_json_220f7077cb4122645f184ef58635668c_add({"bbox": [0.676627006545871, 47.38935804257075, 0.704633869344181, 47.428641811524926], "features": [{"bbox": [0.676627006545871, 47.38935804257075, 0.704633869344181, 47.428641811524926], "geometry": {"coordinates": [[[[0.676627006545871, 47.38948133708631], [0.677072406476544, 47.38973669971322], [0.67710172398033, 47.38971295495807], [0.67676308302373, 47.38935804257075], [0.676627006545871, 47.38948133708631]]], [[[0.67720122, 47.38990204], [0.677049719500491, 47.38980419788664], [0.677071651979405, 47.39013320644752], [0.677235962025315, 47.3900366653481], [0.67720122, 47.38990204]]], [[[0.682426639058219, 47.40221096104739], [0.684395738698086, 47.4013333307259], [0.684832532845685, 47.402540961804235], [0.694071752858958, 47.403566655019056], [0.694980502017775, 47.405500403702554], [0.69862916588803, 47.40595147015335], [0.701941170222853, 47.410983703700985], [0.70323873230805, 47.408546370618964], [0.702642196449974, 47.402166938954444], [0.704633869344181, 47.400001347585146], [0.683733936002502, 47.39864367919308], [0.682426639058219, 47.40221096104739]]], [[[0.697504304421236, 47.42598356209882], [0.695271749978789, 47.42703753547513], [0.695298138651111, 47.428641811524926], [0.697445366161618, 47.42848843813132], [0.697504304421236, 47.42598356209882]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aeb82960c17c50ccbaf3567e3ee75826 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c542e2e015a2a93d752bab5d466d30b3 = $(`<div id="html_c542e2e015a2a93d752bab5d466d30b3" style="width: 100.0%; height: 100.0%;">Tours - 1511</div>`)[0];
+                popup_aeb82960c17c50ccbaf3567e3ee75826.setContent(html_c542e2e015a2a93d752bab5d466d30b3);
+            
+        
+
+        geo_json_220f7077cb4122645f184ef58635668c.bindPopup(popup_aeb82960c17c50ccbaf3567e3ee75826)
+        ;
+
+        
+    
+    
+            geo_json_220f7077cb4122645f184ef58635668c.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_05d508b556c72d2610817eb2b6be6aef_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_05d508b556c72d2610817eb2b6be6aef_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_05d508b556c72d2610817eb2b6be6aef = L.geoJson(null, {
+                onEachFeature: geo_json_05d508b556c72d2610817eb2b6be6aef_onEachFeature,
+            
+                style: geo_json_05d508b556c72d2610817eb2b6be6aef_styler,
+        });
+
+        function geo_json_05d508b556c72d2610817eb2b6be6aef_add (data) {
+            geo_json_05d508b556c72d2610817eb2b6be6aef
+                .addData(data);
+        }
+            geo_json_05d508b556c72d2610817eb2b6be6aef_add({"bbox": [0.67917566178799, 47.40176013311522, 0.68977116862937, 47.41223416729906], "features": [{"bbox": [0.67917566178799, 47.40176013311522, 0.68977116862937, 47.41223416729906], "geometry": {"coordinates": [[[[0.681801944985544, 47.40248999443434], [0.682824097101936, 47.404342686090224], [0.68398049233014, 47.40176013311522], [0.683129522321204, 47.40192326586462], [0.681801944985544, 47.40248999443434]]], [[[0.681486103690503, 47.40662812969176], [0.680610407504086, 47.407995935637594], [0.67917566178799, 47.40743948869884], [0.67943731095139, 47.409667124550786], [0.681746940835265, 47.40936983503481], [0.684673986217268, 47.41223416729906], [0.68977116862937, 47.41136254516357], [0.687513251829087, 47.40871452123284], [0.685206722892626, 47.4094155666075], [0.687398682052311, 47.40750258448284], [0.685019774325376, 47.40582860305172], [0.684244427188229, 47.40675147288923], [0.681728936246411, 47.40545549207142], [0.681486103690503, 47.40662812969176]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_05cad89a8a3768886969496bc1ce6d09 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_956cb405f4b6ce37968118b85c686a8d = $(`<div id="html_956cb405f4b6ce37968118b85c686a8d" style="width: 100.0%; height: 100.0%;">Tours - 1521</div>`)[0];
+                popup_05cad89a8a3768886969496bc1ce6d09.setContent(html_956cb405f4b6ce37968118b85c686a8d);
+            
+        
+
+        geo_json_05d508b556c72d2610817eb2b6be6aef.bindPopup(popup_05cad89a8a3768886969496bc1ce6d09)
+        ;
+
+        
+    
+    
+            geo_json_05d508b556c72d2610817eb2b6be6aef.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_69dfac4a8f213590c1e30d73657d3af2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_69dfac4a8f213590c1e30d73657d3af2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_69dfac4a8f213590c1e30d73657d3af2 = L.geoJson(null, {
+                onEachFeature: geo_json_69dfac4a8f213590c1e30d73657d3af2_onEachFeature,
+            
+                style: geo_json_69dfac4a8f213590c1e30d73657d3af2_styler,
+        });
+
+        function geo_json_69dfac4a8f213590c1e30d73657d3af2_add (data) {
+            geo_json_69dfac4a8f213590c1e30d73657d3af2
+                .addData(data);
+        }
+            geo_json_69dfac4a8f213590c1e30d73657d3af2_add({"bbox": [0.676333174615431, 47.39864367919308, 0.694808635221222, 47.40802439055266], "features": [{"bbox": [0.676333174615431, 47.39864367919308, 0.694808635221222, 47.40802439055266], "geometry": {"coordinates": [[[0.678904, 47.400451], [0.680413, 47.400496], [0.678757, 47.402906], [0.680299116446078, 47.40802439055266], [0.681728936246411, 47.40545549207142], [0.687442498632014, 47.40751571575796], [0.692167448783613, 47.40619162932138], [0.692249991653937, 47.40750211158459], [0.694808635221222, 47.40486082643209], [0.694071752858958, 47.403566655019056], [0.684832532845685, 47.402540961804235], [0.684395738698086, 47.4013333307259], [0.681956818359492, 47.40446185274541], [0.683733936002502, 47.39864367919308], [0.676333174615431, 47.399922776648914], [0.678904, 47.400451]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d240cdff5f1760f30b2a0878482abb99 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ec8c7e20817e715adcdf4347a1d24a98 = $(`<div id="html_ec8c7e20817e715adcdf4347a1d24a98" style="width: 100.0%; height: 100.0%;">Tours - 1522</div>`)[0];
+                popup_d240cdff5f1760f30b2a0878482abb99.setContent(html_ec8c7e20817e715adcdf4347a1d24a98);
+            
+        
+
+        geo_json_69dfac4a8f213590c1e30d73657d3af2.bindPopup(popup_d240cdff5f1760f30b2a0878482abb99)
+        ;
+
+        
+    
+    
+            geo_json_69dfac4a8f213590c1e30d73657d3af2.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_73a40b42e38259c87ec03e0b89703091_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_73a40b42e38259c87ec03e0b89703091_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_73a40b42e38259c87ec03e0b89703091 = L.geoJson(null, {
+                onEachFeature: geo_json_73a40b42e38259c87ec03e0b89703091_onEachFeature,
+            
+                style: geo_json_73a40b42e38259c87ec03e0b89703091_styler,
+        });
+
+        function geo_json_73a40b42e38259c87ec03e0b89703091_add (data) {
+            geo_json_73a40b42e38259c87ec03e0b89703091
+                .addData(data);
+        }
+            geo_json_73a40b42e38259c87ec03e0b89703091_add({"bbox": [0.684616194058094, 47.40963519752089, 0.693021480481591, 47.415902143567166], "features": [{"bbox": [0.684616194058094, 47.40963519752089, 0.693021480481591, 47.415902143567166], "geometry": {"coordinates": [[[0.688324422298799, 47.41006041579591], [0.689722213325254, 47.41144160797973], [0.684616194058094, 47.41237509363373], [0.688289492499938, 47.415902143567166], [0.689223246729628, 47.41453568686573], [0.693021480481591, 47.41445956811782], [0.692001725953204, 47.40963519752089], [0.688324422298799, 47.41006041579591]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aa306f5d9d2a2985bf77b329464d3e53 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11a21ee97d4cfda7da5124cdb44ef48f = $(`<div id="html_11a21ee97d4cfda7da5124cdb44ef48f" style="width: 100.0%; height: 100.0%;">Tours - 1531</div>`)[0];
+                popup_aa306f5d9d2a2985bf77b329464d3e53.setContent(html_11a21ee97d4cfda7da5124cdb44ef48f);
+            
+        
+
+        geo_json_73a40b42e38259c87ec03e0b89703091.bindPopup(popup_aa306f5d9d2a2985bf77b329464d3e53)
+        ;
+
+        
+    
+    
+            geo_json_73a40b42e38259c87ec03e0b89703091.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_b89c6b171031ddd185f8365c70413e4d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b89c6b171031ddd185f8365c70413e4d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b89c6b171031ddd185f8365c70413e4d = L.geoJson(null, {
+                onEachFeature: geo_json_b89c6b171031ddd185f8365c70413e4d_onEachFeature,
+            
+                style: geo_json_b89c6b171031ddd185f8365c70413e4d_styler,
+        });
+
+        function geo_json_b89c6b171031ddd185f8365c70413e4d_add (data) {
+            geo_json_b89c6b171031ddd185f8365c70413e4d
+                .addData(data);
+        }
+            geo_json_b89c6b171031ddd185f8365c70413e4d_add({"bbox": [0.697999931848323, 47.40969526563085, 0.714175648695891, 47.434408061208146], "features": [{"bbox": [0.697999931848323, 47.40969526563085, 0.714175648695891, 47.434408061208146], "geometry": {"coordinates": [[[[0.70597264754099, 47.4097735], [0.70601007759176, 47.40971375241468], [0.705894535192812, 47.40969526563085], [0.70592015116279, 47.4097735], [0.70597264754099, 47.4097735]]], [[[0.709994979765145, 47.41776225491988], [0.709262122545967, 47.41834736340379], [0.710145094187946, 47.419400303277], [0.710383505201255, 47.41772487247252], [0.709994979765145, 47.41776225491988]]], [[[0.697999931848323, 47.419587929687125], [0.698694787726371, 47.41971518745563], [0.698973233282073, 47.419026509658124], [0.69830628880917, 47.41897818034849], [0.697999931848323, 47.419587929687125]]], [[[0.699134049815627, 47.4201641391498], [0.699353470260835, 47.421389590609664], [0.701569387688848, 47.42000101021441], [0.70187207103707, 47.42289929162657], [0.699646224539534, 47.42248385348961], [0.698565877029798, 47.425571586258336], [0.703640920989118, 47.42631680635141], [0.703644953492501, 47.429472757765176], [0.706840718770773, 47.434408061208146], [0.714175648695891, 47.43219613192677], [0.705789037575228, 47.42144825631681], [0.707613623540665, 47.41873102538845], [0.699740625310255, 47.418384952708735], [0.699134049815627, 47.4201641391498]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c6025838ec432dbc691a60290f29c578 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21faa73a10313892954c23d59b436ae2 = $(`<div id="html_21faa73a10313892954c23d59b436ae2" style="width: 100.0%; height: 100.0%;">Tours - 1532</div>`)[0];
+                popup_c6025838ec432dbc691a60290f29c578.setContent(html_21faa73a10313892954c23d59b436ae2);
+            
+        
+
+        geo_json_b89c6b171031ddd185f8365c70413e4d.bindPopup(popup_c6025838ec432dbc691a60290f29c578)
+        ;
+
+        
+    
+    
+            geo_json_b89c6b171031ddd185f8365c70413e4d.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_247e70ec4202210393189ebcfd79f026_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_247e70ec4202210393189ebcfd79f026_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_247e70ec4202210393189ebcfd79f026 = L.geoJson(null, {
+                onEachFeature: geo_json_247e70ec4202210393189ebcfd79f026_onEachFeature,
+            
+                style: geo_json_247e70ec4202210393189ebcfd79f026_styler,
+        });
+
+        function geo_json_247e70ec4202210393189ebcfd79f026_add (data) {
+            geo_json_247e70ec4202210393189ebcfd79f026
+                .addData(data);
+        }
+            geo_json_247e70ec4202210393189ebcfd79f026_add({"bbox": [0.696574944061961, 47.410983703700985, 0.707396879634113, 47.41859651087969], "features": [{"bbox": [0.696574944061961, 47.410983703700985, 0.707396879634113, 47.41859651087969], "geometry": {"coordinates": [[[0.698528416312144, 47.41231164932539], [0.696614773270876, 47.4126153717527], [0.696574944061961, 47.41408322752549], [0.698594176169826, 47.41421495994732], [0.699480120061889, 47.41847922114492], [0.707396879634113, 47.41859651087969], [0.701941170222853, 47.410983703700985], [0.698528416312144, 47.41231164932539]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_82b0eca4b741221220aefd99fefbfc01 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_689908ac3ea58354ecde1b61b21abfb1 = $(`<div id="html_689908ac3ea58354ecde1b61b21abfb1" style="width: 100.0%; height: 100.0%;">Tours - 1533</div>`)[0];
+                popup_82b0eca4b741221220aefd99fefbfc01.setContent(html_689908ac3ea58354ecde1b61b21abfb1);
+            
+        
+
+        geo_json_247e70ec4202210393189ebcfd79f026.bindPopup(popup_82b0eca4b741221220aefd99fefbfc01)
+        ;
+
+        
+    
+    
+            geo_json_247e70ec4202210393189ebcfd79f026.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_6e17d07dc36947b1038e7f7ce187661e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6e17d07dc36947b1038e7f7ce187661e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6e17d07dc36947b1038e7f7ce187661e = L.geoJson(null, {
+                onEachFeature: geo_json_6e17d07dc36947b1038e7f7ce187661e_onEachFeature,
+            
+                style: geo_json_6e17d07dc36947b1038e7f7ce187661e_styler,
+        });
+
+        function geo_json_6e17d07dc36947b1038e7f7ce187661e_add (data) {
+            geo_json_6e17d07dc36947b1038e7f7ce187661e
+                .addData(data);
+        }
+            geo_json_6e17d07dc36947b1038e7f7ce187661e_add({"bbox": [0.685206722892626, 47.40607651262268, 0.695176015686322, 47.411869141898286], "features": [{"bbox": [0.685206722892626, 47.40607651262268, 0.695176015686322, 47.411869141898286], "geometry": {"coordinates": [[[0.687518894693249, 47.40741293549], [0.685206722892626, 47.4094155666075], [0.691671664323299, 47.4093955691423], [0.691781939918453, 47.411151153467685], [0.695176015686322, 47.411869141898286], [0.694070636829913, 47.40655399023825], [0.692249991653937, 47.40750211158459], [0.692167448783613, 47.40619162932138], [0.689682683451267, 47.40607651262268], [0.687518894693249, 47.40741293549]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cdf15a17590318b6a21ed67cc626de7d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a69428c6bbcf40a719036eedd501a4fa = $(`<div id="html_a69428c6bbcf40a719036eedd501a4fa" style="width: 100.0%; height: 100.0%;">Tours - 1534</div>`)[0];
+                popup_cdf15a17590318b6a21ed67cc626de7d.setContent(html_a69428c6bbcf40a719036eedd501a4fa);
+            
+        
+
+        geo_json_6e17d07dc36947b1038e7f7ce187661e.bindPopup(popup_cdf15a17590318b6a21ed67cc626de7d)
+        ;
+
+        
+    
+    
+            geo_json_6e17d07dc36947b1038e7f7ce187661e.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e84fb9fe45b26c153b43c42350cd732b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e84fb9fe45b26c153b43c42350cd732b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e84fb9fe45b26c153b43c42350cd732b = L.geoJson(null, {
+                onEachFeature: geo_json_e84fb9fe45b26c153b43c42350cd732b_onEachFeature,
+            
+                style: geo_json_e84fb9fe45b26c153b43c42350cd732b_styler,
+        });
+
+        function geo_json_e84fb9fe45b26c153b43c42350cd732b_add (data) {
+            geo_json_e84fb9fe45b26c153b43c42350cd732b
+                .addData(data);
+        }
+            geo_json_e84fb9fe45b26c153b43c42350cd732b_add({"bbox": [0.693021480481591, 47.404891290200254, 0.701722424378557, 47.41445956811782], "features": [{"bbox": [0.693021480481591, 47.404891290200254, 0.701722424378557, 47.41445956811782], "geometry": {"coordinates": [[[0.693725891291336, 47.404891290200254], [0.695723576754709, 47.41049931526339], [0.695176015686322, 47.411869141898286], [0.693151608066987, 47.411574987871724], [0.693021480481591, 47.41445956811782], [0.696215156548714, 47.41430441522725], [0.696614773270876, 47.4126153717527], [0.701722424378557, 47.41089405349098], [0.69862916588803, 47.40595147015335], [0.693725891291336, 47.404891290200254]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_27470b0c34aa19ff2ad6da816a6d6976 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_be1ab7052e07f065e51f7cbd37ffbe96 = $(`<div id="html_be1ab7052e07f065e51f7cbd37ffbe96" style="width: 100.0%; height: 100.0%;">Tours - 1535</div>`)[0];
+                popup_27470b0c34aa19ff2ad6da816a6d6976.setContent(html_be1ab7052e07f065e51f7cbd37ffbe96);
+            
+        
+
+        geo_json_e84fb9fe45b26c153b43c42350cd732b.bindPopup(popup_27470b0c34aa19ff2ad6da816a6d6976)
+        ;
+
+        
+    
+    
+            geo_json_e84fb9fe45b26c153b43c42350cd732b.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_98bb4fc24b20cc17f1cd7d4954b7e112 = L.geoJson(null, {
+                onEachFeature: geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_onEachFeature,
+            
+                style: geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_styler,
+        });
+
+        function geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_add (data) {
+            geo_json_98bb4fc24b20cc17f1cd7d4954b7e112
+                .addData(data);
+        }
+            geo_json_98bb4fc24b20cc17f1cd7d4954b7e112_add({"bbox": [0.686686040204981, 47.41375851295833, 0.69951303073844, 47.42183633121069], "features": [{"bbox": [0.686686040204981, 47.41375851295833, 0.69951303073844, 47.42183633121069], "geometry": {"coordinates": [[[[0.690273317044478, 47.414595255774174], [0.688323483273614, 47.41627192010177], [0.689542888381905, 47.41546404051214], [0.690692603299546, 47.41799262800884], [0.69321063282328, 47.419060067889845], [0.69951303073844, 47.41779480538217], [0.698207915800789, 47.41375851295833], [0.690273317044478, 47.414595255774174]]], [[[0.687049407525178, 47.41765990408056], [0.686828618562956, 47.41797617741371], [0.68720248969459, 47.418149767022754], [0.687049407525178, 47.41765990408056]]], [[[0.686728817005342, 47.42183633121069], [0.687860571560188, 47.42159125061142], [0.687784496644293, 47.42117144798657], [0.686686040204981, 47.421408507571144], [0.686728817005342, 47.42183633121069]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2627de5aed4dffef55ffbc88479e7529 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7ac8aff1b6bef620d697a73acdc7535e = $(`<div id="html_7ac8aff1b6bef620d697a73acdc7535e" style="width: 100.0%; height: 100.0%;">Tours - 1536</div>`)[0];
+                popup_2627de5aed4dffef55ffbc88479e7529.setContent(html_7ac8aff1b6bef620d697a73acdc7535e);
+            
+        
+
+        geo_json_98bb4fc24b20cc17f1cd7d4954b7e112.bindPopup(popup_2627de5aed4dffef55ffbc88479e7529)
+        ;
+
+        
+    
+    
+            geo_json_98bb4fc24b20cc17f1cd7d4954b7e112.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_d5721500fb03cff27ec29c2835696a2d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d5721500fb03cff27ec29c2835696a2d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d5721500fb03cff27ec29c2835696a2d = L.geoJson(null, {
+                onEachFeature: geo_json_d5721500fb03cff27ec29c2835696a2d_onEachFeature,
+            
+                style: geo_json_d5721500fb03cff27ec29c2835696a2d_styler,
+        });
+
+        function geo_json_d5721500fb03cff27ec29c2835696a2d_add (data) {
+            geo_json_d5721500fb03cff27ec29c2835696a2d
+                .addData(data);
+        }
+            geo_json_d5721500fb03cff27ec29c2835696a2d_add({"bbox": [0.693207644633329, 47.41381950790365, 0.701891801890091, 47.4252501865035], "features": [{"bbox": [0.693207644633329, 47.41381950790365, 0.701891801890091, 47.4252501865035], "geometry": {"coordinates": [[[[0.696574944061961, 47.41408322752549], [0.696672897064357, 47.41381950790365], [0.696210519801973, 47.41388308477722], [0.696368938752907, 47.414043866709626], [0.696574944061961, 47.41408322752549]]], [[[0.700335693229867, 47.41936702384477], [0.700884515957448, 47.41845017287234], [0.701636367128452, 47.41835157808565], [0.700316625664918, 47.41799071992207], [0.700335693229867, 47.41936702384477]]], [[[0.695499904278066, 47.41837097456074], [0.693207644633329, 47.41951563541007], [0.69869126155364, 47.4252501865035], [0.699585761698978, 47.421569087657396], [0.701891801890091, 47.42040624641233], [0.700108629701452, 47.41990350144314], [0.699353470260835, 47.421389590609664], [0.699417072360705, 47.41793831070382], [0.695499904278066, 47.41837097456074]], [[0.69830628880917, 47.41897818034849], [0.698973233282073, 47.419026509658124], [0.698694787726371, 47.41971518745563], [0.697999931848323, 47.419587929687125], [0.69830628880917, 47.41897818034849]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7a574984929c07477325503ca3d2ac84 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0eee8cad1b1872b544253130e35fc27 = $(`<div id="html_d0eee8cad1b1872b544253130e35fc27" style="width: 100.0%; height: 100.0%;">Tours - 1537</div>`)[0];
+                popup_7a574984929c07477325503ca3d2ac84.setContent(html_d0eee8cad1b1872b544253130e35fc27);
+            
+        
+
+        geo_json_d5721500fb03cff27ec29c2835696a2d.bindPopup(popup_7a574984929c07477325503ca3d2ac84)
+        ;
+
+        
+    
+    
+            geo_json_d5721500fb03cff27ec29c2835696a2d.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_9e83cb07c54a0275f2dae182b990cd93_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9e83cb07c54a0275f2dae182b990cd93_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9e83cb07c54a0275f2dae182b990cd93 = L.geoJson(null, {
+                onEachFeature: geo_json_9e83cb07c54a0275f2dae182b990cd93_onEachFeature,
+            
+                style: geo_json_9e83cb07c54a0275f2dae182b990cd93_styler,
+        });
+
+        function geo_json_9e83cb07c54a0275f2dae182b990cd93_add (data) {
+            geo_json_9e83cb07c54a0275f2dae182b990cd93
+                .addData(data);
+        }
+            geo_json_9e83cb07c54a0275f2dae182b990cd93_add({"bbox": [0.686951659806463, 47.406018003515165, 0.715406576343255, 47.42558914305452], "features": [{"bbox": [0.686951659806463, 47.406018003515165, 0.715406576343255, 47.42558914305452], "geometry": {"coordinates": [[[[0.705999244644719, 47.406768554166284], [0.705788001505915, 47.40664628289136], [0.705448167268871, 47.40685265742368], [0.705462536772218, 47.40688240129075], [0.705999244644719, 47.406768554166284]]], [[[0.703880859456786, 47.40882696464768], [0.702221195555233, 47.41143052171026], [0.708462141136322, 47.412687256973264], [0.709177903374904, 47.411532795889954], [0.706754183600447, 47.41133289615245], [0.706788914421371, 47.410319188952364], [0.710833348089879, 47.411201125183766], [0.710998877789451, 47.409566810317656], [0.713134122957074, 47.4100973621443], [0.715406576343255, 47.40826401078469], [0.711792249639065, 47.406018003515165], [0.703880859456786, 47.40882696464768]], [[0.706013179808407, 47.40975161974944], [0.70592015116279, 47.4097735], [0.705894535192812, 47.40969526563085], [0.70601007759176, 47.40971375241468], [0.706013179808407, 47.40975161974944]], [[0.709483859025657, 47.40731341752113], [0.709470812964728, 47.407606730306306], [0.708945648998527, 47.40766004985885], [0.709013582538409, 47.40742145401144], [0.709483859025657, 47.40731341752113]]], [[[0.710160439089192, 47.412072304268584], [0.711045147181145, 47.41235125254159], [0.711350647109035, 47.41212312814128], [0.709724856520055, 47.411596592776434], [0.710160439089192, 47.412072304268584]]], [[[0.70104859481282, 47.42134737970565], [0.699646224539534, 47.42248385348961], [0.701468657675781, 47.42316250013868], [0.701782576439656, 47.42179035937141], [0.70104859481282, 47.42134737970565]]], [[[0.687103035573895, 47.42558914305452], [0.687338849953511, 47.42525760204557], [0.687249299890389, 47.42486999915428], [0.686951659806463, 47.42525106790741], [0.687103035573895, 47.42558914305452]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b92adb23ae68a16c0f847395ddde4d07 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_73c2a9e4058ff1c56e204cec5c72d70b = $(`<div id="html_73c2a9e4058ff1c56e204cec5c72d70b" style="width: 100.0%; height: 100.0%;">Tours - 1571</div>`)[0];
+                popup_b92adb23ae68a16c0f847395ddde4d07.setContent(html_73c2a9e4058ff1c56e204cec5c72d70b);
+            
+        
+
+        geo_json_9e83cb07c54a0275f2dae182b990cd93.bindPopup(popup_b92adb23ae68a16c0f847395ddde4d07)
+        ;
+
+        
+    
+    
+            geo_json_9e83cb07c54a0275f2dae182b990cd93.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e = L.geoJson(null, {
+                onEachFeature: geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_onEachFeature,
+            
+                style: geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_styler,
+        });
+
+        function geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_add (data) {
+            geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e
+                .addData(data);
+        }
+            geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e_add({"bbox": [0.705141891399991, 47.40815124296227, 0.733757, 47.43415804810045], "features": [{"bbox": [0.705141891399991, 47.40815124296227, 0.733757, 47.43415804810045], "geometry": {"coordinates": [[[0.705141891399991, 47.41562694005656], [0.707613623540665, 47.41873102538845], [0.705789037575228, 47.42144825631681], [0.714175648695891, 47.43219613192677], [0.718317710231055, 47.43415804810045], [0.733457, 47.43106], [0.733757, 47.427673], [0.732795, 47.424878], [0.730914, 47.424677], [0.732698, 47.42456], [0.729206, 47.413088], [0.724475361316092, 47.41679677946226], [0.722959173444221, 47.41528196048518], [0.725197011038406, 47.40983573142312], [0.723760840218438, 47.411096937270095], [0.722858831027694, 47.40877824099391], [0.719917829185962, 47.410200448976184], [0.715713556631898, 47.40815124296227], [0.712951782133388, 47.41425243374558], [0.715136480352754, 47.41425203146869], [0.713411842165343, 47.41567977248569], [0.710753187013673, 47.41686381872543], [0.705141891399991, 47.41562694005656]], [[0.710145094187946, 47.419400303277], [0.709262122545967, 47.41834736340379], [0.710383505201255, 47.41772487247252], [0.710232749479631, 47.41935088061255], [0.710145094187946, 47.419400303277]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e48f1d562598d87a9a51dc2c96b09c20 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6d6644f4416bd245c780ab248cc2c223 = $(`<div id="html_6d6644f4416bd245c780ab248cc2c223" style="width: 100.0%; height: 100.0%;">Tours - 1572</div>`)[0];
+                popup_e48f1d562598d87a9a51dc2c96b09c20.setContent(html_6d6644f4416bd245c780ab248cc2c223);
+            
+        
+
+        geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e.bindPopup(popup_e48f1d562598d87a9a51dc2c96b09c20)
+        ;
+
+        
+    
+    
+            geo_json_786ef2f38a7eb4587e8c6e0bc75fba2e.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_291080aa39a8f175bb89c4dd63d0d95b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_291080aa39a8f175bb89c4dd63d0d95b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_291080aa39a8f175bb89c4dd63d0d95b = L.geoJson(null, {
+                onEachFeature: geo_json_291080aa39a8f175bb89c4dd63d0d95b_onEachFeature,
+            
+                style: geo_json_291080aa39a8f175bb89c4dd63d0d95b_styler,
+        });
+
+        function geo_json_291080aa39a8f175bb89c4dd63d0d95b_add (data) {
+            geo_json_291080aa39a8f175bb89c4dd63d0d95b
+                .addData(data);
+        }
+            geo_json_291080aa39a8f175bb89c4dd63d0d95b_add({"bbox": [0.702221195555233, 47.40731341752113, 0.715136480352754, 47.41686381872543], "features": [{"bbox": [0.702221195555233, 47.40731341752113, 0.715136480352754, 47.41686381872543], "geometry": {"coordinates": [[[[0.709470812964728, 47.407606730306306], [0.709483859025657, 47.40731341752113], [0.708945648998527, 47.40766004985885], [0.709045558691201, 47.40771927234637], [0.709470812964728, 47.407606730306306]]], [[[0.704708635453067, 47.412018645625025], [0.702221195555233, 47.41143052171026], [0.703287324429472, 47.41453742501507], [0.710753187013673, 47.41686381872543], [0.715136480352754, 47.41425203146869], [0.712992898230087, 47.41434214159292], [0.713571403133905, 47.41161181794871], [0.714971024969553, 47.411359392813644], [0.712326, 47.40899845212765], [0.710833348089879, 47.411201125183766], [0.706788914421371, 47.410319188952364], [0.70907789208217, 47.41249328170142], [0.704708635453067, 47.412018645625025]], [[0.709865030059335, 47.411565006282565], [0.710757046574871, 47.41157283729405], [0.711350647109035, 47.41212312814128], [0.709861953707748, 47.412249992139046], [0.709865030059335, 47.411565006282565]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_709272df5d5c7459e09201bd6f58303d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_38f737596d1f2f70c68ff83513b7ece4 = $(`<div id="html_38f737596d1f2f70c68ff83513b7ece4" style="width: 100.0%; height: 100.0%;">Tours - 1573</div>`)[0];
+                popup_709272df5d5c7459e09201bd6f58303d.setContent(html_38f737596d1f2f70c68ff83513b7ece4);
+            
+        
+
+        geo_json_291080aa39a8f175bb89c4dd63d0d95b.bindPopup(popup_709272df5d5c7459e09201bd6f58303d)
+        ;
+
+        
+    
+    
+            geo_json_291080aa39a8f175bb89c4dd63d0d95b.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e4f62ecebe15c4add8764265807a3e9a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e4f62ecebe15c4add8764265807a3e9a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e4f62ecebe15c4add8764265807a3e9a = L.geoJson(null, {
+                onEachFeature: geo_json_e4f62ecebe15c4add8764265807a3e9a_onEachFeature,
+            
+                style: geo_json_e4f62ecebe15c4add8764265807a3e9a_styler,
+        });
+
+        function geo_json_e4f62ecebe15c4add8764265807a3e9a_add (data) {
+            geo_json_e4f62ecebe15c4add8764265807a3e9a
+                .addData(data);
+        }
+            geo_json_e4f62ecebe15c4add8764265807a3e9a_add({"bbox": [0.675671751181342, 47.36114271458082, 0.729656, 47.41679677946226], "features": [{"bbox": [0.675671751181342, 47.36114271458082, 0.729656, 47.41679677946226], "geometry": {"coordinates": [[[[0.690237007469247, 47.361397489455186], [0.689785749098543, 47.36114271458082], [0.689931497320473, 47.36181680010719], [0.690118799504942, 47.36156437128713], [0.690237007469247, 47.361397489455186]]], [[[0.67575985061092, 47.38965234956742], [0.67595397781447, 47.38954931885347], [0.675871511385202, 47.38918126944972], [0.675671751181342, 47.38946664116951], [0.67575985061092, 47.38965234956742]]], [[[0.70814863541795, 47.399390716929375], [0.704633869344181, 47.400001347585146], [0.70260220727258, 47.40329894028389], [0.706430481107827, 47.404732302878095], [0.710712110717592, 47.403745236930014], [0.712185958290743, 47.40634017009985], [0.714761630035947, 47.40600724675929], [0.71516178425234, 47.40716149843486], [0.715462997344748, 47.406102480463915], [0.715668194726435, 47.407500316631726], [0.714829049525102, 47.407043885346], [0.71401088820012, 47.40746761526664], [0.717770997664291, 47.40964681551861], [0.719917829185962, 47.410200448976184], [0.722082146826578, 47.40858150659184], [0.723714034177071, 47.40919578158846], [0.723760840218438, 47.411096937270095], [0.725197011038406, 47.40983573142312], [0.722959173444221, 47.41528196048518], [0.724475361316092, 47.41679677946226], [0.728508644622581, 47.412818628605926], [0.727028, 47.406153], [0.729656, 47.40047], [0.70814863541795, 47.399390716929375]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2e246da35d2021413ebc19023a7e0e34 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ac210c88e550785697440c04d32e6e86 = $(`<div id="html_ac210c88e550785697440c04d32e6e86" style="width: 100.0%; height: 100.0%;">Tours - 1581</div>`)[0];
+                popup_2e246da35d2021413ebc19023a7e0e34.setContent(html_ac210c88e550785697440c04d32e6e86);
+            
+        
+
+        geo_json_e4f62ecebe15c4add8764265807a3e9a.bindPopup(popup_2e246da35d2021413ebc19023a7e0e34)
+        ;
+
+        
+    
+    
+            geo_json_e4f62ecebe15c4add8764265807a3e9a.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_a032244ecbdd44c46f14379fadfa281f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a032244ecbdd44c46f14379fadfa281f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a032244ecbdd44c46f14379fadfa281f = L.geoJson(null, {
+                onEachFeature: geo_json_a032244ecbdd44c46f14379fadfa281f_onEachFeature,
+            
+                style: geo_json_a032244ecbdd44c46f14379fadfa281f_styler,
+        });
+
+        function geo_json_a032244ecbdd44c46f14379fadfa281f_add (data) {
+            geo_json_a032244ecbdd44c46f14379fadfa281f
+                .addData(data);
+        }
+            geo_json_a032244ecbdd44c46f14379fadfa281f_add({"bbox": [0.70260220727258, 47.40329894028389, 0.711798249459339, 47.409030110098904], "features": [{"bbox": [0.70260220727258, 47.40329894028389, 0.711798249459339, 47.409030110098904], "geometry": {"coordinates": [[[0.702609565328544, 47.40619674442913], [0.70323873230805, 47.408546370618964], [0.705778050664978, 47.409030110098904], [0.706239514723111, 47.40720680594391], [0.711798249459339, 47.40656364314153], [0.710712110717592, 47.403745236930014], [0.706430481107827, 47.404732302878095], [0.70260220727258, 47.40329894028389], [0.702609565328544, 47.40619674442913]], [[0.705472360808611, 47.40672045701012], [0.705788001505915, 47.40664628289136], [0.705999244644719, 47.406768554166284], [0.705462536772218, 47.40688240129075], [0.705472360808611, 47.40672045701012]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8e710b51eb5038252d127681e5382765 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8fbdf945bcf50395cfc7575c08a8c317 = $(`<div id="html_8fbdf945bcf50395cfc7575c08a8c317" style="width: 100.0%; height: 100.0%;">Tours - 1582</div>`)[0];
+                popup_8e710b51eb5038252d127681e5382765.setContent(html_8fbdf945bcf50395cfc7575c08a8c317);
+            
+        
+
+        geo_json_a032244ecbdd44c46f14379fadfa281f.bindPopup(popup_8e710b51eb5038252d127681e5382765)
+        ;
+
+        
+    
+    
+            geo_json_a032244ecbdd44c46f14379fadfa281f.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0e9f71bc52d5d6ea46985df6a239f4ad = L.geoJson(null, {
+                onEachFeature: geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_onEachFeature,
+            
+                style: geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_styler,
+        });
+
+        function geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_add (data) {
+            geo_json_0e9f71bc52d5d6ea46985df6a239f4ad
+                .addData(data);
+        }
+            geo_json_0e9f71bc52d5d6ea46985df6a239f4ad_add({"bbox": [0.685847983667851, 47.39427500841751, 0.694141532582471, 47.39957567479044], "features": [{"bbox": [0.685847983667851, 47.39427500841751, 0.694141532582471, 47.39957567479044], "geometry": {"coordinates": [[[0.687199592592593, 47.39427500841751], [0.685847983667851, 47.39886661527672], [0.694141532582471, 47.39957567479044], [0.693352745705362, 47.3963068815721], [0.691831552004342, 47.396148490249196], [0.692505923431093, 47.39480857521341], [0.687199592592593, 47.39427500841751]], [[0.690870838399601, 47.39544085233443], [0.691158655218771, 47.39543377487168], [0.691222105548854, 47.39548287334137], [0.691173518691588, 47.39554117757009], [0.690870838399601, 47.39544085233443]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3980062013af0b606bcf6e85b357717f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7d8b961e88541a24711d2429d29bb91 = $(`<div id="html_a7d8b961e88541a24711d2429d29bb91" style="width: 100.0%; height: 100.0%;">Tours - 1611</div>`)[0];
+                popup_3980062013af0b606bcf6e85b357717f.setContent(html_a7d8b961e88541a24711d2429d29bb91);
+            
+        
+
+        geo_json_0e9f71bc52d5d6ea46985df6a239f4ad.bindPopup(popup_3980062013af0b606bcf6e85b357717f)
+        ;
+
+        
+    
+    
+            geo_json_0e9f71bc52d5d6ea46985df6a239f4ad.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_9165c41f0cae8bafb5486917f709a993_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9165c41f0cae8bafb5486917f709a993_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9165c41f0cae8bafb5486917f709a993 = L.geoJson(null, {
+                onEachFeature: geo_json_9165c41f0cae8bafb5486917f709a993_onEachFeature,
+            
+                style: geo_json_9165c41f0cae8bafb5486917f709a993_styler,
+        });
+
+        function geo_json_9165c41f0cae8bafb5486917f709a993_add (data) {
+            geo_json_9165c41f0cae8bafb5486917f709a993
+                .addData(data);
+        }
+            geo_json_9165c41f0cae8bafb5486917f709a993_add({"bbox": [0.692070566716083, 47.393642504884106, 0.7094193942451, 47.399969499659605], "features": [{"bbox": [0.692070566716083, 47.393642504884106, 0.7094193942451, 47.399969499659605], "geometry": {"coordinates": [[[[0.692070566716083, 47.395544374722014], [0.694293807076903, 47.39965409799051], [0.701372858472524, 47.399151000950326], [0.700949540930638, 47.39431876005889], [0.699566042593298, 47.393642504884106], [0.692070566716083, 47.395544374722014]], [[0.693440247524754, 47.39616714356436], [0.693448844136896, 47.396102668973036], [0.693614510048126, 47.396167411972826], [0.693519323218478, 47.39621816014096], [0.693440247524754, 47.39616714356436]], [[0.698381613516764, 47.394544541647875], [0.698645123062619, 47.39440240041848], [0.699045290931152, 47.394712387266644], [0.698606714155549, 47.39476471905434], [0.698381613516764, 47.394544541647875]], [[0.699463071749912, 47.39546662910483], [0.699639024922117, 47.39569148753894], [0.699340303576543, 47.395913927885566], [0.699140259433443, 47.395305929456676], [0.699463071749912, 47.39546662910483]], [[0.700454646222588, 47.395782405767655], [0.700061847857988, 47.39562497348469], [0.699756490881856, 47.395751082519205], [0.700277772597026, 47.395428354128924], [0.700454646222588, 47.395782405767655]]], [[[0.705006328384042, 47.39560161111376], [0.704561805010382, 47.39660356483189], [0.704558910555229, 47.39785951663307], [0.705769, 47.397369], [0.705006328384042, 47.39560161111376]]], [[[0.701027705210697, 47.39933666104726], [0.701192075147787, 47.39935533011259], [0.701348491468871, 47.399304011046425], [0.701027705210697, 47.39933666104726]]], [[[0.70771883698666, 47.39957017569038], [0.7094193942451, 47.39866471421954], [0.704643628202121, 47.39896862817281], [0.704736732526474, 47.399969499659605], [0.70771883698666, 47.39957017569038]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c08ac2bc382683615e31bb6e60c4b971 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17c11f9ec1b57e5be54ffaf2526de4fc = $(`<div id="html_17c11f9ec1b57e5be54ffaf2526de4fc" style="width: 100.0%; height: 100.0%;">Tours - 1612</div>`)[0];
+                popup_c08ac2bc382683615e31bb6e60c4b971.setContent(html_17c11f9ec1b57e5be54ffaf2526de4fc);
+            
+        
+
+        geo_json_9165c41f0cae8bafb5486917f709a993.bindPopup(popup_c08ac2bc382683615e31bb6e60c4b971)
+        ;
+
+        
+    
+    
+            geo_json_9165c41f0cae8bafb5486917f709a993.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_9b06f1fd617838a8ddce65da3b174228_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9b06f1fd617838a8ddce65da3b174228_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9b06f1fd617838a8ddce65da3b174228 = L.geoJson(null, {
+                onEachFeature: geo_json_9b06f1fd617838a8ddce65da3b174228_onEachFeature,
+            
+                style: geo_json_9b06f1fd617838a8ddce65da3b174228_styler,
+        });
+
+        function geo_json_9b06f1fd617838a8ddce65da3b174228_add (data) {
+            geo_json_9b06f1fd617838a8ddce65da3b174228
+                .addData(data);
+        }
+            geo_json_9b06f1fd617838a8ddce65da3b174228_add({"bbox": [0.685700547344117, 47.373179940546365, 0.713789333674235, 47.400001347585146], "features": [{"bbox": [0.685700547344117, 47.373179940546365, 0.713789333674235, 47.400001347585146], "geometry": {"coordinates": [[[[0.712219362312096, 47.37393868325034], [0.712983143622652, 47.37501240480286], [0.713789333674235, 47.375023672725014], [0.712246708591093, 47.373179940546365], [0.712219362312096, 47.37393868325034]]], [[[0.685935004509581, 47.37826162246337], [0.685700547344117, 47.37839350461894], [0.685748175204913, 47.37850992827869], [0.685854577419357, 47.378519180645156], [0.685935004509581, 47.37826162246337]]], [[[0.698932407239733, 47.39456798133686], [0.698645123062619, 47.39440240041848], [0.698378211699103, 47.39453696875729], [0.698724481664317, 47.3947907919605], [0.698932407239733, 47.39456798133686]]], [[[0.698625816658356, 47.39157662597944], [0.697590566738719, 47.391433238449075], [0.697019816083629, 47.39258927129667], [0.700949540930638, 47.39431876005889], [0.701372858472524, 47.399151000950326], [0.704558910555229, 47.39785951663307], [0.705006328384042, 47.39560161111376], [0.698625816658356, 47.39157662597944]], [[0.697627910730028, 47.39218557359053], [0.697763981212399, 47.3918584711091], [0.69820533372418, 47.392084000064244], [0.697957160482783, 47.39223790147554], [0.697627910730028, 47.39218557359053]]], [[[0.699055377089849, 47.395590756876274], [0.699340303576543, 47.395913927885566], [0.699639024922117, 47.39569148753894], [0.699140259433443, 47.395305929456676], [0.699055377089849, 47.395590756876274]]], [[[0.700631989247315, 47.39554735752688], [0.700275323357466, 47.395428617344095], [0.699756490881856, 47.395751082519205], [0.700650445891778, 47.39583377054108], [0.700631989247315, 47.39554735752688]]], [[[0.7022445, 47.399241699291615], [0.704633869344181, 47.400001347585146], [0.704736732526474, 47.399969499659605], [0.704643628202121, 47.39896862817281], [0.7022445, 47.399241699291615]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2a4f5d1edcb9d14c3e194c013368a4ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b1f338ed67612903df6c3c0b15975a3 = $(`<div id="html_6b1f338ed67612903df6c3c0b15975a3" style="width: 100.0%; height: 100.0%;">Tours - 1613</div>`)[0];
+                popup_2a4f5d1edcb9d14c3e194c013368a4ca.setContent(html_6b1f338ed67612903df6c3c0b15975a3);
+            
+        
+
+        geo_json_9b06f1fd617838a8ddce65da3b174228.bindPopup(popup_2a4f5d1edcb9d14c3e194c013368a4ca)
+        ;
+
+        
+    
+    
+            geo_json_9b06f1fd617838a8ddce65da3b174228.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e316aea3b3989255c61eba9c741d5e41_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e316aea3b3989255c61eba9c741d5e41_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e316aea3b3989255c61eba9c741d5e41 = L.geoJson(null, {
+                onEachFeature: geo_json_e316aea3b3989255c61eba9c741d5e41_onEachFeature,
+            
+                style: geo_json_e316aea3b3989255c61eba9c741d5e41_styler,
+        });
+
+        function geo_json_e316aea3b3989255c61eba9c741d5e41_add (data) {
+            geo_json_e316aea3b3989255c61eba9c741d5e41
+                .addData(data);
+        }
+            geo_json_e316aea3b3989255c61eba9c741d5e41_add({"bbox": [0.688993576874157, 47.38022507803912, 0.696017486432343, 47.390691641592035], "features": [{"bbox": [0.688993576874157, 47.38022507803912, 0.696017486432343, 47.390691641592035], "geometry": {"coordinates": [[[[0.692773094526274, 47.38033917488887], [0.692745036750745, 47.38062955044751], [0.692987402836284, 47.38057882266217], [0.692917811826782, 47.38022507803912], [0.692773094526274, 47.38033917488887]]], [[[0.690651189309659, 47.38570825156561], [0.688993576874157, 47.39034800779757], [0.69274363826544, 47.390691641592035], [0.693128022377889, 47.38742200947406], [0.696017486432343, 47.38452852485279], [0.691229566197765, 47.384469384252405], [0.690651189309659, 47.38570825156561]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72414dd541526861fd0bb60aba03c40e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c659938945bc424ffa2ab2aafd25b3d6 = $(`<div id="html_c659938945bc424ffa2ab2aafd25b3d6" style="width: 100.0%; height: 100.0%;">Tours - 1621</div>`)[0];
+                popup_72414dd541526861fd0bb60aba03c40e.setContent(html_c659938945bc424ffa2ab2aafd25b3d6);
+            
+        
+
+        geo_json_e316aea3b3989255c61eba9c741d5e41.bindPopup(popup_72414dd541526861fd0bb60aba03c40e)
+        ;
+
+        
+    
+    
+            geo_json_e316aea3b3989255c61eba9c741d5e41.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_b8ff61bf981634cf08a1ae59a516cf38_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b8ff61bf981634cf08a1ae59a516cf38_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b8ff61bf981634cf08a1ae59a516cf38 = L.geoJson(null, {
+                onEachFeature: geo_json_b8ff61bf981634cf08a1ae59a516cf38_onEachFeature,
+            
+                style: geo_json_b8ff61bf981634cf08a1ae59a516cf38_styler,
+        });
+
+        function geo_json_b8ff61bf981634cf08a1ae59a516cf38_add (data) {
+            geo_json_b8ff61bf981634cf08a1ae59a516cf38
+                .addData(data);
+        }
+            geo_json_b8ff61bf981634cf08a1ae59a516cf38_add({"bbox": [0.678284445454548, 47.386191808311786, 0.690454921480957, 47.390600818093226], "features": [{"bbox": [0.678284445454548, 47.386191808311786, 0.690454921480957, 47.390600818093226], "geometry": {"coordinates": [[[[0.678284445454548, 47.3875015], [0.678302960360481, 47.387529399173324], [0.678420713518468, 47.38756680311763], [0.678429825581397, 47.3875015], [0.678284445454548, 47.3875015]]], [[[0.68567351352605, 47.387521517545224], [0.684487431946874, 47.3895082726281], [0.688315137085155, 47.390600818093226], [0.690454921480957, 47.386191808311786], [0.68567351352605, 47.387521517545224]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_139f850cc6f0f93c4f09cc35648bab5b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4604e8fed2e49f8b4cb6287bb1e713ac = $(`<div id="html_4604e8fed2e49f8b4cb6287bb1e713ac" style="width: 100.0%; height: 100.0%;">Tours - 1622</div>`)[0];
+                popup_139f850cc6f0f93c4f09cc35648bab5b.setContent(html_4604e8fed2e49f8b4cb6287bb1e713ac);
+            
+        
+
+        geo_json_b8ff61bf981634cf08a1ae59a516cf38.bindPopup(popup_139f850cc6f0f93c4f09cc35648bab5b)
+        ;
+
+        
+    
+    
+            geo_json_b8ff61bf981634cf08a1ae59a516cf38.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1f4a9c9727f8e90c42c6456642e5ad5c = L.geoJson(null, {
+                onEachFeature: geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_onEachFeature,
+            
+                style: geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_styler,
+        });
+
+        function geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_add (data) {
+            geo_json_1f4a9c9727f8e90c42c6456642e5ad5c
+                .addData(data);
+        }
+            geo_json_1f4a9c9727f8e90c42c6456642e5ad5c_add({"bbox": [0.687420576461773, 47.39026683990591, 0.69820533372418, 47.395333449259894], "features": [{"bbox": [0.687420576461773, 47.39026683990591, 0.69820533372418, 47.395333449259894], "geometry": {"coordinates": [[[[0.697849427282471, 47.39225460429729], [0.69820533372418, 47.392084000064244], [0.697740353190601, 47.39186334582233], [0.697628811680124, 47.392192027937945], [0.697849427282471, 47.39225460429729]]], [[[0.688175317740669, 47.3917001936436], [0.687420576461773, 47.3939125791033], [0.69162234453782, 47.39504413865546], [0.694622613233466, 47.395333449259894], [0.697725481969463, 47.39348236329673], [0.697019816083629, 47.39258927129667], [0.697581869397138, 47.39142739201756], [0.691685537275064, 47.39026683990591], [0.688175317740669, 47.3917001936436]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a57590c705616033ac1a8ce28c1f154a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7769ac3918876529f4f6022fc5028a7 = $(`<div id="html_f7769ac3918876529f4f6022fc5028a7" style="width: 100.0%; height: 100.0%;">Tours - 1623</div>`)[0];
+                popup_a57590c705616033ac1a8ce28c1f154a.setContent(html_f7769ac3918876529f4f6022fc5028a7);
+            
+        
+
+        geo_json_1f4a9c9727f8e90c42c6456642e5ad5c.bindPopup(popup_a57590c705616033ac1a8ce28c1f154a)
+        ;
+
+        
+    
+    
+            geo_json_1f4a9c9727f8e90c42c6456642e5ad5c.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_30cdd4dfe240fb1284fd762101d83ce5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_30cdd4dfe240fb1284fd762101d83ce5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_30cdd4dfe240fb1284fd762101d83ce5 = L.geoJson(null, {
+                onEachFeature: geo_json_30cdd4dfe240fb1284fd762101d83ce5_onEachFeature,
+            
+                style: geo_json_30cdd4dfe240fb1284fd762101d83ce5_styler,
+        });
+
+        function geo_json_30cdd4dfe240fb1284fd762101d83ce5_add (data) {
+            geo_json_30cdd4dfe240fb1284fd762101d83ce5
+                .addData(data);
+        }
+            geo_json_30cdd4dfe240fb1284fd762101d83ce5_add({"bbox": [0.69615791540439, 47.3847156509468, 0.702635863951473, 47.389323863200985], "features": [{"bbox": [0.69615791540439, 47.3847156509468, 0.702635863951473, 47.389323863200985], "geometry": {"coordinates": [[[0.699118985852132, 47.3847156509468], [0.69615791540439, 47.388247868248044], [0.702608658621442, 47.389323863200985], [0.702635863951473, 47.385625219747176], [0.699118985852132, 47.3847156509468]], [[0.701000877259754, 47.38694089914367], [0.702040924467355, 47.38783165870989], [0.700036731057336, 47.3879703298852], [0.698810748104856, 47.38657255263903], [0.701000877259754, 47.38694089914367]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ddd854b3c494ed19aa8225af3190bd0e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f7c15a2e56d379a9e15c664479962a2 = $(`<div id="html_9f7c15a2e56d379a9e15c664479962a2" style="width: 100.0%; height: 100.0%;">Tours - 1631</div>`)[0];
+                popup_ddd854b3c494ed19aa8225af3190bd0e.setContent(html_9f7c15a2e56d379a9e15c664479962a2);
+            
+        
+
+        geo_json_30cdd4dfe240fb1284fd762101d83ce5.bindPopup(popup_ddd854b3c494ed19aa8225af3190bd0e)
+        ;
+
+        
+    
+    
+            geo_json_30cdd4dfe240fb1284fd762101d83ce5.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_7803076e66c5a9104c357661a57fefd2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7803076e66c5a9104c357661a57fefd2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7803076e66c5a9104c357661a57fefd2 = L.geoJson(null, {
+                onEachFeature: geo_json_7803076e66c5a9104c357661a57fefd2_onEachFeature,
+            
+                style: geo_json_7803076e66c5a9104c357661a57fefd2_styler,
+        });
+
+        function geo_json_7803076e66c5a9104c357661a57fefd2_add (data) {
+            geo_json_7803076e66c5a9104c357661a57fefd2
+                .addData(data);
+        }
+            geo_json_7803076e66c5a9104c357661a57fefd2_add({"bbox": [0.699944244748299, 47.3823785623797, 0.706852732665636, 47.38743445064351], "features": [{"bbox": [0.699944244748299, 47.3823785623797, 0.706852732665636, 47.38743445064351], "geometry": {"coordinates": [[[0.701160762537637, 47.38313063176131], [0.699944244748299, 47.38405284139105], [0.702900004692117, 47.387066027222396], [0.706702573606793, 47.38743445064351], [0.706852732665636, 47.384322041776436], [0.704447213318682, 47.38434480600673], [0.704000525392927, 47.3823785623797], [0.701160762537637, 47.38313063176131]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f4cd2a47a827d60caf4927fd3d205682 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a58e69ba46897d9849a927399f76956e = $(`<div id="html_a58e69ba46897d9849a927399f76956e" style="width: 100.0%; height: 100.0%;">Tours - 1632</div>`)[0];
+                popup_f4cd2a47a827d60caf4927fd3d205682.setContent(html_a58e69ba46897d9849a927399f76956e);
+            
+        
+
+        geo_json_7803076e66c5a9104c357661a57fefd2.bindPopup(popup_f4cd2a47a827d60caf4927fd3d205682)
+        ;
+
+        
+    
+    
+            geo_json_7803076e66c5a9104c357661a57fefd2.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_26352d1d9d6566dba4b93285a3e699fe_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_26352d1d9d6566dba4b93285a3e699fe_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_26352d1d9d6566dba4b93285a3e699fe = L.geoJson(null, {
+                onEachFeature: geo_json_26352d1d9d6566dba4b93285a3e699fe_onEachFeature,
+            
+                style: geo_json_26352d1d9d6566dba4b93285a3e699fe_styler,
+        });
+
+        function geo_json_26352d1d9d6566dba4b93285a3e699fe_add (data) {
+            geo_json_26352d1d9d6566dba4b93285a3e699fe
+                .addData(data);
+        }
+            geo_json_26352d1d9d6566dba4b93285a3e699fe_add({"bbox": [0.704447213318682, 47.37821363541947, 0.713991155465048, 47.3855109307107], "features": [{"bbox": [0.704447213318682, 47.37821363541947, 0.713991155465048, 47.3855109307107], "geometry": {"coordinates": [[[[0.713678628042435, 47.37922648408571], [0.713991155465048, 47.37869971207329], [0.71276792446722, 47.37821363541947], [0.712552603780128, 47.37857326025868], [0.713678628042435, 47.37922648408571]]], [[[0.704784118032031, 47.38151048568746], [0.704447213318682, 47.38434480600673], [0.710043784686828, 47.3855109307107], [0.712119063505486, 47.381995377066275], [0.704784118032031, 47.38151048568746]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0b95df94d679283025984187839ffa27 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f2ce02db9cbc95e0c60af3c58898316e = $(`<div id="html_f2ce02db9cbc95e0c60af3c58898316e" style="width: 100.0%; height: 100.0%;">Tours - 1633</div>`)[0];
+                popup_0b95df94d679283025984187839ffa27.setContent(html_f2ce02db9cbc95e0c60af3c58898316e);
+            
+        
+
+        geo_json_26352d1d9d6566dba4b93285a3e699fe.bindPopup(popup_0b95df94d679283025984187839ffa27)
+        ;
+
+        
+    
+    
+            geo_json_26352d1d9d6566dba4b93285a3e699fe.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_2631cd456083afa43a7f0b9844857a44_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2631cd456083afa43a7f0b9844857a44_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2631cd456083afa43a7f0b9844857a44 = L.geoJson(null, {
+                onEachFeature: geo_json_2631cd456083afa43a7f0b9844857a44_onEachFeature,
+            
+                style: geo_json_2631cd456083afa43a7f0b9844857a44_styler,
+        });
+
+        function geo_json_2631cd456083afa43a7f0b9844857a44_add (data) {
+            geo_json_2631cd456083afa43a7f0b9844857a44
+                .addData(data);
+        }
+            geo_json_2631cd456083afa43a7f0b9844857a44_add({"bbox": [0.698810748104856, 47.384725096465225, 0.710043784686828, 47.3904046615618], "features": [{"bbox": [0.698810748104856, 47.384725096465225, 0.710043784686828, 47.3904046615618], "geometry": {"coordinates": [[[[0.700993193344858, 47.387034704019015], [0.699969084749652, 47.38740319912724], [0.698810748104856, 47.38657255263903], [0.700036731057336, 47.3879703298852], [0.702040924467355, 47.38783165870989], [0.700993193344858, 47.387034704019015]]], [[[0.702638875574951, 47.387534150076654], [0.702823817001895, 47.38997277412277], [0.707168619577937, 47.3904046615618], [0.710043784686828, 47.3855109307107], [0.707397302458971, 47.384725096465225], [0.706537865498301, 47.38754107692947], [0.702638875574951, 47.387534150076654]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d8279c641b6c00e182567dd3d7abe58d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_00283341f9274a1ec3665f7e44475718 = $(`<div id="html_00283341f9274a1ec3665f7e44475718" style="width: 100.0%; height: 100.0%;">Tours - 1634</div>`)[0];
+                popup_d8279c641b6c00e182567dd3d7abe58d.setContent(html_00283341f9274a1ec3665f7e44475718);
+            
+        
+
+        geo_json_2631cd456083afa43a7f0b9844857a44.bindPopup(popup_d8279c641b6c00e182567dd3d7abe58d)
+        ;
+
+        
+    
+    
+            geo_json_2631cd456083afa43a7f0b9844857a44.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_36bcb6c2aa5bc415563b9a72ec55edf4 = L.geoJson(null, {
+                onEachFeature: geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_onEachFeature,
+            
+                style: geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_styler,
+        });
+
+        function geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_add (data) {
+            geo_json_36bcb6c2aa5bc415563b9a72ec55edf4
+                .addData(data);
+        }
+            geo_json_36bcb6c2aa5bc415563b9a72ec55edf4_add({"bbox": [0.692881422105229, 47.3877505225755, 0.705006328384042, 47.39560161111376], "features": [{"bbox": [0.692881422105229, 47.3877505225755, 0.705006328384042, 47.39560161111376], "geometry": {"coordinates": [[[[0.702233141735771, 47.38938448027534], [0.701833791126618, 47.38929315982054], [0.701682208202596, 47.38937518265352], [0.702096411184931, 47.38980725786004], [0.702233141735771, 47.38938448027534]]], [[[0.693857178465409, 47.38916928069127], [0.692881422105229, 47.39056617218293], [0.703526892563154, 47.39292021902497], [0.700863389813159, 47.39167655790889], [0.700651750552372, 47.3888533059394], [0.698764155958801, 47.38953324914173], [0.695672210198842, 47.3877505225755], [0.695240261711545, 47.38947164422722], [0.693857178465409, 47.38916928069127]]], [[[0.703320202170493, 47.393471260975254], [0.703636074947323, 47.393787742370236], [0.70423744112346, 47.39343758523581], [0.703888610965643, 47.39318519546933], [0.703320202170493, 47.393471260975254]]], [[[0.704340162018372, 47.394598243209764], [0.703578071134021, 47.39478685823806], [0.705006328384042, 47.39560161111376], [0.704919704547481, 47.39493769991016], [0.704340162018372, 47.394598243209764]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1ecc53422739d0c40028ad883832b91d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c744d825fbdc28162b275a32b4a7cce = $(`<div id="html_0c744d825fbdc28162b275a32b4a7cce" style="width: 100.0%; height: 100.0%;">Tours - 1635</div>`)[0];
+                popup_1ecc53422739d0c40028ad883832b91d.setContent(html_0c744d825fbdc28162b275a32b4a7cce);
+            
+        
+
+        geo_json_36bcb6c2aa5bc415563b9a72ec55edf4.bindPopup(popup_1ecc53422739d0c40028ad883832b91d)
+        ;
+
+        
+    
+    
+            geo_json_36bcb6c2aa5bc415563b9a72ec55edf4.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_0c25d61edf3c9b46bba63a6d5c747338_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0c25d61edf3c9b46bba63a6d5c747338_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0c25d61edf3c9b46bba63a6d5c747338 = L.geoJson(null, {
+                onEachFeature: geo_json_0c25d61edf3c9b46bba63a6d5c747338_onEachFeature,
+            
+                style: geo_json_0c25d61edf3c9b46bba63a6d5c747338_styler,
+        });
+
+        function geo_json_0c25d61edf3c9b46bba63a6d5c747338_add (data) {
+            geo_json_0c25d61edf3c9b46bba63a6d5c747338
+                .addData(data);
+        }
+            geo_json_0c25d61edf3c9b46bba63a6d5c747338_add({"bbox": [0.700863389813159, 47.390040913588514, 0.707168619577937, 47.39493769991016], "features": [{"bbox": [0.700863389813159, 47.390040913588514, 0.707168619577937, 47.39493769991016], "geometry": {"coordinates": [[[0.701479454258373, 47.390040913588514], [0.700863389813159, 47.39167655790889], [0.704919704547481, 47.39493769991016], [0.707168619577937, 47.3904046615618], [0.701479454258373, 47.390040913588514]], [[0.703443307757298, 47.39335463003072], [0.703888610965643, 47.39318519546933], [0.70423744112346, 47.39343758523581], [0.703636074947323, 47.393787742370236], [0.703443307757298, 47.39335463003072]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a55fcf841a81a0c6f5d0547c0d6b9ef1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ff0f00bdf0a357845b15354818312763 = $(`<div id="html_ff0f00bdf0a357845b15354818312763" style="width: 100.0%; height: 100.0%;">Tours - 1636</div>`)[0];
+                popup_a55fcf841a81a0c6f5d0547c0d6b9ef1.setContent(html_ff0f00bdf0a357845b15354818312763);
+            
+        
+
+        geo_json_0c25d61edf3c9b46bba63a6d5c747338.bindPopup(popup_a55fcf841a81a0c6f5d0547c0d6b9ef1)
+        ;
+
+        
+    
+    
+            geo_json_0c25d61edf3c9b46bba63a6d5c747338.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_03255333ed959ff4187ea6e5b1ccd248_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_03255333ed959ff4187ea6e5b1ccd248_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_03255333ed959ff4187ea6e5b1ccd248 = L.geoJson(null, {
+                onEachFeature: geo_json_03255333ed959ff4187ea6e5b1ccd248_onEachFeature,
+            
+                style: geo_json_03255333ed959ff4187ea6e5b1ccd248_styler,
+        });
+
+        function geo_json_03255333ed959ff4187ea6e5b1ccd248_add (data) {
+            geo_json_03255333ed959ff4187ea6e5b1ccd248
+                .addData(data);
+        }
+            geo_json_03255333ed959ff4187ea6e5b1ccd248_add({"bbox": [0.693034588806198, 47.37784333115824, 0.700074531810766, 47.38069744742954], "features": [{"bbox": [0.693034588806198, 47.37784333115824, 0.700074531810766, 47.38069744742954], "geometry": {"coordinates": [[[[0.699720091240878, 47.378410229927006], [0.69997238026689, 47.37838552012189], [0.700074531810766, 47.37784333115824], [0.699704966560613, 47.3780302223355], [0.699720091240878, 47.378410229927006]]], [[[0.694330955022983, 47.37821942908732], [0.693034588806198, 47.37973472358113], [0.697910198208517, 47.38069744742954], [0.6994081843372, 47.37956463021107], [0.699487137492041, 47.37788093889243], [0.694330955022983, 47.37821942908732]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b93a943dcb9aa9d41636d131685071e1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb15d2d0f11c1cb03ff90828d7f55133 = $(`<div id="html_fb15d2d0f11c1cb03ff90828d7f55133" style="width: 100.0%; height: 100.0%;">Tours - 1641</div>`)[0];
+                popup_b93a943dcb9aa9d41636d131685071e1.setContent(html_fb15d2d0f11c1cb03ff90828d7f55133);
+            
+        
+
+        geo_json_03255333ed959ff4187ea6e5b1ccd248.bindPopup(popup_b93a943dcb9aa9d41636d131685071e1)
+        ;
+
+        
+    
+    
+            geo_json_03255333ed959ff4187ea6e5b1ccd248.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_c0a337a3ced4047ae67325172a561ec1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c0a337a3ced4047ae67325172a561ec1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c0a337a3ced4047ae67325172a561ec1 = L.geoJson(null, {
+                onEachFeature: geo_json_c0a337a3ced4047ae67325172a561ec1_onEachFeature,
+            
+                style: geo_json_c0a337a3ced4047ae67325172a561ec1_styler,
+        });
+
+        function geo_json_c0a337a3ced4047ae67325172a561ec1_add (data) {
+            geo_json_c0a337a3ced4047ae67325172a561ec1
+                .addData(data);
+        }
+            geo_json_c0a337a3ced4047ae67325172a561ec1_add({"bbox": [0.696623122586409, 47.37575737795376, 0.705329825152742, 47.38306269485724], "features": [{"bbox": [0.696623122586409, 47.37575737795376, 0.705329825152742, 47.38306269485724], "geometry": {"coordinates": [[[[0.698018739803359, 47.37656603266952], [0.697571554411937, 47.37575737795376], [0.696623122586409, 47.37667565732241], [0.697617832833607, 47.377369728693154], [0.698018739803359, 47.37656603266952]]], [[[0.700614968280421, 47.377456358095], [0.699501763985456, 47.37726407524703], [0.698451654453027, 47.3802898918509], [0.701393176572315, 47.3813434917966], [0.701223023590655, 47.38306269485724], [0.705329825152742, 47.38124436812268], [0.702773505126884, 47.37879050320661], [0.7011026463325, 47.37913175709247], [0.700614968280421, 47.377456358095]], [[0.700074531810766, 47.37784333115824], [0.69997238026689, 47.37838552012189], [0.699720091240878, 47.378410229927006], [0.699704966560613, 47.3780302223355], [0.700074531810766, 47.37784333115824]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ce9214472c87036e3354e682fd166de0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_230372cf61007ad4aac6410c65b75520 = $(`<div id="html_230372cf61007ad4aac6410c65b75520" style="width: 100.0%; height: 100.0%;">Tours - 1642</div>`)[0];
+                popup_ce9214472c87036e3354e682fd166de0.setContent(html_230372cf61007ad4aac6410c65b75520);
+            
+        
+
+        geo_json_c0a337a3ced4047ae67325172a561ec1.bindPopup(popup_ce9214472c87036e3354e682fd166de0)
+        ;
+
+        
+    
+    
+            geo_json_c0a337a3ced4047ae67325172a561ec1.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_061aa9121ec007da2337b44c28e1d7b4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_061aa9121ec007da2337b44c28e1d7b4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_061aa9121ec007da2337b44c28e1d7b4 = L.geoJson(null, {
+                onEachFeature: geo_json_061aa9121ec007da2337b44c28e1d7b4_onEachFeature,
+            
+                style: geo_json_061aa9121ec007da2337b44c28e1d7b4_styler,
+        });
+
+        function geo_json_061aa9121ec007da2337b44c28e1d7b4_add (data) {
+            geo_json_061aa9121ec007da2337b44c28e1d7b4
+                .addData(data);
+        }
+            geo_json_061aa9121ec007da2337b44c28e1d7b4_add({"bbox": [0.693993973854643, 47.372372269564806, 0.702431750222432, 47.37839860590069], "features": [{"bbox": [0.693993973854643, 47.372372269564806, 0.702431750222432, 47.37839860590069], "geometry": {"coordinates": [[[0.694569805632396, 47.376123718322575], [0.693993973854643, 47.37839860590069], [0.701445358090825, 47.37793761119538], [0.702431750222432, 47.372372269564806], [0.701058503130138, 47.37418983097174], [0.695648693851779, 47.37369170039204], [0.694569805632396, 47.376123718322575]], [[0.697938736227744, 47.37720363811856], [0.696623122586409, 47.37667565732241], [0.697571554411937, 47.37575737795376], [0.698141368189558, 47.37680099340949], [0.697938736227744, 47.37720363811856]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_44ae105866dfb6429d4f60655ee51180 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62da6d7e7e0da8e4ac62f43a611d2bb7 = $(`<div id="html_62da6d7e7e0da8e4ac62f43a611d2bb7" style="width: 100.0%; height: 100.0%;">Tours - 1643</div>`)[0];
+                popup_44ae105866dfb6429d4f60655ee51180.setContent(html_62da6d7e7e0da8e4ac62f43a611d2bb7);
+            
+        
+
+        geo_json_061aa9121ec007da2337b44c28e1d7b4.bindPopup(popup_44ae105866dfb6429d4f60655ee51180)
+        ;
+
+        
+    
+    
+            geo_json_061aa9121ec007da2337b44c28e1d7b4.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_50824e6742a911a652c9f8483c3353de_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_50824e6742a911a652c9f8483c3353de_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_50824e6742a911a652c9f8483c3353de = L.geoJson(null, {
+                onEachFeature: geo_json_50824e6742a911a652c9f8483c3353de_onEachFeature,
+            
+                style: geo_json_50824e6742a911a652c9f8483c3353de_styler,
+        });
+
+        function geo_json_50824e6742a911a652c9f8483c3353de_add (data) {
+            geo_json_50824e6742a911a652c9f8483c3353de
+                .addData(data);
+        }
+            geo_json_50824e6742a911a652c9f8483c3353de_add({"bbox": [0.700865032836396, 47.3715605237417, 0.722034300137524, 47.381995377066275], "features": [{"bbox": [0.700865032836396, 47.3715605237417, 0.722034300137524, 47.381995377066275], "geometry": {"coordinates": [[[0.702698688362552, 47.374679577209996], [0.700865032836396, 47.378797567793335], [0.706321831665203, 47.38152379199969], [0.712119063505486, 47.381995377066275], [0.713678628042435, 47.37922648408571], [0.71276792446722, 47.37821363541947], [0.715103, 47.377278], [0.722034300137524, 47.37920854471414], [0.721806896361104, 47.37733472864794], [0.717270134596164, 47.37670745478343], [0.714356908738337, 47.37654640710217], [0.710017202703352, 47.37941437327678], [0.703954087756172, 47.37767068838674], [0.703742391627816, 47.3715605237417], [0.702580819555833, 47.37181300076365], [0.702698688362552, 47.374679577209996]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1cac3dc967e7cbf222509eb1b7562964 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c4da8876b979aa88c603b472db939a06 = $(`<div id="html_c4da8876b979aa88c603b472db939a06" style="width: 100.0%; height: 100.0%;">Tours - 1651</div>`)[0];
+                popup_1cac3dc967e7cbf222509eb1b7562964.setContent(html_c4da8876b979aa88c603b472db939a06);
+            
+        
+
+        geo_json_50824e6742a911a652c9f8483c3353de.bindPopup(popup_1cac3dc967e7cbf222509eb1b7562964)
+        ;
+
+        
+    
+    
+            geo_json_50824e6742a911a652c9f8483c3353de.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_17891ed6036806f3fb4f079a90c8b1e7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_17891ed6036806f3fb4f079a90c8b1e7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_17891ed6036806f3fb4f079a90c8b1e7 = L.geoJson(null, {
+                onEachFeature: geo_json_17891ed6036806f3fb4f079a90c8b1e7_onEachFeature,
+            
+                style: geo_json_17891ed6036806f3fb4f079a90c8b1e7_styler,
+        });
+
+        function geo_json_17891ed6036806f3fb4f079a90c8b1e7_add (data) {
+            geo_json_17891ed6036806f3fb4f079a90c8b1e7
+                .addData(data);
+        }
+            geo_json_17891ed6036806f3fb4f079a90c8b1e7_add({"bbox": [0.69420908182714, 47.37190863280219, 0.714356908738337, 47.38947164422722], "features": [{"bbox": [0.69420908182714, 47.37190863280219, 0.714356908738337, 47.38947164422722], "geometry": {"coordinates": [[[[0.703587758793221, 47.37478156777698], [0.703954087756172, 47.37767068838674], [0.710017202703352, 47.37941437327678], [0.714356908738337, 47.37654640710217], [0.706916724496566, 47.37495900558751], [0.704668889003654, 47.37190863280219], [0.703587758793221, 47.37478156777698]]], [[[0.694481262949028, 47.3884447916283], [0.69420908182714, 47.38887734812899], [0.695240261711545, 47.38947164422722], [0.695056174248163, 47.388196730627065], [0.694481262949028, 47.3884447916283]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_60bbc0b51f8b448dafa3f1b4da1dd933 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_661e6117db90ceebbd55fac932ca37d9 = $(`<div id="html_661e6117db90ceebbd55fac932ca37d9" style="width: 100.0%; height: 100.0%;">Tours - 1652</div>`)[0];
+                popup_60bbc0b51f8b448dafa3f1b4da1dd933.setContent(html_661e6117db90ceebbd55fac932ca37d9);
+            
+        
+
+        geo_json_17891ed6036806f3fb4f079a90c8b1e7.bindPopup(popup_60bbc0b51f8b448dafa3f1b4da1dd933)
+        ;
+
+        
+    
+    
+            geo_json_17891ed6036806f3fb4f079a90c8b1e7.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_87c3f5cf293b1131ecdba25443e4ceb6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_87c3f5cf293b1131ecdba25443e4ceb6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_87c3f5cf293b1131ecdba25443e4ceb6 = L.geoJson(null, {
+                onEachFeature: geo_json_87c3f5cf293b1131ecdba25443e4ceb6_onEachFeature,
+            
+                style: geo_json_87c3f5cf293b1131ecdba25443e4ceb6_styler,
+        });
+
+        function geo_json_87c3f5cf293b1131ecdba25443e4ceb6_add (data) {
+            geo_json_87c3f5cf293b1131ecdba25443e4ceb6
+                .addData(data);
+        }
+            geo_json_87c3f5cf293b1131ecdba25443e4ceb6_add({"bbox": [0.692633762187152, 47.380924976962156, 0.701631904973611, 47.389827551719115], "features": [{"bbox": [0.692633762187152, 47.380924976962156, 0.701631904973611, 47.389827551719115], "geometry": {"coordinates": [[[[0.701631904973611, 47.38178373505426], [0.700687597407147, 47.380924976962156], [0.700035046545338, 47.38138322832406], [0.701467461978681, 47.38196340115453], [0.701631904973611, 47.38178373505426]]], [[[0.69566420200573, 47.38373138939828], [0.692633762187152, 47.38854893419461], [0.693375230033796, 47.389827551719115], [0.699066996618218, 47.385971180817386], [0.698152261158445, 47.38302318234278], [0.69566420200573, 47.38373138939828]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_19ef86c9d4ac8f1eb478a9e93066dca0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_108d3bc19cb6144980917296d3b3ac49 = $(`<div id="html_108d3bc19cb6144980917296d3b3ac49" style="width: 100.0%; height: 100.0%;">Tours - 1661</div>`)[0];
+                popup_19ef86c9d4ac8f1eb478a9e93066dca0.setContent(html_108d3bc19cb6144980917296d3b3ac49);
+            
+        
+
+        geo_json_87c3f5cf293b1131ecdba25443e4ceb6.bindPopup(popup_19ef86c9d4ac8f1eb478a9e93066dca0)
+        ;
+
+        
+    
+    
+            geo_json_87c3f5cf293b1131ecdba25443e4ceb6.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_a289712fa9517c03497fd698222f4810_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a289712fa9517c03497fd698222f4810_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a289712fa9517c03497fd698222f4810 = L.geoJson(null, {
+                onEachFeature: geo_json_a289712fa9517c03497fd698222f4810_onEachFeature,
+            
+                style: geo_json_a289712fa9517c03497fd698222f4810_styler,
+        });
+
+        function geo_json_a289712fa9517c03497fd698222f4810_add (data) {
+            geo_json_a289712fa9517c03497fd698222f4810
+                .addData(data);
+        }
+            geo_json_a289712fa9517c03497fd698222f4810_add({"bbox": [0.696513762222152, 47.3802898918509, 0.701467461978681, 47.38480590899767], "features": [{"bbox": [0.696513762222152, 47.3802898918509, 0.701467461978681, 47.38480590899767], "geometry": {"coordinates": [[[0.696513762222152, 47.38191115232565], [0.69892423402766, 47.38480590899767], [0.701467461978681, 47.38196340115453], [0.698451654453027, 47.3802898918509], [0.696513762222152, 47.38191115232565]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_69dbb26e9876c1b2532621c1972d75bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dece8e86509ba5553e8d350b8aadb07e = $(`<div id="html_dece8e86509ba5553e8d350b8aadb07e" style="width: 100.0%; height: 100.0%;">Tours - 1662</div>`)[0];
+                popup_69dbb26e9876c1b2532621c1972d75bd.setContent(html_dece8e86509ba5553e8d350b8aadb07e);
+            
+        
+
+        geo_json_a289712fa9517c03497fd698222f4810.bindPopup(popup_69dbb26e9876c1b2532621c1972d75bd)
+        ;
+
+        
+    
+    
+            geo_json_a289712fa9517c03497fd698222f4810.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_b19e2e44cd5133971b9b9a7a60afb65e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b19e2e44cd5133971b9b9a7a60afb65e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b19e2e44cd5133971b9b9a7a60afb65e = L.geoJson(null, {
+                onEachFeature: geo_json_b19e2e44cd5133971b9b9a7a60afb65e_onEachFeature,
+            
+                style: geo_json_b19e2e44cd5133971b9b9a7a60afb65e_styler,
+        });
+
+        function geo_json_b19e2e44cd5133971b9b9a7a60afb65e_add (data) {
+            geo_json_b19e2e44cd5133971b9b9a7a60afb65e
+                .addData(data);
+        }
+            geo_json_b19e2e44cd5133971b9b9a7a60afb65e_add({"bbox": [0.698151860250421, 47.350195033949674, 0.713906906040374, 47.365890304069445], "features": [{"bbox": [0.698151860250421, 47.350195033949674, 0.713906906040374, 47.365890304069445], "geometry": {"coordinates": [[[[0.701898453205799, 47.353735165892864], [0.702814410051544, 47.35327170269847], [0.703837500398794, 47.35036209799119], [0.701428499999858, 47.350195033949674], [0.701898453205799, 47.353735165892864]]], [[[0.698632, 47.356362], [0.698151860250421, 47.35777048484529], [0.699560307940499, 47.357880919143426], [0.700308129332019, 47.35524512762607], [0.699127048576488, 47.3547734636783], [0.698632, 47.356362]]], [[[0.70685378954082, 47.358368226027906], [0.702536527189354, 47.36253905433264], [0.713906906040374, 47.365890304069445], [0.712043556698703, 47.36320049983872], [0.709897851598244, 47.363710590032795], [0.710493380576735, 47.36247260325357], [0.70685378954082, 47.358368226027906]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_80f5eb896e2bee2073a97e66d40f7c03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6469e7447a139ed93affad408765a06f = $(`<div id="html_6469e7447a139ed93affad408765a06f" style="width: 100.0%; height: 100.0%;">Tours - 1711</div>`)[0];
+                popup_80f5eb896e2bee2073a97e66d40f7c03.setContent(html_6469e7447a139ed93affad408765a06f);
+            
+        
+
+        geo_json_b19e2e44cd5133971b9b9a7a60afb65e.bindPopup(popup_80f5eb896e2bee2073a97e66d40f7c03)
+        ;
+
+        
+    
+    
+            geo_json_b19e2e44cd5133971b9b9a7a60afb65e.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_55ff60ee665283e47dc87e73b7082fec_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_55ff60ee665283e47dc87e73b7082fec_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_55ff60ee665283e47dc87e73b7082fec = L.geoJson(null, {
+                onEachFeature: geo_json_55ff60ee665283e47dc87e73b7082fec_onEachFeature,
+            
+                style: geo_json_55ff60ee665283e47dc87e73b7082fec_styler,
+        });
+
+        function geo_json_55ff60ee665283e47dc87e73b7082fec_add (data) {
+            geo_json_55ff60ee665283e47dc87e73b7082fec
+                .addData(data);
+        }
+            geo_json_55ff60ee665283e47dc87e73b7082fec_add({"bbox": [0.694574108364893, 47.348943, 0.713193145635146, 47.36609147736319], "features": [{"bbox": [0.694574108364893, 47.348943, 0.713193145635146, 47.36609147736319], "geometry": {"coordinates": [[[0.702735712268849, 47.35202156611857], [0.701898453205799, 47.353735165892864], [0.701428499999858, 47.350195033949674], [0.700292, 47.350969], [0.699127048576488, 47.3547734636783], [0.700270610145816, 47.35725638339538], [0.698514939141828, 47.35794554359681], [0.69855373657672, 47.361400031357825], [0.69571853736975, 47.36228526294385], [0.694574108364893, 47.36609147736319], [0.69893359663856, 47.36489560102011], [0.707013685594125, 47.358215122944195], [0.707189481189954, 47.36019204716291], [0.710493380576735, 47.36247260325357], [0.709897851598244, 47.363710590032795], [0.713193145635146, 47.36441090871243], [0.703267, 47.348943], [0.701685218505725, 47.35002020648988], [0.703837500398794, 47.35036209799119], [0.702735712268849, 47.35202156611857]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_394a64a907f89cd06ed4d999d7ccaeda = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_63e6b9cf92af963f480fec0534e59254 = $(`<div id="html_63e6b9cf92af963f480fec0534e59254" style="width: 100.0%; height: 100.0%;">Tours - 1712</div>`)[0];
+                popup_394a64a907f89cd06ed4d999d7ccaeda.setContent(html_63e6b9cf92af963f480fec0534e59254);
+            
+        
+
+        geo_json_55ff60ee665283e47dc87e73b7082fec.bindPopup(popup_394a64a907f89cd06ed4d999d7ccaeda)
+        ;
+
+        
+    
+    
+            geo_json_55ff60ee665283e47dc87e73b7082fec.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_809487e81739fe64fbfca0f06b58076d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_809487e81739fe64fbfca0f06b58076d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_809487e81739fe64fbfca0f06b58076d = L.geoJson(null, {
+                onEachFeature: geo_json_809487e81739fe64fbfca0f06b58076d_onEachFeature,
+            
+                style: geo_json_809487e81739fe64fbfca0f06b58076d_styler,
+        });
+
+        function geo_json_809487e81739fe64fbfca0f06b58076d_add (data) {
+            geo_json_809487e81739fe64fbfca0f06b58076d
+                .addData(data);
+        }
+            geo_json_809487e81739fe64fbfca0f06b58076d_add({"bbox": [0.682568534266337, 47.35794554359681, 0.699474214441686, 47.37851568320611], "features": [{"bbox": [0.682568534266337, 47.35794554359681, 0.699474214441686, 47.37851568320611], "geometry": {"coordinates": [[[[0.689106, 47.362029], [0.689097, 47.363532], [0.682568534266337, 47.36205886675148], [0.683389297659024, 47.36664486522447], [0.688266008124617, 47.36675481620559], [0.685496298572838, 47.369078658575745], [0.688740783403142, 47.36917752092841], [0.691197856822844, 47.36694897110156], [0.695249424066079, 47.36972149736945], [0.699474214441686, 47.36893808184193], [0.69893359663856, 47.36489560102011], [0.694574108364893, 47.36609147736319], [0.69571853736975, 47.36228526294385], [0.69855373657672, 47.361400031357825], [0.698514939141828, 47.35794554359681], [0.697509, 47.359787], [0.690387, 47.36004], [0.689106, 47.362029]], [[0.689785749098543, 47.36114271458082], [0.690201384289964, 47.36110217846179], [0.689931497320473, 47.36181680010719], [0.689785749098543, 47.36114271458082]]], [[[0.685573429864286, 47.37847675452491], [0.6856739366412, 47.37851568320611], [0.685748175204913, 47.37850992827869], [0.685700547344117, 47.37839350461894], [0.685573429864286, 47.37847675452491]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4219445dec9d0237f37931608bd8fec7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_62c0548170f7018c9975917bb2690a19 = $(`<div id="html_62c0548170f7018c9975917bb2690a19" style="width: 100.0%; height: 100.0%;">Tours - 1721</div>`)[0];
+                popup_4219445dec9d0237f37931608bd8fec7.setContent(html_62c0548170f7018c9975917bb2690a19);
+            
+        
+
+        geo_json_809487e81739fe64fbfca0f06b58076d.bindPopup(popup_4219445dec9d0237f37931608bd8fec7)
+        ;
+
+        
+    
+    
+            geo_json_809487e81739fe64fbfca0f06b58076d.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_5c60a750b8e0c261fe03b394531d04a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5c60a750b8e0c261fe03b394531d04a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5c60a750b8e0c261fe03b394531d04a9 = L.geoJson(null, {
+                onEachFeature: geo_json_5c60a750b8e0c261fe03b394531d04a9_onEachFeature,
+            
+                style: geo_json_5c60a750b8e0c261fe03b394531d04a9_styler,
+        });
+
+        function geo_json_5c60a750b8e0c261fe03b394531d04a9_add (data) {
+            geo_json_5c60a750b8e0c261fe03b394531d04a9
+                .addData(data);
+        }
+            geo_json_5c60a750b8e0c261fe03b394531d04a9_add({"bbox": [0.677994955718645, 47.370481822007704, 0.686765535228273, 47.37421331164446], "features": [{"bbox": [0.677994955718645, 47.370481822007704, 0.686765535228273, 47.37421331164446], "geometry": {"coordinates": [[[0.677994955718645, 47.3728321246429], [0.680005309497651, 47.37421331164446], [0.686765535228273, 47.37337914034059], [0.681175813802448, 47.370481822007704], [0.677994955718645, 47.3728321246429]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f417b57d690bb80014da8bba7576a036 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3d4e14b5e8341113deac5bf8fe0dd935 = $(`<div id="html_3d4e14b5e8341113deac5bf8fe0dd935" style="width: 100.0%; height: 100.0%;">Tours - 1731</div>`)[0];
+                popup_f417b57d690bb80014da8bba7576a036.setContent(html_3d4e14b5e8341113deac5bf8fe0dd935);
+            
+        
+
+        geo_json_5c60a750b8e0c261fe03b394531d04a9.bindPopup(popup_f417b57d690bb80014da8bba7576a036)
+        ;
+
+        
+    
+    
+            geo_json_5c60a750b8e0c261fe03b394531d04a9.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_2e61994419e92cedb5bf54a8a8ed441b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2e61994419e92cedb5bf54a8a8ed441b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2e61994419e92cedb5bf54a8a8ed441b = L.geoJson(null, {
+                onEachFeature: geo_json_2e61994419e92cedb5bf54a8a8ed441b_onEachFeature,
+            
+                style: geo_json_2e61994419e92cedb5bf54a8a8ed441b_styler,
+        });
+
+        function geo_json_2e61994419e92cedb5bf54a8a8ed441b_add (data) {
+            geo_json_2e61994419e92cedb5bf54a8a8ed441b
+                .addData(data);
+        }
+            geo_json_2e61994419e92cedb5bf54a8a8ed441b_add({"bbox": [0.683892971534633, 47.36698255480145, 0.694568313543726, 47.373401166985644], "features": [{"bbox": [0.683892971534633, 47.36698255480145, 0.694568313543726, 47.373401166985644], "geometry": {"coordinates": [[[0.687391706390506, 47.370676983859], [0.683892971534633, 47.3711259730149], [0.684314306855015, 47.37275396985999], [0.685749212896672, 47.37173419729933], [0.686862508466449, 47.373401166985644], [0.694568313543726, 47.37325005222136], [0.692726922378662, 47.36698255480145], [0.690268293643876, 47.36734086096643], [0.687391706390506, 47.370676983859]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_496d6f7bf114350b090d3fb82ad98589 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76ecd18896fdcc6dc44a156201c8992f = $(`<div id="html_76ecd18896fdcc6dc44a156201c8992f" style="width: 100.0%; height: 100.0%;">Tours - 1732</div>`)[0];
+                popup_496d6f7bf114350b090d3fb82ad98589.setContent(html_76ecd18896fdcc6dc44a156201c8992f);
+            
+        
+
+        geo_json_2e61994419e92cedb5bf54a8a8ed441b.bindPopup(popup_496d6f7bf114350b090d3fb82ad98589)
+        ;
+
+        
+    
+    
+            geo_json_2e61994419e92cedb5bf54a8a8ed441b.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7db08bcbadc2c94f7a968e5a3a3144fa = L.geoJson(null, {
+                onEachFeature: geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_onEachFeature,
+            
+                style: geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_styler,
+        });
+
+        function geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_add (data) {
+            geo_json_7db08bcbadc2c94f7a968e5a3a3144fa
+                .addData(data);
+        }
+            geo_json_7db08bcbadc2c94f7a968e5a3a3144fa_add({"bbox": [0.678789762201981, 47.373473023942, 0.685532999494193, 47.379361], "features": [{"bbox": [0.678789762201981, 47.373473023942, 0.685532999494193, 47.379361], "geometry": {"coordinates": [[[0.678789762201981, 47.373565864994966], [0.679753156085921, 47.378273467589494], [0.681739600624682, 47.37793628376667], [0.682531968197882, 47.379361], [0.682499678756464, 47.37796078367876], [0.684707291646431, 47.377541385138414], [0.685532999494193, 47.373473023942], [0.678789762201981, 47.373565864994966]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_05f04f2800aab4dea7d0af8308253a71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_58cb047beec3a43688f1acca093d6e98 = $(`<div id="html_58cb047beec3a43688f1acca093d6e98" style="width: 100.0%; height: 100.0%;">Tours - 1741</div>`)[0];
+                popup_05f04f2800aab4dea7d0af8308253a71.setContent(html_58cb047beec3a43688f1acca093d6e98);
+            
+        
+
+        geo_json_7db08bcbadc2c94f7a968e5a3a3144fa.bindPopup(popup_05f04f2800aab4dea7d0af8308253a71)
+        ;
+
+        
+    
+    
+            geo_json_7db08bcbadc2c94f7a968e5a3a3144fa.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_d962f66a6ffd395e92b06ea2c8157631_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d962f66a6ffd395e92b06ea2c8157631_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d962f66a6ffd395e92b06ea2c8157631 = L.geoJson(null, {
+                onEachFeature: geo_json_d962f66a6ffd395e92b06ea2c8157631_onEachFeature,
+            
+                style: geo_json_d962f66a6ffd395e92b06ea2c8157631_styler,
+        });
+
+        function geo_json_d962f66a6ffd395e92b06ea2c8157631_add (data) {
+            geo_json_d962f66a6ffd395e92b06ea2c8157631
+                .addData(data);
+        }
+            geo_json_d962f66a6ffd395e92b06ea2c8157631_add({"bbox": [0.685589992650595, 47.37344618611535, 0.692610790413603, 47.378517394736846], "features": [{"bbox": [0.685589992650595, 47.37344618611535, 0.692610790413603, 47.378517394736846], "geometry": {"coordinates": [[[0.686102155150059, 47.37344618611535], [0.685589992650595, 47.375603356358475], [0.690216471291867, 47.378517394736846], [0.692610790413603, 47.37369313193981], [0.686102155150059, 47.37344618611535]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_46f2a462490c558a292c541d7c627c81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8166d77a88a6b8ffc5b2f5d080284b95 = $(`<div id="html_8166d77a88a6b8ffc5b2f5d080284b95" style="width: 100.0%; height: 100.0%;">Tours - 1742</div>`)[0];
+                popup_46f2a462490c558a292c541d7c627c81.setContent(html_8166d77a88a6b8ffc5b2f5d080284b95);
+            
+        
+
+        geo_json_d962f66a6ffd395e92b06ea2c8157631.bindPopup(popup_46f2a462490c558a292c541d7c627c81)
+        ;
+
+        
+    
+    
+            geo_json_d962f66a6ffd395e92b06ea2c8157631.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_4890d4008e6e1da8413f1e9704f9adf9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4890d4008e6e1da8413f1e9704f9adf9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4890d4008e6e1da8413f1e9704f9adf9 = L.geoJson(null, {
+                onEachFeature: geo_json_4890d4008e6e1da8413f1e9704f9adf9_onEachFeature,
+            
+                style: geo_json_4890d4008e6e1da8413f1e9704f9adf9_styler,
+        });
+
+        function geo_json_4890d4008e6e1da8413f1e9704f9adf9_add (data) {
+            geo_json_4890d4008e6e1da8413f1e9704f9adf9
+                .addData(data);
+        }
+            geo_json_4890d4008e6e1da8413f1e9704f9adf9_add({"bbox": [0.676527907759476, 47.376130315664135, 0.690622680316112, 47.38605816991767], "features": [{"bbox": [0.676527907759476, 47.376130315664135, 0.690622680316112, 47.38605816991767], "geometry": {"coordinates": [[[[0.685815163119972, 47.376212797563035], [0.685763568794092, 47.376130315664135], [0.6853878852459, 47.3761705], [0.685414666768335, 47.37625427809582], [0.685815163119972, 47.376212797563035]]], [[[0.678276162193954, 47.38320868018646], [0.676527907759476, 47.385122091149405], [0.677120197281864, 47.38579970460208], [0.683440353152773, 47.385057461903955], [0.679337467680632, 47.384477906844126], [0.67903957056546, 47.38232276020082], [0.678276162193954, 47.38320868018646]]], [[[0.6869623995733, 47.38416412313319], [0.685419875908755, 47.38509974560574], [0.686355088921462, 47.385963973006], [0.690622680316112, 47.38605816991767], [0.690543671800507, 47.384492630548976], [0.6869623995733, 47.38416412313319]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_62dcb88c1674bbfea8d9a26a94a904fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fdec7577b096efa9bbe538ba6827bea0 = $(`<div id="html_fdec7577b096efa9bbe538ba6827bea0" style="width: 100.0%; height: 100.0%;">Tours - 1751</div>`)[0];
+                popup_62dcb88c1674bbfea8d9a26a94a904fe.setContent(html_fdec7577b096efa9bbe538ba6827bea0);
+            
+        
+
+        geo_json_4890d4008e6e1da8413f1e9704f9adf9.bindPopup(popup_62dcb88c1674bbfea8d9a26a94a904fe)
+        ;
+
+        
+    
+    
+            geo_json_4890d4008e6e1da8413f1e9704f9adf9.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78 = L.geoJson(null, {
+                onEachFeature: geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_onEachFeature,
+            
+                style: geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_styler,
+        });
+
+        function geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_add (data) {
+            geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78
+                .addData(data);
+        }
+            geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78_add({"bbox": [0.686725337209307, 47.38103036239631, 0.692366893040687, 47.385015753458056], "features": [{"bbox": [0.686725337209307, 47.38103036239631, 0.692366893040687, 47.385015753458056], "geometry": {"coordinates": [[[0.686725337209307, 47.38278224418605], [0.688322110707533, 47.385015753458056], [0.691003427363325, 47.38486963685172], [0.692366893040687, 47.38146925849092], [0.69011927432038, 47.38103036239631], [0.689603312217768, 47.38272307192146], [0.686725337209307, 47.38278224418605]], [[0.6905795, 47.382007609374995], [0.690564643070044, 47.381983234724295], [0.69062968601734, 47.38152595867762], [0.690725559508447, 47.3815663540747], [0.6905795, 47.382007609374995]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_af65eaaccebd08ad6bc5446370a2b38f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8de797a5ef384e07788c8a085e29f14d = $(`<div id="html_8de797a5ef384e07788c8a085e29f14d" style="width: 100.0%; height: 100.0%;">Tours - 1752</div>`)[0];
+                popup_af65eaaccebd08ad6bc5446370a2b38f.setContent(html_8de797a5ef384e07788c8a085e29f14d);
+            
+        
+
+        geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78.bindPopup(popup_af65eaaccebd08ad6bc5446370a2b38f)
+        ;
+
+        
+    
+    
+            geo_json_b2bbcc2dda82eaf19bb3af8c94f48e78.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_f9629a62195488b89f6a5c6cba6a09a2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_f9629a62195488b89f6a5c6cba6a09a2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f9629a62195488b89f6a5c6cba6a09a2 = L.geoJson(null, {
+                onEachFeature: geo_json_f9629a62195488b89f6a5c6cba6a09a2_onEachFeature,
+            
+                style: geo_json_f9629a62195488b89f6a5c6cba6a09a2_styler,
+        });
+
+        function geo_json_f9629a62195488b89f6a5c6cba6a09a2_add (data) {
+            geo_json_f9629a62195488b89f6a5c6cba6a09a2
+                .addData(data);
+        }
+            geo_json_f9629a62195488b89f6a5c6cba6a09a2_add({"bbox": [0.691229566197765, 47.37973472358113, 0.697539546420477, 47.38482944330571], "features": [{"bbox": [0.691229566197765, 47.37973472358113, 0.697539546420477, 47.38482944330571], "geometry": {"coordinates": [[[0.692346254031823, 47.38161359833315], [0.691229566197765, 47.384469384252405], [0.69353714020933, 47.38482944330571], [0.696887710392712, 47.38307381221036], [0.697539546420477, 47.38060014385029], [0.693034588806198, 47.37973472358113], [0.692346254031823, 47.38161359833315]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_53b7c2cc0280bacb6785b9d26ea69cb7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e8551948c543cc9b5f2f2b96ce34c93b = $(`<div id="html_e8551948c543cc9b5f2f2b96ce34c93b" style="width: 100.0%; height: 100.0%;">Tours - 1753</div>`)[0];
+                popup_53b7c2cc0280bacb6785b9d26ea69cb7.setContent(html_e8551948c543cc9b5f2f2b96ce34c93b);
+            
+        
+
+        geo_json_f9629a62195488b89f6a5c6cba6a09a2.bindPopup(popup_53b7c2cc0280bacb6785b9d26ea69cb7)
+        ;
+
+        
+    
+    
+            geo_json_f9629a62195488b89f6a5c6cba6a09a2.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_7177aec3f9974072fcf8a010d7b4fa6b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7177aec3f9974072fcf8a010d7b4fa6b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7177aec3f9974072fcf8a010d7b4fa6b = L.geoJson(null, {
+                onEachFeature: geo_json_7177aec3f9974072fcf8a010d7b4fa6b_onEachFeature,
+            
+                style: geo_json_7177aec3f9974072fcf8a010d7b4fa6b_styler,
+        });
+
+        function geo_json_7177aec3f9974072fcf8a010d7b4fa6b_add (data) {
+            geo_json_7177aec3f9974072fcf8a010d7b4fa6b
+                .addData(data);
+        }
+            geo_json_7177aec3f9974072fcf8a010d7b4fa6b_add({"bbox": [0.679187013680154, 47.38246389567399, 0.6869623995733, 47.384554053458785], "features": [{"bbox": [0.679187013680154, 47.38246389567399, 0.6869623995733, 47.384554053458785], "geometry": {"coordinates": [[[0.679187013680154, 47.382940550867055], [0.679605953943596, 47.384554053458785], [0.6869623995733, 47.38416412313319], [0.686612604565009, 47.38246389567399], [0.679187013680154, 47.382940550867055]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_157bb0e116812f15c6790b7a7c3a673b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0577fdb548089c61f03166526dbe015f = $(`<div id="html_0577fdb548089c61f03166526dbe015f" style="width: 100.0%; height: 100.0%;">Tours - 1761</div>`)[0];
+                popup_157bb0e116812f15c6790b7a7c3a673b.setContent(html_0577fdb548089c61f03166526dbe015f);
+            
+        
+
+        geo_json_7177aec3f9974072fcf8a010d7b4fa6b.bindPopup(popup_157bb0e116812f15c6790b7a7c3a673b)
+        ;
+
+        
+    
+    
+            geo_json_7177aec3f9974072fcf8a010d7b4fa6b.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_54d53275674db42b18bea7b767b20857_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_54d53275674db42b18bea7b767b20857_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_54d53275674db42b18bea7b767b20857 = L.geoJson(null, {
+                onEachFeature: geo_json_54d53275674db42b18bea7b767b20857_onEachFeature,
+            
+                style: geo_json_54d53275674db42b18bea7b767b20857_styler,
+        });
+
+        function geo_json_54d53275674db42b18bea7b767b20857_add (data) {
+            geo_json_54d53275674db42b18bea7b767b20857
+                .addData(data);
+        }
+            geo_json_54d53275674db42b18bea7b767b20857_add({"bbox": [0.678763754058927, 47.37954532414966, 0.690164554828779, 47.38272307192146], "features": [{"bbox": [0.678763754058927, 47.37954532414966, 0.690164554828779, 47.38272307192146], "geometry": {"coordinates": [[[0.680846740787117, 47.38195157310673], [0.678763754058927, 47.38225745210009], [0.689603312217768, 47.38272307192146], [0.690164554828779, 47.381222298576375], [0.687010929719601, 47.37954532414966], [0.680846740787117, 47.38195157310673]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d06af6c0e6dfb4757c0ab0280984ed1c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d2c045d321ea2782a839076f4b727471 = $(`<div id="html_d2c045d321ea2782a839076f4b727471" style="width: 100.0%; height: 100.0%;">Tours - 1762</div>`)[0];
+                popup_d06af6c0e6dfb4757c0ab0280984ed1c.setContent(html_d2c045d321ea2782a839076f4b727471);
+            
+        
+
+        geo_json_54d53275674db42b18bea7b767b20857.bindPopup(popup_d06af6c0e6dfb4757c0ab0280984ed1c)
+        ;
+
+        
+    
+    
+            geo_json_54d53275674db42b18bea7b767b20857.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_a334318e3866a7a7796398ac9f803412_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a334318e3866a7a7796398ac9f803412_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a334318e3866a7a7796398ac9f803412 = L.geoJson(null, {
+                onEachFeature: geo_json_a334318e3866a7a7796398ac9f803412_onEachFeature,
+            
+                style: geo_json_a334318e3866a7a7796398ac9f803412_styler,
+        });
+
+        function geo_json_a334318e3866a7a7796398ac9f803412_add (data) {
+            geo_json_a334318e3866a7a7796398ac9f803412
+                .addData(data);
+        }
+            geo_json_a334318e3866a7a7796398ac9f803412_add({"bbox": [0.690454023476831, 47.37369313193981, 0.695414385868266, 47.38093686449003], "features": [{"bbox": [0.690454023476831, 47.37369313193981, 0.695414385868266, 47.38093686449003], "geometry": {"coordinates": [[[0.690564554284891, 47.377928430616414], [0.690454023476831, 47.379993743296], [0.692580893323406, 47.38093686449003], [0.695414385868266, 47.37388968660259], [0.692610790413603, 47.37369313193981], [0.690564554284891, 47.377928430616414]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ac73008ef1581c729607ebf1f4389567 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35e1cf47d6d9dcc65f91928091d7dcc6 = $(`<div id="html_35e1cf47d6d9dcc65f91928091d7dcc6" style="width: 100.0%; height: 100.0%;">Tours - 1763</div>`)[0];
+                popup_ac73008ef1581c729607ebf1f4389567.setContent(html_35e1cf47d6d9dcc65f91928091d7dcc6);
+            
+        
+
+        geo_json_a334318e3866a7a7796398ac9f803412.bindPopup(popup_ac73008ef1581c729607ebf1f4389567)
+        ;
+
+        
+    
+    
+            geo_json_a334318e3866a7a7796398ac9f803412.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_68900bb7d9f9dead5a7e849dcddb4155_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_68900bb7d9f9dead5a7e849dcddb4155_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_68900bb7d9f9dead5a7e849dcddb4155 = L.geoJson(null, {
+                onEachFeature: geo_json_68900bb7d9f9dead5a7e849dcddb4155_onEachFeature,
+            
+                style: geo_json_68900bb7d9f9dead5a7e849dcddb4155_styler,
+        });
+
+        function geo_json_68900bb7d9f9dead5a7e849dcddb4155_add (data) {
+            geo_json_68900bb7d9f9dead5a7e849dcddb4155
+                .addData(data);
+        }
+            geo_json_68900bb7d9f9dead5a7e849dcddb4155_add({"bbox": [0.682531968197882, 47.37614496213212, 0.692438223952742, 47.381379680451126], "features": [{"bbox": [0.682531968197882, 47.37614496213212, 0.692438223952742, 47.381379680451126], "geometry": {"coordinates": [[[0.684375665671949, 47.37614496213212], [0.682531968197882, 47.379361], [0.692438223952742, 47.381379680451126], [0.688667823458546, 47.37728198221119], [0.684375665671949, 47.37614496213212]], [[0.685748175204913, 47.37850992827869], [0.685535511156186, 47.37844380136192], [0.685935004509581, 47.37826162246337], [0.685854577419357, 47.378519180645156], [0.685748175204913, 47.37850992827869]], [[0.685414666768335, 47.37625427809582], [0.685399603994358, 47.37612582227155], [0.685830883417992, 47.37625665647667], [0.685414666768335, 47.37625427809582]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7ab24065e011dd3f720a32a37e233158 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2675d342b5a2e504fbeeb4b76b26bf67 = $(`<div id="html_2675d342b5a2e504fbeeb4b76b26bf67" style="width: 100.0%; height: 100.0%;">Tours - 1764</div>`)[0];
+                popup_7ab24065e011dd3f720a32a37e233158.setContent(html_2675d342b5a2e504fbeeb4b76b26bf67);
+            
+        
+
+        geo_json_68900bb7d9f9dead5a7e849dcddb4155.bindPopup(popup_7ab24065e011dd3f720a32a37e233158)
+        ;
+
+        
+    
+    
+            geo_json_68900bb7d9f9dead5a7e849dcddb4155.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_3457d9c0ee20626ec252f049d93abde4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3457d9c0ee20626ec252f049d93abde4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3457d9c0ee20626ec252f049d93abde4 = L.geoJson(null, {
+                onEachFeature: geo_json_3457d9c0ee20626ec252f049d93abde4_onEachFeature,
+            
+                style: geo_json_3457d9c0ee20626ec252f049d93abde4_styler,
+        });
+
+        function geo_json_3457d9c0ee20626ec252f049d93abde4_add (data) {
+            geo_json_3457d9c0ee20626ec252f049d93abde4
+                .addData(data);
+        }
+            geo_json_3457d9c0ee20626ec252f049d93abde4_add({"bbox": [0.694096422315185, 47.369103254084884, 0.702580819555833, 47.37441044448788], "features": [{"bbox": [0.694096422315185, 47.369103254084884, 0.702580819555833, 47.37441044448788], "geometry": {"coordinates": [[[0.694096422315185, 47.37175436937462], [0.694429240145787, 47.37363926268335], [0.696483676104509, 47.37441044448788], [0.701058503130138, 47.37418983097174], [0.702580819555833, 47.37181300076365], [0.694127510732327, 47.369103254084884], [0.694096422315185, 47.37175436937462]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f7a591f578ac73d88c92a6461d98cac2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80449f99b783ca25202d9cffa0bf996a = $(`<div id="html_80449f99b783ca25202d9cffa0bf996a" style="width: 100.0%; height: 100.0%;">Tours - 1771</div>`)[0];
+                popup_f7a591f578ac73d88c92a6461d98cac2.setContent(html_80449f99b783ca25202d9cffa0bf996a);
+            
+        
+
+        geo_json_3457d9c0ee20626ec252f049d93abde4.bindPopup(popup_f7a591f578ac73d88c92a6461d98cac2)
+        ;
+
+        
+    
+    
+            geo_json_3457d9c0ee20626ec252f049d93abde4.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_2e9dd0450907fab97ad33ddd3b1a5221_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2e9dd0450907fab97ad33ddd3b1a5221_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2e9dd0450907fab97ad33ddd3b1a5221 = L.geoJson(null, {
+                onEachFeature: geo_json_2e9dd0450907fab97ad33ddd3b1a5221_onEachFeature,
+            
+                style: geo_json_2e9dd0450907fab97ad33ddd3b1a5221_styler,
+        });
+
+        function geo_json_2e9dd0450907fab97ad33ddd3b1a5221_add (data) {
+            geo_json_2e9dd0450907fab97ad33ddd3b1a5221
+                .addData(data);
+        }
+            geo_json_2e9dd0450907fab97ad33ddd3b1a5221_add({"bbox": [0.705845824635449, 47.37263398333401, 0.737097, 47.380127], "features": [{"bbox": [0.705845824635449, 47.37263398333401, 0.737097, 47.380127], "geometry": {"coordinates": [[[0.705845824635449, 47.37264544791947], [0.706916724496566, 47.37495900558751], [0.721806896361104, 47.37733472864794], [0.722034300137524, 47.37920854471414], [0.725643, 47.380127], [0.72897, 47.376531], [0.733118, 47.377232], [0.736336, 47.380043], [0.737097, 47.37653], [0.729996, 47.374563], [0.715135, 47.374076], [0.715298554039852, 47.37263398333401], [0.705845824635449, 47.37264544791947]], [[0.713443382579176, 47.37449261864552], [0.713164598462921, 47.37512970576547], [0.712246708591093, 47.373179940546365], [0.713443382579176, 47.37449261864552]], [[0.710279559453258, 47.37515838013769], [0.710368459427206, 47.374594], [0.710710571428571, 47.374594], [0.710277682692307, 47.375200044230766], [0.710279559453258, 47.37515838013769]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_536329b769a081df0d356bdb02868bd9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7aa2ee0c437d2382273d750f7c8d750 = $(`<div id="html_b7aa2ee0c437d2382273d750f7c8d750" style="width: 100.0%; height: 100.0%;">Tours - 1772</div>`)[0];
+                popup_536329b769a081df0d356bdb02868bd9.setContent(html_b7aa2ee0c437d2382273d750f7c8d750);
+            
+        
+
+        geo_json_2e9dd0450907fab97ad33ddd3b1a5221.bindPopup(popup_536329b769a081df0d356bdb02868bd9)
+        ;
+
+        
+    
+    
+            geo_json_2e9dd0450907fab97ad33ddd3b1a5221.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_02dfb92f51bdb3d898b4efefa47b1cca_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_02dfb92f51bdb3d898b4efefa47b1cca_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_02dfb92f51bdb3d898b4efefa47b1cca = L.geoJson(null, {
+                onEachFeature: geo_json_02dfb92f51bdb3d898b4efefa47b1cca_onEachFeature,
+            
+                style: geo_json_02dfb92f51bdb3d898b4efefa47b1cca_styler,
+        });
+
+        function geo_json_02dfb92f51bdb3d898b4efefa47b1cca_add (data) {
+            geo_json_02dfb92f51bdb3d898b4efefa47b1cca
+                .addData(data);
+        }
+            geo_json_02dfb92f51bdb3d898b4efefa47b1cca_add({"bbox": [0.695249424066079, 47.366293400770374, 0.710220139737357, 47.372145113972785], "features": [{"bbox": [0.695249424066079, 47.366293400770374, 0.710220139737357, 47.372145113972785], "geometry": {"coordinates": [[[0.699474214441686, 47.36893808184193], [0.695249424066079, 47.36972149736945], [0.705774309949936, 47.372145113972785], [0.70814251460638, 47.37189188859739], [0.710220139737357, 47.36867888686067], [0.703675801497908, 47.36844041349059], [0.699760268957804, 47.366293400770374], [0.699474214441686, 47.36893808184193]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8315f94262bcebeb08cb8535bd638d3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_097bb83e9140ade80436c39ed17b94dc = $(`<div id="html_097bb83e9140ade80436c39ed17b94dc" style="width: 100.0%; height: 100.0%;">Tours - 1781</div>`)[0];
+                popup_8315f94262bcebeb08cb8535bd638d3a.setContent(html_097bb83e9140ade80436c39ed17b94dc);
+            
+        
+
+        geo_json_02dfb92f51bdb3d898b4efefa47b1cca.bindPopup(popup_8315f94262bcebeb08cb8535bd638d3a)
+        ;
+
+        
+    
+    
+            geo_json_02dfb92f51bdb3d898b4efefa47b1cca.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_89de5a581b1cb8496ec74e623b0c97bf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_89de5a581b1cb8496ec74e623b0c97bf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_89de5a581b1cb8496ec74e623b0c97bf = L.geoJson(null, {
+                onEachFeature: geo_json_89de5a581b1cb8496ec74e623b0c97bf_onEachFeature,
+            
+                style: geo_json_89de5a581b1cb8496ec74e623b0c97bf_styler,
+        });
+
+        function geo_json_89de5a581b1cb8496ec74e623b0c97bf_add (data) {
+            geo_json_89de5a581b1cb8496ec74e623b0c97bf
+                .addData(data);
+        }
+            geo_json_89de5a581b1cb8496ec74e623b0c97bf_add({"bbox": [0.699717720841594, 47.36253905433264, 0.708644525723138, 47.36844041349059], "features": [{"bbox": [0.699717720841594, 47.36253905433264, 0.708644525723138, 47.36844041349059], "geometry": {"coordinates": [[[0.699717720841594, 47.36375421246117], [0.699760268957804, 47.366293400770374], [0.703675801497908, 47.36844041349059], [0.707804728093966, 47.36835465502899], [0.708644525723138, 47.36628996049103], [0.706924206626349, 47.3644679270414], [0.702536527189354, 47.36253905433264], [0.699717720841594, 47.36375421246117]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_756915a329ab9e20413c02e32b06b800 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c9fb40601d561764e480f13d54f38b35 = $(`<div id="html_c9fb40601d561764e480f13d54f38b35" style="width: 100.0%; height: 100.0%;">Tours - 1782</div>`)[0];
+                popup_756915a329ab9e20413c02e32b06b800.setContent(html_c9fb40601d561764e480f13d54f38b35);
+            
+        
+
+        geo_json_89de5a581b1cb8496ec74e623b0c97bf.bindPopup(popup_756915a329ab9e20413c02e32b06b800)
+        ;
+
+        
+    
+    
+            geo_json_89de5a581b1cb8496ec74e623b0c97bf.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e68aff4730c9a01179c177f9ad45fc5e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e68aff4730c9a01179c177f9ad45fc5e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e68aff4730c9a01179c177f9ad45fc5e = L.geoJson(null, {
+                onEachFeature: geo_json_e68aff4730c9a01179c177f9ad45fc5e_onEachFeature,
+            
+                style: geo_json_e68aff4730c9a01179c177f9ad45fc5e_styler,
+        });
+
+        function geo_json_e68aff4730c9a01179c177f9ad45fc5e_add (data) {
+            geo_json_e68aff4730c9a01179c177f9ad45fc5e
+                .addData(data);
+        }
+            geo_json_e68aff4730c9a01179c177f9ad45fc5e_add({"bbox": [0.707373885364795, 47.364676537607295, 0.715110844104753, 47.369382649190975], "features": [{"bbox": [0.707373885364795, 47.364676537607295, 0.715110844104753, 47.369382649190975], "geometry": {"coordinates": [[[0.707373885364795, 47.364676537607295], [0.712169630452494, 47.36916632541269], [0.715110844104753, 47.369382649190975], [0.713906906040374, 47.365890304069445], [0.707373885364795, 47.364676537607295]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d71992943251eb1b263ba2a6ce3c6de9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68a87550df40be3f654a1e2f2abd74da = $(`<div id="html_68a87550df40be3f654a1e2f2abd74da" style="width: 100.0%; height: 100.0%;">Tours - 1783</div>`)[0];
+                popup_d71992943251eb1b263ba2a6ce3c6de9.setContent(html_68a87550df40be3f654a1e2f2abd74da);
+            
+        
+
+        geo_json_e68aff4730c9a01179c177f9ad45fc5e.bindPopup(popup_d71992943251eb1b263ba2a6ce3c6de9)
+        ;
+
+        
+    
+    
+            geo_json_e68aff4730c9a01179c177f9ad45fc5e.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_56b29cefdbbf7472dfb761c68ec627ff_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_56b29cefdbbf7472dfb761c68ec627ff_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_56b29cefdbbf7472dfb761c68ec627ff = L.geoJson(null, {
+                onEachFeature: geo_json_56b29cefdbbf7472dfb761c68ec627ff_onEachFeature,
+            
+                style: geo_json_56b29cefdbbf7472dfb761c68ec627ff_styler,
+        });
+
+        function geo_json_56b29cefdbbf7472dfb761c68ec627ff_add (data) {
+            geo_json_56b29cefdbbf7472dfb761c68ec627ff
+                .addData(data);
+        }
+            geo_json_56b29cefdbbf7472dfb761c68ec627ff_add({"bbox": [0.707804728093966, 47.366185586517815, 0.715298554039852, 47.375200044230766], "features": [{"bbox": [0.707804728093966, 47.366185586517815, 0.715298554039852, 47.375200044230766], "geometry": {"coordinates": [[[[0.710149047652578, 47.366185586517815], [0.70801403432764, 47.367193951956054], [0.707804728093966, 47.36835465502899], [0.710220139737357, 47.36867888686067], [0.70814251460638, 47.37189188859739], [0.715298554039852, 47.37263398333401], [0.715110844104753, 47.369382649190975], [0.712169630452494, 47.36916632541269], [0.710149047652578, 47.366185586517815]]], [[[0.710710571428571, 47.374594], [0.710368459427206, 47.374594], [0.710277682692307, 47.375200044230766], [0.710710571428571, 47.374594]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fa92014090b125bf82297891f273e069 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_66a284ab350c8cd39b23a44e749f9653 = $(`<div id="html_66a284ab350c8cd39b23a44e749f9653" style="width: 100.0%; height: 100.0%;">Tours - 1784</div>`)[0];
+                popup_fa92014090b125bf82297891f273e069.setContent(html_66a284ab350c8cd39b23a44e749f9653);
+            
+        
+
+        geo_json_56b29cefdbbf7472dfb761c68ec627ff.bindPopup(popup_fa92014090b125bf82297891f273e069)
+        ;
+
+        
+    
+    
+            geo_json_56b29cefdbbf7472dfb761c68ec627ff.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cbbb6891fa4197a5bb7f270bfd06cddb = L.geoJson(null, {
+                onEachFeature: geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_onEachFeature,
+            
+                style: geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_styler,
+        });
+
+        function geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_add (data) {
+            geo_json_cbbb6891fa4197a5bb7f270bfd06cddb
+                .addData(data);
+        }
+            geo_json_cbbb6891fa4197a5bb7f270bfd06cddb_add({"bbox": [0.666767789239266, 47.391888386250685, 0.691173518691588, 47.399815030868865], "features": [{"bbox": [0.666767789239266, 47.391888386250685, 0.691173518691588, 47.399815030868865], "geometry": {"coordinates": [[[[0.668613303503788, 47.39209247632576], [0.668839119877046, 47.39225228483607], [0.668643508834897, 47.391888386250685], [0.668613303503788, 47.39209247632576]]], [[[0.668038274907751, 47.39218343726937], [0.668095211961685, 47.39241873135974], [0.668334603729384, 47.39279162264931], [0.668357584509055, 47.39211544639842], [0.668038274907751, 47.39218343726937]]], [[[0.685529647314127, 47.39513166266197], [0.685419248778929, 47.395104665640254], [0.685309500052835, 47.3956933178984], [0.685440140091098, 47.395553625284755], [0.685529647314127, 47.39513166266197]]], [[[0.691158655218771, 47.39543377487168], [0.690870838399601, 47.39544085233443], [0.690870555737542, 47.39544163259948], [0.691173518691588, 47.39554117757009], [0.691158655218771, 47.39543377487168]]], [[[0.670492513579378, 47.39215651061977], [0.667702228760986, 47.39380505819448], [0.666767789239266, 47.39744667398213], [0.67583403602507, 47.399815030868865], [0.676869897383834, 47.39524707705111], [0.670492513579378, 47.39215651061977]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_21420c7fddfd30c9028f7748359d4b18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d3feee1530dd90f5322f75107806fa1b = $(`<div id="html_d3feee1530dd90f5322f75107806fa1b" style="width: 100.0%; height: 100.0%;">Tours - 1811</div>`)[0];
+                popup_21420c7fddfd30c9028f7748359d4b18.setContent(html_d3feee1530dd90f5322f75107806fa1b);
+            
+        
+
+        geo_json_cbbb6891fa4197a5bb7f270bfd06cddb.bindPopup(popup_21420c7fddfd30c9028f7748359d4b18)
+        ;
+
+        
+    
+    
+            geo_json_cbbb6891fa4197a5bb7f270bfd06cddb.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_84266472f183125d2da06b02a1bd4b22_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_84266472f183125d2da06b02a1bd4b22_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_84266472f183125d2da06b02a1bd4b22 = L.geoJson(null, {
+                onEachFeature: geo_json_84266472f183125d2da06b02a1bd4b22_onEachFeature,
+            
+                style: geo_json_84266472f183125d2da06b02a1bd4b22_styler,
+        });
+
+        function geo_json_84266472f183125d2da06b02a1bd4b22_add (data) {
+            geo_json_84266472f183125d2da06b02a1bd4b22
+                .addData(data);
+        }
+            geo_json_84266472f183125d2da06b02a1bd4b22_add({"bbox": [0.66381, 47.38277024110342, 0.677849051459679, 47.39744667398213], "features": [{"bbox": [0.66381, 47.38277024110342, 0.677849051459679, 47.39744667398213], "geometry": {"coordinates": [[[[0.668249628501966, 47.38323950370456], [0.667862694596076, 47.38321171287154], [0.668065672256851, 47.38364909699218], [0.668281122280243, 47.383488178416], [0.668249628501966, 47.38323950370456]]], [[[0.671684058267668, 47.383889222317684], [0.672321813254705, 47.38421294725773], [0.672990418108989, 47.38322907658214], [0.671891625626936, 47.38277024110342], [0.671684058267668, 47.383889222317684]]], [[[0.672546598011317, 47.38747119804207], [0.673328544024588, 47.38769714495143], [0.674229611370911, 47.387162666256465], [0.671476006599424, 47.386761373052735], [0.672546598011317, 47.38747119804207]]], [[[0.677260757508492, 47.389709896222534], [0.677181614897285, 47.38972820131627], [0.67720122, 47.38990204], [0.677260757508492, 47.389709896222534]]], [[[0.677849051459679, 47.39024078859475], [0.677540027777771, 47.38992622569445], [0.677353512987005, 47.3899870974026], [0.677806196791626, 47.39030663891175], [0.677849051459679, 47.39024078859475]]], [[[0.677305724215242, 47.39000963452914], [0.677243843043075, 47.39003361062907], [0.677804269100165, 47.39030876146011], [0.677305724215242, 47.39000963452914]]], [[[0.665925656312019, 47.38759886154686], [0.668214, 47.391536], [0.664569, 47.393883], [0.66381, 47.397027], [0.666767789239266, 47.39744667398213], [0.667702228760986, 47.39380505819448], [0.66956066767779, 47.39333038984172], [0.671160672967559, 47.38987068563899], [0.669163969660613, 47.38765670674945], [0.672017834266398, 47.38608666818417], [0.672267685897437, 47.38468527380953], [0.668116818834207, 47.384545816941454], [0.665925656312019, 47.38759886154686]], [[0.668415004270081, 47.39228008877443], [0.668334603729384, 47.39279162264931], [0.668038274907751, 47.39218343726937], [0.668549329034905, 47.391528436753845], [0.668415004270081, 47.39228008877443]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_77f0c1d21416fad5edbafd260ea1278e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_56d01ad77531a963a0b7227e7e525c42 = $(`<div id="html_56d01ad77531a963a0b7227e7e525c42" style="width: 100.0%; height: 100.0%;">Tours - 1812</div>`)[0];
+                popup_77f0c1d21416fad5edbafd260ea1278e.setContent(html_56d01ad77531a963a0b7227e7e525c42);
+            
+        
+
+        geo_json_84266472f183125d2da06b02a1bd4b22.bindPopup(popup_77f0c1d21416fad5edbafd260ea1278e)
+        ;
+
+        
+    
+    
+            geo_json_84266472f183125d2da06b02a1bd4b22.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_6ad83e63115bbe40da54211cb970f5bc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6ad83e63115bbe40da54211cb970f5bc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6ad83e63115bbe40da54211cb970f5bc = L.geoJson(null, {
+                onEachFeature: geo_json_6ad83e63115bbe40da54211cb970f5bc_onEachFeature,
+            
+                style: geo_json_6ad83e63115bbe40da54211cb970f5bc_styler,
+        });
+
+        function geo_json_6ad83e63115bbe40da54211cb970f5bc_add (data) {
+            geo_json_6ad83e63115bbe40da54211cb970f5bc
+                .addData(data);
+        }
+            geo_json_6ad83e63115bbe40da54211cb970f5bc_add({"bbox": [0.681225833975417, 47.38935253893803, 0.688323063387063, 47.3939273580684], "features": [{"bbox": [0.681225833975417, 47.38935253893803, 0.688323063387063, 47.3939273580684], "geometry": {"coordinates": [[[0.681450736851954, 47.39100201144937], [0.681225833975417, 47.39296130196295], [0.686874304841468, 47.3939273580684], [0.688323063387063, 47.39159854134652], [0.682784178639461, 47.38935253893803], [0.681450736851954, 47.39100201144937]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c1caa02909592ffa840afa22d627ee69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1870a3c8a016dcbfc3990072a5ad366a = $(`<div id="html_1870a3c8a016dcbfc3990072a5ad366a" style="width: 100.0%; height: 100.0%;">Tours - 1821</div>`)[0];
+                popup_c1caa02909592ffa840afa22d627ee69.setContent(html_1870a3c8a016dcbfc3990072a5ad366a);
+            
+        
+
+        geo_json_6ad83e63115bbe40da54211cb970f5bc.bindPopup(popup_c1caa02909592ffa840afa22d627ee69)
+        ;
+
+        
+    
+    
+            geo_json_6ad83e63115bbe40da54211cb970f5bc.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_3b19cc4b51a7070653be6e7c49dca4db_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3b19cc4b51a7070653be6e7c49dca4db_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3b19cc4b51a7070653be6e7c49dca4db = L.geoJson(null, {
+                onEachFeature: geo_json_3b19cc4b51a7070653be6e7c49dca4db_onEachFeature,
+            
+                style: geo_json_3b19cc4b51a7070653be6e7c49dca4db_styler,
+        });
+
+        function geo_json_3b19cc4b51a7070653be6e7c49dca4db_add (data) {
+            geo_json_3b19cc4b51a7070653be6e7c49dca4db
+                .addData(data);
+        }
+            geo_json_3b19cc4b51a7070653be6e7c49dca4db_add({"bbox": [0.676481235374417, 47.386254544320934, 0.684977997918669, 47.389107053850736], "features": [{"bbox": [0.676481235374417, 47.386254544320934, 0.684977997918669, 47.389107053850736], "geometry": {"coordinates": [[[0.676883627119863, 47.386254544320934], [0.676481235374417, 47.38854527988566], [0.684737991756027, 47.389107053850736], [0.684977997918669, 47.38746826400897], [0.676883627119863, 47.386254544320934]], [[0.678420713518468, 47.38756680311763], [0.678302960360481, 47.387529399173324], [0.678284445454548, 47.3875015], [0.678429825581397, 47.3875015], [0.678420713518468, 47.38756680311763]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_16086bad4383389307fb0e69b57b98a7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e6cdb9fe1b02fb7f54071189f1fe389e = $(`<div id="html_e6cdb9fe1b02fb7f54071189f1fe389e" style="width: 100.0%; height: 100.0%;">Tours - 1822</div>`)[0];
+                popup_16086bad4383389307fb0e69b57b98a7.setContent(html_e6cdb9fe1b02fb7f54071189f1fe389e);
+            
+        
+
+        geo_json_3b19cc4b51a7070653be6e7c49dca4db.bindPopup(popup_16086bad4383389307fb0e69b57b98a7)
+        ;
+
+        
+    
+    
+            geo_json_3b19cc4b51a7070653be6e7c49dca4db.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e0d286341d41a87f070abcd65d2f7133_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e0d286341d41a87f070abcd65d2f7133_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e0d286341d41a87f070abcd65d2f7133 = L.geoJson(null, {
+                onEachFeature: geo_json_e0d286341d41a87f070abcd65d2f7133_onEachFeature,
+            
+                style: geo_json_e0d286341d41a87f070abcd65d2f7133_styler,
+        });
+
+        function geo_json_e0d286341d41a87f070abcd65d2f7133_add (data) {
+            geo_json_e0d286341d41a87f070abcd65d2f7133
+                .addData(data);
+        }
+            geo_json_e0d286341d41a87f070abcd65d2f7133_add({"bbox": [0.668167056409259, 47.38783238646985, 0.680495059956109, 47.393767085736094], "features": [{"bbox": [0.668167056409259, 47.38783238646985, 0.680495059956109, 47.393767085736094], "geometry": {"coordinates": [[[[0.675907098895205, 47.387962679359624], [0.675496982389151, 47.38783238646985], [0.675289994867366, 47.388319920252506], [0.67588000494143, 47.388506076937475], [0.675907098895205, 47.387962679359624]]], [[[0.671158869368804, 47.38987428065003], [0.669970057177435, 47.392006643435174], [0.673079228058264, 47.393767085736094], [0.67498147754995, 47.38967633642286], [0.66957356234238, 47.38817780122951], [0.671158869368804, 47.38987428065003]]], [[[0.668167056409259, 47.391849649314885], [0.668415004270081, 47.39228008877443], [0.668604715084031, 47.391589498033824], [0.668549329034905, 47.391528436753845], [0.668167056409259, 47.391849649314885]]], [[[0.680495059956109, 47.39293804424382], [0.680477126109662, 47.392895548825074], [0.680366262589926, 47.392842636690645], [0.680349147947143, 47.392996668475696], [0.680495059956109, 47.39293804424382]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cd084c00945286be8d67cdf2155d163c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c00190485381e87b6f39285d495aca38 = $(`<div id="html_c00190485381e87b6f39285d495aca38" style="width: 100.0%; height: 100.0%;">Tours - 1823</div>`)[0];
+                popup_cd084c00945286be8d67cdf2155d163c.setContent(html_c00190485381e87b6f39285d495aca38);
+            
+        
+
+        geo_json_e0d286341d41a87f070abcd65d2f7133.bindPopup(popup_cd084c00945286be8d67cdf2155d163c)
+        ;
+
+        
+    
+    
+            geo_json_e0d286341d41a87f070abcd65d2f7133.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_6a2295aa44fee2c96ed1f81aace33767_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6a2295aa44fee2c96ed1f81aace33767_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6a2295aa44fee2c96ed1f81aace33767 = L.geoJson(null, {
+                onEachFeature: geo_json_6a2295aa44fee2c96ed1f81aace33767_onEachFeature,
+            
+                style: geo_json_6a2295aa44fee2c96ed1f81aace33767_styler,
+        });
+
+        function geo_json_6a2295aa44fee2c96ed1f81aace33767_add (data) {
+            geo_json_6a2295aa44fee2c96ed1f81aace33767
+                .addData(data);
+        }
+            geo_json_6a2295aa44fee2c96ed1f81aace33767_add({"bbox": [0.673012469968567, 47.388306298223256, 0.679214106982839, 47.3951154848105], "features": [{"bbox": [0.673012469968567, 47.388306298223256, 0.679214106982839, 47.3951154848105], "geometry": {"coordinates": [[[0.673960410078196, 47.3914069991312], [0.673012469968567, 47.394180065090985], [0.675454006466806, 47.3951154848105], [0.679214106982839, 47.38892874383151], [0.676104704077393, 47.388306298223256], [0.673960410078196, 47.3914069991312]], [[0.676674892803789, 47.389382195791086], [0.677089878953579, 47.38956726112901], [0.67710172398033, 47.38971295495807], [0.676627006545871, 47.38948133708631], [0.676674892803789, 47.389382195791086]], [[0.677008837979093, 47.38993812062718], [0.677050678465592, 47.38980330079026], [0.677260757508492, 47.389709896222534], [0.677141406273905, 47.39013713083396], [0.677008837979093, 47.38993812062718]], [[0.67575985061092, 47.38965234956742], [0.675671751181342, 47.38946664116951], [0.675871511385202, 47.38918126944972], [0.67595397781447, 47.38954931885347], [0.67575985061092, 47.38965234956742]], [[0.677472918823527, 47.3899430117647], [0.677849051459679, 47.39024078859475], [0.677806196791626, 47.39030663891175], [0.677353512987005, 47.3899870974026], [0.677472918823527, 47.3899430117647]], [[0.677804269100165, 47.39030876146011], [0.677784920569841, 47.39033262715704], [0.677243843043075, 47.39003361062907], [0.677305724215242, 47.39000963452914], [0.677804269100165, 47.39030876146011]], [[0.676172034929843, 47.39168635963283], [0.676593524539873, 47.39151147583193], [0.676700949794129, 47.391571669581], [0.676098416349805, 47.3920506281912], [0.676172034929843, 47.39168635963283]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_978e075426749f31267c3af07c9d7df7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_28be586d4f2a1f85dfcd3743bb195e77 = $(`<div id="html_28be586d4f2a1f85dfcd3743bb195e77" style="width: 100.0%; height: 100.0%;">Tours - 1824</div>`)[0];
+                popup_978e075426749f31267c3af07c9d7df7.setContent(html_28be586d4f2a1f85dfcd3743bb195e77);
+            
+        
+
+        geo_json_6a2295aa44fee2c96ed1f81aace33767.bindPopup(popup_978e075426749f31267c3af07c9d7df7)
+        ;
+
+        
+    
+    
+            geo_json_6a2295aa44fee2c96ed1f81aace33767.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8c67aa1da5356c301bd5bf47fdc73ca8 = L.geoJson(null, {
+                onEachFeature: geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_onEachFeature,
+            
+                style: geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_styler,
+        });
+
+        function geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_add (data) {
+            geo_json_8c67aa1da5356c301bd5bf47fdc73ca8
+                .addData(data);
+        }
+            geo_json_8c67aa1da5356c301bd5bf47fdc73ca8_add({"bbox": [0.675454006466806, 47.38886699698007, 0.682550564671901, 47.395485118593804], "features": [{"bbox": [0.675454006466806, 47.38886699698007, 0.682550564671901, 47.395485118593804], "geometry": {"coordinates": [[[[0.676431558823481, 47.391824567226934], [0.676700949794129, 47.391571669581], [0.676098416349805, 47.3920506281912], [0.676431558823481, 47.391824567226934]]], [[[0.676199326557512, 47.39257704169782], [0.675454006466806, 47.3951154848105], [0.67714174330736, 47.395485118593804], [0.682550564671901, 47.389607994869365], [0.679332219079408, 47.38886699698007], [0.676199326557512, 47.39257704169782]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9d084d848cdb80838a38f6cc30ded9a6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e2a068ca07535e05f1249f7ddc18d8e8 = $(`<div id="html_e2a068ca07535e05f1249f7ddc18d8e8" style="width: 100.0%; height: 100.0%;">Tours - 1825</div>`)[0];
+                popup_9d084d848cdb80838a38f6cc30ded9a6.setContent(html_e2a068ca07535e05f1249f7ddc18d8e8);
+            
+        
+
+        geo_json_8c67aa1da5356c301bd5bf47fdc73ca8.bindPopup(popup_9d084d848cdb80838a38f6cc30ded9a6)
+        ;
+
+        
+    
+    
+            geo_json_8c67aa1da5356c301bd5bf47fdc73ca8.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_10e775d91261a117f24ed16e816cc195_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_10e775d91261a117f24ed16e816cc195_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_10e775d91261a117f24ed16e816cc195 = L.geoJson(null, {
+                onEachFeature: geo_json_10e775d91261a117f24ed16e816cc195_onEachFeature,
+            
+                style: geo_json_10e775d91261a117f24ed16e816cc195_styler,
+        });
+
+        function geo_json_10e775d91261a117f24ed16e816cc195_add (data) {
+            geo_json_10e775d91261a117f24ed16e816cc195
+                .addData(data);
+        }
+            geo_json_10e775d91261a117f24ed16e816cc195_add({"bbox": [0.67583403602507, 47.39218977127141, 0.683319807623437, 47.399815030868865], "features": [{"bbox": [0.67583403602507, 47.39218977127141, 0.683319807623437, 47.399815030868865], "geometry": {"coordinates": [[[[0.678309270161291, 47.393507135080654], [0.676755406909578, 47.39561940977897], [0.67583403602507, 47.399815030868865], [0.681602801423064, 47.39825306694764], [0.680199137255923, 47.395448896888375], [0.682106051093835, 47.393042128799465], [0.680531072089533, 47.39218977127141], [0.678309270161291, 47.393507135080654]], [[0.680366262589926, 47.392842636690645], [0.680495059956109, 47.39293804424382], [0.680422145109843, 47.39301811939632], [0.680349147947143, 47.392996668475696], [0.680366262589926, 47.392842636690645]]], [[[0.682863236438011, 47.39584948976384], [0.681832905199524, 47.39826249097372], [0.682620750234423, 47.39847802542724], [0.683319807623437, 47.395828965848054], [0.682863236438011, 47.39584948976384]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a9a16cc64b6f265c24c9053492997e72 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e173da513c365d566959f99c04d6c61c = $(`<div id="html_e173da513c365d566959f99c04d6c61c" style="width: 100.0%; height: 100.0%;">Tours - 1831</div>`)[0];
+                popup_a9a16cc64b6f265c24c9053492997e72.setContent(html_e173da513c365d566959f99c04d6c61c);
+            
+        
+
+        geo_json_10e775d91261a117f24ed16e816cc195.bindPopup(popup_a9a16cc64b6f265c24c9053492997e72)
+        ;
+
+        
+    
+    
+            geo_json_10e775d91261a117f24ed16e816cc195.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_445fc2cedc646c64245dfd0c84a3a871_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_445fc2cedc646c64245dfd0c84a3a871_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_445fc2cedc646c64245dfd0c84a3a871 = L.geoJson(null, {
+                onEachFeature: geo_json_445fc2cedc646c64245dfd0c84a3a871_onEachFeature,
+            
+                style: geo_json_445fc2cedc646c64245dfd0c84a3a871_styler,
+        });
+
+        function geo_json_445fc2cedc646c64245dfd0c84a3a871_add (data) {
+            geo_json_445fc2cedc646c64245dfd0c84a3a871
+                .addData(data);
+        }
+            geo_json_445fc2cedc646c64245dfd0c84a3a871_add({"bbox": [0.677183888888954, 47.39278179331307, 0.68738474196344, 47.39886661527672], "features": [{"bbox": [0.677183888888954, 47.39278179331307, 0.68738474196344, 47.39886661527672], "geometry": {"coordinates": [[[[0.677183888888954, 47.395517666666706], [0.677561385253741, 47.3957926771355], [0.677673497459654, 47.395278220168876], [0.67746850687765, 47.39522896918489], [0.677183888888954, 47.395517666666706]]], [[[0.68106160642344, 47.39419343909324], [0.680154553468207, 47.395927485549144], [0.681602801423064, 47.39825306694764], [0.683310176871816, 47.39581839718476], [0.682620750234423, 47.39847802542724], [0.685847983667851, 47.39886661527672], [0.68738474196344, 47.393959992776274], [0.682252551671735, 47.39278179331307], [0.68106160642344, 47.39419343909324]], [[0.685419248778929, 47.395104665640254], [0.685529647314127, 47.39513166266197], [0.685309500052835, 47.3956933178984], [0.685419248778929, 47.395104665640254]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_371d0ba73d90e8992a1c30e0fde71e12 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bea03a4a8fdee88c2f8c9a86897f7147 = $(`<div id="html_bea03a4a8fdee88c2f8c9a86897f7147" style="width: 100.0%; height: 100.0%;">Tours - 1832</div>`)[0];
+                popup_371d0ba73d90e8992a1c30e0fde71e12.setContent(html_bea03a4a8fdee88c2f8c9a86897f7147);
+            
+        
+
+        geo_json_445fc2cedc646c64245dfd0c84a3a871.bindPopup(popup_371d0ba73d90e8992a1c30e0fde71e12)
+        ;
+
+        
+    
+    
+            geo_json_445fc2cedc646c64245dfd0c84a3a871.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_de736cc157d024e5090604969def495c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_de736cc157d024e5090604969def495c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_de736cc157d024e5090604969def495c = L.geoJson(null, {
+                onEachFeature: geo_json_de736cc157d024e5090604969def495c_onEachFeature,
+            
+                style: geo_json_de736cc157d024e5090604969def495c_styler,
+        });
+
+        function geo_json_de736cc157d024e5090604969def495c_add (data) {
+            geo_json_de736cc157d024e5090604969def495c
+                .addData(data);
+        }
+            geo_json_de736cc157d024e5090604969def495c_add({"bbox": [0.665926763090323, 47.381362553780534, 0.678430933135364, 47.387278310078635], "features": [{"bbox": [0.665926763090323, 47.381362553780534, 0.678430933135364, 47.387278310078635], "geometry": {"coordinates": [[[0.668539676558421, 47.38303215920119], [0.666174204479285, 47.38347918174295], [0.665926763090323, 47.387278310078635], [0.668116818834207, 47.384545816941454], [0.67628201100535, 47.38623265734681], [0.678430933135364, 47.3833653539832], [0.677044795452297, 47.381681844097095], [0.674956770749243, 47.38287521146898], [0.671265906922054, 47.381362553780534], [0.670455535227079, 47.383370716068036], [0.668539676558421, 47.38303215920119]], [[0.671524951974329, 47.3830918693607], [0.671891625626936, 47.38277024110342], [0.672941802258656, 47.383682526061236], [0.671912628298114, 47.38418626640096], [0.671524951974329, 47.3830918693607]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_67c3e23edb52b0eca90f22fddcac29fc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f1f8fe52a9ba10e1e803f1e9cd11d18c = $(`<div id="html_f1f8fe52a9ba10e1e803f1e9cd11d18c" style="width: 100.0%; height: 100.0%;">Tours - 1841</div>`)[0];
+                popup_67c3e23edb52b0eca90f22fddcac29fc.setContent(html_f1f8fe52a9ba10e1e803f1e9cd11d18c);
+            
+        
+
+        geo_json_de736cc157d024e5090604969def495c.bindPopup(popup_67c3e23edb52b0eca90f22fddcac29fc)
+        ;
+
+        
+    
+    
+            geo_json_de736cc157d024e5090604969def495c.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_333299f40a87c70afeae6c8761bdcef7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_333299f40a87c70afeae6c8761bdcef7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_333299f40a87c70afeae6c8761bdcef7 = L.geoJson(null, {
+                onEachFeature: geo_json_333299f40a87c70afeae6c8761bdcef7_onEachFeature,
+            
+                style: geo_json_333299f40a87c70afeae6c8761bdcef7_styler,
+        });
+
+        function geo_json_333299f40a87c70afeae6c8761bdcef7_add (data) {
+            geo_json_333299f40a87c70afeae6c8761bdcef7
+                .addData(data);
+        }
+            geo_json_333299f40a87c70afeae6c8761bdcef7_add({"bbox": [0.676688889736742, 47.38507155496281, 0.687927165969312, 47.38785728732321], "features": [{"bbox": [0.676688889736742, 47.38507155496281, 0.687927165969312, 47.38785728732321], "geometry": {"coordinates": [[[0.676688889736742, 47.38580595917589], [0.687086009559981, 47.38785728732321], [0.687927165969312, 47.38605875104602], [0.684850830684767, 47.38507155496281], [0.676688889736742, 47.38580595917589]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b7fedd4fbb8aa70f41ba7701f00d9b2f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6ade4039d7f04657e7d070f8399ce4d4 = $(`<div id="html_6ade4039d7f04657e7d070f8399ce4d4" style="width: 100.0%; height: 100.0%;">Tours - 1842</div>`)[0];
+                popup_b7fedd4fbb8aa70f41ba7701f00d9b2f.setContent(html_6ade4039d7f04657e7d070f8399ce4d4);
+            
+        
+
+        geo_json_333299f40a87c70afeae6c8761bdcef7.bindPopup(popup_b7fedd4fbb8aa70f41ba7701f00d9b2f)
+        ;
+
+        
+    
+    
+            geo_json_333299f40a87c70afeae6c8761bdcef7.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_4e0d703f0eb705d549bd0fae04ac25ed_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4e0d703f0eb705d549bd0fae04ac25ed_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4e0d703f0eb705d549bd0fae04ac25ed = L.geoJson(null, {
+                onEachFeature: geo_json_4e0d703f0eb705d549bd0fae04ac25ed_onEachFeature,
+            
+                style: geo_json_4e0d703f0eb705d549bd0fae04ac25ed_styler,
+        });
+
+        function geo_json_4e0d703f0eb705d549bd0fae04ac25ed_add (data) {
+            geo_json_4e0d703f0eb705d549bd0fae04ac25ed
+                .addData(data);
+        }
+            geo_json_4e0d703f0eb705d549bd0fae04ac25ed_add({"bbox": [0.669163969660613, 47.38584347003746, 0.676662242298749, 47.38967633642286], "features": [{"bbox": [0.669163969660613, 47.38584347003746, 0.676662242298749, 47.38967633642286], "geometry": {"coordinates": [[[0.672197822097372, 47.38584347003746], [0.669163969660613, 47.38765670674945], [0.67498147754995, 47.38967633642286], [0.676662242298749, 47.38772281913373], [0.676604513250585, 47.386080337806106], [0.672197822097372, 47.38584347003746]], [[0.672168301296949, 47.38752076431322], [0.671476006599424, 47.386761373052735], [0.674229611370911, 47.387162666256465], [0.673328544024588, 47.38769714495143], [0.672168301296949, 47.38752076431322]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0181ce5404d762d770cc217597329cb2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9838bbb33e23975747568ccee5690aa5 = $(`<div id="html_9838bbb33e23975747568ccee5690aa5" style="width: 100.0%; height: 100.0%;">Tours - 1843</div>`)[0];
+                popup_0181ce5404d762d770cc217597329cb2.setContent(html_9838bbb33e23975747568ccee5690aa5);
+            
+        
+
+        geo_json_4e0d703f0eb705d549bd0fae04ac25ed.bindPopup(popup_0181ce5404d762d770cc217597329cb2)
+        ;
+
+        
+    
+    
+            geo_json_4e0d703f0eb705d549bd0fae04ac25ed.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_bddf9e2de06e4331151707f42a1b846c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_bddf9e2de06e4331151707f42a1b846c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bddf9e2de06e4331151707f42a1b846c = L.geoJson(null, {
+                onEachFeature: geo_json_bddf9e2de06e4331151707f42a1b846c_onEachFeature,
+            
+                style: geo_json_bddf9e2de06e4331151707f42a1b846c_styler,
+        });
+
+        function geo_json_bddf9e2de06e4331151707f42a1b846c_add (data) {
+            geo_json_bddf9e2de06e4331151707f42a1b846c
+                .addData(data);
+        }
+            geo_json_bddf9e2de06e4331151707f42a1b846c_add({"bbox": [0.652788, 47.36197001002135, 0.688740783403142, 47.377453820658424], "features": [{"bbox": [0.652788, 47.36197001002135, 0.688740783403142, 47.377453820658424], "geometry": {"coordinates": [[[0.676991997372244, 47.36197001002135], [0.67399, 47.363036], [0.674124, 47.364228], [0.661775, 47.36371], [0.652788, 47.36917], [0.660962, 47.370927], [0.660464, 47.375244], [0.664318500844823, 47.377453820658424], [0.66858803645032, 47.3752558423589], [0.672597726042902, 47.37596512644823], [0.675505027887997, 47.372188765498294], [0.677685225749595, 47.372618917171124], [0.681175813802448, 47.370481822007704], [0.685786546776691, 47.371367969714356], [0.688740783403142, 47.36917752092841], [0.685496298572838, 47.369078658575745], [0.688266008124617, 47.36675481620559], [0.683389297659024, 47.36664486522447], [0.682568534266337, 47.36205886675148], [0.676991997372244, 47.36197001002135]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_603ab97db7311714b3fa1e7ef74ded2a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76e0ff581ee07860cdb5173cb4ac24fe = $(`<div id="html_76e0ff581ee07860cdb5173cb4ac24fe" style="width: 100.0%; height: 100.0%;">Tours - 1851</div>`)[0];
+                popup_603ab97db7311714b3fa1e7ef74ded2a.setContent(html_76e0ff581ee07860cdb5173cb4ac24fe);
+            
+        
+
+        geo_json_bddf9e2de06e4331151707f42a1b846c.bindPopup(popup_603ab97db7311714b3fa1e7ef74ded2a)
+        ;
+
+        
+    
+    
+            geo_json_bddf9e2de06e4331151707f42a1b846c.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_8761ec160b586a410434b76ad39c2443_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8761ec160b586a410434b76ad39c2443_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8761ec160b586a410434b76ad39c2443 = L.geoJson(null, {
+                onEachFeature: geo_json_8761ec160b586a410434b76ad39c2443_onEachFeature,
+            
+                style: geo_json_8761ec160b586a410434b76ad39c2443_styler,
+        });
+
+        function geo_json_8761ec160b586a410434b76ad39c2443_add (data) {
+            geo_json_8761ec160b586a410434b76ad39c2443
+                .addData(data);
+        }
+            geo_json_8761ec160b586a410434b76ad39c2443_add({"bbox": [0.667625679796614, 47.372188765498294, 0.712243923458496, 47.41613316790154], "features": [{"bbox": [0.667625679796614, 47.372188765498294, 0.712243923458496, 47.41613316790154], "geometry": {"coordinates": [[[[0.67482550569315, 47.37850792701322], [0.676537856424045, 47.379799738006085], [0.682282285880737, 47.379307797712436], [0.681739600624682, 47.37793628376667], [0.679608513654875, 47.37807436509443], [0.678789762201981, 47.373565864994966], [0.675505027887997, 47.372188765498294], [0.672755872027196, 47.37584677485769], [0.675537571154001, 47.37618026114692], [0.676413796700869, 47.377824738374585], [0.67482550569315, 47.37850792701322]]], [[[0.669712985036314, 47.375889599152266], [0.667625679796614, 47.37580337800337], [0.667971376750701, 47.3794848487152], [0.669514947824651, 47.37737806100756], [0.669712985036314, 47.375889599152266]]], [[[0.671815218136438, 47.37899988103161], [0.673055242522643, 47.37886598916905], [0.672597726042902, 47.37596512644823], [0.671970955866014, 47.37602670619245], [0.671815218136438, 47.37899988103161]]], [[[0.670377405580672, 47.37936733258185], [0.671117038832614, 47.379497064399416], [0.66993262100459, 47.377374405811196], [0.67017044411278, 47.378839485902276], [0.670377405580672, 47.37936733258185]]], [[[0.67706897288099, 47.38239171358458], [0.677256316501905, 47.38259998479087], [0.677378165505203, 47.3821883327526], [0.677246454753987, 47.382142464055725], [0.67706897288099, 47.38239171358458]]], [[[0.712153120306932, 47.41576070971499], [0.711832558479532, 47.41605837426901], [0.712243923458496, 47.41613316790154], [0.712153120306932, 47.41576070971499]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3188f41ca306a4905c885626eeafc20c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_183d2d5fa3f4e35fece895a51290b02c = $(`<div id="html_183d2d5fa3f4e35fece895a51290b02c" style="width: 100.0%; height: 100.0%;">Tours - 1861</div>`)[0];
+                popup_3188f41ca306a4905c885626eeafc20c.setContent(html_183d2d5fa3f4e35fece895a51290b02c);
+            
+        
+
+        geo_json_8761ec160b586a410434b76ad39c2443.bindPopup(popup_3188f41ca306a4905c885626eeafc20c)
+        ;
+
+        
+    
+    
+            geo_json_8761ec160b586a410434b76ad39c2443.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8216ffa1d99d31ee6e9c46fc157fbb26 = L.geoJson(null, {
+                onEachFeature: geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_onEachFeature,
+            
+                style: geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_styler,
+        });
+
+        function geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_add (data) {
+            geo_json_8216ffa1d99d31ee6e9c46fc157fbb26
+                .addData(data);
+        }
+            geo_json_8216ffa1d99d31ee6e9c46fc157fbb26_add({"bbox": [0.664626, 47.37580337800337, 0.671741943883756, 47.38347918174295], "features": [{"bbox": [0.664626, 47.37580337800337, 0.671741943883756, 47.38347918174295], "geometry": {"coordinates": [[[0.664626, 47.377747], [0.666174204479285, 47.38347918174295], [0.670915723590782, 47.382927114577605], [0.671741943883756, 47.38095885042113], [0.669696854395462, 47.3766526485974], [0.668191767663056, 47.37945045244565], [0.667625679796614, 47.37580337800337], [0.664626, 47.377747]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_66a3cca5d2c0ea70b4048878e8c240f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e74d09c3bf38b7f85964fd78ba97a8e0 = $(`<div id="html_e74d09c3bf38b7f85964fd78ba97a8e0" style="width: 100.0%; height: 100.0%;">Tours - 1862</div>`)[0];
+                popup_66a3cca5d2c0ea70b4048878e8c240f1.setContent(html_e74d09c3bf38b7f85964fd78ba97a8e0);
+            
+        
+
+        geo_json_8216ffa1d99d31ee6e9c46fc157fbb26.bindPopup(popup_66a3cca5d2c0ea70b4048878e8c240f1)
+        ;
+
+        
+    
+    
+            geo_json_8216ffa1d99d31ee6e9c46fc157fbb26.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_e7113e3a7c0200161884151abd0ff483_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e7113e3a7c0200161884151abd0ff483_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e7113e3a7c0200161884151abd0ff483 = L.geoJson(null, {
+                onEachFeature: geo_json_e7113e3a7c0200161884151abd0ff483_onEachFeature,
+            
+                style: geo_json_e7113e3a7c0200161884151abd0ff483_styler,
+        });
+
+        function geo_json_e7113e3a7c0200161884151abd0ff483_add (data) {
+            geo_json_e7113e3a7c0200161884151abd0ff483
+                .addData(data);
+        }
+            geo_json_e7113e3a7c0200161884151abd0ff483_add({"bbox": [0.676683717512835, 47.37924690904429, 0.691345641520621, 47.38423880491042], "features": [{"bbox": [0.676683717512835, 47.37924690904429, 0.691345641520621, 47.38423880491042], "geometry": {"coordinates": [[[[0.676683717512835, 47.37979917483585], [0.677338133879402, 47.38349819524079], [0.683875883798004, 47.38014708664695], [0.682034269575685, 47.37924690904429], [0.676683717512835, 47.37979917483585]]], [[[0.69062968601734, 47.38152595867762], [0.690564643070044, 47.381983234724295], [0.6905795, 47.382007609374995], [0.690725559508447, 47.3815663540747], [0.69062968601734, 47.38152595867762]]], [[[0.691345641520621, 47.38395870938587], [0.690795528710188, 47.38380437909516], [0.690846912408757, 47.38423880491042], [0.69131104447142, 47.38403386348014], [0.691345641520621, 47.38395870938587]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_db0acdbd8bcda1a8ea2cd81f5e063c9b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f61b26152ae0e31aacc8499e239e3d0a = $(`<div id="html_f61b26152ae0e31aacc8499e239e3d0a" style="width: 100.0%; height: 100.0%;">Tours - 1863</div>`)[0];
+                popup_db0acdbd8bcda1a8ea2cd81f5e063c9b.setContent(html_f61b26152ae0e31aacc8499e239e3d0a);
+            
+        
+
+        geo_json_e7113e3a7c0200161884151abd0ff483.bindPopup(popup_db0acdbd8bcda1a8ea2cd81f5e063c9b)
+        ;
+
+        
+    
+    
+            geo_json_e7113e3a7c0200161884151abd0ff483.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+    
+        function geo_json_8bb3ca532801bdaa0893344e7e097d2d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8bb3ca532801bdaa0893344e7e097d2d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8bb3ca532801bdaa0893344e7e097d2d = L.geoJson(null, {
+                onEachFeature: geo_json_8bb3ca532801bdaa0893344e7e097d2d_onEachFeature,
+            
+                style: geo_json_8bb3ca532801bdaa0893344e7e097d2d_styler,
+        });
+
+        function geo_json_8bb3ca532801bdaa0893344e7e097d2d_add (data) {
+            geo_json_8bb3ca532801bdaa0893344e7e097d2d
+                .addData(data);
+        }
+            geo_json_8bb3ca532801bdaa0893344e7e097d2d_add({"bbox": [0.669712985036314, 47.375889599152266, 0.676019596004675, 47.38271979176054], "features": [{"bbox": [0.669712985036314, 47.375889599152266, 0.676019596004675, 47.38271979176054], "geometry": {"coordinates": [[[0.670744208689726, 47.37984358279109], [0.673271923894998, 47.38271979176054], [0.676019596004675, 47.38219289797628], [0.675537571154001, 47.37618026114692], [0.672597726042902, 47.37596512644823], [0.672517405650514, 47.379659500061486], [0.671970955866014, 47.37602670619245], [0.669712985036314, 47.375889599152266], [0.670744208689726, 47.37984358279109]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e340fd2cb539ec18202d4ea7d328571f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69a0b6714181255affe7f0b411a72fd3 = $(`<div id="html_69a0b6714181255affe7f0b411a72fd3" style="width: 100.0%; height: 100.0%;">Tours - 1864</div>`)[0];
+                popup_e340fd2cb539ec18202d4ea7d328571f.setContent(html_69a0b6714181255affe7f0b411a72fd3);
+            
+        
+
+        geo_json_8bb3ca532801bdaa0893344e7e097d2d.bindPopup(popup_e340fd2cb539ec18202d4ea7d328571f)
+        ;
+
+        
+    
+    
+            geo_json_8bb3ca532801bdaa0893344e7e097d2d.addTo(map_525a8399ad80ff4060f67e8f09e53a1a);
+        
+</script>
+</html>
