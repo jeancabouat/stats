@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3fb67406e8397b1377ac539ce9fd49ba {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_3fb67406e8397b1377ac539ce9fd49ba" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3fb67406e8397b1377ac539ce9fd49ba = L.map(
+                "map_3fb67406e8397b1377ac539ce9fd49ba",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_784eb63f412202bc51945733adcef16e = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_784eb63f412202bc51945733adcef16e.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_267cd8ff156542ad79629d0eb0f1085b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_267cd8ff156542ad79629d0eb0f1085b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_267cd8ff156542ad79629d0eb0f1085b = L.geoJson(null, {
+                onEachFeature: geo_json_267cd8ff156542ad79629d0eb0f1085b_onEachFeature,
+            
+                style: geo_json_267cd8ff156542ad79629d0eb0f1085b_styler,
+        });
+
+        function geo_json_267cd8ff156542ad79629d0eb0f1085b_add (data) {
+            geo_json_267cd8ff156542ad79629d0eb0f1085b
+                .addData(data);
+        }
+            geo_json_267cd8ff156542ad79629d0eb0f1085b_add({"bbox": [2.3702, 48.6876, 2.6022, 48.7718], "features": [{"bbox": [2.3702, 48.6876, 2.6022, 48.7718], "geometry": {"coordinates": [[[2.5975, 48.7606], [2.5873, 48.764], [2.5812, 48.755], [2.577, 48.755], [2.5755, 48.7523], [2.5702, 48.7512], [2.5573, 48.7546], [2.5372, 48.7545], [2.5264, 48.7562], [2.5167, 48.7614], [2.5055, 48.7611], [2.4998, 48.7631], [2.4941, 48.7597], [2.4835, 48.7565], [2.4795, 48.7605], [2.4767, 48.7595], [2.4721, 48.7633], [2.4682, 48.7624], [2.4662, 48.7661], [2.46, 48.7657], [2.4408, 48.7718], [2.4353, 48.7674], [2.4398, 48.7647], [2.4385, 48.7636], [2.4422, 48.7622], [2.4414, 48.7612], [2.4342, 48.7634], [2.4266, 48.7605], [2.4285, 48.7581], [2.4257, 48.7571], [2.4286, 48.7526], [2.4275, 48.7509], [2.4366, 48.7451], [2.4243, 48.7427], [2.4188, 48.7444], [2.4087, 48.7422], [2.4026, 48.738], [2.3884, 48.737], [2.3892, 48.7345], [2.3878, 48.7327], [2.3851, 48.7327], [2.385, 48.7299], [2.3798, 48.7293], [2.3796, 48.7281], [2.3702, 48.7279], [2.3708, 48.72], [2.3766, 48.7195], [2.3775, 48.7207], [2.3851, 48.719], [2.3918, 48.7227], [2.3976, 48.7209], [2.3989, 48.7248], [2.401, 48.7247], [2.4019, 48.7267], [2.4109, 48.7261], [2.4107, 48.722], [2.415, 48.721], [2.4132, 48.7186], [2.4144, 48.7177], [2.4233, 48.7221], [2.4397, 48.7253], [2.4436, 48.7244], [2.4424, 48.7217], [2.4488, 48.7148], [2.4506, 48.7159], [2.4481, 48.7178], [2.4485, 48.7232], [2.4542, 48.7205], [2.4566, 48.722], [2.4525, 48.7237], [2.4599, 48.7238], [2.4603, 48.726], [2.4649, 48.7272], [2.4658, 48.7295], [2.4676, 48.7267], [2.4801, 48.728], [2.5062, 48.7359], [2.5077, 48.735], [2.5074, 48.733], [2.5101, 48.7348], [2.5158, 48.7291], [2.518, 48.7152], [2.5209, 48.7128], [2.5191, 48.712], [2.5215, 48.7123], [2.5226, 48.7099], [2.5293, 48.708], [2.5291, 48.7053], [2.5268, 48.7047], [2.5316, 48.6999], [2.5357, 48.7011], [2.5362, 48.6973], [2.5413, 48.7004], [2.5443, 48.6986], [2.5424, 48.6968], [2.5438, 48.6946], [2.5467, 48.6954], [2.5462, 48.6931], [2.5511, 48.6904], [2.549, 48.689], [2.555, 48.6876], [2.5612, 48.6896], [2.5611, 48.6907], [2.5718, 48.692], [2.5708, 48.695], [2.5815, 48.6974], [2.5699, 48.7034], [2.5708, 48.7039], [2.5678, 48.709], [2.5711, 48.7112], [2.5718, 48.7135], [2.5754, 48.7127], [2.5774, 48.7211], [2.5794, 48.7228], [2.5809, 48.7219], [2.5902, 48.7312], [2.5947, 48.7319], [2.5939, 48.7355], [2.5958, 48.7365], [2.5914, 48.7375], [2.5898, 48.74], [2.5852, 48.7418], [2.5917, 48.7476], [2.5961, 48.7472], [2.6022, 48.7536], [2.5994, 48.7554], [2.5975, 48.7606]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_31ac478a09585292ddd8fc12080a3506 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4728eaa04f8ce08007f9cee2b0b9c4a6 = $(`<div id="html_4728eaa04f8ce08007f9cee2b0b9c4a6" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 3ème circonscription - 94003</div>`)[0];
+                popup_31ac478a09585292ddd8fc12080a3506.setContent(html_4728eaa04f8ce08007f9cee2b0b9c4a6);
+            
+        
+
+        geo_json_267cd8ff156542ad79629d0eb0f1085b.bindPopup(popup_31ac478a09585292ddd8fc12080a3506)
+        ;
+
+        
+    
+    
+            geo_json_267cd8ff156542ad79629d0eb0f1085b.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_2ff3e4a63a8865198823ec6f1e64da2a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_2ff3e4a63a8865198823ec6f1e64da2a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2ff3e4a63a8865198823ec6f1e64da2a = L.geoJson(null, {
+                onEachFeature: geo_json_2ff3e4a63a8865198823ec6f1e64da2a_onEachFeature,
+            
+                style: geo_json_2ff3e4a63a8865198823ec6f1e64da2a_styler,
+        });
+
+        function geo_json_2ff3e4a63a8865198823ec6f1e64da2a_add (data) {
+            geo_json_2ff3e4a63a8865198823ec6f1e64da2a
+                .addData(data);
+        }
+            geo_json_2ff3e4a63a8865198823ec6f1e64da2a_add({"bbox": [2.3674, 48.77, 2.4339, 48.8166], "features": [{"bbox": [2.3674, 48.77, 2.4339, 48.8166], "geometry": {"coordinates": [[[2.4225, 48.8096], [2.4159, 48.8162], [2.4094, 48.8166], [2.41, 48.8047], [2.4207, 48.7957], [2.4228, 48.791], [2.4137, 48.796], [2.4101, 48.7921], [2.4047, 48.7981], [2.401, 48.7994], [2.3936, 48.7959], [2.3955, 48.7931], [2.3902, 48.79], [2.3915, 48.7871], [2.3896, 48.7877], [2.3873, 48.7931], [2.3818, 48.7941], [2.3769, 48.7996], [2.3703, 48.7965], [2.3769, 48.7866], [2.3695, 48.7824], [2.3709, 48.7807], [2.3674, 48.7794], [2.3678, 48.7719], [2.3711, 48.77], [2.3743, 48.7718], [2.3762, 48.7708], [2.3791, 48.7731], [2.3819, 48.7718], [2.3881, 48.7732], [2.3886, 48.7719], [2.4003, 48.7751], [2.402, 48.773], [2.4119, 48.7742], [2.4147, 48.7772], [2.4283, 48.7761], [2.43, 48.7823], [2.4339, 48.7839], [2.4225, 48.8096]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_07cabae06767696e87ee04b77def34f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1c03ab084d3e20c4ac21c177a231e03e = $(`<div id="html_1c03ab084d3e20c4ac21c177a231e03e" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 9ème circonscription - 94009</div>`)[0];
+                popup_07cabae06767696e87ee04b77def34f5.setContent(html_1c03ab084d3e20c4ac21c177a231e03e);
+            
+        
+
+        geo_json_2ff3e4a63a8865198823ec6f1e64da2a.bindPopup(popup_07cabae06767696e87ee04b77def34f5)
+        ;
+
+        
+    
+    
+            geo_json_2ff3e4a63a8865198823ec6f1e64da2a.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_715db9f328b05fe7761c9c54652bca7e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_715db9f328b05fe7761c9c54652bca7e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_715db9f328b05fe7761c9c54652bca7e = L.geoJson(null, {
+                onEachFeature: geo_json_715db9f328b05fe7761c9c54652bca7e_onEachFeature,
+            
+                style: geo_json_715db9f328b05fe7761c9c54652bca7e_styler,
+        });
+
+        function geo_json_715db9f328b05fe7761c9c54652bca7e_add (data) {
+            geo_json_715db9f328b05fe7761c9c54652bca7e
+                .addData(data);
+        }
+            geo_json_715db9f328b05fe7761c9c54652bca7e_add({"bbox": [2.3179, 48.7788, 2.3769, 48.817], "features": [{"bbox": [2.3179, 48.7788, 2.3769, 48.817], "geometry": {"coordinates": [[[2.3319, 48.817], [2.3256, 48.8096], [2.3191, 48.81], [2.3179, 48.8084], [2.3183, 48.806], [2.324, 48.8054], [2.3264, 48.8083], [2.3187, 48.788], [2.3251, 48.7863], [2.3244, 48.7822], [2.3276, 48.7821], [2.3284, 48.7844], [2.3386, 48.7827], [2.3412, 48.7843], [2.3436, 48.7911], [2.3462, 48.7896], [2.3447, 48.7855], [2.3478, 48.7849], [2.3475, 48.7822], [2.3526, 48.781], [2.3549, 48.7788], [2.3673, 48.7809], [2.3674, 48.7794], [2.3709, 48.7807], [2.3695, 48.7824], [2.3769, 48.7866], [2.3703, 48.7965], [2.372, 48.7972], [2.3699, 48.8008], [2.3731, 48.8025], [2.3672, 48.8081], [2.3581, 48.806], [2.3596, 48.803], [2.353, 48.8032], [2.3485, 48.8011], [2.3439, 48.8033], [2.345, 48.8054], [2.3426, 48.8066], [2.3434, 48.8083], [2.3391, 48.8108], [2.3503, 48.8157], [2.3489, 48.8169], [2.3319, 48.817]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f4f0b00a84258202652893b6f826144d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c59861fd2d821308a2522161cff70102 = $(`<div id="html_c59861fd2d821308a2522161cff70102" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 11ème circonscription - 94011</div>`)[0];
+                popup_f4f0b00a84258202652893b6f826144d.setContent(html_c59861fd2d821308a2522161cff70102);
+            
+        
+
+        geo_json_715db9f328b05fe7761c9c54652bca7e.bindPopup(popup_f4f0b00a84258202652893b6f826144d)
+        ;
+
+        
+    
+    
+            geo_json_715db9f328b05fe7761c9c54652bca7e.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_5341e6e0da59917daf669b8eed3c1a54_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_5341e6e0da59917daf669b8eed3c1a54_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5341e6e0da59917daf669b8eed3c1a54 = L.geoJson(null, {
+                onEachFeature: geo_json_5341e6e0da59917daf669b8eed3c1a54_onEachFeature,
+            
+                style: geo_json_5341e6e0da59917daf669b8eed3c1a54_styler,
+        });
+
+        function geo_json_5341e6e0da59917daf669b8eed3c1a54_add (data) {
+            geo_json_5341e6e0da59917daf669b8eed3c1a54
+                .addData(data);
+        }
+            geo_json_5341e6e0da59917daf669b8eed3c1a54_add({"bbox": [2.4509, 48.7565, 2.5234, 48.8238], "features": [{"bbox": [2.4509, 48.7565, 2.5234, 48.8238], "geometry": {"coordinates": [[[2.4996, 48.763], [2.4947, 48.7643], [2.494, 48.7665], [2.4955, 48.7692], [2.4976, 48.7691], [2.498, 48.7757], [2.5121, 48.7819], [2.5141, 48.7836], [2.5124, 48.7848], [2.5196, 48.7881], [2.5227, 48.7927], [2.5234, 48.7976], [2.5223, 48.8042], [2.52, 48.8071], [2.5108, 48.8097], [2.5121, 48.8133], [2.5049, 48.8159], [2.5059, 48.8175], [2.5039, 48.8173], [2.4962, 48.8238], [2.4891, 48.8209], [2.4834, 48.8206], [2.4801, 48.8135], [2.4738, 48.8158], [2.4699, 48.8124], [2.4661, 48.8106], [2.4647, 48.8118], [2.4606, 48.8093], [2.464, 48.8074], [2.4576, 48.8052], [2.4605, 48.8029], [2.4538, 48.8001], [2.4509, 48.7948], [2.4562, 48.7853], [2.4616, 48.7823], [2.4659, 48.7849], [2.4681, 48.7822], [2.4714, 48.782], [2.475, 48.7776], [2.4728, 48.7765], [2.4746, 48.7746], [2.4716, 48.7729], [2.4774, 48.7661], [2.4749, 48.7654], [2.4772, 48.7628], [2.4739, 48.7611], [2.4767, 48.7595], [2.4795, 48.7605], [2.4835, 48.7565], [2.4941, 48.7597], [2.4996, 48.763]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_73f9c3d1bcb4a11c8fb662f429cc8966 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52a95b845416940b7140af4132424bd3 = $(`<div id="html_52a95b845416940b7140af4132424bd3" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 1ère circonscription - 94001</div>`)[0];
+                popup_73f9c3d1bcb4a11c8fb662f429cc8966.setContent(html_52a95b845416940b7140af4132424bd3);
+            
+        
+
+        geo_json_5341e6e0da59917daf669b8eed3c1a54.bindPopup(popup_73f9c3d1bcb4a11c8fb662f429cc8966)
+        ;
+
+        
+    
+    
+            geo_json_5341e6e0da59917daf669b8eed3c1a54.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_4a78ad7304f48eda3f3058fd507bd053_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_4a78ad7304f48eda3f3058fd507bd053_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4a78ad7304f48eda3f3058fd507bd053 = L.geoJson(null, {
+                onEachFeature: geo_json_4a78ad7304f48eda3f3058fd507bd053_onEachFeature,
+            
+                style: geo_json_4a78ad7304f48eda3f3058fd507bd053_styler,
+        });
+
+        function geo_json_4a78ad7304f48eda3f3058fd507bd053_add (data) {
+            geo_json_4a78ad7304f48eda3f3058fd507bd053
+                .addData(data);
+        }
+            geo_json_4a78ad7304f48eda3f3058fd507bd053_add({"bbox": [2.4651, 48.8032, 2.5655, 48.8572], "features": [{"bbox": [2.4651, 48.8032, 2.5655, 48.8572], "geometry": {"coordinates": [[[2.4657, 48.8262], [2.4695, 48.8301], [2.4714, 48.829], [2.4757, 48.8306], [2.4818, 48.82], [2.4962, 48.8238], [2.5039, 48.8173], [2.5059, 48.8175], [2.5049, 48.8159], [2.5121, 48.8133], [2.5108, 48.8097], [2.5183, 48.8083], [2.5223, 48.8042], [2.5262, 48.8048], [2.5257, 48.8071], [2.5271, 48.8052], [2.5435, 48.8063], [2.551, 48.8032], [2.554, 48.8049], [2.5538, 48.8076], [2.5582, 48.8075], [2.5655, 48.814], [2.5568, 48.819], [2.5449, 48.8198], [2.5348, 48.8171], [2.5296, 48.8213], [2.525, 48.8214], [2.5259, 48.824], [2.5241, 48.8271], [2.5265, 48.8289], [2.5319, 48.8292], [2.5352, 48.8344], [2.5335, 48.8356], [2.5365, 48.8373], [2.5357, 48.8383], [2.5408, 48.8394], [2.5374, 48.8412], [2.5345, 48.8453], [2.5288, 48.8436], [2.5247, 48.8491], [2.519, 48.848], [2.5156, 48.8513], [2.5135, 48.8501], [2.5055, 48.8572], [2.4972, 48.8549], [2.4933, 48.8517], [2.4935, 48.8487], [2.4865, 48.8454], [2.4858, 48.8434], [2.4799, 48.8419], [2.4792, 48.8435], [2.4732, 48.8401], [2.4722, 48.8421], [2.4687, 48.8409], [2.4695, 48.84], [2.4673, 48.8391], [2.4699, 48.8364], [2.4651, 48.8306], [2.4657, 48.8262]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_51f95884d7094279c4f5bf1834e23e1d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b7d5e75285205080a954551475426f1d = $(`<div id="html_b7d5e75285205080a954551475426f1d" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 5ème circonscription - 94005</div>`)[0];
+                popup_51f95884d7094279c4f5bf1834e23e1d.setContent(html_b7d5e75285205080a954551475426f1d);
+            
+        
+
+        geo_json_4a78ad7304f48eda3f3058fd507bd053.bindPopup(popup_51f95884d7094279c4f5bf1834e23e1d)
+        ;
+
+        
+    
+    
+            geo_json_4a78ad7304f48eda3f3058fd507bd053.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_812f274942afa5fd8a094356906c57c1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_812f274942afa5fd8a094356906c57c1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_812f274942afa5fd8a094356906c57c1 = L.geoJson(null, {
+                onEachFeature: geo_json_812f274942afa5fd8a094356906c57c1_onEachFeature,
+            
+                style: geo_json_812f274942afa5fd8a094356906c57c1_styler,
+        });
+
+        function geo_json_812f274942afa5fd8a094356906c57c1_add (data) {
+            geo_json_812f274942afa5fd8a094356906c57c1
+                .addData(data);
+        }
+            geo_json_812f274942afa5fd8a094356906c57c1_add({"bbox": [2.3901, 48.7866, 2.4825, 48.8306], "features": [{"bbox": [2.3901, 48.7866, 2.4825, 48.8306], "geometry": {"coordinates": [[[2.3901, 48.8257], [2.4004, 48.8198], [2.4094, 48.8166], [2.4159, 48.8162], [2.4248, 48.8063], [2.4328, 48.7866], [2.4391, 48.7892], [2.4368, 48.7923], [2.4409, 48.7935], [2.4398, 48.7953], [2.4424, 48.7959], [2.4487, 48.8038], [2.4499, 48.803], [2.4545, 48.806], [2.4576, 48.8052], [2.464, 48.8074], [2.4606, 48.8093], [2.4647, 48.8118], [2.4661, 48.8106], [2.4699, 48.8124], [2.4738, 48.8158], [2.4801, 48.8135], [2.4825, 48.82], [2.4787, 48.8235], [2.4757, 48.8306], [2.4714, 48.829], [2.4695, 48.8301], [2.4657, 48.8262], [2.4627, 48.8191], [2.4591, 48.817], [2.4373, 48.8182], [2.4306, 48.8232], [2.4109, 48.8249], [2.4022, 48.8296], [2.3901, 48.8257]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4889e8fc93b2af66540cd47ba798dce6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e6a3bd5e8055bf3f837717cdd2eda8b = $(`<div id="html_7e6a3bd5e8055bf3f837717cdd2eda8b" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 8ème circonscription - 94008</div>`)[0];
+                popup_4889e8fc93b2af66540cd47ba798dce6.setContent(html_7e6a3bd5e8055bf3f837717cdd2eda8b);
+            
+        
+
+        geo_json_812f274942afa5fd8a094356906c57c1.bindPopup(popup_4889e8fc93b2af66540cd47ba798dce6)
+        ;
+
+        
+    
+    
+            geo_json_812f274942afa5fd8a094356906c57c1.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_192ab9e9af90d9914b1c80019b2d12a0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_192ab9e9af90d9914b1c80019b2d12a0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_192ab9e9af90d9914b1c80019b2d12a0 = L.geoJson(null, {
+                onEachFeature: geo_json_192ab9e9af90d9914b1c80019b2d12a0_onEachFeature,
+            
+                style: geo_json_192ab9e9af90d9914b1c80019b2d12a0_styler,
+        });
+
+        function geo_json_192ab9e9af90d9914b1c80019b2d12a0_add (data) {
+            geo_json_192ab9e9af90d9914b1c80019b2d12a0
+                .addData(data);
+        }
+            geo_json_192ab9e9af90d9914b1c80019b2d12a0_add({"bbox": [2.4941, 48.7512, 2.6155, 48.8383], "features": [{"bbox": [2.4941, 48.7512, 2.6155, 48.8383], "geometry": {"coordinates": [[[2.5918, 48.8073], [2.5698, 48.8152], [2.5687, 48.818], [2.5724, 48.8236], [2.5613, 48.8265], [2.5606, 48.8289], [2.5568, 48.8316], [2.5554, 48.8311], [2.5492, 48.8351], [2.5474, 48.8342], [2.5473, 48.8361], [2.5441, 48.835], [2.5357, 48.8383], [2.5365, 48.8373], [2.5335, 48.8356], [2.5352, 48.8344], [2.5319, 48.8292], [2.5265, 48.8289], [2.5241, 48.8271], [2.5259, 48.824], [2.525, 48.8214], [2.5296, 48.8213], [2.5348, 48.8171], [2.5449, 48.8198], [2.5568, 48.819], [2.5655, 48.814], [2.5582, 48.8075], [2.5538, 48.8076], [2.554, 48.8049], [2.551, 48.8032], [2.5435, 48.8063], [2.5271, 48.8052], [2.525, 48.8068], [2.5262, 48.8048], [2.5223, 48.8042], [2.5235, 48.7957], [2.5212, 48.79], [2.5124, 48.7848], [2.5141, 48.7836], [2.5121, 48.7819], [2.498, 48.7757], [2.4976, 48.7691], [2.4941, 48.7679], [2.4947, 48.7643], [2.5055, 48.7611], [2.5167, 48.7614], [2.5264, 48.7562], [2.5372, 48.7545], [2.5573, 48.7546], [2.5702, 48.7512], [2.5755, 48.7523], [2.577, 48.755], [2.5812, 48.755], [2.5873, 48.764], [2.6027, 48.759], [2.6148, 48.7611], [2.6155, 48.7631], [2.6122, 48.7694], [2.6072, 48.7745], [2.6009, 48.7741], [2.5922, 48.7711], [2.5895, 48.7711], [2.5864, 48.7743], [2.5855, 48.7789], [2.5881, 48.7785], [2.5883, 48.783], [2.5921, 48.7853], [2.5951, 48.7849], [2.5941, 48.7882], [2.5967, 48.7889], [2.5958, 48.7898], [2.5999, 48.795], [2.5915, 48.7974], [2.5965, 48.8057], [2.5918, 48.8073]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_81ad8294cb0a3897335d54adb681d05c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7102323e2e733180b9876f3bac566cb7 = $(`<div id="html_7102323e2e733180b9876f3bac566cb7" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 4ème circonscription - 94004</div>`)[0];
+                popup_81ad8294cb0a3897335d54adb681d05c.setContent(html_7102323e2e733180b9876f3bac566cb7);
+            
+        
+
+        geo_json_192ab9e9af90d9914b1c80019b2d12a0.bindPopup(popup_81ad8294cb0a3897335d54adb681d05c)
+        ;
+
+        
+    
+    
+            geo_json_192ab9e9af90d9914b1c80019b2d12a0.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_8206d8415b53e5bbfd0568b2a85ff56f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_8206d8415b53e5bbfd0568b2a85ff56f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8206d8415b53e5bbfd0568b2a85ff56f = L.geoJson(null, {
+                onEachFeature: geo_json_8206d8415b53e5bbfd0568b2a85ff56f_onEachFeature,
+            
+                style: geo_json_8206d8415b53e5bbfd0568b2a85ff56f_styler,
+        });
+
+        function geo_json_8206d8415b53e5bbfd0568b2a85ff56f_add (data) {
+            geo_json_8206d8415b53e5bbfd0568b2a85ff56f
+                .addData(data);
+        }
+            geo_json_8206d8415b53e5bbfd0568b2a85ff56f_add({"bbox": [2.3087, 48.7381, 2.4061, 48.7911], "features": [{"bbox": [2.3087, 48.7381, 2.4061, 48.7911], "geometry": {"coordinates": [[[2.3693, 48.7461], [2.3745, 48.7462], [2.3742, 48.7485], [2.376, 48.7491], [2.3821, 48.7482], [2.3862, 48.7503], [2.3894, 48.7496], [2.3873, 48.7528], [2.3932, 48.7508], [2.399, 48.7524], [2.3994, 48.7497], [2.4061, 48.7511], [2.4033, 48.7612], [2.3981, 48.7659], [2.4039, 48.7669], [2.3987, 48.7748], [2.3886, 48.7719], [2.3881, 48.7732], [2.3819, 48.7718], [2.3791, 48.7731], [2.3762, 48.7708], [2.3743, 48.7718], [2.3711, 48.77], [2.3678, 48.7719], [2.3673, 48.7809], [2.3549, 48.7788], [2.3526, 48.781], [2.3475, 48.7822], [2.3478, 48.7849], [2.3447, 48.7855], [2.3462, 48.7896], [2.3436, 48.7911], [2.3412, 48.7843], [2.3386, 48.7827], [2.3284, 48.7844], [2.3276, 48.7821], [2.3258, 48.7819], [2.3246, 48.7791], [2.3266, 48.7787], [2.3257, 48.7771], [2.3237, 48.7766], [2.3151, 48.7657], [2.3134, 48.7602], [2.3087, 48.7554], [2.3115, 48.7543], [2.3101, 48.7522], [2.3227, 48.7481], [2.3248, 48.7505], [2.3241, 48.7521], [2.3262, 48.7515], [2.3334, 48.7469], [2.3378, 48.7431], [2.3371, 48.7422], [2.342, 48.7403], [2.3478, 48.7415], [2.3567, 48.7381], [2.3592, 48.7425], [2.3629, 48.7441], [2.3629, 48.7461], [2.3693, 48.7461]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2c4b97674dee3106f63303ea884f1338 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_433dbe2e45f73575266f836fccdc6ee6 = $(`<div id="html_433dbe2e45f73575266f836fccdc6ee6" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 7ème circonscription - 94007</div>`)[0];
+                popup_2c4b97674dee3106f63303ea884f1338.setContent(html_433dbe2e45f73575266f836fccdc6ee6);
+            
+        
+
+        geo_json_8206d8415b53e5bbfd0568b2a85ff56f.bindPopup(popup_2c4b97674dee3106f63303ea884f1338)
+        ;
+
+        
+    
+    
+            geo_json_8206d8415b53e5bbfd0568b2a85ff56f.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_8536d75d602f90be12e911307fe52f77_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_8536d75d602f90be12e911307fe52f77_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8536d75d602f90be12e911307fe52f77 = L.geoJson(null, {
+                onEachFeature: geo_json_8536d75d602f90be12e911307fe52f77_onEachFeature,
+            
+                style: geo_json_8536d75d602f90be12e911307fe52f77_styler,
+        });
+
+        function geo_json_8536d75d602f90be12e911307fe52f77_add (data) {
+            geo_json_8536d75d602f90be12e911307fe52f77
+                .addData(data);
+        }
+            geo_json_8536d75d602f90be12e911307fe52f77_add({"bbox": [2.3693, 48.7279, 2.4774, 48.806], "features": [{"bbox": [2.3693, 48.7279, 2.4774, 48.806], "geometry": {"coordinates": [[[2.3702, 48.7279], [2.3796, 48.7281], [2.3798, 48.7293], [2.385, 48.7299], [2.3851, 48.7327], [2.3878, 48.7327], [2.3892, 48.7345], [2.3884, 48.737], [2.4026, 48.738], [2.4087, 48.7422], [2.4188, 48.7444], [2.4243, 48.7427], [2.4366, 48.7451], [2.4275, 48.7509], [2.4286, 48.7526], [2.4257, 48.7571], [2.4285, 48.7581], [2.4266, 48.7605], [2.4342, 48.7634], [2.4414, 48.7612], [2.4422, 48.7622], [2.4385, 48.7636], [2.4398, 48.7647], [2.4353, 48.7674], [2.4408, 48.7718], [2.46, 48.7657], [2.4662, 48.7661], [2.4682, 48.7624], [2.4772, 48.7628], [2.4749, 48.7654], [2.4774, 48.7661], [2.472, 48.7715], [2.4716, 48.7729], [2.4746, 48.7746], [2.4728, 48.7765], [2.475, 48.7776], [2.4714, 48.782], [2.4681, 48.7822], [2.4659, 48.7849], [2.4616, 48.7823], [2.4594, 48.7834], [2.4562, 48.7853], [2.4512, 48.7926], [2.4509, 48.7948], [2.4538, 48.8001], [2.4605, 48.8029], [2.4545, 48.806], [2.447, 48.8025], [2.4424, 48.7959], [2.4398, 48.7953], [2.4409, 48.7935], [2.4368, 48.7923], [2.4391, 48.7892], [2.4328, 48.7866], [2.4339, 48.7839], [2.43, 48.7823], [2.4283, 48.7761], [2.4147, 48.7772], [2.4119, 48.7742], [2.402, 48.773], [2.4003, 48.7751], [2.3987, 48.7748], [2.4039, 48.7669], [2.3981, 48.7659], [2.4033, 48.7612], [2.4061, 48.7511], [2.3994, 48.7497], [2.399, 48.7524], [2.3932, 48.7508], [2.3873, 48.7528], [2.3894, 48.7496], [2.3862, 48.7503], [2.3821, 48.7482], [2.376, 48.7491], [2.3742, 48.7485], [2.3745, 48.7462], [2.3693, 48.7461], [2.3702, 48.7279]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9b0aa8ca9ca8c2f4a819df1d9090cc7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_329673ec5f5292be0d1f0c79c643550d = $(`<div id="html_329673ec5f5292be0d1f0c79c643550d" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 2ème circonscription - 94002</div>`)[0];
+                popup_9b0aa8ca9ca8c2f4a819df1d9090cc7a.setContent(html_329673ec5f5292be0d1f0c79c643550d);
+            
+        
+
+        geo_json_8536d75d602f90be12e911307fe52f77.bindPopup(popup_9b0aa8ca9ca8c2f4a819df1d9090cc7a)
+        ;
+
+        
+    
+    
+            geo_json_8536d75d602f90be12e911307fe52f77.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_058670c3471ab4a3cf3410c603ff7ba4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_058670c3471ab4a3cf3410c603ff7ba4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_058670c3471ab4a3cf3410c603ff7ba4 = L.geoJson(null, {
+                onEachFeature: geo_json_058670c3471ab4a3cf3410c603ff7ba4_onEachFeature,
+            
+                style: geo_json_058670c3471ab4a3cf3410c603ff7ba4_styler,
+        });
+
+        function geo_json_058670c3471ab4a3cf3410c603ff7ba4_add (data) {
+            geo_json_058670c3471ab4a3cf3410c603ff7ba4
+                .addData(data);
+        }
+            geo_json_058670c3471ab4a3cf3410c603ff7ba4_add({"bbox": [2.4115, 48.8339, 2.5, 48.8615], "features": [{"bbox": [2.4115, 48.8339, 2.5, 48.8615], "geometry": {"coordinates": [[[2.4673, 48.8391], [2.4722, 48.8421], [2.4732, 48.8401], [2.4792, 48.8435], [2.4799, 48.8419], [2.4858, 48.8434], [2.4865, 48.8454], [2.4935, 48.8487], [2.4933, 48.8517], [2.5, 48.8557], [2.4968, 48.8557], [2.4949, 48.8588], [2.4971, 48.8592], [2.4961, 48.8607], [2.4916, 48.8595], [2.491, 48.8608], [2.4816, 48.8615], [2.4808, 48.8601], [2.4699, 48.8607], [2.4668, 48.8601], [2.4674, 48.8566], [2.4527, 48.8551], [2.4471, 48.8512], [2.4352, 48.8534], [2.4346, 48.8508], [2.4296, 48.8511], [2.4293, 48.8487], [2.4163, 48.8492], [2.4115, 48.8339], [2.4221, 48.8358], [2.4194, 48.8425], [2.4218, 48.8444], [2.4249, 48.8418], [2.4372, 48.8409], [2.438, 48.8447], [2.4466, 48.8458], [2.4628, 48.8424], [2.4673, 48.8391]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_22f888039b59dca23e060f901941e19d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9ea385eeaecb934c9eb3a289defb371b = $(`<div id="html_9ea385eeaecb934c9eb3a289defb371b" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 6ème circonscription - 94006</div>`)[0];
+                popup_22f888039b59dca23e060f901941e19d.setContent(html_9ea385eeaecb934c9eb3a289defb371b);
+            
+        
+
+        geo_json_058670c3471ab4a3cf3410c603ff7ba4.bindPopup(popup_22f888039b59dca23e060f901941e19d)
+        ;
+
+        
+    
+    
+            geo_json_058670c3471ab4a3cf3410c603ff7ba4.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+    
+        function geo_json_51ca15fff7b4a3656d8b025687324dc0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_51ca15fff7b4a3656d8b025687324dc0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_51ca15fff7b4a3656d8b025687324dc0 = L.geoJson(null, {
+                onEachFeature: geo_json_51ca15fff7b4a3656d8b025687324dc0_onEachFeature,
+            
+                style: geo_json_51ca15fff7b4a3656d8b025687324dc0_styler,
+        });
+
+        function geo_json_51ca15fff7b4a3656d8b025687324dc0_add (data) {
+            geo_json_51ca15fff7b4a3656d8b025687324dc0
+                .addData(data);
+        }
+            geo_json_51ca15fff7b4a3656d8b025687324dc0_add({"bbox": [2.3391, 48.7871, 2.4228, 48.8257], "features": [{"bbox": [2.3391, 48.7871, 2.4228, 48.8257], "geometry": {"coordinates": [[[2.369, 48.8179], [2.3559, 48.8159], [2.3524, 48.8186], [2.3489, 48.8169], [2.3503, 48.8157], [2.3471, 48.8137], [2.3391, 48.8108], [2.3434, 48.8083], [2.3426, 48.8066], [2.345, 48.8054], [2.3439, 48.8033], [2.3485, 48.8011], [2.353, 48.8032], [2.3596, 48.803], [2.3581, 48.806], [2.3672, 48.8081], [2.3731, 48.8025], [2.3699, 48.8008], [2.3716, 48.7975], [2.3782, 48.799], [2.3818, 48.7941], [2.3873, 48.7931], [2.3896, 48.7877], [2.3915, 48.7871], [2.3902, 48.79], [2.3955, 48.7931], [2.3936, 48.7959], [2.401, 48.7994], [2.4047, 48.7981], [2.4101, 48.7921], [2.4137, 48.796], [2.4228, 48.791], [2.4207, 48.7957], [2.41, 48.8047], [2.4089, 48.8075], [2.4103, 48.8145], [2.4086, 48.8171], [2.398, 48.8207], [2.3901, 48.8257], [2.369, 48.8179]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_daed640efe074811e0cdaedc6e9f9283 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39e7d0efe60bc1936198f0bb92f69d56 = $(`<div id="html_39e7d0efe60bc1936198f0bb92f69d56" style="width: 100.0%; height: 100.0%;">Val-de-Marne - 10ème circonscription - 94010</div>`)[0];
+                popup_daed640efe074811e0cdaedc6e9f9283.setContent(html_39e7d0efe60bc1936198f0bb92f69d56);
+            
+        
+
+        geo_json_51ca15fff7b4a3656d8b025687324dc0.bindPopup(popup_daed640efe074811e0cdaedc6e9f9283)
+        ;
+
+        
+    
+    
+            geo_json_51ca15fff7b4a3656d8b025687324dc0.addTo(map_3fb67406e8397b1377ac539ce9fd49ba);
+        
+</script>
+</html>

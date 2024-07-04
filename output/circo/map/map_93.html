@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_163119f56e2d24eb7dc3d35c6e92fbf1 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_163119f56e2d24eb7dc3d35c6e92fbf1" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_163119f56e2d24eb7dc3d35c6e92fbf1 = L.map(
+                "map_163119f56e2d24eb7dc3d35c6e92fbf1",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_6d0f8bb3ee6abb4dab7b8b7acc278b5b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_6d0f8bb3ee6abb4dab7b8b7acc278b5b.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_ef4750ecfbc443533969142cabddcd90_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_ef4750ecfbc443533969142cabddcd90_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ef4750ecfbc443533969142cabddcd90 = L.geoJson(null, {
+                onEachFeature: geo_json_ef4750ecfbc443533969142cabddcd90_onEachFeature,
+            
+                style: geo_json_ef4750ecfbc443533969142cabddcd90_styler,
+        });
+
+        function geo_json_ef4750ecfbc443533969142cabddcd90_add (data) {
+            geo_json_ef4750ecfbc443533969142cabddcd90
+                .addData(data);
+        }
+            geo_json_ef4750ecfbc443533969142cabddcd90_add({"bbox": [2.3656, 48.8832, 2.4277, 48.9245], "features": [{"bbox": [2.3656, 48.8832, 2.4277, 48.9245], "geometry": {"coordinates": [[[2.3703, 48.9018], [2.3908, 48.9009], [2.3955, 48.8983], [2.3989, 48.8895], [2.4101, 48.8891], [2.4117, 48.8832], [2.4173, 48.884], [2.4224, 48.8876], [2.4277, 48.8959], [2.424, 48.8952], [2.4213, 48.9021], [2.4116, 48.9062], [2.4146, 48.9089], [2.413, 48.9097], [2.4153, 48.912], [2.4129, 48.9155], [2.3986, 48.9225], [2.3923, 48.9226], [2.3865, 48.9192], [2.38, 48.9198], [2.3748, 48.9238], [2.372, 48.9225], [2.3683, 48.9245], [2.3667, 48.9235], [2.3656, 48.9018], [2.3703, 48.9018]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7e25235569fa39beda91fefab4d6fd61 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f65371b566290a09ba31724785d29a96 = $(`<div id="html_f65371b566290a09ba31724785d29a96" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 6ème circonscription - 93006</div>`)[0];
+                popup_7e25235569fa39beda91fefab4d6fd61.setContent(html_f65371b566290a09ba31724785d29a96);
+            
+        
+
+        geo_json_ef4750ecfbc443533969142cabddcd90.bindPopup(popup_7e25235569fa39beda91fefab4d6fd61)
+        ;
+
+        
+    
+    
+            geo_json_ef4750ecfbc443533969142cabddcd90.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f = L.geoJson(null, {
+                onEachFeature: geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_onEachFeature,
+            
+                style: geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_styler,
+        });
+
+        function geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_add (data) {
+            geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f
+                .addData(data);
+        }
+            geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f_add({"bbox": [2.4595, 48.887, 2.5241, 48.9746], "features": [{"bbox": [2.4595, 48.887, 2.5241, 48.9746], "geometry": {"coordinates": [[[2.4822, 48.9321], [2.4793, 48.9304], [2.4815, 48.9274], [2.4794, 48.9184], [2.4913, 48.9174], [2.4922, 48.916], [2.4905, 48.909], [2.4923, 48.9079], [2.4888, 48.9077], [2.4881, 48.9063], [2.4811, 48.9068], [2.482, 48.9006], [2.4791, 48.8942], [2.482, 48.8935], [2.4814, 48.8917], [2.4799, 48.8934], [2.4784, 48.8925], [2.477, 48.8888], [2.487, 48.887], [2.4911, 48.8909], [2.4955, 48.8893], [2.4977, 48.8902], [2.4981, 48.8931], [2.5022, 48.8967], [2.501, 48.8972], [2.5023, 48.8993], [2.5072, 48.8977], [2.5211, 48.9119], [2.5102, 48.9103], [2.5087, 48.9162], [2.5058, 48.9174], [2.5123, 48.9194], [2.5181, 48.9251], [2.5134, 48.9279], [2.5144, 48.9303], [2.5103, 48.9334], [2.5054, 48.9344], [2.5054, 48.936], [2.5072, 48.9356], [2.51, 48.9395], [2.5083, 48.9403], [2.5173, 48.9467], [2.517, 48.9482], [2.5241, 48.9505], [2.5126, 48.9616], [2.4925, 48.9746], [2.4883, 48.9713], [2.4903, 48.9701], [2.4868, 48.9673], [2.4808, 48.9698], [2.4778, 48.9667], [2.475, 48.9677], [2.4695, 48.963], [2.4673, 48.9643], [2.4606, 48.9582], [2.4595, 48.955], [2.4724, 48.9516], [2.4715, 48.9471], [2.4796, 48.9427], [2.4761, 48.9397], [2.4834, 48.9375], [2.4826, 48.9361], [2.4842, 48.936], [2.4818, 48.9341], [2.4822, 48.9321]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_25fa5bab0104e62dad8bea0dfe8904b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3bdae4a4d8b94a5178a04758e13e00e6 = $(`<div id="html_3bdae4a4d8b94a5178a04758e13e00e6" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 10ème circonscription - 93010</div>`)[0];
+                popup_25fa5bab0104e62dad8bea0dfe8904b6.setContent(html_3bdae4a4d8b94a5178a04758e13e00e6);
+            
+        
+
+        geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f.bindPopup(popup_25fa5bab0104e62dad8bea0dfe8904b6)
+        ;
+
+        
+    
+    
+            geo_json_ff2181bfc22f5a66eddd8e6b3d7f8b0f.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c29cb7423f0a3aa43521c93d52d0d0f6 = L.geoJson(null, {
+                onEachFeature: geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_onEachFeature,
+            
+                style: geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_styler,
+        });
+
+        function geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_add (data) {
+            geo_json_c29cb7423f0a3aa43521c93d52d0d0f6
+                .addData(data);
+        }
+            geo_json_c29cb7423f0a3aa43521c93d52d0d0f6_add({"bbox": [2.4134, 48.8487, 2.4828, 48.879], "features": [{"bbox": [2.4134, 48.8487, 2.4828, 48.879], "geometry": {"coordinates": [[[2.4155, 48.8542], [2.4163, 48.8492], [2.4293, 48.8487], [2.4296, 48.8511], [2.4346, 48.8508], [2.4352, 48.8534], [2.4471, 48.8512], [2.4527, 48.8551], [2.4674, 48.8566], [2.4677, 48.8605], [2.4808, 48.8601], [2.4828, 48.864], [2.4822, 48.8671], [2.4797, 48.8678], [2.4808, 48.8689], [2.4722, 48.8675], [2.4703, 48.8742], [2.4675, 48.8763], [2.4684, 48.8772], [2.4649, 48.8781], [2.4518, 48.8785], [2.4466, 48.873], [2.4386, 48.8713], [2.4354, 48.8746], [2.4371, 48.8773], [2.433, 48.879], [2.4219, 48.8783], [2.4134, 48.8731], [2.4155, 48.8542]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ed733e47ef44f21a01786bb4569dd8fa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_83db56ec659731e83918d97a3fe3354e = $(`<div id="html_83db56ec659731e83918d97a3fe3354e" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 7ème circonscription - 93007</div>`)[0];
+                popup_ed733e47ef44f21a01786bb4569dd8fa.setContent(html_83db56ec659731e83918d97a3fe3354e);
+            
+        
+
+        geo_json_c29cb7423f0a3aa43521c93d52d0d0f6.bindPopup(popup_ed733e47ef44f21a01786bb4569dd8fa)
+        ;
+
+        
+    
+    
+            geo_json_c29cb7423f0a3aa43521c93d52d0d0f6.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8798c3f64d7f22c2275ad6ae2d36deaa = L.geoJson(null, {
+                onEachFeature: geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_onEachFeature,
+            
+                style: geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_styler,
+        });
+
+        function geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_add (data) {
+            geo_json_8798c3f64d7f22c2275ad6ae2d36deaa
+                .addData(data);
+        }
+            geo_json_8798c3f64d7f22c2275ad6ae2d36deaa_add({"bbox": [2.3655, 48.9166, 2.4842, 48.9721], "features": [{"bbox": [2.3655, 48.9166, 2.4842, 48.9721], "geometry": {"coordinates": [[[2.4101, 48.9166], [2.4163, 48.9218], [2.4218, 48.9292], [2.4125, 48.9327], [2.4177, 48.9337], [2.4134, 48.9355], [2.4166, 48.9357], [2.4168, 48.9394], [2.4225, 48.9403], [2.4219, 48.9413], [2.4266, 48.9426], [2.4306, 48.9463], [2.4352, 48.9451], [2.431, 48.939], [2.4387, 48.9377], [2.4389, 48.9361], [2.4486, 48.9396], [2.4555, 48.9375], [2.4578, 48.9358], [2.4574, 48.9344], [2.4639, 48.9308], [2.4622, 48.9279], [2.462, 48.9209], [2.4687, 48.9189], [2.4719, 48.9206], [2.4744, 48.9184], [2.4795, 48.9199], [2.4815, 48.9274], [2.4793, 48.9304], [2.4822, 48.9321], [2.4818, 48.9341], [2.4842, 48.936], [2.4826, 48.9361], [2.4834, 48.9375], [2.4761, 48.9397], [2.4796, 48.9427], [2.4715, 48.9471], [2.4724, 48.9516], [2.4567, 48.9557], [2.4491, 48.955], [2.4453, 48.9568], [2.4359, 48.9552], [2.427, 48.9593], [2.4184, 48.9576], [2.4174, 48.9595], [2.4074, 48.9561], [2.3943, 48.9625], [2.3842, 48.9711], [2.3757, 48.9721], [2.3733, 48.9601], [2.3655, 48.9588], [2.3717, 48.947], [2.3752, 48.9476], [2.3771, 48.9446], [2.3821, 48.9454], [2.3837, 48.9435], [2.3962, 48.9493], [2.3982, 48.9482], [2.3944, 48.9444], [2.3847, 48.9403], [2.3839, 48.9325], [2.3825, 48.9308], [2.3776, 48.9318], [2.3751, 48.9277], [2.3778, 48.9253], [2.3748, 48.9238], [2.38, 48.9198], [2.3865, 48.9192], [2.3923, 48.9226], [2.3986, 48.9225], [2.4101, 48.9166]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3e8299a865c60204851db31502c90a96 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4dcb7c20052b64cee0f2bfe11944d96c = $(`<div id="html_4dcb7c20052b64cee0f2bfe11944d96c" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 4ème circonscription - 93004</div>`)[0];
+                popup_3e8299a865c60204851db31502c90a96.setContent(html_4dcb7c20052b64cee0f2bfe11944d96c);
+            
+        
+
+        geo_json_8798c3f64d7f22c2275ad6ae2d36deaa.bindPopup(popup_3e8299a865c60204851db31502c90a96)
+        ;
+
+        
+    
+    
+            geo_json_8798c3f64d7f22c2275ad6ae2d36deaa.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_64f24d98738543a0686be88bab5e0b4c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_64f24d98738543a0686be88bab5e0b4c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_64f24d98738543a0686be88bab5e0b4c = L.geoJson(null, {
+                onEachFeature: geo_json_64f24d98738543a0686be88bab5e0b4c_onEachFeature,
+            
+                style: geo_json_64f24d98738543a0686be88bab5e0b4c_styler,
+        });
+
+        function geo_json_64f24d98738543a0686be88bab5e0b4c_add (data) {
+            geo_json_64f24d98738543a0686be88bab5e0b4c
+                .addData(data);
+        }
+            geo_json_64f24d98738543a0686be88bab5e0b4c_add({"bbox": [2.4101, 48.8952, 2.4762, 48.9463], "features": [{"bbox": [2.4101, 48.8952, 2.4762, 48.9463], "geometry": {"coordinates": [[[2.4101, 48.9166], [2.4129, 48.9155], [2.4153, 48.912], [2.413, 48.9097], [2.4146, 48.9089], [2.4116, 48.9062], [2.4213, 48.9021], [2.424, 48.8952], [2.4616, 48.9022], [2.4621, 48.9054], [2.4709, 48.9051], [2.4762, 48.9132], [2.4736, 48.92], [2.4687, 48.9189], [2.462, 48.9209], [2.4622, 48.9279], [2.4639, 48.9308], [2.4574, 48.9344], [2.4578, 48.9358], [2.4555, 48.9375], [2.4486, 48.9396], [2.4389, 48.9361], [2.4387, 48.9377], [2.431, 48.939], [2.4352, 48.9451], [2.4306, 48.9463], [2.4266, 48.9426], [2.4219, 48.9413], [2.4225, 48.9403], [2.4168, 48.9394], [2.4166, 48.9357], [2.4134, 48.9355], [2.4177, 48.9337], [2.4125, 48.9327], [2.4218, 48.9292], [2.4163, 48.9218], [2.4101, 48.9166]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_26f67998e7e96121842ba92cc75683aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_23065145f503edef184e37a6882a40aa = $(`<div id="html_23065145f503edef184e37a6882a40aa" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 5ème circonscription - 93005</div>`)[0];
+                popup_26f67998e7e96121842ba92cc75683aa.setContent(html_23065145f503edef184e37a6882a40aa);
+            
+        
+
+        geo_json_64f24d98738543a0686be88bab5e0b4c.bindPopup(popup_26f67998e7e96121842ba92cc75683aa)
+        ;
+
+        
+    
+    
+            geo_json_64f24d98738543a0686be88bab5e0b4c.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_08d4974cca0832ae6bd658902b1f5b66_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_08d4974cca0832ae6bd658902b1f5b66_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_08d4974cca0832ae6bd658902b1f5b66 = L.geoJson(null, {
+                onEachFeature: geo_json_08d4974cca0832ae6bd658902b1f5b66_onEachFeature,
+            
+                style: geo_json_08d4974cca0832ae6bd658902b1f5b66_styler,
+        });
+
+        function geo_json_08d4974cca0832ae6bd658902b1f5b66_add (data) {
+            geo_json_08d4974cca0832ae6bd658902b1f5b66
+                .addData(data);
+        }
+            geo_json_08d4974cca0832ae6bd658902b1f5b66_add({"bbox": [2.3989, 48.8713, 2.4923, 48.9202], "features": [{"bbox": [2.3989, 48.8713, 2.4923, 48.9202], "geometry": {"coordinates": [[[2.4108, 48.8784], [2.4134, 48.8731], [2.4219, 48.8783], [2.433, 48.879], [2.4371, 48.8773], [2.4354, 48.8746], [2.4386, 48.8713], [2.4466, 48.873], [2.4518, 48.8785], [2.4649, 48.8781], [2.4703, 48.8868], [2.4754, 48.8863], [2.4784, 48.8925], [2.4799, 48.8934], [2.4814, 48.8917], [2.482, 48.8935], [2.4791, 48.8942], [2.482, 48.9006], [2.4811, 48.9068], [2.4881, 48.9063], [2.4888, 48.9077], [2.4923, 48.9079], [2.4905, 48.909], [2.4922, 48.916], [2.4887, 48.9186], [2.4794, 48.9184], [2.4795, 48.9199], [2.477, 48.9202], [2.4744, 48.9184], [2.4759, 48.9124], [2.4709, 48.9051], [2.4621, 48.9054], [2.4616, 48.9022], [2.4277, 48.8959], [2.4224, 48.8876], [2.4173, 48.884], [2.4117, 48.8832], [2.4101, 48.8891], [2.3989, 48.8895], [2.4001, 48.8838], [2.4094, 48.8803], [2.4108, 48.8784]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3bca638b667bae9456f3009efeb01658 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_de3001b41718f0551f2aa0433cb2355e = $(`<div id="html_de3001b41718f0551f2aa0433cb2355e" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 9ème circonscription - 93009</div>`)[0];
+                popup_3bca638b667bae9456f3009efeb01658.setContent(html_de3001b41718f0551f2aa0433cb2355e);
+            
+        
+
+        geo_json_08d4974cca0832ae6bd658902b1f5b66.bindPopup(popup_3bca638b667bae9456f3009efeb01658)
+        ;
+
+        
+    
+    
+            geo_json_08d4974cca0832ae6bd658902b1f5b66.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55 = L.geoJson(null, {
+                onEachFeature: geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_onEachFeature,
+            
+                style: geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_styler,
+        });
+
+        function geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_add (data) {
+            geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55
+                .addData(data);
+        }
+            geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55_add({"bbox": [2.5058, 48.8846, 2.6033, 48.9433], "features": [{"bbox": [2.5058, 48.8846, 2.6033, 48.9433], "geometry": {"coordinates": [[[2.5923, 48.9077], [2.5888, 48.9095], [2.5907, 48.9119], [2.5892, 48.912], [2.5904, 48.9158], [2.5889, 48.9172], [2.5893, 48.9222], [2.6027, 48.9294], [2.6021, 48.935], [2.6033, 48.9377], [2.5977, 48.9388], [2.5769, 48.9364], [2.5714, 48.9393], [2.5689, 48.9433], [2.5663, 48.9427], [2.5685, 48.937], [2.5566, 48.9353], [2.5563, 48.934], [2.5439, 48.9346], [2.5366, 48.9259], [2.5345, 48.9273], [2.5279, 48.9262], [2.5259, 48.9277], [2.5242, 48.925], [2.5217, 48.9239], [2.5181, 48.9251], [2.5123, 48.9194], [2.5058, 48.9174], [2.5087, 48.9162], [2.5102, 48.9103], [2.5211, 48.9119], [2.508, 48.8988], [2.5066, 48.8927], [2.516, 48.8878], [2.5182, 48.8911], [2.5229, 48.8932], [2.5272, 48.8917], [2.5326, 48.8932], [2.532, 48.8953], [2.5357, 48.8949], [2.536, 48.8983], [2.5385, 48.8997], [2.5462, 48.8989], [2.5442, 48.8962], [2.5477, 48.8958], [2.5467, 48.8912], [2.549, 48.8903], [2.5472, 48.8874], [2.5495, 48.8872], [2.55, 48.8848], [2.5587, 48.8846], [2.5628, 48.8897], [2.5702, 48.8904], [2.5723, 48.8925], [2.5766, 48.8922], [2.5839, 48.8948], [2.587, 48.894], [2.587, 48.898], [2.5891, 48.8986], [2.5841, 48.9034], [2.5923, 48.9077]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_41c2f3f3ed41c5203527f20216eb8d00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5282d10e93a4b0044c00591f49cf5190 = $(`<div id="html_5282d10e93a4b0044c00591f49cf5190" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 12ème circonscription - 93012</div>`)[0];
+                popup_41c2f3f3ed41c5203527f20216eb8d00.setContent(html_5282d10e93a4b0044c00591f49cf5190);
+            
+        
+
+        geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55.bindPopup(popup_41c2f3f3ed41c5203527f20216eb8d00)
+        ;
+
+        
+    
+    
+            geo_json_fd6ba63c4e8645f7ce3a46ff3e6bcb55.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_404b945bc70ee62b3339ff09aed87099_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_404b945bc70ee62b3339ff09aed87099_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_404b945bc70ee62b3339ff09aed87099 = L.geoJson(null, {
+                onEachFeature: geo_json_404b945bc70ee62b3339ff09aed87099_onEachFeature,
+            
+                style: geo_json_404b945bc70ee62b3339ff09aed87099_styler,
+        });
+
+        function geo_json_404b945bc70ee62b3339ff09aed87099_add (data) {
+            geo_json_404b945bc70ee62b3339ff09aed87099
+                .addData(data);
+        }
+            geo_json_404b945bc70ee62b3339ff09aed87099_add({"bbox": [2.2883, 48.9005, 2.367, 48.9662], "features": [{"bbox": [2.2883, 48.9005, 2.367, 48.9662], "geometry": {"coordinates": [[[2.3352, 48.9011], [2.3656, 48.9018], [2.3669, 48.9185], [2.3657, 48.9188], [2.367, 48.9218], [2.3657, 48.9256], [2.362, 48.9264], [2.3604, 48.9245], [2.3584, 48.9283], [2.3523, 48.9282], [2.3493, 48.9331], [2.3463, 48.9334], [2.3441, 48.9388], [2.3439, 48.9365], [2.3417, 48.9363], [2.3425, 48.941], [2.3399, 48.9405], [2.3383, 48.9426], [2.3408, 48.9443], [2.3369, 48.9451], [2.3394, 48.9476], [2.346, 48.9464], [2.3279, 48.9595], [2.3227, 48.9575], [2.313, 48.9624], [2.3104, 48.9617], [2.3089, 48.9635], [2.3051, 48.9622], [2.2986, 48.9662], [2.2903, 48.9617], [2.2883, 48.9584], [2.2923, 48.9514], [2.291, 48.951], [2.3242, 48.946], [2.3354, 48.9409], [2.3369, 48.9338], [2.3336, 48.9275], [2.3198, 48.9159], [2.3138, 48.914], [2.3209, 48.9046], [2.3199, 48.9005], [2.3352, 48.9011]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b8748ceacbec085d271d38d16728431b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c7ae4c26d3f5bb67b8cb99c1dbcd521e = $(`<div id="html_c7ae4c26d3f5bb67b8cb99c1dbcd521e" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 1ère circonscription - 93001</div>`)[0];
+                popup_b8748ceacbec085d271d38d16728431b.setContent(html_c7ae4c26d3f5bb67b8cb99c1dbcd521e);
+            
+        
+
+        geo_json_404b945bc70ee62b3339ff09aed87099.bindPopup(popup_b8748ceacbec085d271d38d16728431b)
+        ;
+
+        
+    
+    
+            geo_json_404b945bc70ee62b3339ff09aed87099.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_e9761c879869a2e0e7983ffc4d015844_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_e9761c879869a2e0e7983ffc4d015844_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e9761c879869a2e0e7983ffc4d015844 = L.geoJson(null, {
+                onEachFeature: geo_json_e9761c879869a2e0e7983ffc4d015844_onEachFeature,
+            
+                style: geo_json_e9761c879869a2e0e7983ffc4d015844_styler,
+        });
+
+        function geo_json_e9761c879869a2e0e7983ffc4d015844_add (data) {
+            geo_json_e9761c879869a2e0e7983ffc4d015844
+                .addData(data);
+        }
+            geo_json_e9761c879869a2e0e7983ffc4d015844_add({"bbox": [2.4649, 48.8595, 2.5719, 48.8997], "features": [{"bbox": [2.4649, 48.8595, 2.5719, 48.8997], "geometry": {"coordinates": [[[2.5592, 48.8852], [2.55, 48.8848], [2.5495, 48.8872], [2.5472, 48.8874], [2.549, 48.8903], [2.5467, 48.8912], [2.5477, 48.8958], [2.5442, 48.8962], [2.5462, 48.8989], [2.5385, 48.8997], [2.536, 48.8983], [2.5357, 48.8949], [2.532, 48.8953], [2.5326, 48.8932], [2.5272, 48.8917], [2.5229, 48.8932], [2.5182, 48.8911], [2.516, 48.8878], [2.5066, 48.8927], [2.508, 48.8985], [2.5023, 48.8993], [2.501, 48.8972], [2.5022, 48.8967], [2.4981, 48.8931], [2.4977, 48.8902], [2.4955, 48.8893], [2.4911, 48.8909], [2.487, 48.887], [2.4779, 48.8892], [2.4754, 48.8863], [2.4703, 48.8868], [2.4649, 48.8781], [2.4684, 48.8772], [2.4675, 48.8763], [2.4703, 48.8742], [2.4722, 48.8675], [2.4808, 48.8689], [2.4797, 48.8678], [2.4822, 48.8671], [2.4828, 48.864], [2.4816, 48.8615], [2.491, 48.8608], [2.4916, 48.8595], [2.4973, 48.8604], [2.5009, 48.867], [2.5009, 48.873], [2.5058, 48.8721], [2.5094, 48.8781], [2.518, 48.8745], [2.5248, 48.8756], [2.5297, 48.8739], [2.5312, 48.8767], [2.5393, 48.8697], [2.5519, 48.8744], [2.5583, 48.8674], [2.5676, 48.8659], [2.5706, 48.8693], [2.5678, 48.8727], [2.5719, 48.8782], [2.5714, 48.8798], [2.5648, 48.8814], [2.5592, 48.8852]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_87b54dfcde89a9f9827ff31bdb49fcb3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b1ba90c20733377f34a61063ed348d91 = $(`<div id="html_b1ba90c20733377f34a61063ed348d91" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 8ème circonscription - 93008</div>`)[0];
+                popup_87b54dfcde89a9f9827ff31bdb49fcb3.setContent(html_b1ba90c20733377f34a61063ed348d91);
+            
+        
+
+        geo_json_e9761c879869a2e0e7983ffc4d015844.bindPopup(popup_87b54dfcde89a9f9827ff31bdb49fcb3)
+        ;
+
+        
+    
+    
+            geo_json_e9761c879869a2e0e7983ffc4d015844.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_d846fad32b421e4f35a6d60ec1aa3419_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_d846fad32b421e4f35a6d60ec1aa3419_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d846fad32b421e4f35a6d60ec1aa3419 = L.geoJson(null, {
+                onEachFeature: geo_json_d846fad32b421e4f35a6d60ec1aa3419_onEachFeature,
+            
+                style: geo_json_d846fad32b421e4f35a6d60ec1aa3419_styler,
+        });
+
+        function geo_json_d846fad32b421e4f35a6d60ec1aa3419_add (data) {
+            geo_json_d846fad32b421e4f35a6d60ec1aa3419
+                .addData(data);
+        }
+            geo_json_d846fad32b421e4f35a6d60ec1aa3419_add({"bbox": [2.4949, 48.8077, 2.5963, 48.8781], "features": [{"bbox": [2.4949, 48.8077, 2.5963, 48.8781], "geometry": {"coordinates": [[[2.5676, 48.8659], [2.5583, 48.8674], [2.5519, 48.8744], [2.5393, 48.8697], [2.5312, 48.8767], [2.5297, 48.8739], [2.5248, 48.8756], [2.518, 48.8745], [2.5094, 48.8781], [2.5058, 48.8721], [2.5009, 48.873], [2.5009, 48.867], [2.4973, 48.8604], [2.4961, 48.8607], [2.4971, 48.8592], [2.4949, 48.8588], [2.4968, 48.8557], [2.5055, 48.8572], [2.5135, 48.8501], [2.5156, 48.8513], [2.519, 48.848], [2.5247, 48.8491], [2.5288, 48.8436], [2.5345, 48.8453], [2.5374, 48.8412], [2.5408, 48.8394], [2.5367, 48.8385], [2.5381, 48.8369], [2.5441, 48.835], [2.5473, 48.8361], [2.5474, 48.8342], [2.5492, 48.8351], [2.5554, 48.8311], [2.5568, 48.8316], [2.5606, 48.8289], [2.5613, 48.8265], [2.5724, 48.8236], [2.5687, 48.818], [2.5698, 48.8152], [2.5929, 48.8077], [2.5963, 48.8111], [2.5924, 48.827], [2.5872, 48.8256], [2.5857, 48.8294], [2.5873, 48.8335], [2.5742, 48.8534], [2.5832, 48.8554], [2.5814, 48.859], [2.587, 48.8602], [2.5881, 48.8643], [2.5762, 48.8652], [2.5724, 48.8679], [2.5676, 48.8659]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6a991bff304fd010a59485917f93d58e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_82897cba608b69b8203bd7f0801545ec = $(`<div id="html_82897cba608b69b8203bd7f0801545ec" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 3ème circonscription - 93003</div>`)[0];
+                popup_6a991bff304fd010a59485917f93d58e.setContent(html_82897cba608b69b8203bd7f0801545ec);
+            
+        
+
+        geo_json_d846fad32b421e4f35a6d60ec1aa3419.bindPopup(popup_6a991bff304fd010a59485917f93d58e)
+        ;
+
+        
+    
+    
+            geo_json_d846fad32b421e4f35a6d60ec1aa3419.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_439ddf7db730cac6937abb47b135199f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_439ddf7db730cac6937abb47b135199f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_439ddf7db730cac6937abb47b135199f = L.geoJson(null, {
+                onEachFeature: geo_json_439ddf7db730cac6937abb47b135199f_onEachFeature,
+            
+                style: geo_json_439ddf7db730cac6937abb47b135199f_styler,
+        });
+
+        function geo_json_439ddf7db730cac6937abb47b135199f_add (data) {
+            geo_json_439ddf7db730cac6937abb47b135199f
+                .addData(data);
+        }
+            geo_json_439ddf7db730cac6937abb47b135199f_add({"bbox": [2.3334, 48.9218, 2.3977, 48.974], "features": [{"bbox": [2.3334, 48.9218, 2.3977, 48.974], "geometry": {"coordinates": [[[2.3748, 48.9238], [2.3778, 48.9253], [2.3751, 48.9277], [2.3776, 48.9318], [2.3825, 48.9308], [2.3839, 48.9325], [2.3847, 48.9403], [2.3961, 48.9455], [2.3977, 48.9495], [2.3837, 48.9435], [2.3821, 48.9454], [2.3771, 48.9446], [2.3752, 48.9476], [2.3717, 48.947], [2.3655, 48.9588], [2.3733, 48.9601], [2.3757, 48.9721], [2.3617, 48.974], [2.359, 48.9729], [2.3539, 48.9658], [2.3439, 48.9684], [2.3334, 48.9553], [2.346, 48.9464], [2.3394, 48.9476], [2.3369, 48.9451], [2.3408, 48.9443], [2.3383, 48.9426], [2.3399, 48.9405], [2.3425, 48.941], [2.3417, 48.9363], [2.3439, 48.9365], [2.3441, 48.9388], [2.3463, 48.9334], [2.3493, 48.9331], [2.3523, 48.9282], [2.3584, 48.9283], [2.3604, 48.9245], [2.3636, 48.9267], [2.3657, 48.9256], [2.367, 48.9218], [2.3667, 48.9235], [2.3683, 48.9245], [2.372, 48.9225], [2.3748, 48.9238]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a03abfbdb6f4fce7e606aa9f47128c17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_79c29320a6be677eed021414396e7dd7 = $(`<div id="html_79c29320a6be677eed021414396e7dd7" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 2ème circonscription - 93002</div>`)[0];
+                popup_a03abfbdb6f4fce7e606aa9f47128c17.setContent(html_79c29320a6be677eed021414396e7dd7);
+            
+        
+
+        geo_json_439ddf7db730cac6937abb47b135199f.bindPopup(popup_a03abfbdb6f4fce7e606aa9f47128c17)
+        ;
+
+        
+    
+    
+            geo_json_439ddf7db730cac6937abb47b135199f.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+    
+        function geo_json_67c1938f44785156e4349ab1fde6b3ce_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_67c1938f44785156e4349ab1fde6b3ce_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_67c1938f44785156e4349ab1fde6b3ce = L.geoJson(null, {
+                onEachFeature: geo_json_67c1938f44785156e4349ab1fde6b3ce_onEachFeature,
+            
+                style: geo_json_67c1938f44785156e4349ab1fde6b3ce_styler,
+        });
+
+        function geo_json_67c1938f44785156e4349ab1fde6b3ce_add (data) {
+            geo_json_67c1938f44785156e4349ab1fde6b3ce
+                .addData(data);
+        }
+            geo_json_67c1938f44785156e4349ab1fde6b3ce_add({"bbox": [2.4958, 48.9239, 2.5959, 49.0121], "features": [{"bbox": [2.4958, 48.9239, 2.5959, 49.0121], "geometry": {"coordinates": [[[2.5535, 49.0101], [2.5531, 49.0068], [2.5488, 49.0067], [2.5493, 49.0032], [2.5481, 49.0031], [2.5478, 49.0051], [2.5441, 49.0047], [2.5412, 49.0063], [2.5322, 49.0052], [2.5244, 48.9962], [2.5228, 48.9921], [2.5189, 48.991], [2.5192, 48.9878], [2.5169, 48.9876], [2.517, 48.9861], [2.5123, 48.986], [2.5147, 48.9822], [2.5092, 48.9798], [2.5038, 48.9795], [2.5004, 48.9777], [2.5021, 48.9766], [2.4958, 48.9751], [2.498, 48.9739], [2.4962, 48.9726], [2.5126, 48.9616], [2.5241, 48.9505], [2.517, 48.9482], [2.5173, 48.9467], [2.5083, 48.9403], [2.51, 48.9395], [2.5072, 48.9356], [2.5054, 48.936], [2.5054, 48.9344], [2.5103, 48.9334], [2.5144, 48.9303], [2.5134, 48.9279], [2.5181, 48.9251], [2.5217, 48.9239], [2.5259, 48.9277], [2.5279, 48.9262], [2.5345, 48.9273], [2.5366, 48.9259], [2.5439, 48.9346], [2.5563, 48.934], [2.5566, 48.9353], [2.5685, 48.937], [2.5663, 48.9427], [2.5689, 48.9433], [2.5714, 48.9393], [2.5769, 48.9364], [2.5959, 48.9386], [2.5934, 48.9475], [2.5892, 48.954], [2.5815, 48.9589], [2.5622, 48.9791], [2.5637, 48.9806], [2.5791, 48.9793], [2.5766, 48.9841], [2.5814, 48.986], [2.5793, 48.9902], [2.5813, 48.9905], [2.576, 49.0003], [2.5715, 48.9999], [2.5735, 49.001], [2.5713, 49.0042], [2.5691, 49.0038], [2.5701, 49.0059], [2.5647, 49.0056], [2.5645, 49.0073], [2.5707, 49.0077], [2.5691, 49.0113], [2.5592, 49.0121], [2.5535, 49.0101]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c5c986923fd5e405c71c8586a3423533 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c419904d5ec1e168f864dc3a3695de21 = $(`<div id="html_c419904d5ec1e168f864dc3a3695de21" style="width: 100.0%; height: 100.0%;">Seine-Saint-Denis - 11ème circonscription - 93011</div>`)[0];
+                popup_c5c986923fd5e405c71c8586a3423533.setContent(html_c419904d5ec1e168f864dc3a3695de21);
+            
+        
+
+        geo_json_67c1938f44785156e4349ab1fde6b3ce.bindPopup(popup_c5c986923fd5e405c71c8586a3423533)
+        ;
+
+        
+    
+    
+            geo_json_67c1938f44785156e4349ab1fde6b3ce.addTo(map_163119f56e2d24eb7dc3d35c6e92fbf1);
+        
+</script>
+</html>

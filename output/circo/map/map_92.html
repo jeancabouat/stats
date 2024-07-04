@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_697a64a9756eb399c45c901dd86d20ba {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_697a64a9756eb399c45c901dd86d20ba" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_697a64a9756eb399c45c901dd86d20ba = L.map(
+                "map_697a64a9756eb399c45c901dd86d20ba",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_26e7e52ff5051a27db584cefc7c2bf21 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_26e7e52ff5051a27db584cefc7c2bf21.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_a35ebec8cb9e781619ee3b0d68319838_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_a35ebec8cb9e781619ee3b0d68319838_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a35ebec8cb9e781619ee3b0d68319838 = L.geoJson(null, {
+                onEachFeature: geo_json_a35ebec8cb9e781619ee3b0d68319838_onEachFeature,
+            
+                style: geo_json_a35ebec8cb9e781619ee3b0d68319838_styler,
+        });
+
+        function geo_json_a35ebec8cb9e781619ee3b0d68319838_add (data) {
+            geo_json_a35ebec8cb9e781619ee3b0d68319838
+                .addData(data);
+        }
+            geo_json_a35ebec8cb9e781619ee3b0d68319838_add({"bbox": [2.2288, 48.7295, 2.3266, 48.7893], "features": [{"bbox": [2.2288, 48.7295, 2.3266, 48.7893], "geometry": {"coordinates": [[[2.2746, 48.7407], [2.2799, 48.7327], [2.3025, 48.7408], [2.3015, 48.7362], [2.3038, 48.7295], [2.3144, 48.7304], [2.3187, 48.737], [2.313, 48.7382], [2.317, 48.7409], [2.3143, 48.7433], [2.3185, 48.745], [2.3207, 48.7488], [2.3101, 48.7522], [2.3115, 48.7543], [2.3087, 48.7554], [2.3134, 48.7602], [2.3151, 48.7657], [2.3266, 48.7787], [2.3246, 48.7791], [2.3258, 48.7819], [2.3244, 48.7822], [2.3251, 48.7863], [2.3124, 48.7893], [2.3097, 48.7849], [2.3034, 48.7854], [2.2876, 48.7825], [2.2806, 48.7833], [2.2762, 48.7813], [2.2744, 48.777], [2.2674, 48.7765], [2.2599, 48.7732], [2.2392, 48.7727], [2.2368, 48.7737], [2.2375, 48.7763], [2.2293, 48.7763], [2.2288, 48.7745], [2.2331, 48.7691], [2.233, 48.7662], [2.2386, 48.7665], [2.2407, 48.7638], [2.247, 48.7608], [2.2493, 48.7618], [2.262, 48.7598], [2.2689, 48.762], [2.2687, 48.7607], [2.2707, 48.7607], [2.2694, 48.7577], [2.2761, 48.7566], [2.275, 48.7553], [2.2854, 48.7475], [2.2848, 48.7456], [2.2746, 48.7407]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_91e8bffbdc5398f0c7587738fcada3b6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_68b1d6a0cb44ff3593f2538ca8f28dc8 = $(`<div id="html_68b1d6a0cb44ff3593f2538ca8f28dc8" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 13ème circonscription - 92013</div>`)[0];
+                popup_91e8bffbdc5398f0c7587738fcada3b6.setContent(html_68b1d6a0cb44ff3593f2538ca8f28dc8);
+            
+        
+
+        geo_json_a35ebec8cb9e781619ee3b0d68319838.bindPopup(popup_91e8bffbdc5398f0c7587738fcada3b6)
+        ;
+
+        
+    
+    
+            geo_json_a35ebec8cb9e781619ee3b0d68319838.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_7bb4564b1149e0053edd4408badbaae1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_7bb4564b1149e0053edd4408badbaae1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7bb4564b1149e0053edd4408badbaae1 = L.geoJson(null, {
+                onEachFeature: geo_json_7bb4564b1149e0053edd4408badbaae1_onEachFeature,
+            
+                style: geo_json_7bb4564b1149e0053edd4408badbaae1_styler,
+        });
+
+        function geo_json_7bb4564b1149e0053edd4408badbaae1_add (data) {
+            geo_json_7bb4564b1149e0053edd4408badbaae1
+                .addData(data);
+        }
+            geo_json_7bb4564b1149e0053edd4408badbaae1_add({"bbox": [2.2366, 48.9023, 2.322, 48.9338], "features": [{"bbox": [2.2366, 48.9023, 2.322, 48.9338], "geometry": {"coordinates": [[[2.2921, 48.918], [2.2859, 48.9227], [2.2833, 48.9317], [2.273, 48.9338], [2.2724, 48.9285], [2.2658, 48.9294], [2.2535, 48.9275], [2.2519, 48.9259], [2.2521, 48.923], [2.2498, 48.9229], [2.2419, 48.9141], [2.2366, 48.9113], [2.2377, 48.9088], [2.2499, 48.9127], [2.2616, 48.9139], [2.2632, 48.9202], [2.2672, 48.9195], [2.2698, 48.9247], [2.2682, 48.9251], [2.2733, 48.9268], [2.2806, 48.9191], [2.2723, 48.9127], [2.2722, 48.9102], [2.265, 48.9102], [2.2664, 48.9063], [2.2743, 48.9083], [2.2801, 48.9036], [2.2818, 48.9046], [2.2843, 48.9023], [2.2982, 48.9097], [2.3198, 48.9159], [2.322, 48.9187], [2.3178, 48.9208], [2.2963, 48.9128], [2.2952, 48.9199], [2.2921, 48.918]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9eb8746cf613399aaadc9bd395de2bed = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9fd1a8c21caf7c92b7da9a900aba738b = $(`<div id="html_9fd1a8c21caf7c92b7da9a900aba738b" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 2ème circonscription - 92002</div>`)[0];
+                popup_9eb8746cf613399aaadc9bd395de2bed.setContent(html_9fd1a8c21caf7c92b7da9a900aba738b);
+            
+        
+
+        geo_json_7bb4564b1149e0053edd4408badbaae1.bindPopup(popup_9eb8746cf613399aaadc9bd395de2bed)
+        ;
+
+        
+    
+    
+            geo_json_7bb4564b1149e0053edd4408badbaae1.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_4635cac338d08066c3fe2551a1a6f6f2_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_4635cac338d08066c3fe2551a1a6f6f2_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4635cac338d08066c3fe2551a1a6f6f2 = L.geoJson(null, {
+                onEachFeature: geo_json_4635cac338d08066c3fe2551a1a6f6f2_onEachFeature,
+            
+                style: geo_json_4635cac338d08066c3fe2551a1a6f6f2_styler,
+        });
+
+        function geo_json_4635cac338d08066c3fe2551a1a6f6f2_add (data) {
+            geo_json_4635cac338d08066c3fe2551a1a6f6f2
+                .addData(data);
+        }
+            geo_json_4635cac338d08066c3fe2551a1a6f6f2_add({"bbox": [2.2745, 48.7849, 2.3325, 48.8251], "features": [{"bbox": [2.2745, 48.7849, 2.3325, 48.8251], "geometry": {"coordinates": [[[2.3013, 48.8251], [2.2909, 48.8177], [2.2745, 48.8134], [2.2905, 48.809], [2.2936, 48.8119], [2.2948, 48.8105], [2.298, 48.8121], [2.3059, 48.8086], [2.303, 48.8034], [2.2996, 48.8029], [2.2922, 48.796], [2.2983, 48.7945], [2.2975, 48.7937], [2.3034, 48.7854], [2.3097, 48.7849], [2.3124, 48.7893], [2.3187, 48.788], [2.3264, 48.8083], [2.324, 48.8054], [2.3183, 48.806], [2.3179, 48.8084], [2.3191, 48.81], [2.3256, 48.8096], [2.3325, 48.8182], [2.3013, 48.8251]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a6025a170104feb0d2513ebea802ca81 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9148863d0ee7964338b7e019b7ef9660 = $(`<div id="html_9148863d0ee7964338b7e019b7ef9660" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 11ème circonscription - 92011</div>`)[0];
+                popup_a6025a170104feb0d2513ebea802ca81.setContent(html_9148863d0ee7964338b7e019b7ef9660);
+            
+        
+
+        geo_json_4635cac338d08066c3fe2551a1a6f6f2.bindPopup(popup_a6025a170104feb0d2513ebea802ca81)
+        ;
+
+        
+    
+    
+            geo_json_4635cac338d08066c3fe2551a1a6f6f2.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_84bdb43682f1e3f6d55a5eecd3f11299_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_84bdb43682f1e3f6d55a5eecd3f11299_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_84bdb43682f1e3f6d55a5eecd3f11299 = L.geoJson(null, {
+                onEachFeature: geo_json_84bdb43682f1e3f6d55a5eecd3f11299_onEachFeature,
+            
+                style: geo_json_84bdb43682f1e3f6d55a5eecd3f11299_styler,
+        });
+
+        function geo_json_84bdb43682f1e3f6d55a5eecd3f11299_add (data) {
+            geo_json_84bdb43682f1e3f6d55a5eecd3f11299
+                .addData(data);
+        }
+            geo_json_84bdb43682f1e3f6d55a5eecd3f11299_add({"bbox": [2.2291, 48.8885, 2.2843, 48.9268], "features": [{"bbox": [2.2291, 48.8885, 2.2843, 48.9268], "geometry": {"coordinates": [[[2.2377, 48.9088], [2.2291, 48.906], [2.2319, 48.9009], [2.2306, 48.9003], [2.2338, 48.8957], [2.2406, 48.8945], [2.2476, 48.8977], [2.2522, 48.8923], [2.2536, 48.8925], [2.2554, 48.8885], [2.2643, 48.8955], [2.2843, 48.9023], [2.2818, 48.9046], [2.2801, 48.9036], [2.2743, 48.9083], [2.2664, 48.9063], [2.265, 48.9102], [2.2722, 48.9102], [2.2723, 48.9127], [2.2806, 48.9191], [2.2733, 48.9268], [2.2682, 48.9251], [2.2698, 48.9247], [2.2672, 48.9195], [2.2632, 48.9202], [2.2616, 48.9139], [2.2499, 48.9127], [2.2377, 48.9088]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c0c9b6937d4dcb03e4ad86de8034ca73 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed574f3e122602aff19d407b68e53700 = $(`<div id="html_ed574f3e122602aff19d407b68e53700" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 3ème circonscription - 92003</div>`)[0];
+                popup_c0c9b6937d4dcb03e4ad86de8034ca73.setContent(html_ed574f3e122602aff19d407b68e53700);
+            
+        
+
+        geo_json_84bdb43682f1e3f6d55a5eecd3f11299.bindPopup(popup_c0c9b6937d4dcb03e4ad86de8034ca73)
+        ;
+
+        
+    
+    
+            geo_json_84bdb43682f1e3f6d55a5eecd3f11299.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_ee6216dfe083306fdb450ea0b23e5a4f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_ee6216dfe083306fdb450ea0b23e5a4f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ee6216dfe083306fdb450ea0b23e5a4f = L.geoJson(null, {
+                onEachFeature: geo_json_ee6216dfe083306fdb450ea0b23e5a4f_onEachFeature,
+            
+                style: geo_json_ee6216dfe083306fdb450ea0b23e5a4f_styler,
+        });
+
+        function geo_json_ee6216dfe083306fdb450ea0b23e5a4f_add (data) {
+            geo_json_ee6216dfe083306fdb450ea0b23e5a4f
+                .addData(data);
+        }
+            geo_json_ee6216dfe083306fdb450ea0b23e5a4f_add({"bbox": [2.2229, 48.8254, 2.2628, 48.8535], "features": [{"bbox": [2.2229, 48.8254, 2.2628, 48.8535], "geometry": {"coordinates": [[[2.2242, 48.8535], [2.2255, 48.8476], [2.2229, 48.838], [2.2273, 48.8274], [2.2344, 48.8309], [2.2483, 48.8254], [2.2519, 48.8301], [2.2568, 48.8313], [2.2584, 48.8303], [2.2628, 48.8339], [2.2551, 48.8348], [2.2517, 48.8388], [2.2525, 48.8455], [2.2242, 48.8535]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_92a512784b97d1ee83be7a870d9b4328 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ae97926ea117dc9e15f6275d5244bea = $(`<div id="html_1ae97926ea117dc9e15f6275d5244bea" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 9ème circonscription - 92009</div>`)[0];
+                popup_92a512784b97d1ee83be7a870d9b4328.setContent(html_1ae97926ea117dc9e15f6275d5244bea);
+            
+        
+
+        geo_json_ee6216dfe083306fdb450ea0b23e5a4f.bindPopup(popup_92a512784b97d1ee83be7a870d9b4328)
+        ;
+
+        
+    
+    
+            geo_json_ee6216dfe083306fdb450ea0b23e5a4f.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_4ca168d24f03065752031b463a59c022_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_4ca168d24f03065752031b463a59c022_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4ca168d24f03065752031b463a59c022 = L.geoJson(null, {
+                onEachFeature: geo_json_4ca168d24f03065752031b463a59c022_onEachFeature,
+            
+                style: geo_json_4ca168d24f03065752031b463a59c022_styler,
+        });
+
+        function geo_json_4ca168d24f03065752031b463a59c022_add (data) {
+            geo_json_4ca168d24f03065752031b463a59c022
+                .addData(data);
+        }
+            geo_json_4ca168d24f03065752031b463a59c022_add({"bbox": [2.2273, 48.8048, 2.3013, 48.8346], "features": [{"bbox": [2.2273, 48.8048, 2.3013, 48.8346], "geometry": {"coordinates": [[[2.2628, 48.8339], [2.2584, 48.8303], [2.2568, 48.8313], [2.2519, 48.8301], [2.2483, 48.8254], [2.2344, 48.8309], [2.2273, 48.8274], [2.2328, 48.8227], [2.2339, 48.8192], [2.241, 48.8182], [2.2413, 48.8148], [2.2456, 48.8132], [2.2413, 48.8099], [2.2477, 48.8104], [2.2473, 48.8076], [2.2489, 48.8048], [2.2483, 48.8075], [2.255, 48.8101], [2.2543, 48.8143], [2.2519, 48.8164], [2.2565, 48.817], [2.2615, 48.8133], [2.2772, 48.8153], [2.2782, 48.8142], [2.2909, 48.8177], [2.3013, 48.8251], [2.2791, 48.8325], [2.2728, 48.8279], [2.2678, 48.8278], [2.2673, 48.8315], [2.2699, 48.833], [2.2675, 48.8346], [2.2628, 48.8339]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ce145d36c69a7fb2cc705c8d48cb9f4d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_08309a11bc7f845b7e7a22e3b9f831be = $(`<div id="html_08309a11bc7f845b7e7a22e3b9f831be" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 10ème circonscription - 92010</div>`)[0];
+                popup_ce145d36c69a7fb2cc705c8d48cb9f4d.setContent(html_08309a11bc7f845b7e7a22e3b9f831be);
+            
+        
+
+        geo_json_4ca168d24f03065752031b463a59c022.bindPopup(popup_ce145d36c69a7fb2cc705c8d48cb9f4d)
+        ;
+
+        
+    
+    
+            geo_json_4ca168d24f03065752031b463a59c022.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d3f43492f712db5dfe2b7c9ab437cc3e = L.geoJson(null, {
+                onEachFeature: geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_onEachFeature,
+            
+                style: geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_styler,
+        });
+
+        function geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_add (data) {
+            geo_json_d3f43492f712db5dfe2b7c9ab437cc3e
+                .addData(data);
+        }
+            geo_json_d3f43492f712db5dfe2b7c9ab437cc3e_add({"bbox": [2.2237, 48.7727, 2.3059, 48.817], "features": [{"bbox": [2.2237, 48.7727, 2.3059, 48.817], "geometry": {"coordinates": [[[2.2266, 48.7761], [2.2288, 48.7745], [2.2304, 48.7768], [2.2375, 48.7763], [2.2368, 48.7737], [2.2392, 48.7727], [2.2599, 48.7732], [2.2674, 48.7765], [2.2744, 48.777], [2.2762, 48.7813], [2.2806, 48.7833], [2.2876, 48.7825], [2.3034, 48.7854], [2.2975, 48.7937], [2.2983, 48.7945], [2.2922, 48.796], [2.2996, 48.8029], [2.303, 48.8034], [2.3059, 48.8086], [2.298, 48.8121], [2.2948, 48.8105], [2.2936, 48.8119], [2.2905, 48.809], [2.2799, 48.8109], [2.2745, 48.8134], [2.2782, 48.8142], [2.2772, 48.8153], [2.2615, 48.8133], [2.2565, 48.817], [2.2519, 48.8164], [2.2543, 48.8143], [2.255, 48.8101], [2.2483, 48.8075], [2.2483, 48.8039], [2.2463, 48.8048], [2.2423, 48.8034], [2.2388, 48.7978], [2.2348, 48.7954], [2.2365, 48.789], [2.2348, 48.7845], [2.2237, 48.7806], [2.2241, 48.7778], [2.2266, 48.7761]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_99bff61298bcf45ec51d4ce74380ae70 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7e470451d27050721d365c111879939d = $(`<div id="html_7e470451d27050721d365c111879939d" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 12ème circonscription - 92012</div>`)[0];
+                popup_99bff61298bcf45ec51d4ce74380ae70.setContent(html_7e470451d27050721d365c111879939d);
+            
+        
+
+        geo_json_d3f43492f712db5dfe2b7c9ab437cc3e.bindPopup(popup_99bff61298bcf45ec51d4ce74380ae70)
+        ;
+
+        
+    
+    
+            geo_json_d3f43492f712db5dfe2b7c9ab437cc3e.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_06839f09e1a4b4948908203c88f1e93a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_06839f09e1a4b4948908203c88f1e93a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_06839f09e1a4b4948908203c88f1e93a = L.geoJson(null, {
+                onEachFeature: geo_json_06839f09e1a4b4948908203c88f1e93a_onEachFeature,
+            
+                style: geo_json_06839f09e1a4b4948908203c88f1e93a_styler,
+        });
+
+        function geo_json_06839f09e1a4b4948908203c88f1e93a_add (data) {
+            geo_json_06839f09e1a4b4948908203c88f1e93a
+                .addData(data);
+        }
+            geo_json_06839f09e1a4b4948908203c88f1e93a_add({"bbox": [2.1457, 48.7816, 2.2489, 48.8516], "features": [{"bbox": [2.1457, 48.7816, 2.2489, 48.8516], "geometry": {"coordinates": [[[2.1485, 48.8285], [2.1515, 48.8214], [2.1503, 48.8188], [2.1532, 48.8161], [2.1627, 48.8124], [2.1665, 48.8123], [2.1693, 48.8159], [2.1767, 48.814], [2.1764, 48.8109], [2.1831, 48.8053], [2.1804, 48.8048], [2.182, 48.8006], [2.187, 48.8007], [2.1829, 48.7972], [2.2026, 48.7984], [2.2045, 48.7958], [2.2099, 48.7939], [2.2116, 48.7913], [2.2063, 48.7849], [2.2115, 48.7881], [2.2192, 48.7854], [2.2233, 48.7859], [2.2266, 48.7816], [2.2348, 48.7845], [2.2365, 48.789], [2.2348, 48.7954], [2.2388, 48.7978], [2.2423, 48.8034], [2.2489, 48.8048], [2.2477, 48.8104], [2.2413, 48.8099], [2.2456, 48.8132], [2.2449, 48.8141], [2.2413, 48.8148], [2.2421, 48.8162], [2.2395, 48.819], [2.2354, 48.8184], [2.233, 48.8199], [2.2328, 48.8227], [2.2273, 48.8274], [2.2241, 48.8352], [2.2221, 48.8354], [2.2238, 48.8297], [2.2208, 48.8285], [2.2216, 48.827], [2.2189, 48.8264], [2.2006, 48.8299], [2.1876, 48.8288], [2.1808, 48.8306], [2.1853, 48.8339], [2.1874, 48.8376], [2.1864, 48.8385], [2.1667, 48.8377], [2.167, 48.8422], [2.1789, 48.8441], [2.1826, 48.8516], [2.1766, 48.8516], [2.1599, 48.8476], [2.152, 48.8488], [2.1457, 48.8418], [2.1485, 48.8285]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1c8a3a9163c59d81af32f81bf2011e9e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_384e92efdc861fb68565d31b2224c96f = $(`<div id="html_384e92efdc861fb68565d31b2224c96f" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 8ème circonscription - 92008</div>`)[0];
+                popup_1c8a3a9163c59d81af32f81bf2011e9e.setContent(html_384e92efdc861fb68565d31b2224c96f);
+            
+        
+
+        geo_json_06839f09e1a4b4948908203c88f1e93a.bindPopup(popup_1c8a3a9163c59d81af32f81bf2011e9e)
+        ;
+
+        
+    
+    
+            geo_json_06839f09e1a4b4948908203c88f1e93a.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_1e952f86e6669f905c9ab920805b46b7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_1e952f86e6669f905c9ab920805b46b7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1e952f86e6669f905c9ab920805b46b7 = L.geoJson(null, {
+                onEachFeature: geo_json_1e952f86e6669f905c9ab920805b46b7_onEachFeature,
+            
+                style: geo_json_1e952f86e6669f905c9ab920805b46b7_styler,
+        });
+
+        function geo_json_1e952f86e6669f905c9ab920805b46b7_add (data) {
+            geo_json_1e952f86e6669f905c9ab920805b46b7
+                .addData(data);
+        }
+            geo_json_1e952f86e6669f905c9ab920805b46b7_add({"bbox": [2.2711, 48.8856, 2.3209, 48.914], "features": [{"bbox": [2.2711, 48.8856, 2.3209, 48.914], "geometry": {"coordinates": [[[2.3199, 48.9005], [2.3209, 48.9046], [2.3138, 48.914], [2.3023, 48.9112], [2.2826, 48.9016], [2.2711, 48.8984], [2.2845, 48.8856], [2.3199, 48.9005]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4df1ab86924b0c67cd222c322f5f04e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f07632dcd7907783fdba9418808aae11 = $(`<div id="html_f07632dcd7907783fdba9418808aae11" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 5ème circonscription - 92005</div>`)[0];
+                popup_4df1ab86924b0c67cd222c322f5f04e4.setContent(html_f07632dcd7907783fdba9418808aae11);
+            
+        
+
+        geo_json_1e952f86e6669f905c9ab920805b46b7.bindPopup(popup_4df1ab86924b0c67cd222c322f5f04e4)
+        ;
+
+        
+    
+    
+            geo_json_1e952f86e6669f905c9ab920805b46b7.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_9b6b200e3cada506d7e395d8b2959c38_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_9b6b200e3cada506d7e395d8b2959c38_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9b6b200e3cada506d7e395d8b2959c38 = L.geoJson(null, {
+                onEachFeature: geo_json_9b6b200e3cada506d7e395d8b2959c38_onEachFeature,
+            
+                style: geo_json_9b6b200e3cada506d7e395d8b2959c38_styler,
+        });
+
+        function geo_json_9b6b200e3cada506d7e395d8b2959c38_add (data) {
+            geo_json_9b6b200e3cada506d7e395d8b2959c38
+                .addData(data);
+        }
+            geo_json_9b6b200e3cada506d7e395d8b2959c38_add({"bbox": [2.2204, 48.906, 2.3369, 48.951], "features": [{"bbox": [2.2204, 48.906, 2.3369, 48.951], "geometry": {"coordinates": [[[2.322, 48.9187], [2.3345, 48.9287], [2.3369, 48.9338], [2.3354, 48.9409], [2.3242, 48.946], [2.291, 48.951], [2.2815, 48.9498], [2.2618, 48.9438], [2.2204, 48.9206], [2.2241, 48.918], [2.2221, 48.9165], [2.2266, 48.9121], [2.2291, 48.906], [2.2377, 48.9088], [2.2366, 48.9113], [2.2419, 48.9141], [2.2498, 48.9229], [2.2521, 48.923], [2.2519, 48.9259], [2.2535, 48.9275], [2.2658, 48.9294], [2.2724, 48.9285], [2.273, 48.9338], [2.2833, 48.9317], [2.2859, 48.9227], [2.2921, 48.918], [2.2952, 48.9199], [2.2963, 48.9128], [2.3178, 48.9208], [2.322, 48.9187]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_73a37305e09191c0339fce877daded68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fba4d57b062d2c63c5df9d7b3be4c3de = $(`<div id="html_fba4d57b062d2c63c5df9d7b3be4c3de" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 1ère circonscription - 92001</div>`)[0];
+                popup_73a37305e09191c0339fce877daded68.setContent(html_fba4d57b062d2c63c5df9d7b3be4c3de);
+            
+        
+
+        geo_json_9b6b200e3cada506d7e395d8b2959c38.bindPopup(popup_73a37305e09191c0339fce877daded68)
+        ;
+
+        
+    
+    
+            geo_json_9b6b200e3cada506d7e395d8b2959c38.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_ebda5cc310cd59b1ae95e78f09fd115d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_ebda5cc310cd59b1ae95e78f09fd115d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ebda5cc310cd59b1ae95e78f09fd115d = L.geoJson(null, {
+                onEachFeature: geo_json_ebda5cc310cd59b1ae95e78f09fd115d_onEachFeature,
+            
+                style: geo_json_ebda5cc310cd59b1ae95e78f09fd115d_styler,
+        });
+
+        function geo_json_ebda5cc310cd59b1ae95e78f09fd115d_add (data) {
+            geo_json_ebda5cc310cd59b1ae95e78f09fd115d
+                .addData(data);
+        }
+            geo_json_ebda5cc310cd59b1ae95e78f09fd115d_add({"bbox": [2.2225, 48.8691, 2.2845, 48.8984], "features": [{"bbox": [2.2225, 48.8691, 2.2845, 48.8984], "geometry": {"coordinates": [[[2.255, 48.8741], [2.2585, 48.8804], [2.2799, 48.8786], [2.2809, 48.8828], [2.2845, 48.8856], [2.2711, 48.8984], [2.2643, 48.8955], [2.2554, 48.8885], [2.2536, 48.8925], [2.2522, 48.8923], [2.2476, 48.8977], [2.2406, 48.8945], [2.2338, 48.8957], [2.2301, 48.8911], [2.2304, 48.8894], [2.2225, 48.8831], [2.2306, 48.8799], [2.2364, 48.8796], [2.2319, 48.8759], [2.2368, 48.8735], [2.2317, 48.8691], [2.2404, 48.872], [2.2457, 48.8765], [2.255, 48.8741]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_48b76bcd073fba07428d60b83495e8f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d1573ee3c9015ca4d67d3534aab0ca75 = $(`<div id="html_d1573ee3c9015ca4d67d3534aab0ca75" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 6ème circonscription - 92006</div>`)[0];
+                popup_48b76bcd073fba07428d60b83495e8f4.setContent(html_d1573ee3c9015ca4d67d3534aab0ca75);
+            
+        
+
+        geo_json_ebda5cc310cd59b1ae95e78f09fd115d.bindPopup(popup_48b76bcd073fba07428d60b83495e8f4)
+        ;
+
+        
+    
+    
+            geo_json_ebda5cc310cd59b1ae95e78f09fd115d.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_9a60c94a9f243ea8d298b00d8026696b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_9a60c94a9f243ea8d298b00d8026696b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9a60c94a9f243ea8d298b00d8026696b = L.geoJson(null, {
+                onEachFeature: geo_json_9a60c94a9f243ea8d298b00d8026696b_onEachFeature,
+            
+                style: geo_json_9a60c94a9f243ea8d298b00d8026696b_styler,
+        });
+
+        function geo_json_9a60c94a9f243ea8d298b00d8026696b_add (data) {
+            geo_json_9a60c94a9f243ea8d298b00d8026696b
+                .addData(data);
+        }
+            geo_json_9a60c94a9f243ea8d298b00d8026696b_add({"bbox": [2.148, 48.827, 2.2257, 48.8958], "features": [{"bbox": [2.148, 48.827, 2.2257, 48.8958], "geometry": {"coordinates": [[[2.2257, 48.8594], [2.2137, 48.8593], [2.2126, 48.8617], [2.2062, 48.8603], [2.1998, 48.8614], [2.2021, 48.8662], [2.2078, 48.8644], [2.2091, 48.8671], [2.2114, 48.8667], [2.2118, 48.8695], [2.1999, 48.8796], [2.1693, 48.8958], [2.1629, 48.8873], [2.1633, 48.8829], [2.1583, 48.8806], [2.148, 48.8693], [2.1521, 48.8682], [2.1572, 48.8696], [2.1533, 48.8614], [2.1501, 48.8595], [2.1515, 48.8591], [2.1501, 48.857], [2.1599, 48.8476], [2.1766, 48.8516], [2.1826, 48.8516], [2.1789, 48.8441], [2.167, 48.8422], [2.1667, 48.8377], [2.1864, 48.8385], [2.1874, 48.8376], [2.1853, 48.8339], [2.1808, 48.8306], [2.1848, 48.8289], [2.2006, 48.8299], [2.2216, 48.827], [2.2208, 48.8285], [2.2238, 48.8297], [2.2221, 48.8354], [2.2241, 48.8352], [2.223, 48.8396], [2.2255, 48.8476], [2.2242, 48.8535], [2.2257, 48.8594]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e596de89b0d44482b43d857f97e598cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fe529573b67d6091d3edbb5488ce1e5c = $(`<div id="html_fe529573b67d6091d3edbb5488ce1e5c" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 7ème circonscription - 92007</div>`)[0];
+                popup_e596de89b0d44482b43d857f97e598cd.setContent(html_fe529573b67d6091d3edbb5488ce1e5c);
+            
+        
+
+        geo_json_9a60c94a9f243ea8d298b00d8026696b.bindPopup(popup_e596de89b0d44482b43d857f97e598cd)
+        ;
+
+        
+    
+    
+            geo_json_9a60c94a9f243ea8d298b00d8026696b.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+    
+        function geo_json_a997fe441987f3239dd44ab436ceb55c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "blue"};
+            }
+        }
+
+        function geo_json_a997fe441987f3239dd44ab436ceb55c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a997fe441987f3239dd44ab436ceb55c = L.geoJson(null, {
+                onEachFeature: geo_json_a997fe441987f3239dd44ab436ceb55c_onEachFeature,
+            
+                style: geo_json_a997fe441987f3239dd44ab436ceb55c_styler,
+        });
+
+        function geo_json_a997fe441987f3239dd44ab436ceb55c_add (data) {
+            geo_json_a997fe441987f3239dd44ab436ceb55c
+                .addData(data);
+        }
+            geo_json_a997fe441987f3239dd44ab436ceb55c_add({"bbox": [2.1693, 48.8593, 2.2368, 48.9206], "features": [{"bbox": [2.1693, 48.8593, 2.2368, 48.9206], "geometry": {"coordinates": [[[2.2317, 48.8691], [2.2368, 48.8735], [2.2319, 48.8759], [2.2364, 48.8796], [2.2306, 48.8799], [2.2225, 48.8831], [2.2304, 48.8894], [2.2301, 48.8911], [2.2343, 48.8951], [2.2306, 48.9003], [2.2319, 48.9009], [2.2279, 48.9079], [2.2291, 48.9083], [2.2221, 48.9165], [2.2241, 48.918], [2.2204, 48.9206], [2.206, 48.9108], [2.192, 48.9046], [2.1774, 48.9007], [2.1693, 48.8958], [2.1999, 48.8796], [2.2118, 48.8695], [2.2114, 48.8667], [2.2091, 48.8671], [2.2078, 48.8644], [2.2021, 48.8662], [2.1998, 48.8614], [2.2062, 48.8603], [2.2126, 48.8617], [2.2137, 48.8593], [2.2257, 48.8594], [2.2317, 48.8691]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_59ab21ef8d69df05a8795640a2280cd1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ccbb484c2a2046d29ebcd60c992f8274 = $(`<div id="html_ccbb484c2a2046d29ebcd60c992f8274" style="width: 100.0%; height: 100.0%;">Hauts-de-Seine - 4ème circonscription - 92004</div>`)[0];
+                popup_59ab21ef8d69df05a8795640a2280cd1.setContent(html_ccbb484c2a2046d29ebcd60c992f8274);
+            
+        
+
+        geo_json_a997fe441987f3239dd44ab436ceb55c.bindPopup(popup_59ab21ef8d69df05a8795640a2280cd1)
+        ;
+
+        
+    
+    
+            geo_json_a997fe441987f3239dd44ab436ceb55c.addTo(map_697a64a9756eb399c45c901dd86d20ba);
+        
+</script>
+</html>

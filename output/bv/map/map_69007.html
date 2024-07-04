@@ -1,0 +1,3125 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_c2be2d7496ae785144abf042977aabd9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_c2be2d7496ae785144abf042977aabd9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_c2be2d7496ae785144abf042977aabd9 = L.map(
+                "map_c2be2d7496ae785144abf042977aabd9",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_f9982176e98dc020bd427d1864a38ad7 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_f9982176e98dc020bd427d1864a38ad7.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_04d2e7f4f5fdc253531e565cbdf41d86_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_04d2e7f4f5fdc253531e565cbdf41d86_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_04d2e7f4f5fdc253531e565cbdf41d86 = L.geoJson(null, {
+                onEachFeature: geo_json_04d2e7f4f5fdc253531e565cbdf41d86_onEachFeature,
+            
+                style: geo_json_04d2e7f4f5fdc253531e565cbdf41d86_styler,
+        });
+
+        function geo_json_04d2e7f4f5fdc253531e565cbdf41d86_add (data) {
+            geo_json_04d2e7f4f5fdc253531e565cbdf41d86
+                .addData(data);
+        }
+            geo_json_04d2e7f4f5fdc253531e565cbdf41d86_add({"bbox": [4.900973133775122, 45.733113021522406, 4.912044536313489, 45.7409093457583], "features": [{"bbox": [4.900973133775122, 45.733113021522406, 4.912044536313489, 45.7409093457583], "geometry": {"coordinates": [[[4.903604159601078, 45.73502607022832], [4.900973133775122, 45.7409093457583], [4.905060005380142, 45.73841219931196], [4.910890898806985, 45.73852398572645], [4.912044536313489, 45.73661497625832], [4.90997392433225, 45.733113021522406], [4.903604159601078, 45.73502607022832]], [[4.908303526237132, 45.73671389355695], [4.90830984040224, 45.73670854313285], [4.908784323652353, 45.73666775045523], [4.908314428897587, 45.7368774334638], [4.908303526237132, 45.73671389355695]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c40811c8c578a9deb097a576862a5141 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c24f949f956ae867d1fe86cc05faafcb = $(`<div id="html_c24f949f956ae867d1fe86cc05faafcb" style="width: 100.0%; height: 100.0%;">Bron - 0001</div>`)[0];
+                popup_c40811c8c578a9deb097a576862a5141.setContent(html_c24f949f956ae867d1fe86cc05faafcb);
+            
+        
+
+        geo_json_04d2e7f4f5fdc253531e565cbdf41d86.bindPopup(popup_c40811c8c578a9deb097a576862a5141)
+        ;
+
+        
+    
+    
+            geo_json_04d2e7f4f5fdc253531e565cbdf41d86.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_31fa1c57f6d6353dee80661d325119cf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_31fa1c57f6d6353dee80661d325119cf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_31fa1c57f6d6353dee80661d325119cf = L.geoJson(null, {
+                onEachFeature: geo_json_31fa1c57f6d6353dee80661d325119cf_onEachFeature,
+            
+                style: geo_json_31fa1c57f6d6353dee80661d325119cf_styler,
+        });
+
+        function geo_json_31fa1c57f6d6353dee80661d325119cf_add (data) {
+            geo_json_31fa1c57f6d6353dee80661d325119cf
+                .addData(data);
+        }
+            geo_json_31fa1c57f6d6353dee80661d325119cf_add({"bbox": [4.900480130769535, 45.72771020662294, 4.932241914257012, 45.74703066199544], "features": [{"bbox": [4.900480130769535, 45.72771020662294, 4.932241914257012, 45.74703066199544], "geometry": {"coordinates": [[[[4.900928862803817, 45.72853724828288], [4.900542194543926, 45.727739744996846], [4.900480130769535, 45.72771020662294], [4.900731701584312, 45.72858610475298], [4.900928862803817, 45.72853724828288]]], [[[4.926460739552583, 45.7416404188818], [4.927017625536577, 45.74354208569041], [4.922520696617499, 45.74396636467621], [4.922681665433135, 45.745459096719934], [4.925027593414591, 45.74665388051603], [4.932241914257012, 45.74431242572825], [4.928020462704774, 45.739683082781454], [4.928100094536585, 45.73463419784701], [4.926282398647388, 45.73627596244169], [4.926460739552583, 45.7416404188818]]], [[[4.923868056793318, 45.746634417481026], [4.923290007221866, 45.74615195090959], [4.922726878854418, 45.74703066199544], [4.924735078730452, 45.74675642451444], [4.923868056793318, 45.746634417481026]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6631ddb62cd37abf0466cb7ceae79c18 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55d5490b56544aa1fb14668b754d0e98 = $(`<div id="html_55d5490b56544aa1fb14668b754d0e98" style="width: 100.0%; height: 100.0%;">Bron - 0010</div>`)[0];
+                popup_6631ddb62cd37abf0466cb7ceae79c18.setContent(html_55d5490b56544aa1fb14668b754d0e98);
+            
+        
+
+        geo_json_31fa1c57f6d6353dee80661d325119cf.bindPopup(popup_6631ddb62cd37abf0466cb7ceae79c18)
+        ;
+
+        
+    
+    
+            geo_json_31fa1c57f6d6353dee80661d325119cf.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_0a611b8aa14867bcd3567a02e21e6ac1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0a611b8aa14867bcd3567a02e21e6ac1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0a611b8aa14867bcd3567a02e21e6ac1 = L.geoJson(null, {
+                onEachFeature: geo_json_0a611b8aa14867bcd3567a02e21e6ac1_onEachFeature,
+            
+                style: geo_json_0a611b8aa14867bcd3567a02e21e6ac1_styler,
+        });
+
+        function geo_json_0a611b8aa14867bcd3567a02e21e6ac1_add (data) {
+            geo_json_0a611b8aa14867bcd3567a02e21e6ac1
+                .addData(data);
+        }
+            geo_json_0a611b8aa14867bcd3567a02e21e6ac1_add({"bbox": [4.919594348313851, 45.73810590596668, 4.927017625536577, 45.744148668916736], "features": [{"bbox": [4.919594348313851, 45.73810590596668, 4.927017625536577, 45.744148668916736], "geometry": {"coordinates": [[[[4.920660508159837, 45.74051587056837], [4.919594348313851, 45.74294086696601], [4.922353708501616, 45.74173635538978], [4.92391118171094, 45.74208306777196], [4.922272286988775, 45.74253950300962], [4.922520696617499, 45.74396636467621], [4.927017625536577, 45.74354208569041], [4.925733676976036, 45.738731914944275], [4.92264566988433, 45.73810590596668], [4.920660508159837, 45.74051587056837]]], [[[4.921193786118192, 45.744148668916736], [4.921893946768059, 45.74332371219655], [4.921857329761496, 45.74320334552368], [4.921029041927846, 45.74313971004871], [4.921193786118192, 45.744148668916736]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b64ad0c43ba954f4f66fe01f7631c882 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_11fb23fd23e258753e6fcb06e1728f41 = $(`<div id="html_11fb23fd23e258753e6fcb06e1728f41" style="width: 100.0%; height: 100.0%;">Bron - 0011</div>`)[0];
+                popup_b64ad0c43ba954f4f66fe01f7631c882.setContent(html_11fb23fd23e258753e6fcb06e1728f41);
+            
+        
+
+        geo_json_0a611b8aa14867bcd3567a02e21e6ac1.bindPopup(popup_b64ad0c43ba954f4f66fe01f7631c882)
+        ;
+
+        
+    
+    
+            geo_json_0a611b8aa14867bcd3567a02e21e6ac1.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_1f1eb80176889e50c2f354e3ae870639_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1f1eb80176889e50c2f354e3ae870639_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1f1eb80176889e50c2f354e3ae870639 = L.geoJson(null, {
+                onEachFeature: geo_json_1f1eb80176889e50c2f354e3ae870639_onEachFeature,
+            
+                style: geo_json_1f1eb80176889e50c2f354e3ae870639_styler,
+        });
+
+        function geo_json_1f1eb80176889e50c2f354e3ae870639_add (data) {
+            geo_json_1f1eb80176889e50c2f354e3ae870639
+                .addData(data);
+        }
+            geo_json_1f1eb80176889e50c2f354e3ae870639_add({"bbox": [4.915090343273834, 45.741156629124525, 4.919579688600366, 45.74537141196322], "features": [{"bbox": [4.915090343273834, 45.741156629124525, 4.919579688600366, 45.74537141196322], "geometry": {"coordinates": [[[4.915090343273834, 45.742560539508055], [4.917839968912665, 45.74537141196322], [4.919579688600366, 45.74212536240535], [4.917711910798952, 45.741156629124525], [4.915090343273834, 45.742560539508055]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c6cd4f2f3d80c6a504725f7b11faf245 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4785e91ba4fe5f4c96f024de6f4eaa91 = $(`<div id="html_4785e91ba4fe5f4c96f024de6f4eaa91" style="width: 100.0%; height: 100.0%;">Bron - 0012</div>`)[0];
+                popup_c6cd4f2f3d80c6a504725f7b11faf245.setContent(html_4785e91ba4fe5f4c96f024de6f4eaa91);
+            
+        
+
+        geo_json_1f1eb80176889e50c2f354e3ae870639.bindPopup(popup_c6cd4f2f3d80c6a504725f7b11faf245)
+        ;
+
+        
+    
+    
+            geo_json_1f1eb80176889e50c2f354e3ae870639.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2750c9b789d1d3d6ec39f1bc0532efc0 = L.geoJson(null, {
+                onEachFeature: geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_onEachFeature,
+            
+                style: geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_styler,
+        });
+
+        function geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_add (data) {
+            geo_json_2750c9b789d1d3d6ec39f1bc0532efc0
+                .addData(data);
+        }
+            geo_json_2750c9b789d1d3d6ec39f1bc0532efc0_add({"bbox": [4.914143491638407, 45.73694225984301, 4.922446286560946, 45.743129414240144], "features": [{"bbox": [4.914143491638407, 45.73694225984301, 4.922446286560946, 45.743129414240144], "geometry": {"coordinates": [[[[4.915125301858185, 45.73786327920093], [4.914143491638407, 45.73947840763416], [4.916677542139082, 45.74234285272218], [4.919834539357286, 45.74175373361617], [4.922446286560946, 45.73826328271451], [4.9168176691402, 45.73694225984301], [4.915125301858185, 45.73786327920093]]], [[[4.915124921089391, 45.742687861731845], [4.915206066023273, 45.74301033380678], [4.915402273285359, 45.743129414240144], [4.915504626924529, 45.74270073311609], [4.915124921089391, 45.742687861731845]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_225e6c40d9617d809f8953838bd4a3db = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dbf8e5d9a4367d64259fcadf50dfb174 = $(`<div id="html_dbf8e5d9a4367d64259fcadf50dfb174" style="width: 100.0%; height: 100.0%;">Bron - 0013</div>`)[0];
+                popup_225e6c40d9617d809f8953838bd4a3db.setContent(html_dbf8e5d9a4367d64259fcadf50dfb174);
+            
+        
+
+        geo_json_2750c9b789d1d3d6ec39f1bc0532efc0.bindPopup(popup_225e6c40d9617d809f8953838bd4a3db)
+        ;
+
+        
+    
+    
+            geo_json_2750c9b789d1d3d6ec39f1bc0532efc0.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_5b8b8819c5e97b192a18e1b260e7b918_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5b8b8819c5e97b192a18e1b260e7b918_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5b8b8819c5e97b192a18e1b260e7b918 = L.geoJson(null, {
+                onEachFeature: geo_json_5b8b8819c5e97b192a18e1b260e7b918_onEachFeature,
+            
+                style: geo_json_5b8b8819c5e97b192a18e1b260e7b918_styler,
+        });
+
+        function geo_json_5b8b8819c5e97b192a18e1b260e7b918_add (data) {
+            geo_json_5b8b8819c5e97b192a18e1b260e7b918
+                .addData(data);
+        }
+            geo_json_5b8b8819c5e97b192a18e1b260e7b918_add({"bbox": [4.910081541550852, 45.72757109563525, 4.926809324046458, 45.73983246715106], "features": [{"bbox": [4.910081541550852, 45.72757109563525, 4.926809324046458, 45.73983246715106], "geometry": {"coordinates": [[[[4.924479076810669, 45.72757109563525], [4.923785556357892, 45.73190284201218], [4.926558056155786, 45.73256110470263], [4.926809324046458, 45.730211313160616], [4.924479076810669, 45.72757109563525]]], [[[4.910081541550852, 45.734668261166625], [4.912731559492, 45.73983246715106], [4.917376737010149, 45.73496217340502], [4.91075519727772, 45.73307676577871], [4.910081541550852, 45.734668261166625]], [[4.911849793462863, 45.734542507505815], [4.912661759127199, 45.73444959372056], [4.912837633393518, 45.73488528743249], [4.912152844134503, 45.73515706355595], [4.911849793462863, 45.734542507505815]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5866befd0f7c610cb06a8c5fb248335f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9695b19fa6961c28826bb3e9b53d7cad = $(`<div id="html_9695b19fa6961c28826bb3e9b53d7cad" style="width: 100.0%; height: 100.0%;">Bron - 0014</div>`)[0];
+                popup_5866befd0f7c610cb06a8c5fb248335f.setContent(html_9695b19fa6961c28826bb3e9b53d7cad);
+            
+        
+
+        geo_json_5b8b8819c5e97b192a18e1b260e7b918.bindPopup(popup_5866befd0f7c610cb06a8c5fb248335f)
+        ;
+
+        
+    
+    
+            geo_json_5b8b8819c5e97b192a18e1b260e7b918.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_028cbbb734be64bc0c4d9419faab66d1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_028cbbb734be64bc0c4d9419faab66d1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_028cbbb734be64bc0c4d9419faab66d1 = L.geoJson(null, {
+                onEachFeature: geo_json_028cbbb734be64bc0c4d9419faab66d1_onEachFeature,
+            
+                style: geo_json_028cbbb734be64bc0c4d9419faab66d1_styler,
+        });
+
+        function geo_json_028cbbb734be64bc0c4d9419faab66d1_add (data) {
+            geo_json_028cbbb734be64bc0c4d9419faab66d1
+                .addData(data);
+        }
+            geo_json_028cbbb734be64bc0c4d9419faab66d1_add({"bbox": [4.892952612881352, 45.73073948897337, 4.918539442979026, 45.7457940200615], "features": [{"bbox": [4.892952612881352, 45.73073948897337, 4.918539442979026, 45.7457940200615], "geometry": {"coordinates": [[[[4.912043319193324, 45.732500348052845], [4.910363212388658, 45.73289551332664], [4.910247377968611, 45.73331720267608], [4.91580886663525, 45.73507860871709], [4.918172245795796, 45.73228671954334], [4.917082427676848, 45.73073948897337], [4.912043319193324, 45.732500348052845]]], [[[4.918135367170779, 45.73410970630837], [4.918539442979026, 45.73387147653825], [4.918211451398695, 45.73340524766882], [4.917953594414894, 45.733835009308514], [4.918135367170779, 45.73410970630837]]], [[[4.9122425, 45.73508045886076], [4.912837633393518, 45.73488528743249], [4.912661759127199, 45.73444959372056], [4.91186516653762, 45.73443987405444], [4.9122425, 45.73508045886076]]], [[[4.897241858459928, 45.74076307716696], [4.892952612881352, 45.740492028359036], [4.895923391237184, 45.7457940200615], [4.90022690782557, 45.7431082098957], [4.897241858459928, 45.74076307716696]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bf5861bbad7ebf9444d11e3254d5e543 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3e142c0d2c0b58f0283108a044abec45 = $(`<div id="html_3e142c0d2c0b58f0283108a044abec45" style="width: 100.0%; height: 100.0%;">Bron - 0015</div>`)[0];
+                popup_bf5861bbad7ebf9444d11e3254d5e543.setContent(html_3e142c0d2c0b58f0283108a044abec45);
+            
+        
+
+        geo_json_028cbbb734be64bc0c4d9419faab66d1.bindPopup(popup_bf5861bbad7ebf9444d11e3254d5e543)
+        ;
+
+        
+    
+    
+            geo_json_028cbbb734be64bc0c4d9419faab66d1.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_163ee469894ef3bc7f2db8b3e44baa94_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_163ee469894ef3bc7f2db8b3e44baa94_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_163ee469894ef3bc7f2db8b3e44baa94 = L.geoJson(null, {
+                onEachFeature: geo_json_163ee469894ef3bc7f2db8b3e44baa94_onEachFeature,
+            
+                style: geo_json_163ee469894ef3bc7f2db8b3e44baa94_styler,
+        });
+
+        function geo_json_163ee469894ef3bc7f2db8b3e44baa94_add (data) {
+            geo_json_163ee469894ef3bc7f2db8b3e44baa94
+                .addData(data);
+        }
+            geo_json_163ee469894ef3bc7f2db8b3e44baa94_add({"bbox": [4.902595323127717, 45.72986895869498, 4.91709522622554, 45.73498998990531], "features": [{"bbox": [4.902595323127717, 45.72986895869498, 4.91709522622554, 45.73498998990531], "geometry": {"coordinates": [[[[4.917057767320564, 45.730666705978514], [4.91709522622554, 45.7302068995509], [4.916796835698737, 45.729997557505925], [4.916544403691213, 45.7303160895423], [4.917057767320564, 45.730666705978514]]], [[[4.902595323127717, 45.73215288450251], [4.904715929024183, 45.73498998990531], [4.910201426094503, 45.73337773807909], [4.91062745516191, 45.73164250876989], [4.908964815520974, 45.72986895869498], [4.907602711688075, 45.73158715016919], [4.903499671626172, 45.73069704674701], [4.902595323127717, 45.73215288450251]], [[4.903494954715346, 45.73211291487982], [4.90366102818991, 45.73243974747775], [4.903459729295429, 45.73268496613104], [4.90333606570093, 45.7325889696458], [4.903494954715346, 45.73211291487982]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aee54c1dbb58589a1574f35a54f54cd4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ffdf4d8009d27f7019a8d6e854cf2483 = $(`<div id="html_ffdf4d8009d27f7019a8d6e854cf2483" style="width: 100.0%; height: 100.0%;">Bron - 0016</div>`)[0];
+                popup_aee54c1dbb58589a1574f35a54f54cd4.setContent(html_ffdf4d8009d27f7019a8d6e854cf2483);
+            
+        
+
+        geo_json_163ee469894ef3bc7f2db8b3e44baa94.bindPopup(popup_aee54c1dbb58589a1574f35a54f54cd4)
+        ;
+
+        
+    
+    
+            geo_json_163ee469894ef3bc7f2db8b3e44baa94.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_11889275bede993600004c66cebd6554_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_11889275bede993600004c66cebd6554_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_11889275bede993600004c66cebd6554 = L.geoJson(null, {
+                onEachFeature: geo_json_11889275bede993600004c66cebd6554_onEachFeature,
+            
+                style: geo_json_11889275bede993600004c66cebd6554_styler,
+        });
+
+        function geo_json_11889275bede993600004c66cebd6554_add (data) {
+            geo_json_11889275bede993600004c66cebd6554
+                .addData(data);
+        }
+            geo_json_11889275bede993600004c66cebd6554_add({"bbox": [4.90333606570093, 45.72932923497317, 4.917082427676848, 45.732870778679015], "features": [{"bbox": [4.90333606570093, 45.72932923497317, 4.917082427676848, 45.732870778679015], "geometry": {"coordinates": [[[[4.909406567358082, 45.730502695775535], [4.908974434411261, 45.73004153179], [4.908591926587626, 45.730513137408714], [4.908983973720143, 45.73093903754267], [4.909406567358082, 45.730502695775535]]], [[[4.909961384390868, 45.73043236612691], [4.909562383047211, 45.73063601072961], [4.909760276843465, 45.73107416300128], [4.910197541205189, 45.7307812506398], [4.909961384390868, 45.73043236612691]]], [[[4.911882737524362, 45.73026017317999], [4.910541617612978, 45.732870778679015], [4.917082427676848, 45.73073948897337], [4.916607946670283, 45.72932923497317], [4.911882737524362, 45.73026017317999]]], [[[4.90366102818991, 45.73243974747775], [4.903494954715346, 45.73211291487982], [4.90333606570093, 45.7325889696458], [4.90366102818991, 45.73243974747775]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_29bd12a66a00630723ad501a9e96bcd7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_43627648e461fb1f444f1fa144807791 = $(`<div id="html_43627648e461fb1f444f1fa144807791" style="width: 100.0%; height: 100.0%;">Bron - 0017</div>`)[0];
+                popup_29bd12a66a00630723ad501a9e96bcd7.setContent(html_43627648e461fb1f444f1fa144807791);
+            
+        
+
+        geo_json_11889275bede993600004c66cebd6554.bindPopup(popup_29bd12a66a00630723ad501a9e96bcd7)
+        ;
+
+        
+    
+    
+            geo_json_11889275bede993600004c66cebd6554.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_9e4dd83118d2bfe5858e12dd9c779187_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9e4dd83118d2bfe5858e12dd9c779187_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9e4dd83118d2bfe5858e12dd9c779187 = L.geoJson(null, {
+                onEachFeature: geo_json_9e4dd83118d2bfe5858e12dd9c779187_onEachFeature,
+            
+                style: geo_json_9e4dd83118d2bfe5858e12dd9c779187_styler,
+        });
+
+        function geo_json_9e4dd83118d2bfe5858e12dd9c779187_add (data) {
+            geo_json_9e4dd83118d2bfe5858e12dd9c779187
+                .addData(data);
+        }
+            geo_json_9e4dd83118d2bfe5858e12dd9c779187_add({"bbox": [4.89705005958208, 45.718054, 4.9220579275886, 45.72811630189853], "features": [{"bbox": [4.89705005958208, 45.718054, 4.9220579275886, 45.72811630189853], "geometry": {"coordinates": [[[[4.9082, 45.719467], [4.906795188149178, 45.7205232823451], [4.910299572851398, 45.72161028856913], [4.911445422223975, 45.723581074750484], [4.909839334795212, 45.72534038918325], [4.904728601850683, 45.72157219156566], [4.905525305509737, 45.72636461306298], [4.909085861487135, 45.72811630189853], [4.915268624108651, 45.72508604274572], [4.919226763701011, 45.725541572692414], [4.9220579275886, 45.72126897951818], [4.909645, 45.718054], [4.9082, 45.719467]]], [[[4.89931231191497, 45.7264137326443], [4.898813963374193, 45.72619244110755], [4.89705005958208, 45.72656380031701], [4.899568254464134, 45.726965411564244], [4.89931231191497, 45.7264137326443]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2659e40ce1fc9d8a8c92c173a333a6bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_76887b817ad6a21024c3411522f28444 = $(`<div id="html_76887b817ad6a21024c3411522f28444" style="width: 100.0%; height: 100.0%;">Bron - 0018</div>`)[0];
+                popup_2659e40ce1fc9d8a8c92c173a333a6bb.setContent(html_76887b817ad6a21024c3411522f28444);
+            
+        
+
+        geo_json_9e4dd83118d2bfe5858e12dd9c779187.bindPopup(popup_2659e40ce1fc9d8a8c92c173a333a6bb)
+        ;
+
+        
+    
+    
+            geo_json_9e4dd83118d2bfe5858e12dd9c779187.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_8ae3734eed191c126995b4b4f26ef787_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8ae3734eed191c126995b4b4f26ef787_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8ae3734eed191c126995b4b4f26ef787 = L.geoJson(null, {
+                onEachFeature: geo_json_8ae3734eed191c126995b4b4f26ef787_onEachFeature,
+            
+                style: geo_json_8ae3734eed191c126995b4b4f26ef787_styler,
+        });
+
+        function geo_json_8ae3734eed191c126995b4b4f26ef787_add (data) {
+            geo_json_8ae3734eed191c126995b4b4f26ef787
+                .addData(data);
+        }
+            geo_json_8ae3734eed191c126995b4b4f26ef787_add({"bbox": [4.891258869563687, 45.7205232823451, 4.911445422223975, 45.751667005638645], "features": [{"bbox": [4.891258869563687, 45.7205232823451, 4.911445422223975, 45.751667005638645], "geometry": {"coordinates": [[[[4.898090197204788, 45.72841102576303], [4.900480130769535, 45.72771020662294], [4.901998016487444, 45.72904312261988], [4.906569555003562, 45.727585930163215], [4.904728601850683, 45.72157219156566], [4.908491779780164, 45.725495100158355], [4.911445422223975, 45.723581074750484], [4.910299572851398, 45.72161028856913], [4.906795188149178, 45.7205232823451], [4.895267, 45.722417], [4.894792357808864, 45.72513830562557], [4.891258869563687, 45.72848257303911], [4.893404608417459, 45.729163142439376], [4.895794285473788, 45.72691032743904], [4.898090197204788, 45.72841102576303]], [[4.899427903656917, 45.72696266448439], [4.89705005958208, 45.72656380031701], [4.898813963374193, 45.72619244110755], [4.899427903656917, 45.72696266448439]]], [[[4.897987798444231, 45.75075798118249], [4.897398315322552, 45.75049933797943], [4.897729799460655, 45.751667005638645], [4.897987798444231, 45.75075798118249]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_770371cea84467f386f58b14da826c00 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3444eed5ff3d94de0397315279d0c20d = $(`<div id="html_3444eed5ff3d94de0397315279d0c20d" style="width: 100.0%; height: 100.0%;">Bron - 0019</div>`)[0];
+                popup_770371cea84467f386f58b14da826c00.setContent(html_3444eed5ff3d94de0397315279d0c20d);
+            
+        
+
+        geo_json_8ae3734eed191c126995b4b4f26ef787.bindPopup(popup_770371cea84467f386f58b14da826c00)
+        ;
+
+        
+    
+    
+            geo_json_8ae3734eed191c126995b4b4f26ef787.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_61e4aaccc56741fcae40820bfbe139c1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_61e4aaccc56741fcae40820bfbe139c1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_61e4aaccc56741fcae40820bfbe139c1 = L.geoJson(null, {
+                onEachFeature: geo_json_61e4aaccc56741fcae40820bfbe139c1_onEachFeature,
+            
+                style: geo_json_61e4aaccc56741fcae40820bfbe139c1_styler,
+        });
+
+        function geo_json_61e4aaccc56741fcae40820bfbe139c1_add (data) {
+            geo_json_61e4aaccc56741fcae40820bfbe139c1
+                .addData(data);
+        }
+            geo_json_61e4aaccc56741fcae40820bfbe139c1_add({"bbox": [4.890717164623156, 45.73644402923061, 4.914339364045988, 45.752916], "features": [{"bbox": [4.890717164623156, 45.73644402923061, 4.914339364045988, 45.752916], "geometry": {"coordinates": [[[[4.891294315629334, 45.73644402923061], [4.890717164623156, 45.73670853049469], [4.891016534849114, 45.7371899338916], [4.891102530585069, 45.73713708734995], [4.891294315629334, 45.73644402923061]]], [[[4.896799, 45.74808], [4.898396, 45.752916], [4.907256329267637, 45.75115024624779], [4.906772528911622, 45.74627979061531], [4.90022690782557, 45.7431082098957], [4.895923391237184, 45.7457940200615], [4.896799, 45.74808]]], [[[4.914011500000576, 45.74893767514201], [4.914011500000385, 45.74931171680862], [4.914339364045988, 45.74918033158206], [4.914011500000576, 45.74893767514201]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1e496fdc45984626af9392a8c8626aad = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39a688bb23443ceba521cb74e0e65e67 = $(`<div id="html_39a688bb23443ceba521cb74e0e65e67" style="width: 100.0%; height: 100.0%;">Bron - 0002</div>`)[0];
+                popup_1e496fdc45984626af9392a8c8626aad.setContent(html_39a688bb23443ceba521cb74e0e65e67);
+            
+        
+
+        geo_json_61e4aaccc56741fcae40820bfbe139c1.bindPopup(popup_1e496fdc45984626af9392a8c8626aad)
+        ;
+
+        
+    
+    
+            geo_json_61e4aaccc56741fcae40820bfbe139c1.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_d2f7786d421836dd97cd5fb100e30254_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d2f7786d421836dd97cd5fb100e30254_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d2f7786d421836dd97cd5fb100e30254 = L.geoJson(null, {
+                onEachFeature: geo_json_d2f7786d421836dd97cd5fb100e30254_onEachFeature,
+            
+                style: geo_json_d2f7786d421836dd97cd5fb100e30254_styler,
+        });
+
+        function geo_json_d2f7786d421836dd97cd5fb100e30254_add (data) {
+            geo_json_d2f7786d421836dd97cd5fb100e30254
+                .addData(data);
+        }
+            geo_json_d2f7786d421836dd97cd5fb100e30254_add({"bbox": [4.887981139133513, 45.729163142439376, 4.894254576808923, 45.733667022155835], "features": [{"bbox": [4.887981139133513, 45.729163142439376, 4.894254576808923, 45.733667022155835], "geometry": {"coordinates": [[[4.891342950996094, 45.73268384597089], [4.892650406957221, 45.733667022155835], [4.894254576808923, 45.7317715752768], [4.893404608417459, 45.729163142439376], [4.887981139133513, 45.73114669354339], [4.891342950996094, 45.73268384597089]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b1960af04ed58c136d42dc725258d2ca = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3455dc939b2acc54fde08cae4544ff1a = $(`<div id="html_3455dc939b2acc54fde08cae4544ff1a" style="width: 100.0%; height: 100.0%;">Bron - 0020</div>`)[0];
+                popup_b1960af04ed58c136d42dc725258d2ca.setContent(html_3455dc939b2acc54fde08cae4544ff1a);
+            
+        
+
+        geo_json_d2f7786d421836dd97cd5fb100e30254.bindPopup(popup_b1960af04ed58c136d42dc725258d2ca)
+        ;
+
+        
+    
+    
+            geo_json_d2f7786d421836dd97cd5fb100e30254.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_14499dea5a3925f55cff7db47395f75d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_14499dea5a3925f55cff7db47395f75d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_14499dea5a3925f55cff7db47395f75d = L.geoJson(null, {
+                onEachFeature: geo_json_14499dea5a3925f55cff7db47395f75d_onEachFeature,
+            
+                style: geo_json_14499dea5a3925f55cff7db47395f75d_styler,
+        });
+
+        function geo_json_14499dea5a3925f55cff7db47395f75d_add (data) {
+            geo_json_14499dea5a3925f55cff7db47395f75d
+                .addData(data);
+        }
+            geo_json_14499dea5a3925f55cff7db47395f75d_add({"bbox": [4.888659, 45.72691032743904, 4.899906529229139, 45.735481472024624], "features": [{"bbox": [4.888659, 45.72691032743904, 4.899906529229139, 45.735481472024624], "geometry": {"coordinates": [[[4.888659, 45.733073], [4.890799563615053, 45.735481472024624], [4.899168551398455, 45.7338268184871], [4.899906529229139, 45.732535935406624], [4.89852609444805, 45.72867238691499], [4.895794285473788, 45.72691032743904], [4.893404608417459, 45.729163142439376], [4.894501902043493, 45.731310300015544], [4.892742715623241, 45.73359128903976], [4.890033182544175, 45.73218022741023], [4.888659, 45.733073]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7cd0e7d27c7d528a4f83903777a69679 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb3e17da02a5cdc1c8c5ed27f4e62d2e = $(`<div id="html_cb3e17da02a5cdc1c8c5ed27f4e62d2e" style="width: 100.0%; height: 100.0%;">Bron - 0021</div>`)[0];
+                popup_7cd0e7d27c7d528a4f83903777a69679.setContent(html_cb3e17da02a5cdc1c8c5ed27f4e62d2e);
+            
+        
+
+        geo_json_14499dea5a3925f55cff7db47395f75d.bindPopup(popup_7cd0e7d27c7d528a4f83903777a69679)
+        ;
+
+        
+    
+    
+            geo_json_14499dea5a3925f55cff7db47395f75d.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_feeb4143c9bb117985d8288417a8d63f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_feeb4143c9bb117985d8288417a8d63f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_feeb4143c9bb117985d8288417a8d63f = L.geoJson(null, {
+                onEachFeature: geo_json_feeb4143c9bb117985d8288417a8d63f_onEachFeature,
+            
+                style: geo_json_feeb4143c9bb117985d8288417a8d63f_styler,
+        });
+
+        function geo_json_feeb4143c9bb117985d8288417a8d63f_add (data) {
+            geo_json_feeb4143c9bb117985d8288417a8d63f
+                .addData(data);
+        }
+            geo_json_feeb4143c9bb117985d8288417a8d63f_add({"bbox": [4.89852609444805, 45.728360238219466, 4.905318494945386, 45.737253216265096], "features": [{"bbox": [4.89852609444805, 45.728360238219466, 4.905318494945386, 45.737253216265096], "geometry": {"coordinates": [[[4.898942119856336, 45.72988326242913], [4.900528465125096, 45.73506111637603], [4.901871438250017, 45.737253216265096], [4.903651948924987, 45.73492398717346], [4.90254434447144, 45.73234795929527], [4.901121384873514, 45.73267940456444], [4.901426894520258, 45.73101944368234], [4.905028118819324, 45.729881175752894], [4.905318494945386, 45.728360238219466], [4.89852609444805, 45.72867238691499], [4.898942119856336, 45.72988326242913]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fd7510324421cdad6a39b51242c7c2c5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e71d51cd7314d688495afcd046be836a = $(`<div id="html_e71d51cd7314d688495afcd046be836a" style="width: 100.0%; height: 100.0%;">Bron - 0022</div>`)[0];
+                popup_fd7510324421cdad6a39b51242c7c2c5.setContent(html_e71d51cd7314d688495afcd046be836a);
+            
+        
+
+        geo_json_feeb4143c9bb117985d8288417a8d63f.bindPopup(popup_fd7510324421cdad6a39b51242c7c2c5)
+        ;
+
+        
+    
+    
+            geo_json_feeb4143c9bb117985d8288417a8d63f.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_055a47134411528efa036001165a4d7a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_055a47134411528efa036001165a4d7a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_055a47134411528efa036001165a4d7a = L.geoJson(null, {
+                onEachFeature: geo_json_055a47134411528efa036001165a4d7a_onEachFeature,
+            
+                style: geo_json_055a47134411528efa036001165a4d7a_styler,
+        });
+
+        function geo_json_055a47134411528efa036001165a4d7a_add (data) {
+            geo_json_055a47134411528efa036001165a4d7a
+                .addData(data);
+        }
+            geo_json_055a47134411528efa036001165a4d7a_add({"bbox": [4.889786989660276, 45.732535935406624, 4.901896000433076, 45.74270524474557], "features": [{"bbox": [4.889786989660276, 45.732535935406624, 4.901896000433076, 45.74270524474557], "geometry": {"coordinates": [[[4.891220426701119, 45.7349779918174], [4.889786989660276, 45.73518345913081], [4.892952612881352, 45.740492028359036], [4.895477887341509, 45.74006461914946], [4.900209879718309, 45.74270524474557], [4.901896000433076, 45.73783403965272], [4.899906529229139, 45.732535935406624], [4.894733186930091, 45.73517237386018], [4.891220426701119, 45.7349779918174]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_277202ceb2b3578a4a53ea005ecc91aa = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9d569a17725f806b1168d67cf31d025b = $(`<div id="html_9d569a17725f806b1168d67cf31d025b" style="width: 100.0%; height: 100.0%;">Bron - 0023</div>`)[0];
+                popup_277202ceb2b3578a4a53ea005ecc91aa.setContent(html_9d569a17725f806b1168d67cf31d025b);
+            
+        
+
+        geo_json_055a47134411528efa036001165a4d7a.bindPopup(popup_277202ceb2b3578a4a53ea005ecc91aa)
+        ;
+
+        
+    
+    
+            geo_json_055a47134411528efa036001165a4d7a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_5044eb01d9a7f983e333b522f32178f8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5044eb01d9a7f983e333b522f32178f8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5044eb01d9a7f983e333b522f32178f8 = L.geoJson(null, {
+                onEachFeature: geo_json_5044eb01d9a7f983e333b522f32178f8_onEachFeature,
+            
+                style: geo_json_5044eb01d9a7f983e333b522f32178f8_styler,
+        });
+
+        function geo_json_5044eb01d9a7f983e333b522f32178f8_add (data) {
+            geo_json_5044eb01d9a7f983e333b522f32178f8
+                .addData(data);
+        }
+            geo_json_5044eb01d9a7f983e333b522f32178f8_add({"bbox": [4.901121384873514, 45.72632101255434, 4.917376350824584, 45.73267940456444], "features": [{"bbox": [4.901121384873514, 45.72632101255434, 4.917376350824584, 45.73267940456444], "geometry": {"coordinates": [[[[4.905390582779465, 45.72910867073383], [4.901426894520258, 45.73101944368234], [4.901121384873514, 45.73267940456444], [4.903499671626172, 45.73069704674701], [4.907602711688075, 45.73158715016919], [4.908340875643223, 45.729981345381034], [4.910356798132438, 45.731196101896074], [4.916678313021905, 45.72909943495099], [4.914727757934266, 45.72632101255434], [4.909645792794723, 45.728059202656816], [4.906810957113593, 45.72726981674325], [4.905390582779465, 45.72910867073383]]], [[[4.916881514647836, 45.7298426948558], [4.91709522622554, 45.7302068995509], [4.917376350824584, 45.730084292728634], [4.917258693366697, 45.729734588617625], [4.916881514647836, 45.7298426948558]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0f879e6734ee49147fa0d29885d728e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0919f28e94b9cda41aa584553890a9e7 = $(`<div id="html_0919f28e94b9cda41aa584553890a9e7" style="width: 100.0%; height: 100.0%;">Bron - 0024</div>`)[0];
+                popup_0f879e6734ee49147fa0d29885d728e9.setContent(html_0919f28e94b9cda41aa584553890a9e7);
+            
+        
+
+        geo_json_5044eb01d9a7f983e333b522f32178f8.bindPopup(popup_0f879e6734ee49147fa0d29885d728e9)
+        ;
+
+        
+    
+    
+            geo_json_5044eb01d9a7f983e333b522f32178f8.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_884ee240b2fa55233cb23b24d1f079cf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_884ee240b2fa55233cb23b24d1f079cf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_884ee240b2fa55233cb23b24d1f079cf = L.geoJson(null, {
+                onEachFeature: geo_json_884ee240b2fa55233cb23b24d1f079cf_onEachFeature,
+            
+                style: geo_json_884ee240b2fa55233cb23b24d1f079cf_styler,
+        });
+
+        function geo_json_884ee240b2fa55233cb23b24d1f079cf_add (data) {
+            geo_json_884ee240b2fa55233cb23b24d1f079cf
+                .addData(data);
+        }
+            geo_json_884ee240b2fa55233cb23b24d1f079cf_add({"bbox": [4.886823, 45.72317398974575, 4.894792357808864, 45.73120435896244], "features": [{"bbox": [4.886823, 45.72317398974575, 4.894792357808864, 45.73120435896244], "geometry": {"coordinates": [[[4.886998, 45.726118], [4.886823, 45.729646], [4.888854691772559, 45.73120435896244], [4.894792357808864, 45.72513830562557], [4.89420253386368, 45.72317398974575], [4.886998, 45.726118]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ef5d3f23ed0e38c5bc60332aee882472 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_318385ce6daa76eca59f7d7743ba07ef = $(`<div id="html_318385ce6daa76eca59f7d7743ba07ef" style="width: 100.0%; height: 100.0%;">Bron - 0025</div>`)[0];
+                popup_ef5d3f23ed0e38c5bc60332aee882472.setContent(html_318385ce6daa76eca59f7d7743ba07ef);
+            
+        
+
+        geo_json_884ee240b2fa55233cb23b24d1f079cf.bindPopup(popup_ef5d3f23ed0e38c5bc60332aee882472)
+        ;
+
+        
+    
+    
+            geo_json_884ee240b2fa55233cb23b24d1f079cf.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_7027064d79fa8209d2a6beb8043962f9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7027064d79fa8209d2a6beb8043962f9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7027064d79fa8209d2a6beb8043962f9 = L.geoJson(null, {
+                onEachFeature: geo_json_7027064d79fa8209d2a6beb8043962f9_onEachFeature,
+            
+                style: geo_json_7027064d79fa8209d2a6beb8043962f9_styler,
+        });
+
+        function geo_json_7027064d79fa8209d2a6beb8043962f9_add (data) {
+            geo_json_7027064d79fa8209d2a6beb8043962f9
+                .addData(data);
+        }
+            geo_json_7027064d79fa8209d2a6beb8043962f9_add({"bbox": [4.9168176691402, 45.723427849173845, 4.936504, 45.73694225984301], "features": [{"bbox": [4.9168176691402, 45.723427849173845, 4.936504, 45.73694225984301], "geometry": {"coordinates": [[[[4.929347128815871, 45.73417960927471], [4.935682489074054, 45.73262733705937], [4.936504, 45.725956], [4.929382841809546, 45.723427849173845], [4.926558056155786, 45.73256110470263], [4.929347128815871, 45.73417960927471]]], [[[4.917840813946678, 45.73160773161442], [4.9168176691402, 45.73694225984301], [4.920718445188426, 45.73630920600664], [4.919580969508479, 45.734965135783305], [4.922080155454836, 45.73212004770175], [4.918433072463024, 45.73037370355504], [4.917840813946678, 45.73160773161442]], [[4.918539442979026, 45.73387147653825], [4.91843550000001, 45.73401259090908], [4.917968210445404, 45.73409247630745], [4.918211451398695, 45.73340524766882], [4.918539442979026, 45.73387147653825]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1e9b44cfd210d35e49b165cb72cfb16b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_db4e5c8799852902bdb78ec2060156b0 = $(`<div id="html_db4e5c8799852902bdb78ec2060156b0" style="width: 100.0%; height: 100.0%;">Bron - 0026</div>`)[0];
+                popup_1e9b44cfd210d35e49b165cb72cfb16b.setContent(html_db4e5c8799852902bdb78ec2060156b0);
+            
+        
+
+        geo_json_7027064d79fa8209d2a6beb8043962f9.bindPopup(popup_1e9b44cfd210d35e49b165cb72cfb16b)
+        ;
+
+        
+    
+    
+            geo_json_7027064d79fa8209d2a6beb8043962f9.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_2f3269ba1e7da0af3c122a42d9c3b931_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2f3269ba1e7da0af3c122a42d9c3b931_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2f3269ba1e7da0af3c122a42d9c3b931 = L.geoJson(null, {
+                onEachFeature: geo_json_2f3269ba1e7da0af3c122a42d9c3b931_onEachFeature,
+            
+                style: geo_json_2f3269ba1e7da0af3c122a42d9c3b931_styler,
+        });
+
+        function geo_json_2f3269ba1e7da0af3c122a42d9c3b931_add (data) {
+            geo_json_2f3269ba1e7da0af3c122a42d9c3b931
+                .addData(data);
+        }
+            geo_json_2f3269ba1e7da0af3c122a42d9c3b931_add({"bbox": [4.90022690782557, 45.73666775045523, 4.915382306294179, 45.74495257065401], "features": [{"bbox": [4.90022690782557, 45.73666775045523, 4.915382306294179, 45.74495257065401], "geometry": {"coordinates": [[[[4.908770918540709, 45.73679607887393], [4.908784323652353, 45.73666775045523], [4.908303526237132, 45.73671389355695], [4.908314428897587, 45.7368774334638], [4.908770918540709, 45.73679607887393]]], [[[4.908313466976726, 45.73886846232557], [4.904958496010645, 45.738442216755324], [4.900973133775122, 45.7409093457583], [4.90022690782557, 45.7431082098957], [4.905171474503174, 45.74495257065401], [4.9069615175441, 45.742631199218565], [4.915382306294179, 45.74160331752688], [4.911340243660291, 45.73827792952506], [4.908313466976726, 45.73886846232557]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_da9a04fecf48131148d3e5c536bf9ba2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9435c3324386332dad68a616404c4e3e = $(`<div id="html_9435c3324386332dad68a616404c4e3e" style="width: 100.0%; height: 100.0%;">Bron - 0003</div>`)[0];
+                popup_da9a04fecf48131148d3e5c536bf9ba2.setContent(html_9435c3324386332dad68a616404c4e3e);
+            
+        
+
+        geo_json_2f3269ba1e7da0af3c122a42d9c3b931.bindPopup(popup_da9a04fecf48131148d3e5c536bf9ba2)
+        ;
+
+        
+    
+    
+            geo_json_2f3269ba1e7da0af3c122a42d9c3b931.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_fba51d6b77109b3958a3adad04ce8df6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fba51d6b77109b3958a3adad04ce8df6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fba51d6b77109b3958a3adad04ce8df6 = L.geoJson(null, {
+                onEachFeature: geo_json_fba51d6b77109b3958a3adad04ce8df6_onEachFeature,
+            
+                style: geo_json_fba51d6b77109b3958a3adad04ce8df6_styler,
+        });
+
+        function geo_json_fba51d6b77109b3958a3adad04ce8df6_add (data) {
+            geo_json_fba51d6b77109b3958a3adad04ce8df6
+                .addData(data);
+        }
+            geo_json_fba51d6b77109b3958a3adad04ce8df6_add({"bbox": [4.917099862553076, 45.73192330912849, 4.935682489074054, 45.744248], "features": [{"bbox": [4.917099862553076, 45.73192330912849, 4.935682489074054, 45.744248], "geometry": {"coordinates": [[[4.920823404374989, 45.7335947900138], [4.919580969508479, 45.734965135783305], [4.920718445188426, 45.73630920600664], [4.917099862553076, 45.73697760359392], [4.924966801554461, 45.739191823599185], [4.928100094536585, 45.73463419784701], [4.928446901993501, 45.74062920398583], [4.932537, 45.744248], [4.935682489074054, 45.73262733705937], [4.928845803652734, 45.73416022146694], [4.92329099411013, 45.73192330912849], [4.920823404374989, 45.7335947900138]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_bc3d20a820eac9483423e2ae1fd26f65 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d24b0e92332ee169d48c07b15fcec7b = $(`<div id="html_2d24b0e92332ee169d48c07b15fcec7b" style="width: 100.0%; height: 100.0%;">Bron - 0004</div>`)[0];
+                popup_bc3d20a820eac9483423e2ae1fd26f65.setContent(html_2d24b0e92332ee169d48c07b15fcec7b);
+            
+        
+
+        geo_json_fba51d6b77109b3958a3adad04ce8df6.bindPopup(popup_bc3d20a820eac9483423e2ae1fd26f65)
+        ;
+
+        
+    
+    
+            geo_json_fba51d6b77109b3958a3adad04ce8df6.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c9ddaff14b146d8a317f1ef1f49d42e9 = L.geoJson(null, {
+                onEachFeature: geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_onEachFeature,
+            
+                style: geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_styler,
+        });
+
+        function geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_add (data) {
+            geo_json_c9ddaff14b146d8a317f1ef1f49d42e9
+                .addData(data);
+        }
+            geo_json_c9ddaff14b146d8a317f1ef1f49d42e9_add({"bbox": [4.905171474503174, 45.74155712407866, 4.91543073756496, 45.75115024624779], "features": [{"bbox": [4.905171474503174, 45.74155712407866, 4.91543073756496, 45.75115024624779], "geometry": {"coordinates": [[[4.910120213968958, 45.74242142904656], [4.9069615175441, 45.742631199218565], [4.905171474503174, 45.74495257065401], [4.907344028053904, 45.74771387846981], [4.907256329267637, 45.75115024624779], [4.911497864762371, 45.75015821870574], [4.911182011262857, 45.744714815581766], [4.912462480339103, 45.74559052733394], [4.91543073756496, 45.74317738182242], [4.91392368802722, 45.74155712407866], [4.910120213968958, 45.74242142904656]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d1c905936d46cd7214e930b03786f496 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52306ce3d6dcc00c634433b9dadb1589 = $(`<div id="html_52306ce3d6dcc00c634433b9dadb1589" style="width: 100.0%; height: 100.0%;">Bron - 0005</div>`)[0];
+                popup_d1c905936d46cd7214e930b03786f496.setContent(html_52306ce3d6dcc00c634433b9dadb1589);
+            
+        
+
+        geo_json_c9ddaff14b146d8a317f1ef1f49d42e9.bindPopup(popup_d1c905936d46cd7214e930b03786f496)
+        ;
+
+        
+    
+    
+            geo_json_c9ddaff14b146d8a317f1ef1f49d42e9.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_9ef50907701a33bffdd76155b27553a7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9ef50907701a33bffdd76155b27553a7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9ef50907701a33bffdd76155b27553a7 = L.geoJson(null, {
+                onEachFeature: geo_json_9ef50907701a33bffdd76155b27553a7_onEachFeature,
+            
+                style: geo_json_9ef50907701a33bffdd76155b27553a7_styler,
+        });
+
+        function geo_json_9ef50907701a33bffdd76155b27553a7_add (data) {
+            geo_json_9ef50907701a33bffdd76155b27553a7
+                .addData(data);
+        }
+            geo_json_9ef50907701a33bffdd76155b27553a7_add({"bbox": [4.914727757934266, 45.72126897951818, 4.929382841809546, 45.73190284201218], "features": [{"bbox": [4.914727757934266, 45.72126897951818, 4.929382841809546, 45.73190284201218], "geometry": {"coordinates": [[[4.916308884665928, 45.725439821558], [4.914727757934266, 45.72632101255434], [4.91716399473734, 45.73084251242929], [4.923785556357892, 45.73190284201218], [4.924093091199283, 45.72783448016416], [4.926809324046458, 45.730211313160616], [4.929382841809546, 45.723427849173845], [4.9220579275886, 45.72126897951818], [4.920331653587417, 45.724910243278444], [4.916308884665928, 45.725439821558]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d06fa32acbca58632e91b9d4e41b11e5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3563491ced37b10355c605d8e49dbb0d = $(`<div id="html_3563491ced37b10355c605d8e49dbb0d" style="width: 100.0%; height: 100.0%;">Bron - 0006</div>`)[0];
+                popup_d06fa32acbca58632e91b9d4e41b11e5.setContent(html_3563491ced37b10355c605d8e49dbb0d);
+            
+        
+
+        geo_json_9ef50907701a33bffdd76155b27553a7.bindPopup(popup_d06fa32acbca58632e91b9d4e41b11e5)
+        ;
+
+        
+    
+    
+            geo_json_9ef50907701a33bffdd76155b27553a7.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_7482c68658b3cd8be8ee682f35640f4d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7482c68658b3cd8be8ee682f35640f4d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7482c68658b3cd8be8ee682f35640f4d = L.geoJson(null, {
+                onEachFeature: geo_json_7482c68658b3cd8be8ee682f35640f4d_onEachFeature,
+            
+                style: geo_json_7482c68658b3cd8be8ee682f35640f4d_styler,
+        });
+
+        function geo_json_7482c68658b3cd8be8ee682f35640f4d_add (data) {
+            geo_json_7482c68658b3cd8be8ee682f35640f4d
+                .addData(data);
+        }
+            geo_json_7482c68658b3cd8be8ee682f35640f4d_add({"bbox": [4.911290900057109, 45.743544633757956, 4.916521141752944, 45.75015821870574], "features": [{"bbox": [4.911290900057109, 45.743544633757956, 4.916521141752944, 45.75015821870574], "geometry": {"coordinates": [[[4.911290900057109, 45.745465110508285], [4.911497864762371, 45.75015821870574], [4.914343160479883, 45.74917881023401], [4.916521141752944, 45.74471805780232], [4.914908289808919, 45.743544633757956], [4.911290900057109, 45.745465110508285]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8be8d50d486b35077cd0e3d64cca9b42 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cb1c51cc27f6c2b4255a1d915481136a = $(`<div id="html_cb1c51cc27f6c2b4255a1d915481136a" style="width: 100.0%; height: 100.0%;">Bron - 0007</div>`)[0];
+                popup_8be8d50d486b35077cd0e3d64cca9b42.setContent(html_cb1c51cc27f6c2b4255a1d915481136a);
+            
+        
+
+        geo_json_7482c68658b3cd8be8ee682f35640f4d.bindPopup(popup_8be8d50d486b35077cd0e3d64cca9b42)
+        ;
+
+        
+    
+    
+            geo_json_7482c68658b3cd8be8ee682f35640f4d.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46 = L.geoJson(null, {
+                onEachFeature: geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_onEachFeature,
+            
+                style: geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_styler,
+        });
+
+        function geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_add (data) {
+            geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46
+                .addData(data);
+        }
+            geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46_add({"bbox": [4.914343160479883, 45.74317738182242, 4.919310579984728, 45.74917881023401], "features": [{"bbox": [4.914343160479883, 45.74317738182242, 4.919310579984728, 45.74917881023401], "geometry": {"coordinates": [[[[4.91543073756496, 45.74317738182242], [4.914920734826121, 45.74347445412485], [4.914908289808919, 45.743544633757956], [4.915694798247156, 45.743644555128675], [4.91543073756496, 45.74317738182242]]], [[[4.91868449294053, 45.74391363820038], [4.918646241357851, 45.744484615459065], [4.919077995637003, 45.744586780977315], [4.919310579984728, 45.74396059234878], [4.91868449294053, 45.74391363820038]]], [[[4.915076, 45.747220123853225], [4.914343160479883, 45.74917881023401], [4.917806167189336, 45.74844444684322], [4.917072689057146, 45.74451063830329], [4.915076, 45.747220123853225]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1d9b5a80ceb3c5a9389a67d2dd783540 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf69b37f974befde121194d2acc95375 = $(`<div id="html_cf69b37f974befde121194d2acc95375" style="width: 100.0%; height: 100.0%;">Bron - 0008</div>`)[0];
+                popup_1d9b5a80ceb3c5a9389a67d2dd783540.setContent(html_cf69b37f974befde121194d2acc95375);
+            
+        
+
+        geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46.bindPopup(popup_1d9b5a80ceb3c5a9389a67d2dd783540)
+        ;
+
+        
+    
+    
+            geo_json_ea0d25cc2b0054f0d4bed2aa20c70c46.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_cf7c920eae25a0aab74fee56be1c8609_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cf7c920eae25a0aab74fee56be1c8609_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cf7c920eae25a0aab74fee56be1c8609 = L.geoJson(null, {
+                onEachFeature: geo_json_cf7c920eae25a0aab74fee56be1c8609_onEachFeature,
+            
+                style: geo_json_cf7c920eae25a0aab74fee56be1c8609_styler,
+        });
+
+        function geo_json_cf7c920eae25a0aab74fee56be1c8609_add (data) {
+            geo_json_cf7c920eae25a0aab74fee56be1c8609
+                .addData(data);
+        }
+            geo_json_cf7c920eae25a0aab74fee56be1c8609_add({"bbox": [4.889342182688919, 45.725053393729816, 4.925183147520768, 45.74844444684322], "features": [{"bbox": [4.889342182688919, 45.725053393729816, 4.925183147520768, 45.74844444684322], "geometry": {"coordinates": [[[[4.889619187825587, 45.72552953704419], [4.889854309859151, 45.7252003661972], [4.88986783493284, 45.725053393729816], [4.889342182688919, 45.725245698351564], [4.889619187825587, 45.72552953704419]]], [[[4.918194651768397, 45.74521245970328], [4.917806167189336, 45.74844444684322], [4.925027593414591, 45.74665388051603], [4.925183147520768, 45.74575880688852], [4.922681665433135, 45.745459096719934], [4.922272286988775, 45.74253950300962], [4.92391118171094, 45.74208306777196], [4.922353708501616, 45.74173635538978], [4.919293114706229, 45.74295283670187], [4.918194651768397, 45.74521245970328]], [[4.921377932263453, 45.743079338682776], [4.921893946768059, 45.74332371219655], [4.921193786118192, 45.744148668916736], [4.921029041927846, 45.74313971004871], [4.921377932263453, 45.743079338682776]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e29e5b4f708a4a986f06990242637932 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1e0fc5b6cc602ae7e8aa17508c75cbe1 = $(`<div id="html_1e0fc5b6cc602ae7e8aa17508c75cbe1" style="width: 100.0%; height: 100.0%;">Bron - 0009</div>`)[0];
+                popup_e29e5b4f708a4a986f06990242637932.setContent(html_1e0fc5b6cc602ae7e8aa17508c75cbe1);
+            
+        
+
+        geo_json_cf7c920eae25a0aab74fee56be1c8609.bindPopup(popup_e29e5b4f708a4a986f06990242637932)
+        ;
+
+        
+    
+    
+            geo_json_cf7c920eae25a0aab74fee56be1c8609.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_3386495a2372c4a97c7aa874952e5c9f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3386495a2372c4a97c7aa874952e5c9f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3386495a2372c4a97c7aa874952e5c9f = L.geoJson(null, {
+                onEachFeature: geo_json_3386495a2372c4a97c7aa874952e5c9f_onEachFeature,
+            
+                style: geo_json_3386495a2372c4a97c7aa874952e5c9f_styler,
+        });
+
+        function geo_json_3386495a2372c4a97c7aa874952e5c9f_add (data) {
+            geo_json_3386495a2372c4a97c7aa874952e5c9f
+                .addData(data);
+        }
+            geo_json_3386495a2372c4a97c7aa874952e5c9f_add({"bbox": [4.913270808532296, 45.77357874543316, 4.929594820383598, 45.78302278401638], "features": [{"bbox": [4.913270808532296, 45.77357874543316, 4.929594820383598, 45.78302278401638], "geometry": {"coordinates": [[[[4.921240593750005, 45.773660864583334], [4.921152183642405, 45.77357874543316], [4.921141484036491, 45.77377885233751], [4.921240593750005, 45.773660864583334]]], [[[4.913270808532296, 45.774806634574155], [4.913425633965438, 45.774931346612625], [4.914097569207624, 45.774457039382845], [4.914023577972891, 45.774410646483], [4.913270808532296, 45.774806634574155]]], [[[4.91754814929905, 45.775675962723696], [4.91456210493055, 45.77546066514034], [4.91644840760949, 45.776388355404805], [4.915207548828179, 45.776732399083656], [4.915693232965011, 45.77876821025169], [4.918279274192765, 45.778507966679605], [4.917065937217001, 45.77981070416447], [4.919820031693616, 45.78244259533669], [4.921842766500357, 45.7800657199941], [4.924401507158977, 45.78302278401638], [4.929175266097247, 45.782121006076686], [4.929594820383598, 45.780586009773174], [4.924589368340342, 45.7800741224085], [4.921865633692132, 45.7766137307975], [4.920340186913592, 45.77727679083485], [4.91983612374438, 45.77464695257681], [4.91754814929905, 45.775675962723696]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e230d6a3eb3e44da853e39d6834a2484 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_edc4d750b21cc52d3b14597f8856fdb9 = $(`<div id="html_edc4d750b21cc52d3b14597f8856fdb9" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0001</div>`)[0];
+                popup_e230d6a3eb3e44da853e39d6834a2484.setContent(html_edc4d750b21cc52d3b14597f8856fdb9);
+            
+        
+
+        geo_json_3386495a2372c4a97c7aa874952e5c9f.bindPopup(popup_e230d6a3eb3e44da853e39d6834a2484)
+        ;
+
+        
+    
+    
+            geo_json_3386495a2372c4a97c7aa874952e5c9f.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_db89cd7c814228cba74bb0d46db60a3a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_db89cd7c814228cba74bb0d46db60a3a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_db89cd7c814228cba74bb0d46db60a3a = L.geoJson(null, {
+                onEachFeature: geo_json_db89cd7c814228cba74bb0d46db60a3a_onEachFeature,
+            
+                style: geo_json_db89cd7c814228cba74bb0d46db60a3a_styler,
+        });
+
+        function geo_json_db89cd7c814228cba74bb0d46db60a3a_add (data) {
+            geo_json_db89cd7c814228cba74bb0d46db60a3a
+                .addData(data);
+        }
+            geo_json_db89cd7c814228cba74bb0d46db60a3a_add({"bbox": [4.915213836185197, 45.77264024900006, 4.945626316188153, 45.782995714474076], "features": [{"bbox": [4.915213836185197, 45.77264024900006, 4.945626316188153, 45.782995714474076], "geometry": {"coordinates": [[[[4.916020500166459, 45.77607560882752], [4.915413693751069, 45.77595017113947], [4.915213836185197, 45.77672833995974], [4.916004391856601, 45.776882861243315], [4.916020500166459, 45.77607560882752]]], [[[4.935232146687156, 45.7789037567286], [4.940592491958848, 45.782995714474076], [4.945626316188153, 45.7804354955756], [4.938437102782002, 45.77264024900006], [4.935691870391967, 45.773505225831165], [4.935232146687156, 45.7789037567286]]], [[[4.922552639642746, 45.778336083075985], [4.928246220652118, 45.7807608419451], [4.932783611111109, 45.77927066666666], [4.930171683598524, 45.77696804283966], [4.921987019774024, 45.77672754745252], [4.922552639642746, 45.778336083075985]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e2ef66ff8b1d3c31b14dc9ae668b1a7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dfabb7f700486a4406b9dee65000bb0a = $(`<div id="html_dfabb7f700486a4406b9dee65000bb0a" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0010</div>`)[0];
+                popup_e2ef66ff8b1d3c31b14dc9ae668b1a7a.setContent(html_dfabb7f700486a4406b9dee65000bb0a);
+            
+        
+
+        geo_json_db89cd7c814228cba74bb0d46db60a3a.bindPopup(popup_e2ef66ff8b1d3c31b14dc9ae668b1a7a)
+        ;
+
+        
+    
+    
+            geo_json_db89cd7c814228cba74bb0d46db60a3a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_25924712c64c013aab47d82824dd2408_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_25924712c64c013aab47d82824dd2408_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_25924712c64c013aab47d82824dd2408 = L.geoJson(null, {
+                onEachFeature: geo_json_25924712c64c013aab47d82824dd2408_onEachFeature,
+            
+                style: geo_json_25924712c64c013aab47d82824dd2408_styler,
+        });
+
+        function geo_json_25924712c64c013aab47d82824dd2408_add (data) {
+            geo_json_25924712c64c013aab47d82824dd2408
+                .addData(data);
+        }
+            geo_json_25924712c64c013aab47d82824dd2408_add({"bbox": [4.909607907004357, 45.755709680683665, 4.938437102782002, 45.773505225831165], "features": [{"bbox": [4.909607907004357, 45.755709680683665, 4.938437102782002, 45.773505225831165], "geometry": {"coordinates": [[[[4.927883709661152, 45.756014788088294], [4.928420109739302, 45.756048976225145], [4.928802749716205, 45.75589044209155], [4.928314129035538, 45.755709680683665], [4.927883709661152, 45.756014788088294]]], [[[4.918333, 45.76654], [4.91734, 45.768901], [4.914985750887363, 45.76828031739291], [4.915768062589334, 45.76964165656067], [4.916609236819857, 45.769915065816846], [4.917529487565266, 45.76878301132844], [4.918419689789912, 45.76676180943504], [4.922641034460995, 45.76641169795119], [4.925558813623923, 45.7698289963398], [4.932349013800282, 45.770651421104134], [4.935691870391967, 45.773505225831165], [4.938437102782002, 45.77264024900006], [4.93591, 45.769905], [4.937086, 45.762513], [4.935882322348325, 45.756998476331695], [4.934650239222917, 45.76051394130687], [4.932134987461659, 45.76171072931893], [4.931274683559968, 45.760623634856735], [4.92313289695435, 45.76560625506418], [4.92052871209835, 45.76064760439084], [4.918333, 45.76654]]], [[[4.9097067791411, 45.770753748466234], [4.909780009240833, 45.77037295194769], [4.909730852551467, 45.77024751836132], [4.909607907004357, 45.77041362564305], [4.9097067791411, 45.770753748466234]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_78a69bb171531d37a4a8dcf58838c595 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0eb64a4eec124ff0769f6b0281596e72 = $(`<div id="html_0eb64a4eec124ff0769f6b0281596e72" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0011</div>`)[0];
+                popup_78a69bb171531d37a4a8dcf58838c595.setContent(html_0eb64a4eec124ff0769f6b0281596e72);
+            
+        
+
+        geo_json_25924712c64c013aab47d82824dd2408.bindPopup(popup_78a69bb171531d37a4a8dcf58838c595)
+        ;
+
+        
+    
+    
+            geo_json_25924712c64c013aab47d82824dd2408.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_553724738fc5fc98ca8a75c73b76596a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_553724738fc5fc98ca8a75c73b76596a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_553724738fc5fc98ca8a75c73b76596a = L.geoJson(null, {
+                onEachFeature: geo_json_553724738fc5fc98ca8a75c73b76596a_onEachFeature,
+            
+                style: geo_json_553724738fc5fc98ca8a75c73b76596a_styler,
+        });
+
+        function geo_json_553724738fc5fc98ca8a75c73b76596a_add (data) {
+            geo_json_553724738fc5fc98ca8a75c73b76596a
+                .addData(data);
+        }
+            geo_json_553724738fc5fc98ca8a75c73b76596a_add({"bbox": [4.917405550810859, 45.7800657199941, 4.925734423911824, 45.78815503011367], "features": [{"bbox": [4.917405550810859, 45.7800657199941, 4.925734423911824, 45.78815503011367], "geometry": {"coordinates": [[[4.918194720454721, 45.78291824602727], [4.917405550810859, 45.78540356219094], [4.919188812492153, 45.78815503011367], [4.920049708353169, 45.78728097047227], [4.918636659725736, 45.786353093190314], [4.920297609647547, 45.784889292939425], [4.924106993449786, 45.78624805458516], [4.925734423911824, 45.78470635387451], [4.921842766500357, 45.7800657199941], [4.920927365716666, 45.78258046208923], [4.918805528077212, 45.78105241673678], [4.918194720454721, 45.78291824602727]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_00e6a4003f155c59d8d74f738a67be04 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a7f1e8904a4b61a9d9c9bde0f64eb320 = $(`<div id="html_a7f1e8904a4b61a9d9c9bde0f64eb320" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0012</div>`)[0];
+                popup_00e6a4003f155c59d8d74f738a67be04.setContent(html_a7f1e8904a4b61a9d9c9bde0f64eb320);
+            
+        
+
+        geo_json_553724738fc5fc98ca8a75c73b76596a.bindPopup(popup_00e6a4003f155c59d8d74f738a67be04)
+        ;
+
+        
+    
+    
+            geo_json_553724738fc5fc98ca8a75c73b76596a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_446588399402dc3350c804a5e3d1badd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_446588399402dc3350c804a5e3d1badd_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_446588399402dc3350c804a5e3d1badd = L.geoJson(null, {
+                onEachFeature: geo_json_446588399402dc3350c804a5e3d1badd_onEachFeature,
+            
+                style: geo_json_446588399402dc3350c804a5e3d1badd_styler,
+        });
+
+        function geo_json_446588399402dc3350c804a5e3d1badd_add (data) {
+            geo_json_446588399402dc3350c804a5e3d1badd
+                .addData(data);
+        }
+            geo_json_446588399402dc3350c804a5e3d1badd_add({"bbox": [4.912903640832646, 45.7847773923576, 4.928051034172976, 45.803320503783006], "features": [{"bbox": [4.912903640832646, 45.7847773923576, 4.928051034172976, 45.803320503783006], "geometry": {"coordinates": [[[[4.927630268915038, 45.78841848330825], [4.928051034172976, 45.78884030337466], [4.927945465027656, 45.78735042241484], [4.927752402842682, 45.78740189875922], [4.927630268915038, 45.78841848330825]]], [[[4.920035649876111, 45.78734936607892], [4.91790769887664, 45.789009963434026], [4.912903640832646, 45.80308672512153], [4.914366632093936, 45.8032475030466], [4.920181733617937, 45.79181994662173], [4.921577944450776, 45.79184753610129], [4.915030898904124, 45.803320503783006], [4.917560366551687, 45.803110100188604], [4.92316488311852, 45.79427510673221], [4.921792388367951, 45.79188091258645], [4.924501671539276, 45.78946750457908], [4.924024247716363, 45.78578164963851], [4.920554582090605, 45.7847773923576], [4.918636659725736, 45.786353093190314], [4.920035649876111, 45.78734936607892]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5ddc1cc71e0eaefdaef5563b320f65d2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b597883d1cf69f83eaa18dbf9081d9d7 = $(`<div id="html_b597883d1cf69f83eaa18dbf9081d9d7" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0013</div>`)[0];
+                popup_5ddc1cc71e0eaefdaef5563b320f65d2.setContent(html_b597883d1cf69f83eaa18dbf9081d9d7);
+            
+        
+
+        geo_json_446588399402dc3350c804a5e3d1badd.bindPopup(popup_5ddc1cc71e0eaefdaef5563b320f65d2)
+        ;
+
+        
+    
+    
+            geo_json_446588399402dc3350c804a5e3d1badd.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_d5398bfe6333712876b18db37f4cd8de_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d5398bfe6333712876b18db37f4cd8de_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d5398bfe6333712876b18db37f4cd8de = L.geoJson(null, {
+                onEachFeature: geo_json_d5398bfe6333712876b18db37f4cd8de_onEachFeature,
+            
+                style: geo_json_d5398bfe6333712876b18db37f4cd8de_styler,
+        });
+
+        function geo_json_d5398bfe6333712876b18db37f4cd8de_add (data) {
+            geo_json_d5398bfe6333712876b18db37f4cd8de
+                .addData(data);
+        }
+            geo_json_d5398bfe6333712876b18db37f4cd8de_add({"bbox": [4.911463799602781, 45.777360440469906, 4.926423842725415, 45.7865963421927], "features": [{"bbox": [4.911463799602781, 45.777360440469906, 4.926423842725415, 45.7865963421927], "geometry": {"coordinates": [[[[4.913200902330215, 45.777360440469906], [4.911463799602781, 45.77954425859433], [4.917927243234253, 45.78335816954705], [4.917083797263666, 45.77898670968764], [4.913200902330215, 45.777360440469906]]], [[[4.92622638416636, 45.785800010644785], [4.925969466154914, 45.786148981158426], [4.926074727574755, 45.7865963421927], [4.926423842725415, 45.7864249607254], [4.92622638416636, 45.785800010644785]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d3b1ec4f18542832421f743c233657a1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_839af74121c2fbeb7e26eff9f62ec234 = $(`<div id="html_839af74121c2fbeb7e26eff9f62ec234" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0014</div>`)[0];
+                popup_d3b1ec4f18542832421f743c233657a1.setContent(html_839af74121c2fbeb7e26eff9f62ec234);
+            
+        
+
+        geo_json_d5398bfe6333712876b18db37f4cd8de.bindPopup(popup_d3b1ec4f18542832421f743c233657a1)
+        ;
+
+        
+    
+    
+            geo_json_d5398bfe6333712876b18db37f4cd8de.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_fcfc49cdfc008570b48bb8b006256f64_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fcfc49cdfc008570b48bb8b006256f64_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fcfc49cdfc008570b48bb8b006256f64 = L.geoJson(null, {
+                onEachFeature: geo_json_fcfc49cdfc008570b48bb8b006256f64_onEachFeature,
+            
+                style: geo_json_fcfc49cdfc008570b48bb8b006256f64_styler,
+        });
+
+        function geo_json_fcfc49cdfc008570b48bb8b006256f64_add (data) {
+            geo_json_fcfc49cdfc008570b48bb8b006256f64
+                .addData(data);
+        }
+            geo_json_fcfc49cdfc008570b48bb8b006256f64_add({"bbox": [4.914366632093936, 45.78616620516319, 4.944064697636283, 45.80945371989778], "features": [{"bbox": [4.914366632093936, 45.78616620516319, 4.944064697636283, 45.80945371989778], "geometry": {"coordinates": [[[[4.920727076358941, 45.79183845403126], [4.920181733617937, 45.79181994662173], [4.914366632093936, 45.8032475030466], [4.921577944450776, 45.79184753610129], [4.920727076358941, 45.79183845403126]]], [[[4.924296251709711, 45.78975626616806], [4.921792388367951, 45.79188091258645], [4.92316488311852, 45.79427510673221], [4.917560366551687, 45.803110100188604], [4.944064697636283, 45.80945371989778], [4.939152595581431, 45.79610378867605], [4.934310378605836, 45.788075040177326], [4.928244112804659, 45.78763823318391], [4.928051034172976, 45.78884030337466], [4.927397887632416, 45.78616620516319], [4.924296251709711, 45.78975626616806]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_494be18dbfbc0741631ac1d0d220ac68 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ed9c5f51e85db98b6c9112f9dbe4df16 = $(`<div id="html_ed9c5f51e85db98b6c9112f9dbe4df16" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0015</div>`)[0];
+                popup_494be18dbfbc0741631ac1d0d220ac68.setContent(html_ed9c5f51e85db98b6c9112f9dbe4df16);
+            
+        
+
+        geo_json_fcfc49cdfc008570b48bb8b006256f64.bindPopup(popup_494be18dbfbc0741631ac1d0d220ac68)
+        ;
+
+        
+    
+    
+            geo_json_fcfc49cdfc008570b48bb8b006256f64.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_5ff5fb3698f2179c1ee7879a632a5e81_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5ff5fb3698f2179c1ee7879a632a5e81_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5ff5fb3698f2179c1ee7879a632a5e81 = L.geoJson(null, {
+                onEachFeature: geo_json_5ff5fb3698f2179c1ee7879a632a5e81_onEachFeature,
+            
+                style: geo_json_5ff5fb3698f2179c1ee7879a632a5e81_styler,
+        });
+
+        function geo_json_5ff5fb3698f2179c1ee7879a632a5e81_add (data) {
+            geo_json_5ff5fb3698f2179c1ee7879a632a5e81
+                .addData(data);
+        }
+            geo_json_5ff5fb3698f2179c1ee7879a632a5e81_add({"bbox": [4.927274722056773, 45.77646593105948, 4.970126, 45.810852], "features": [{"bbox": [4.927274722056773, 45.77646593105948, 4.970126, 45.810852], "geometry": {"coordinates": [[[[4.927521813556475, 45.785306922107765], [4.927274722056773, 45.78561287558611], [4.927403489064387, 45.785746325030374], [4.927560926038365, 45.785749382058995], [4.927521813556475, 45.785306922107765]]], [[[4.929175266097247, 45.782121006076686], [4.929023308016347, 45.78561652755279], [4.932557531622712, 45.788613398869686], [4.934310378605836, 45.788075040177326], [4.939152595581431, 45.79610378867605], [4.944064697636283, 45.80945371989778], [4.951903, 45.808932], [4.963921, 45.810852], [4.970126, 45.807587], [4.945626316188153, 45.7804354955756], [4.940592491958848, 45.782995714474076], [4.93462218615529, 45.77860736261507], [4.934535447482796, 45.77665871727596], [4.931579473983081, 45.77646593105948], [4.932783611111109, 45.77927066666666], [4.929175266097247, 45.782121006076686]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1514790a30e49bf7a15ae52aef300b3a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_91cd660b7f2275b37eed9f87f947fe75 = $(`<div id="html_91cd660b7f2275b37eed9f87f947fe75" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0016</div>`)[0];
+                popup_1514790a30e49bf7a15ae52aef300b3a.setContent(html_91cd660b7f2275b37eed9f87f947fe75);
+            
+        
+
+        geo_json_5ff5fb3698f2179c1ee7879a632a5e81.bindPopup(popup_1514790a30e49bf7a15ae52aef300b3a)
+        ;
+
+        
+    
+    
+            geo_json_5ff5fb3698f2179c1ee7879a632a5e81.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_0ed009019e6eda43f993c81a85751588_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0ed009019e6eda43f993c81a85751588_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0ed009019e6eda43f993c81a85751588 = L.geoJson(null, {
+                onEachFeature: geo_json_0ed009019e6eda43f993c81a85751588_onEachFeature,
+            
+                style: geo_json_0ed009019e6eda43f993c81a85751588_styler,
+        });
+
+        function geo_json_0ed009019e6eda43f993c81a85751588_add (data) {
+            geo_json_0ed009019e6eda43f993c81a85751588
+                .addData(data);
+        }
+            geo_json_0ed009019e6eda43f993c81a85751588_add({"bbox": [4.917420724601289, 45.76641169795119, 4.935691870391967, 45.77836791790199], "features": [{"bbox": [4.917420724601289, 45.76641169795119, 4.935691870391967, 45.77836791790199], "geometry": {"coordinates": [[[[4.917420724601289, 45.77274273363238], [4.91754814929905, 45.775675962723696], [4.91983612374438, 45.77464695257681], [4.920340186913592, 45.77727679083485], [4.922596807767156, 45.77661183467069], [4.923242104696123, 45.774484246718515], [4.924840669567665, 45.77295320229614], [4.931855480045648, 45.77836791790199], [4.931305324016281, 45.776644672007], [4.934535447482796, 45.77665871727596], [4.935691870391967, 45.773505225831165], [4.932349013800282, 45.770651421104134], [4.925558813623923, 45.7698289963398], [4.922641034460995, 45.76641169795119], [4.920519048217152, 45.767017137566185], [4.921219409148004, 45.77120768337869], [4.917482805271232, 45.77051492443737], [4.917420724601289, 45.77274273363238]], [[4.921240593750005, 45.773660864583334], [4.921141484036491, 45.77377885233751], [4.921152183642405, 45.77357874543316], [4.921240593750005, 45.773660864583334]], [[4.920870621430914, 45.77181503462422], [4.920697717123141, 45.771576850118606], [4.921010325125902, 45.77178662031337], [4.920870621430914, 45.77181503462422]], [[4.918762673677255, 45.772909537981576], [4.918641578183175, 45.77288835778109], [4.918484154266952, 45.772503543763676], [4.918904033844557, 45.77272943465731], [4.918762673677255, 45.772909537981576]]], [[[4.924426753164176, 45.77574371973809], [4.924419464914871, 45.77553802082362], [4.92318584205583, 45.775400376584756], [4.923745530202183, 45.77594218771415], [4.924426753164176, 45.77574371973809]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_52c28dded8855c713b6bf247548e357b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_72b444b0df823fcbaca3181afde68d86 = $(`<div id="html_72b444b0df823fcbaca3181afde68d86" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0017</div>`)[0];
+                popup_52c28dded8855c713b6bf247548e357b.setContent(html_72b444b0df823fcbaca3181afde68d86);
+            
+        
+
+        geo_json_0ed009019e6eda43f993c81a85751588.bindPopup(popup_52c28dded8855c713b6bf247548e357b)
+        ;
+
+        
+    
+    
+            geo_json_0ed009019e6eda43f993c81a85751588.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_0722833763b7e6d9d5f19e05c8f87285_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0722833763b7e6d9d5f19e05c8f87285_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0722833763b7e6d9d5f19e05c8f87285 = L.geoJson(null, {
+                onEachFeature: geo_json_0722833763b7e6d9d5f19e05c8f87285_onEachFeature,
+            
+                style: geo_json_0722833763b7e6d9d5f19e05c8f87285_styler,
+        });
+
+        function geo_json_0722833763b7e6d9d5f19e05c8f87285_add (data) {
+            geo_json_0722833763b7e6d9d5f19e05c8f87285
+                .addData(data);
+        }
+            geo_json_0722833763b7e6d9d5f19e05c8f87285_add({"bbox": [4.911690203414368, 45.78153287461789, 4.917461731814318, 45.785073410114784], "features": [{"bbox": [4.911690203414368, 45.78153287461789, 4.917461731814318, 45.785073410114784], "geometry": {"coordinates": [[[4.914057603630667, 45.78153287461789], [4.911690203414368, 45.783361428375855], [4.912287526319963, 45.785073410114784], [4.91542582342998, 45.78249179526537], [4.917461731814318, 45.78343076563781], [4.916417428903221, 45.78167763100087], [4.914057603630667, 45.78153287461789]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b980133de5956880a077bfebcd50c8f5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25683baa808068e6eef33fd9a9556ab1 = $(`<div id="html_25683baa808068e6eef33fd9a9556ab1" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0018</div>`)[0];
+                popup_b980133de5956880a077bfebcd50c8f5.setContent(html_25683baa808068e6eef33fd9a9556ab1);
+            
+        
+
+        geo_json_0722833763b7e6d9d5f19e05c8f87285.bindPopup(popup_b980133de5956880a077bfebcd50c8f5)
+        ;
+
+        
+    
+    
+            geo_json_0722833763b7e6d9d5f19e05c8f87285.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_41fdb5f723114135025f243fffd63447_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_41fdb5f723114135025f243fffd63447_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_41fdb5f723114135025f243fffd63447 = L.geoJson(null, {
+                onEachFeature: geo_json_41fdb5f723114135025f243fffd63447_onEachFeature,
+            
+                style: geo_json_41fdb5f723114135025f243fffd63447_styler,
+        });
+
+        function geo_json_41fdb5f723114135025f243fffd63447_add (data) {
+            geo_json_41fdb5f723114135025f243fffd63447
+                .addData(data);
+        }
+            geo_json_41fdb5f723114135025f243fffd63447_add({"bbox": [4.924250371153724, 45.782121006076686, 4.931401846146854, 45.788542909423256], "features": [{"bbox": [4.924250371153724, 45.782121006076686, 4.931401846146854, 45.788542909423256], "geometry": {"coordinates": [[[4.925235610771751, 45.78235536937576], [4.924250371153724, 45.7883450888186], [4.927397887632416, 45.78616620516319], [4.929811564735301, 45.788542909423256], [4.931401846146854, 45.787908017972406], [4.928955475285171, 45.78546030671736], [4.929175266097247, 45.782121006076686], [4.925235610771751, 45.78235536937576]], [[4.926383596445826, 45.786541835921334], [4.925969466154914, 45.786148981158426], [4.926212592427105, 45.78580182423741], [4.926423842725415, 45.7864249607254], [4.926383596445826, 45.786541835921334]], [[4.927403489064387, 45.785746325030374], [4.927274722056773, 45.78561287558611], [4.927521813556475, 45.785306922107765], [4.927560926038365, 45.785749382058995], [4.927403489064387, 45.785746325030374]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_919f5d9c350842860e0e4ee1cf2da56d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dc87fe0ee5dbfe61562a94bc9b057276 = $(`<div id="html_dc87fe0ee5dbfe61562a94bc9b057276" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0019</div>`)[0];
+                popup_919f5d9c350842860e0e4ee1cf2da56d.setContent(html_dc87fe0ee5dbfe61562a94bc9b057276);
+            
+        
+
+        geo_json_41fdb5f723114135025f243fffd63447.bindPopup(popup_919f5d9c350842860e0e4ee1cf2da56d)
+        ;
+
+        
+    
+    
+            geo_json_41fdb5f723114135025f243fffd63447.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_3cd990082300123d977935320b2bf6d0_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3cd990082300123d977935320b2bf6d0_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3cd990082300123d977935320b2bf6d0 = L.geoJson(null, {
+                onEachFeature: geo_json_3cd990082300123d977935320b2bf6d0_onEachFeature,
+            
+                style: geo_json_3cd990082300123d977935320b2bf6d0_styler,
+        });
+
+        function geo_json_3cd990082300123d977935320b2bf6d0_add (data) {
+            geo_json_3cd990082300123d977935320b2bf6d0
+                .addData(data);
+        }
+            geo_json_3cd990082300123d977935320b2bf6d0_add({"bbox": [4.920415, 45.75128602295047, 4.929134671136376, 45.76560625506418], "features": [{"bbox": [4.920415, 45.75128602295047, 4.929134671136376, 45.76560625506418], "geometry": {"coordinates": [[[4.920415, 45.753482], [4.92052871209835, 45.76064760439084], [4.92313289695435, 45.76560625506418], [4.926973959311275, 45.76368368971467], [4.927816137380565, 45.760872622657715], [4.926107078454005, 45.75986685522057], [4.929134671136376, 45.75884583048927], [4.927794695235759, 45.75128602295047], [4.920415, 45.753482]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d9303c670557b6845047a5d64e732581 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbebb0b0fb7e481c68fd14e8cc5b61ed = $(`<div id="html_fbebb0b0fb7e481c68fd14e8cc5b61ed" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0002</div>`)[0];
+                popup_d9303c670557b6845047a5d64e732581.setContent(html_fbebb0b0fb7e481c68fd14e8cc5b61ed);
+            
+        
+
+        geo_json_3cd990082300123d977935320b2bf6d0.bindPopup(popup_d9303c670557b6845047a5d64e732581)
+        ;
+
+        
+    
+    
+            geo_json_3cd990082300123d977935320b2bf6d0.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_856f57be51d262bf9faf1c02d2337d0d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_856f57be51d262bf9faf1c02d2337d0d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_856f57be51d262bf9faf1c02d2337d0d = L.geoJson(null, {
+                onEachFeature: geo_json_856f57be51d262bf9faf1c02d2337d0d_onEachFeature,
+            
+                style: geo_json_856f57be51d262bf9faf1c02d2337d0d_styler,
+        });
+
+        function geo_json_856f57be51d262bf9faf1c02d2337d0d_add (data) {
+            geo_json_856f57be51d262bf9faf1c02d2337d0d
+                .addData(data);
+        }
+            geo_json_856f57be51d262bf9faf1c02d2337d0d_add({"bbox": [4.926107078454005, 45.74904304594526, 4.935882322348325, 45.76318345228698], "features": [{"bbox": [4.926107078454005, 45.74904304594526, 4.935882322348325, 45.76318345228698], "geometry": {"coordinates": [[[4.927086573003757, 45.752261032808526], [4.929134671136376, 45.75884583048927], [4.926107078454005, 45.75986685522057], [4.927816137380565, 45.760872622657715], [4.927349912122112, 45.76318345228698], [4.931274683559968, 45.760623634856735], [4.932134987461659, 45.76171072931893], [4.934650239222917, 45.76051394130687], [4.935882322348325, 45.756998476331695], [4.933750761573349, 45.74904304594526], [4.927086573003757, 45.752261032808526]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_567c91b77951276ca84acf3526b020be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_af64bb537d2aa7c57b7e8bbcbf134c74 = $(`<div id="html_af64bb537d2aa7c57b7e8bbcbf134c74" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0020</div>`)[0];
+                popup_567c91b77951276ca84acf3526b020be.setContent(html_af64bb537d2aa7c57b7e8bbcbf134c74);
+            
+        
+
+        geo_json_856f57be51d262bf9faf1c02d2337d0d.bindPopup(popup_567c91b77951276ca84acf3526b020be)
+        ;
+
+        
+    
+    
+            geo_json_856f57be51d262bf9faf1c02d2337d0d.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_5de5a0b91611065c2a3699e9e4c0b503_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5de5a0b91611065c2a3699e9e4c0b503_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5de5a0b91611065c2a3699e9e4c0b503 = L.geoJson(null, {
+                onEachFeature: geo_json_5de5a0b91611065c2a3699e9e4c0b503_onEachFeature,
+            
+                style: geo_json_5de5a0b91611065c2a3699e9e4c0b503_styler,
+        });
+
+        function geo_json_5de5a0b91611065c2a3699e9e4c0b503_add (data) {
+            geo_json_5de5a0b91611065c2a3699e9e4c0b503
+                .addData(data);
+        }
+            geo_json_5de5a0b91611065c2a3699e9e4c0b503_add({"bbox": [4.902247, 45.76676180943504, 4.921302871578653, 45.78054864256052], "features": [{"bbox": [4.902247, 45.76676180943504, 4.921302871578653, 45.78054864256052], "geometry": {"coordinates": [[[[4.920870621430914, 45.77181503462422], [4.921010325125902, 45.77178662031337], [4.920697717123141, 45.771576850118606], [4.920870621430914, 45.77181503462422]]], [[[4.918641578183175, 45.77288835778109], [4.918904033844557, 45.77272943465731], [4.918484154266952, 45.772503543763676], [4.918641578183175, 45.77288835778109]]], [[[4.906292, 45.77096], [4.902247, 45.772133], [4.908572716721287, 45.78054864256052], [4.915139231403746, 45.77722279395879], [4.914834373653584, 45.775315530159865], [4.917140170960053, 45.77616105891945], [4.917418108688714, 45.770549876479215], [4.921302871578653, 45.770876821059815], [4.920519048217152, 45.767017137566185], [4.918419689789912, 45.76676180943504], [4.916576475239169, 45.76993593201918], [4.913441, 45.768148], [4.906292, 45.77096]], [[4.913425633965438, 45.774931346612625], [4.913270808532296, 45.774806634574155], [4.914097569207624, 45.774457039382845], [4.913425633965438, 45.774931346612625]], [[4.9097067791411, 45.770753748466234], [4.909607907004357, 45.77041362564305], [4.909730852551467, 45.77024751836132], [4.909780009240833, 45.77037295194769], [4.9097067791411, 45.770753748466234]], [[4.909056793612244, 45.771264860291375], [4.908778169313997, 45.77115378709139], [4.908775891129537, 45.77108601110356], [4.909217289373987, 45.771144256539785], [4.909056793612244, 45.771264860291375]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f3acbeae42bad9b98599282d309b3b40 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d0dec7bdaf0ff7f039f309078214b62e = $(`<div id="html_d0dec7bdaf0ff7f039f309078214b62e" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0003</div>`)[0];
+                popup_f3acbeae42bad9b98599282d309b3b40.setContent(html_d0dec7bdaf0ff7f039f309078214b62e);
+            
+        
+
+        geo_json_5de5a0b91611065c2a3699e9e4c0b503.bindPopup(popup_f3acbeae42bad9b98599282d309b3b40)
+        ;
+
+        
+    
+    
+            geo_json_5de5a0b91611065c2a3699e9e4c0b503.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b = L.geoJson(null, {
+                onEachFeature: geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_onEachFeature,
+            
+                style: geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_styler,
+        });
+
+        function geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_add (data) {
+            geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b
+                .addData(data);
+        }
+            geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b_add({"bbox": [4.879805, 45.78362785103802, 4.919188812492153, 45.80308672512153], "features": [{"bbox": [4.879805, 45.78362785103802, 4.919188812492153, 45.80308672512153], "geometry": {"coordinates": [[[4.90244900289336, 45.786629465637915], [4.896888, 45.787566], [4.892861, 45.786514], [4.883639, 45.789583], [4.883601, 45.793507], [4.879805, 45.795315], [4.888998, 45.801201], [4.898179, 45.800814], [4.912903640832646, 45.80308672512153], [4.919188812492153, 45.78815503011367], [4.917353101532747, 45.78692071269075], [4.908325708838761, 45.78828058543813], [4.906700512129773, 45.78685707202682], [4.907381963878136, 45.78362785103802], [4.90244900289336, 45.786629465637915]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fccb33140d4d1b4203c6f538f49e5088 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c550eb88ef65a1bf7500ec7e1348238a = $(`<div id="html_c550eb88ef65a1bf7500ec7e1348238a" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0004</div>`)[0];
+                popup_fccb33140d4d1b4203c6f538f49e5088.setContent(html_c550eb88ef65a1bf7500ec7e1348238a);
+            
+        
+
+        geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b.bindPopup(popup_fccb33140d4d1b4203c6f538f49e5088)
+        ;
+
+        
+    
+    
+            geo_json_96bcb6d5f3c3da8a1c719305f54c7c6b.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_8f1186860fa3aa52b649b99a4d23b96d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8f1186860fa3aa52b649b99a4d23b96d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8f1186860fa3aa52b649b99a4d23b96d = L.geoJson(null, {
+                onEachFeature: geo_json_8f1186860fa3aa52b649b99a4d23b96d_onEachFeature,
+            
+                style: geo_json_8f1186860fa3aa52b649b99a4d23b96d_styler,
+        });
+
+        function geo_json_8f1186860fa3aa52b649b99a4d23b96d_add (data) {
+            geo_json_8f1186860fa3aa52b649b99a4d23b96d
+                .addData(data);
+        }
+            geo_json_8f1186860fa3aa52b649b99a4d23b96d_add({"bbox": [4.917686, 45.744248, 4.933750761573349, 45.7533996388871], "features": [{"bbox": [4.917686, 45.744248, 4.933750761573349, 45.7533996388871], "geometry": {"coordinates": [[[4.917983, 45.749432], [4.920349353024836, 45.7533996388871], [4.933750761573349, 45.74904304594526], [4.932537, 45.744248], [4.917686, 45.748442], [4.917983, 45.749432]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0c08209f5c7370e788d783f682672ca2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_53293a46aaecbda378a1a68e31874352 = $(`<div id="html_53293a46aaecbda378a1a68e31874352" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0005</div>`)[0];
+                popup_0c08209f5c7370e788d783f682672ca2.setContent(html_53293a46aaecbda378a1a68e31874352);
+            
+        
+
+        geo_json_8f1186860fa3aa52b649b99a4d23b96d.bindPopup(popup_0c08209f5c7370e788d783f682672ca2)
+        ;
+
+        
+    
+    
+            geo_json_8f1186860fa3aa52b649b99a4d23b96d.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_93a193c7b7822301f09d945190a07daf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_93a193c7b7822301f09d945190a07daf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_93a193c7b7822301f09d945190a07daf = L.geoJson(null, {
+                onEachFeature: geo_json_93a193c7b7822301f09d945190a07daf_onEachFeature,
+            
+                style: geo_json_93a193c7b7822301f09d945190a07daf_styler,
+        });
+
+        function geo_json_93a193c7b7822301f09d945190a07daf_add (data) {
+            geo_json_93a193c7b7822301f09d945190a07daf
+                .addData(data);
+        }
+            geo_json_93a193c7b7822301f09d945190a07daf_add({"bbox": [4.907381963878136, 45.77922914714807, 4.914228230771601, 45.786647305043644], "features": [{"bbox": [4.907381963878136, 45.77922914714807, 4.914228230771601, 45.786647305043644], "geometry": {"coordinates": [[[[4.907892, 45.780507], [4.907381963878136, 45.78362785103802], [4.912235146659826, 45.7851760328111], [4.911690203414368, 45.783361428375855], [4.914228230771601, 45.78074556461228], [4.910225783191872, 45.77922914714807], [4.907892, 45.780507]]], [[[4.913620973285267, 45.78651119680908], [4.914081885261441, 45.786647305043644], [4.913920271870377, 45.78629396396504], [4.913620973285267, 45.78651119680908]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8b3fcf9bdfe28d6765fff11982b01848 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7a576f6925f2b1be5699741326a1477 = $(`<div id="html_f7a576f6925f2b1be5699741326a1477" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0006</div>`)[0];
+                popup_8b3fcf9bdfe28d6765fff11982b01848.setContent(html_f7a576f6925f2b1be5699741326a1477);
+            
+        
+
+        geo_json_93a193c7b7822301f09d945190a07daf.bindPopup(popup_8b3fcf9bdfe28d6765fff11982b01848)
+        ;
+
+        
+    
+    
+            geo_json_93a193c7b7822301f09d945190a07daf.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_a3d10ffa0d43db0575cc549b873a6106_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a3d10ffa0d43db0575cc549b873a6106_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a3d10ffa0d43db0575cc549b873a6106 = L.geoJson(null, {
+                onEachFeature: geo_json_a3d10ffa0d43db0575cc549b873a6106_onEachFeature,
+            
+                style: geo_json_a3d10ffa0d43db0575cc549b873a6106_styler,
+        });
+
+        function geo_json_a3d10ffa0d43db0575cc549b873a6106_add (data) {
+            geo_json_a3d10ffa0d43db0575cc549b873a6106
+                .addData(data);
+        }
+            geo_json_a3d10ffa0d43db0575cc549b873a6106_add({"bbox": [4.912235146659826, 45.778507966679605, 4.918618359320099, 45.78741234424304], "features": [{"bbox": [4.912235146659826, 45.778507966679605, 4.918618359320099, 45.78741234424304], "geometry": {"coordinates": [[[[4.918618359320099, 45.779353378795236], [4.918279274192765, 45.778507966679605], [4.917083797263666, 45.77898670968764], [4.917278192337269, 45.779403579123255], [4.918618359320099, 45.779353378795236]]], [[[4.913194996968231, 45.783904447501165], [4.912235146659826, 45.7851760328111], [4.913527343887125, 45.78741234424304], [4.917907111693264, 45.78694209553905], [4.917927243234253, 45.78335816954705], [4.91542582342998, 45.78249179526537], [4.913194996968231, 45.783904447501165]], [[4.913620973285267, 45.78651119680908], [4.913920271870377, 45.78629396396504], [4.914081885261441, 45.786647305043644], [4.913620973285267, 45.78651119680908]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1fcf19a4c24d3634581cd52c78a47781 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c56f1ff65626ad2149d80ebd1781c677 = $(`<div id="html_c56f1ff65626ad2149d80ebd1781c677" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0007</div>`)[0];
+                popup_1fcf19a4c24d3634581cd52c78a47781.setContent(html_c56f1ff65626ad2149d80ebd1781c677);
+            
+        
+
+        geo_json_a3d10ffa0d43db0575cc549b873a6106.bindPopup(popup_1fcf19a4c24d3634581cd52c78a47781)
+        ;
+
+        
+    
+    
+            geo_json_a3d10ffa0d43db0575cc549b873a6106.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a = L.geoJson(null, {
+                onEachFeature: geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_onEachFeature,
+            
+                style: geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_styler,
+        });
+
+        function geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_add (data) {
+            geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a
+                .addData(data);
+        }
+            geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a_add({"bbox": [4.907313221644183, 45.78391470894458, 4.913527343887125, 45.78828058543813], "features": [{"bbox": [4.907313221644183, 45.78391470894458, 4.913527343887125, 45.78828058543813], "geometry": {"coordinates": [[[4.907313221644183, 45.78583724871247], [4.908325708838761, 45.78828058543813], [4.913527343887125, 45.78741234424304], [4.910314477795645, 45.784047818761394], [4.90802040097801, 45.78391470894458], [4.907313221644183, 45.78583724871247]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_678eb4956033718783acc014d4b1f367 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4c458311980384ec55bae37aa77f2f52 = $(`<div id="html_4c458311980384ec55bae37aa77f2f52" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0008</div>`)[0];
+                popup_678eb4956033718783acc014d4b1f367.setContent(html_4c458311980384ec55bae37aa77f2f52);
+            
+        
+
+        geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a.bindPopup(popup_678eb4956033718783acc014d4b1f367)
+        ;
+
+        
+    
+    
+            geo_json_1cf72a981c1e22697c9bf3b4fbe39d6a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_04b6c64b6dbf6edcbceda8bdc73e9940 = L.geoJson(null, {
+                onEachFeature: geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_onEachFeature,
+            
+                style: geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_styler,
+        });
+
+        function geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_add (data) {
+            geo_json_04b6c64b6dbf6edcbceda8bdc73e9940
+                .addData(data);
+        }
+            geo_json_04b6c64b6dbf6edcbceda8bdc73e9940_add({"bbox": [4.908778169313997, 45.77102716970804, 4.929475532535199, 45.7869825], "features": [{"bbox": [4.908778169313997, 45.77102716970804, 4.929475532535199, 45.7869825], "geometry": {"coordinates": [[[[4.908778169313997, 45.77115378709139], [4.909056793612244, 45.771264860291375], [4.909217289373987, 45.771144256539785], [4.908919250165894, 45.77102716970804], [4.908778169313997, 45.77115378709139]]], [[[4.923458090763147, 45.77418986873302], [4.922784872865654, 45.77683384848323], [4.929475532535199, 45.77697247681338], [4.926672462541072, 45.77374679832498], [4.924840669567665, 45.77295320229614], [4.923458090763147, 45.77418986873302]], [[4.923407381478716, 45.775329928902174], [4.924419464914871, 45.77553802082362], [4.924472225867836, 45.77561577809225], [4.923745530202183, 45.77594218771415], [4.923407381478716, 45.775329928902174]]], [[[4.913496540716612, 45.7869825], [4.913467876152335, 45.786805005742785], [4.912784718204488, 45.7869825], [4.913496540716612, 45.7869825]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f2dac012b63f6de17ca6405ab07bdc03 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d73b1698ff042444f200fb302f3f90d3 = $(`<div id="html_d73b1698ff042444f200fb302f3f90d3" style="width: 100.0%; height: 100.0%;">Vaulx-en-Velin - 0009</div>`)[0];
+                popup_f2dac012b63f6de17ca6405ab07bdc03.setContent(html_d73b1698ff042444f200fb302f3f90d3);
+            
+        
+
+        geo_json_04b6c64b6dbf6edcbceda8bdc73e9940.bindPopup(popup_f2dac012b63f6de17ca6405ab07bdc03)
+        ;
+
+        
+    
+    
+            geo_json_04b6c64b6dbf6edcbceda8bdc73e9940.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_629d9e232e46249fab46f6202c395bc1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_629d9e232e46249fab46f6202c395bc1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_629d9e232e46249fab46f6202c395bc1 = L.geoJson(null, {
+                onEachFeature: geo_json_629d9e232e46249fab46f6202c395bc1_onEachFeature,
+            
+                style: geo_json_629d9e232e46249fab46f6202c395bc1_styler,
+        });
+
+        function geo_json_629d9e232e46249fab46f6202c395bc1_add (data) {
+            geo_json_629d9e232e46249fab46f6202c395bc1
+                .addData(data);
+        }
+            geo_json_629d9e232e46249fab46f6202c395bc1_add({"bbox": [4.890164483836853, 45.81768341898015, 4.909824287878784, 45.83567665866739], "features": [{"bbox": [4.890164483836853, 45.81768341898015, 4.909824287878784, 45.83567665866739], "geometry": {"coordinates": [[[[4.890638898247137, 45.82311543088945], [4.890695558638508, 45.82246082253804], [4.890521064704974, 45.82241521555265], [4.890164483836853, 45.823133867793025], [4.890638898247137, 45.82311543088945]]], [[[4.896738222094772, 45.81768341898015], [4.896665391025846, 45.81874358246454], [4.891957111022875, 45.81835078609598], [4.896542503009607, 45.82076400329899], [4.897014039418904, 45.8226627486366], [4.895607385879653, 45.823271203188646], [4.89763724633495, 45.82478811523522], [4.896590445922069, 45.824882554846646], [4.897824736275465, 45.82849012360649], [4.901461897727037, 45.82942651266402], [4.902885448929253, 45.82640198852837], [4.906026169028882, 45.827859014705446], [4.902064822266032, 45.822933469443576], [4.904268896754842, 45.82056530625853], [4.899877671401774, 45.81918685332052], [4.900175637835191, 45.817777579218436], [4.896738222094772, 45.81768341898015]]], [[[4.902826622216658, 45.8348439572881], [4.904472439125283, 45.8304739906617], [4.901479335186337, 45.82945205707228], [4.89892660477881, 45.83567665866739], [4.902826622216658, 45.8348439572881]]], [[[4.909824287878784, 45.83319546969697], [4.909630681794839, 45.83298217485871], [4.909411700240297, 45.83300124532442], [4.909655558139534, 45.833330453488365], [4.909824287878784, 45.83319546969697]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72e0933295cad85c7b0ac4385622630b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a98cace9885ffd0742c04d4a810c80f = $(`<div id="html_3a98cace9885ffd0742c04d4a810c80f" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0001</div>`)[0];
+                popup_72e0933295cad85c7b0ac4385622630b.setContent(html_3a98cace9885ffd0742c04d4a810c80f);
+            
+        
+
+        geo_json_629d9e232e46249fab46f6202c395bc1.bindPopup(popup_72e0933295cad85c7b0ac4385622630b)
+        ;
+
+        
+    
+    
+            geo_json_629d9e232e46249fab46f6202c395bc1.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_97b044a3bc4899aefa5e01941c1f64c3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_97b044a3bc4899aefa5e01941c1f64c3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_97b044a3bc4899aefa5e01941c1f64c3 = L.geoJson(null, {
+                onEachFeature: geo_json_97b044a3bc4899aefa5e01941c1f64c3_onEachFeature,
+            
+                style: geo_json_97b044a3bc4899aefa5e01941c1f64c3_styler,
+        });
+
+        function geo_json_97b044a3bc4899aefa5e01941c1f64c3_add (data) {
+            geo_json_97b044a3bc4899aefa5e01941c1f64c3
+                .addData(data);
+        }
+            geo_json_97b044a3bc4899aefa5e01941c1f64c3_add({"bbox": [4.891988261141246, 45.81574196885404, 4.901057626698179, 45.81879670772736], "features": [{"bbox": [4.891988261141246, 45.81574196885404, 4.901057626698179, 45.81879670772736], "geometry": {"coordinates": [[[4.894256414802282, 45.8165523444018], [4.891988261141246, 45.816579954037124], [4.89487595927145, 45.81879670772736], [4.901057626698179, 45.81751642988862], [4.899164303577564, 45.81574196885404], [4.894256414802282, 45.8165523444018]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_72adb3375bf981a1f9b0fd2e7db6a430 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ce6292082c7519cd6d0e2aaea0719864 = $(`<div id="html_ce6292082c7519cd6d0e2aaea0719864" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0010</div>`)[0];
+                popup_72adb3375bf981a1f9b0fd2e7db6a430.setContent(html_ce6292082c7519cd6d0e2aaea0719864);
+            
+        
+
+        geo_json_97b044a3bc4899aefa5e01941c1f64c3.bindPopup(popup_72adb3375bf981a1f9b0fd2e7db6a430)
+        ;
+
+        
+    
+    
+            geo_json_97b044a3bc4899aefa5e01941c1f64c3.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_9b61e97ff260bff44cc0590984b44f3c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9b61e97ff260bff44cc0590984b44f3c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9b61e97ff260bff44cc0590984b44f3c = L.geoJson(null, {
+                onEachFeature: geo_json_9b61e97ff260bff44cc0590984b44f3c_onEachFeature,
+            
+                style: geo_json_9b61e97ff260bff44cc0590984b44f3c_styler,
+        });
+
+        function geo_json_9b61e97ff260bff44cc0590984b44f3c_add (data) {
+            geo_json_9b61e97ff260bff44cc0590984b44f3c
+                .addData(data);
+        }
+            geo_json_9b61e97ff260bff44cc0590984b44f3c_add({"bbox": [4.899877671401774, 45.81670761155081, 4.908475319163118, 45.820652223428155], "features": [{"bbox": [4.899877671401774, 45.81670761155081, 4.908475319163118, 45.820652223428155], "geometry": {"coordinates": [[[4.903767789758031, 45.81802749964101], [4.901057626698179, 45.81751642988862], [4.899877671401774, 45.81918685332052], [4.904516836773355, 45.820652223428155], [4.908475319163118, 45.819372438101965], [4.907861929080241, 45.81670761155081], [4.906456751764098, 45.81854647658591], [4.903767789758031, 45.81802749964101]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_def4efadafcd679f4a02dfeab46ebfa0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d75712ed05246cea16ad9332e7cdeb9 = $(`<div id="html_8d75712ed05246cea16ad9332e7cdeb9" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0011</div>`)[0];
+                popup_def4efadafcd679f4a02dfeab46ebfa0.setContent(html_8d75712ed05246cea16ad9332e7cdeb9);
+            
+        
+
+        geo_json_9b61e97ff260bff44cc0590984b44f3c.bindPopup(popup_def4efadafcd679f4a02dfeab46ebfa0)
+        ;
+
+        
+    
+    
+            geo_json_9b61e97ff260bff44cc0590984b44f3c.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_adcb1e13b6e267ecf2f1a17b28f514d9 = L.geoJson(null, {
+                onEachFeature: geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_onEachFeature,
+            
+                style: geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_styler,
+        });
+
+        function geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_add (data) {
+            geo_json_adcb1e13b6e267ecf2f1a17b28f514d9
+                .addData(data);
+        }
+            geo_json_adcb1e13b6e267ecf2f1a17b28f514d9_add({"bbox": [4.902064822266032, 45.81592407825482, 4.92169255865232, 45.82829416942505], "features": [{"bbox": [4.902064822266032, 45.81592407825482, 4.92169255865232, 45.82829416942505], "geometry": {"coordinates": [[[4.902064822266032, 45.822933469443576], [4.906418277626756, 45.82829416942505], [4.90888218146461, 45.82817195581683], [4.919954386926013, 45.82616131533005], [4.919642, 45.822], [4.92169255865232, 45.82018521328936], [4.910004162127885, 45.81592407825482], [4.907861929080241, 45.81670761155081], [4.908475319163118, 45.819372438101965], [4.902064822266032, 45.822933469443576]], [[4.907557331329197, 45.820874934727826], [4.908736109127894, 45.82068184220829], [4.908088344555548, 45.82224434371951], [4.907688303377978, 45.821966652713385], [4.907557331329197, 45.820874934727826]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_78996711e13880c9f1bdcf57931488bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0214d48131bdec55c471a053193beee5 = $(`<div id="html_0214d48131bdec55c471a053193beee5" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0012</div>`)[0];
+                popup_78996711e13880c9f1bdcf57931488bd.setContent(html_0214d48131bdec55c471a053193beee5);
+            
+        
+
+        geo_json_adcb1e13b6e267ecf2f1a17b28f514d9.bindPopup(popup_78996711e13880c9f1bdcf57931488bd)
+        ;
+
+        
+    
+    
+            geo_json_adcb1e13b6e267ecf2f1a17b28f514d9.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a = L.geoJson(null, {
+                onEachFeature: geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_onEachFeature,
+            
+                style: geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_styler,
+        });
+
+        function geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_add (data) {
+            geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a
+                .addData(data);
+        }
+            geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a_add({"bbox": [4.897869802205403, 45.810474882936624, 4.910004162127885, 45.81803384177358], "features": [{"bbox": [4.897869802205403, 45.810474882936624, 4.910004162127885, 45.81803384177358], "geometry": {"coordinates": [[[[4.898560265789642, 45.81492244769781], [4.900252502790124, 45.81357343143965], [4.898513981488316, 45.81270527918956], [4.897869802205403, 45.814144334835035], [4.898560265789642, 45.81492244769781]]], [[[4.901550316962887, 45.812485196128236], [4.900822287226586, 45.81362173400029], [4.903424621798401, 45.81624440329181], [4.903065398576271, 45.81803384177358], [4.910004162127885, 45.81592407825482], [4.909018644893023, 45.81382734683595], [4.906189655697081, 45.81411979508617], [4.905005526891973, 45.810474882936624], [4.901550316962887, 45.812485196128236]]], [[[4.90070153453009, 45.815600604159144], [4.900203099391481, 45.815435798992354], [4.900083444000448, 45.81587196219191], [4.900575032834429, 45.815895021796074], [4.90070153453009, 45.815600604159144]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3bdab52d3e3b7469df9bddbd146a64ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c1b3d028a55cf592f05c8bc3ef80f2aa = $(`<div id="html_c1b3d028a55cf592f05c8bc3ef80f2aa" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0013</div>`)[0];
+                popup_3bdab52d3e3b7469df9bddbd146a64ae.setContent(html_c1b3d028a55cf592f05c8bc3ef80f2aa);
+            
+        
+
+        geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a.bindPopup(popup_3bdab52d3e3b7469df9bddbd146a64ae)
+        ;
+
+        
+    
+    
+            geo_json_0adfdbd87da6d0d4e6b21141e9cecc8a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_2bf26f525d21b579006f0160a482dd52_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2bf26f525d21b579006f0160a482dd52_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2bf26f525d21b579006f0160a482dd52 = L.geoJson(null, {
+                onEachFeature: geo_json_2bf26f525d21b579006f0160a482dd52_onEachFeature,
+            
+                style: geo_json_2bf26f525d21b579006f0160a482dd52_styler,
+        });
+
+        function geo_json_2bf26f525d21b579006f0160a482dd52_add (data) {
+            geo_json_2bf26f525d21b579006f0160a482dd52
+                .addData(data);
+        }
+            geo_json_2bf26f525d21b579006f0160a482dd52_add({"bbox": [4.882067495695704, 45.80975207806451, 4.907674996365956, 45.81893628847392], "features": [{"bbox": [4.882067495695704, 45.80975207806451, 4.907674996365956, 45.81893628847392], "geometry": {"coordinates": [[[[4.882767648143398, 45.809926350204016], [4.882383484516127, 45.80975207806451], [4.882067495695704, 45.81012008603911], [4.882300654258461, 45.81038732310899], [4.882767648143398, 45.809926350204016]]], [[[4.900871584332338, 45.81371201263817], [4.899865855978174, 45.81635077447576], [4.903042265660134, 45.81800433247671], [4.903424621798401, 45.81624440329181], [4.900871584332338, 45.81371201263817]]], [[[4.898788477799458, 45.816148854613814], [4.899164303577564, 45.81574196885404], [4.898968695045096, 45.81557414076932], [4.898548820732787, 45.81580073960453], [4.898788477799458, 45.816148854613814]]], [[[4.905289003508578, 45.81685234896695], [4.905110329684477, 45.81893628847392], [4.907674996365956, 45.816733346772295], [4.906592148966785, 45.816436345320284], [4.905289003508578, 45.81685234896695]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f8257abcf0c11fece2378ffcc8ff21bb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_479a74bbfed7682e17e4663f7e7adccf = $(`<div id="html_479a74bbfed7682e17e4663f7e7adccf" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0014</div>`)[0];
+                popup_f8257abcf0c11fece2378ffcc8ff21bb.setContent(html_479a74bbfed7682e17e4663f7e7adccf);
+            
+        
+
+        geo_json_2bf26f525d21b579006f0160a482dd52.bindPopup(popup_f8257abcf0c11fece2378ffcc8ff21bb)
+        ;
+
+        
+    
+    
+            geo_json_2bf26f525d21b579006f0160a482dd52.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_4ea7e1df101b5ad7c2b50cf70721545a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4ea7e1df101b5ad7c2b50cf70721545a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4ea7e1df101b5ad7c2b50cf70721545a = L.geoJson(null, {
+                onEachFeature: geo_json_4ea7e1df101b5ad7c2b50cf70721545a_onEachFeature,
+            
+                style: geo_json_4ea7e1df101b5ad7c2b50cf70721545a_styler,
+        });
+
+        function geo_json_4ea7e1df101b5ad7c2b50cf70721545a_add (data) {
+            geo_json_4ea7e1df101b5ad7c2b50cf70721545a
+                .addData(data);
+        }
+            geo_json_4ea7e1df101b5ad7c2b50cf70721545a_add({"bbox": [4.891075221231767, 45.809072451271184, 4.899353718546871, 45.81313209295604], "features": [{"bbox": [4.891075221231767, 45.809072451271184, 4.899353718546871, 45.81313209295604], "geometry": {"coordinates": [[[[4.89326609177211, 45.81205664589714], [4.893491662218096, 45.81313209295604], [4.898507732878756, 45.8126914423593], [4.899353718546871, 45.8104698043289], [4.895629722583733, 45.809072451271184], [4.89326609177211, 45.81205664589714]]], [[[4.891988010314108, 45.81237519667135], [4.892978046610937, 45.81219334445216], [4.891267617339213, 45.81106275922893], [4.891075221231767, 45.812506073743926], [4.891988010314108, 45.81237519667135]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_82d21bd9e6effd4ca529f757f8cd9016 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc5c8324b8e27fec94e617e1133fd5db = $(`<div id="html_bc5c8324b8e27fec94e617e1133fd5db" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0015</div>`)[0];
+                popup_82d21bd9e6effd4ca529f757f8cd9016.setContent(html_bc5c8324b8e27fec94e617e1133fd5db);
+            
+        
+
+        geo_json_4ea7e1df101b5ad7c2b50cf70721545a.bindPopup(popup_82d21bd9e6effd4ca529f757f8cd9016)
+        ;
+
+        
+    
+    
+            geo_json_4ea7e1df101b5ad7c2b50cf70721545a.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_3eb55ea4f027cedbb2c193949fefcf82_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_3eb55ea4f027cedbb2c193949fefcf82_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_3eb55ea4f027cedbb2c193949fefcf82 = L.geoJson(null, {
+                onEachFeature: geo_json_3eb55ea4f027cedbb2c193949fefcf82_onEachFeature,
+            
+                style: geo_json_3eb55ea4f027cedbb2c193949fefcf82_styler,
+        });
+
+        function geo_json_3eb55ea4f027cedbb2c193949fefcf82_add (data) {
+            geo_json_3eb55ea4f027cedbb2c193949fefcf82
+                .addData(data);
+        }
+            geo_json_3eb55ea4f027cedbb2c193949fefcf82_add({"bbox": [4.894410720811104, 45.807849395208756, 4.90242427996923, 45.81604549158015], "features": [{"bbox": [4.894410720811104, 45.807849395208756, 4.90242427996923, 45.81604549158015], "geometry": {"coordinates": [[[[4.896585476290542, 45.80827854483242], [4.897005542947791, 45.80857870539323], [4.89734399650716, 45.80806829559001], [4.896016998615247, 45.807849395208756], [4.896585476290542, 45.80827854483242]]], [[[4.894410720811104, 45.8140932943137], [4.899821444594378, 45.81604549158015], [4.90242427996923, 45.81036829891501], [4.898322871593995, 45.80862125179978], [4.898507732878756, 45.8126914423593], [4.895514768390681, 45.81218723614259], [4.894410720811104, 45.8140932943137]], [[4.897956164258359, 45.814416023181884], [4.898513981488316, 45.81270527918956], [4.900252502790124, 45.81357343143965], [4.899469605124931, 45.81493007028595], [4.897956164258359, 45.814416023181884]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4a942e82ccd6c90b57ed84efbc64619e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fb0aa9bacb12674d4febc62ec62743b7 = $(`<div id="html_fb0aa9bacb12674d4febc62ec62743b7" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0016</div>`)[0];
+                popup_4a942e82ccd6c90b57ed84efbc64619e.setContent(html_fb0aa9bacb12674d4febc62ec62743b7);
+            
+        
+
+        geo_json_3eb55ea4f027cedbb2c193949fefcf82.bindPopup(popup_4a942e82ccd6c90b57ed84efbc64619e)
+        ;
+
+        
+    
+    
+            geo_json_3eb55ea4f027cedbb2c193949fefcf82.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_53358984e69cc21bee124e34b3741dad_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_53358984e69cc21bee124e34b3741dad_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_53358984e69cc21bee124e34b3741dad = L.geoJson(null, {
+                onEachFeature: geo_json_53358984e69cc21bee124e34b3741dad_onEachFeature,
+            
+                style: geo_json_53358984e69cc21bee124e34b3741dad_styler,
+        });
+
+        function geo_json_53358984e69cc21bee124e34b3741dad_add (data) {
+            geo_json_53358984e69cc21bee124e34b3741dad
+                .addData(data);
+        }
+            geo_json_53358984e69cc21bee124e34b3741dad_add({"bbox": [4.881760269100257, 45.799970386352555, 4.90031228087628, 45.811373770937074], "features": [{"bbox": [4.881760269100257, 45.799970386352555, 4.90031228087628, 45.811373770937074], "geometry": {"coordinates": [[[4.884119480823585, 45.80669252776287], [4.881760269100257, 45.80854150502619], [4.882383484516127, 45.80975207806451], [4.889127688278357, 45.80780817639588], [4.893462164780455, 45.811373770937074], [4.895629722583733, 45.809072451271184], [4.90031228087628, 45.8089921323001], [4.898651040775953, 45.80732677801282], [4.898161365998976, 45.808669683675696], [4.895927843498662, 45.808169048919424], [4.896506341410634, 45.800886872340826], [4.890195, 45.801432], [4.886116286766214, 45.799970386352555], [4.884119480823585, 45.80669252776287]], [[4.892622980062142, 45.80411680502331], [4.89350938535626, 45.80366548511165], [4.892350819751376, 45.80509012327349], [4.892140459778386, 45.804754871481656], [4.892622980062142, 45.80411680502331]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5c3cf08a8a993710b2669d937a1f86df = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_144e8601e943cc8b0485178ed684beda = $(`<div id="html_144e8601e943cc8b0485178ed684beda" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0017</div>`)[0];
+                popup_5c3cf08a8a993710b2669d937a1f86df.setContent(html_144e8601e943cc8b0485178ed684beda);
+            
+        
+
+        geo_json_53358984e69cc21bee124e34b3741dad.bindPopup(popup_5c3cf08a8a993710b2669d937a1f86df)
+        ;
+
+        
+    
+    
+            geo_json_53358984e69cc21bee124e34b3741dad.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_bcd9889b7d765527a6c176193a44b4ba_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_bcd9889b7d765527a6c176193a44b4ba_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bcd9889b7d765527a6c176193a44b4ba = L.geoJson(null, {
+                onEachFeature: geo_json_bcd9889b7d765527a6c176193a44b4ba_onEachFeature,
+            
+                style: geo_json_bcd9889b7d765527a6c176193a44b4ba_styler,
+        });
+
+        function geo_json_bcd9889b7d765527a6c176193a44b4ba_add (data) {
+            geo_json_bcd9889b7d765527a6c176193a44b4ba
+                .addData(data);
+        }
+            geo_json_bcd9889b7d765527a6c176193a44b4ba_add({"bbox": [4.880378604974403, 45.81673291815493, 4.894546867704238, 45.8302741916879], "features": [{"bbox": [4.880378604974403, 45.81673291815493, 4.894546867704238, 45.8302741916879], "geometry": {"coordinates": [[[[4.885284088503818, 45.82034359692274], [4.885569721204016, 45.82039249953177], [4.885795679680728, 45.82015877613785], [4.885413220847069, 45.82016935103648], [4.885284088503818, 45.82034359692274]]], [[[4.881792277918141, 45.8211801677615], [4.880378604974403, 45.826032], [4.881908, 45.827199], [4.887197, 45.828538], [4.888076503886152, 45.8302741916879], [4.89238644987508, 45.82868000421612], [4.889049827859766, 45.822286006432634], [4.8929730527727, 45.82310084593942], [4.894546867704238, 45.820697789091696], [4.891347413964388, 45.81673291815493], [4.890097938095257, 45.81836546808299], [4.887863598784075, 45.81713186722086], [4.888713, 45.819178042328055], [4.890693209779925, 45.81949614838571], [4.889627950198822, 45.820658226654686], [4.881792277918141, 45.8211801677615]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e6314e739b9e17762102d4ecdba05663 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_195f4de2c57a0aa4c39be0be3bcc49dd = $(`<div id="html_195f4de2c57a0aa4c39be0be3bcc49dd" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0018</div>`)[0];
+                popup_e6314e739b9e17762102d4ecdba05663.setContent(html_195f4de2c57a0aa4c39be0be3bcc49dd);
+            
+        
+
+        geo_json_bcd9889b7d765527a6c176193a44b4ba.bindPopup(popup_e6314e739b9e17762102d4ecdba05663)
+        ;
+
+        
+    
+    
+            geo_json_bcd9889b7d765527a6c176193a44b4ba.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_78c9e11d81fec19cae6e5e30042c7a94_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_78c9e11d81fec19cae6e5e30042c7a94_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_78c9e11d81fec19cae6e5e30042c7a94 = L.geoJson(null, {
+                onEachFeature: geo_json_78c9e11d81fec19cae6e5e30042c7a94_onEachFeature,
+            
+                style: geo_json_78c9e11d81fec19cae6e5e30042c7a94_styler,
+        });
+
+        function geo_json_78c9e11d81fec19cae6e5e30042c7a94_add (data) {
+            geo_json_78c9e11d81fec19cae6e5e30042c7a94
+                .addData(data);
+        }
+            geo_json_78c9e11d81fec19cae6e5e30042c7a94_add({"bbox": [4.897712, 45.82616131533005, 4.921567, 45.857659], "features": [{"bbox": [4.897712, 45.82616131533005, 4.921567, 45.857659], "geometry": {"coordinates": [[[4.901782957022931, 45.83586290206273], [4.908099, 45.835427], [4.90736, 45.839447], [4.90859, 45.841354], [4.897712, 45.850364], [4.900979, 45.857659], [4.900805, 45.855771], [4.909167, 45.853259], [4.913902, 45.84589], [4.917067, 45.845212], [4.918602, 45.833832], [4.921567, 45.832736], [4.921469, 45.830565], [4.919245, 45.829609], [4.919954386926013, 45.82616131533005], [4.906418277626756, 45.82829416942505], [4.9027000172104, 45.82647633894599], [4.901461897727037, 45.82942651266402], [4.904468660751134, 45.8307992681925], [4.901782957022931, 45.83586290206273]], [[4.909630681794839, 45.83298217485871], [4.909824287878784, 45.83319546969697], [4.909655558139534, 45.833330453488365], [4.909411700240297, 45.83300124532442], [4.909630681794839, 45.83298217485871]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aa158ffb4753bd37312f2d7505e5b7e9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1440fedf51d0c03cd01e408ae86cecb5 = $(`<div id="html_1440fedf51d0c03cd01e408ae86cecb5" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0002</div>`)[0];
+                popup_aa158ffb4753bd37312f2d7505e5b7e9.setContent(html_1440fedf51d0c03cd01e408ae86cecb5);
+            
+        
+
+        geo_json_78c9e11d81fec19cae6e5e30042c7a94.bindPopup(popup_aa158ffb4753bd37312f2d7505e5b7e9)
+        ;
+
+        
+    
+    
+            geo_json_78c9e11d81fec19cae6e5e30042c7a94.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_8b9b7d93cb58f882995523f437fe441c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8b9b7d93cb58f882995523f437fe441c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8b9b7d93cb58f882995523f437fe441c = L.geoJson(null, {
+                onEachFeature: geo_json_8b9b7d93cb58f882995523f437fe441c_onEachFeature,
+            
+                style: geo_json_8b9b7d93cb58f882995523f437fe441c_styler,
+        });
+
+        function geo_json_8b9b7d93cb58f882995523f437fe441c_add (data) {
+            geo_json_8b9b7d93cb58f882995523f437fe441c
+                .addData(data);
+        }
+            geo_json_8b9b7d93cb58f882995523f437fe441c_add({"bbox": [4.87349511987296, 45.81604185087042, 4.890693209779925, 45.826193], "features": [{"bbox": [4.87349511987296, 45.81604185087042, 4.890693209779925, 45.826193], "geometry": {"coordinates": [[[[4.888568076725733, 45.817343900652986], [4.890097938095257, 45.81836546808299], [4.890599120110221, 45.818222536125226], [4.890100047370698, 45.81639302232162], [4.888568076725733, 45.817343900652986]]], [[[4.877139, 45.821048], [4.880101, 45.822244], [4.879526, 45.826193], [4.881132276903682, 45.82547459538647], [4.882249379884919, 45.82068442333972], [4.886826476346657, 45.82153024634128], [4.890693209779925, 45.81949614838571], [4.888713, 45.819178042328055], [4.88752009045674, 45.81637334083686], [4.883402892254943, 45.81604185087042], [4.881155993737726, 45.817906416941504], [4.878422586571755, 45.817161488101654], [4.87349511987296, 45.81884101426272], [4.877139, 45.821048]], [[4.885807643377636, 45.8202594119413], [4.885569721204016, 45.82039249953177], [4.885285653500927, 45.82038788054472], [4.885413220847069, 45.82016935103648], [4.885807643377636, 45.8202594119413]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_e0237760151b0ffda3ad38222bd54d71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_df000b4293a31ff63d4abae2365ab952 = $(`<div id="html_df000b4293a31ff63d4abae2365ab952" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0003</div>`)[0];
+                popup_e0237760151b0ffda3ad38222bd54d71.setContent(html_df000b4293a31ff63d4abae2365ab952);
+            
+        
+
+        geo_json_8b9b7d93cb58f882995523f437fe441c.bindPopup(popup_e0237760151b0ffda3ad38222bd54d71)
+        ;
+
+        
+    
+    
+            geo_json_8b9b7d93cb58f882995523f437fe441c.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_5ba8fd6deb08f444585a383d03faa9b3_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5ba8fd6deb08f444585a383d03faa9b3_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5ba8fd6deb08f444585a383d03faa9b3 = L.geoJson(null, {
+                onEachFeature: geo_json_5ba8fd6deb08f444585a383d03faa9b3_onEachFeature,
+            
+                style: geo_json_5ba8fd6deb08f444585a383d03faa9b3_styler,
+        });
+
+        function geo_json_5ba8fd6deb08f444585a383d03faa9b3_add (data) {
+            geo_json_5ba8fd6deb08f444585a383d03faa9b3
+                .addData(data);
+        }
+            geo_json_5ba8fd6deb08f444585a383d03faa9b3_add({"bbox": [4.888083, 45.820697789091696, 4.901479335186337, 45.836061], "features": [{"bbox": [4.888083, 45.820697789091696, 4.901479335186337, 45.836061], "geometry": {"coordinates": [[[4.889137220609109, 45.822553872409664], [4.890526603707599, 45.82643905928467], [4.89266524094885, 45.82774539410879], [4.888083, 45.830292], [4.893793, 45.836061], [4.89892660477881, 45.83567665866739], [4.901479335186337, 45.82945205707228], [4.897824736275465, 45.82849012360649], [4.896590445922069, 45.824882554846646], [4.89763724633495, 45.82478811523522], [4.895607385879653, 45.823271203188646], [4.897014039418904, 45.8226627486366], [4.896542503009607, 45.82076400329899], [4.894546867704238, 45.820697789091696], [4.8929730527727, 45.82310084593942], [4.890385799412798, 45.82325735546946], [4.889858318087029, 45.82158801390241], [4.889137220609109, 45.822553872409664]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f28ffdbc7e85bd32d0533685ddc8d4dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f23e1b7ced9169d45994d108097760f1 = $(`<div id="html_f23e1b7ced9169d45994d108097760f1" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0004</div>`)[0];
+                popup_f28ffdbc7e85bd32d0533685ddc8d4dd.setContent(html_f23e1b7ced9169d45994d108097760f1);
+            
+        
+
+        geo_json_5ba8fd6deb08f444585a383d03faa9b3.bindPopup(popup_f28ffdbc7e85bd32d0533685ddc8d4dd)
+        ;
+
+        
+    
+    
+            geo_json_5ba8fd6deb08f444585a383d03faa9b3.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_a66d80ef8a2665102c199292882276df_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a66d80ef8a2665102c199292882276df_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a66d80ef8a2665102c199292882276df = L.geoJson(null, {
+                onEachFeature: geo_json_a66d80ef8a2665102c199292882276df_onEachFeature,
+            
+                style: geo_json_a66d80ef8a2665102c199292882276df_styler,
+        });
+
+        function geo_json_a66d80ef8a2665102c199292882276df_add (data) {
+            geo_json_a66d80ef8a2665102c199292882276df
+                .addData(data);
+        }
+            geo_json_a66d80ef8a2665102c199292882276df_add({"bbox": [4.870566016353408, 45.795315, 4.886116286766214, 45.811578256593265], "features": [{"bbox": [4.870566016353408, 45.795315, 4.886116286766214, 45.811578256593265], "geometry": {"coordinates": [[[[4.875537, 45.800839], [4.87477, 45.805476], [4.872494976503234, 45.80650284776181], [4.877012157933164, 45.80692767538523], [4.87593631674194, 45.81138990872784], [4.87891948080275, 45.80720973929184], [4.87919136642877, 45.811578256593265], [4.882610500188153, 45.810808882596426], [4.881760269100257, 45.80854150502619], [4.884126262549293, 45.80682071891957], [4.886116286766214, 45.799970386352555], [4.879805, 45.795315], [4.877448, 45.796986], [4.877257, 45.800286], [4.875537, 45.800839]]], [[[4.871535, 45.808759], [4.870566016353408, 45.81013375328789], [4.873623463741224, 45.81054872095113], [4.873697984706795, 45.80756073648233], [4.872315543356314, 45.806918255726494], [4.871535, 45.808759]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_591c9f9c8c0acc64d9b3eeba5ca298f1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ef97ca973d7618e3c44097ec451741c4 = $(`<div id="html_ef97ca973d7618e3c44097ec451741c4" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0005</div>`)[0];
+                popup_591c9f9c8c0acc64d9b3eeba5ca298f1.setContent(html_ef97ca973d7618e3c44097ec451741c4);
+            
+        
+
+        geo_json_a66d80ef8a2665102c199292882276df.bindPopup(popup_591c9f9c8c0acc64d9b3eeba5ca298f1)
+        ;
+
+        
+    
+    
+            geo_json_a66d80ef8a2665102c199292882276df.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_622160e1ff66d562f662dd4f360417dc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_622160e1ff66d562f662dd4f360417dc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_622160e1ff66d562f662dd4f360417dc = L.geoJson(null, {
+                onEachFeature: geo_json_622160e1ff66d562f662dd4f360417dc_onEachFeature,
+            
+                style: geo_json_622160e1ff66d562f662dd4f360417dc_styler,
+        });
+
+        function geo_json_622160e1ff66d562f662dd4f360417dc_add (data) {
+            geo_json_622160e1ff66d562f662dd4f360417dc
+                .addData(data);
+        }
+            geo_json_622160e1ff66d562f662dd4f360417dc_add({"bbox": [4.892140459778386, 45.80096811562681, 4.923763, 45.82218998130377], "features": [{"bbox": [4.892140459778386, 45.80096811562681, 4.923763, 45.82218998130377], "geometry": {"coordinates": [[[[4.892140459778386, 45.804754871481656], [4.892980379480089, 45.8048263130531], [4.89350938535626, 45.80366548511165], [4.892296076583931, 45.804361222391314], [4.892140459778386, 45.804754871481656]]], [[[4.899264527180055, 45.80123730537755], [4.8964669015174, 45.80096811562681], [4.895342802896304, 45.80578261222251], [4.896399337212505, 45.80784747231787], [4.898161365998976, 45.808669683675696], [4.898940786539658, 45.80746489780518], [4.90254180449163, 45.81099312506131], [4.905005526891973, 45.810474882936624], [4.906189655697081, 45.81411979508617], [4.909018644893023, 45.81382734683595], [4.914768230984484, 45.8185524682839], [4.922429, 45.819326], [4.919302, 45.816926], [4.92019, 45.814393], [4.917723, 45.810359], [4.918389, 45.806971], [4.922976, 45.805913], [4.923763, 45.804073], [4.899264527180055, 45.80123730537755]]], [[[4.907984045542867, 45.82218998130377], [4.908260902400647, 45.82215329925941], [4.908600062331232, 45.82048337274219], [4.907426044905638, 45.82106279762122], [4.907984045542867, 45.82218998130377]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fa760a2b2a2eb3e9469891ac37300be9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_364daf1f8d7125ff2e814d3cfec54fdc = $(`<div id="html_364daf1f8d7125ff2e814d3cfec54fdc" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0006</div>`)[0];
+                popup_fa760a2b2a2eb3e9469891ac37300be9.setContent(html_364daf1f8d7125ff2e814d3cfec54fdc);
+            
+        
+
+        geo_json_622160e1ff66d562f662dd4f360417dc.bindPopup(popup_fa760a2b2a2eb3e9469891ac37300be9)
+        ;
+
+        
+    
+    
+            geo_json_622160e1ff66d562f662dd4f360417dc.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_778055c215898f419a92bb6e3f3aba72_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_778055c215898f419a92bb6e3f3aba72_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_778055c215898f419a92bb6e3f3aba72 = L.geoJson(null, {
+                onEachFeature: geo_json_778055c215898f419a92bb6e3f3aba72_onEachFeature,
+            
+                style: geo_json_778055c215898f419a92bb6e3f3aba72_styler,
+        });
+
+        function geo_json_778055c215898f419a92bb6e3f3aba72_add (data) {
+            geo_json_778055c215898f419a92bb6e3f3aba72
+                .addData(data);
+        }
+            geo_json_778055c215898f419a92bb6e3f3aba72_add({"bbox": [4.866335, 45.80650284776181, 4.892931651567201, 45.81884101426272], "features": [{"bbox": [4.866335, 45.80650284776181, 4.892931651567201, 45.81884101426272], "geometry": {"coordinates": [[[4.873623463741224, 45.81054872095113], [4.870566016353408, 45.81013375328789], [4.868783, 45.811764], [4.869089, 45.813603], [4.866335, 45.814422], [4.87349511987296, 45.81884101426272], [4.878422586571755, 45.817161488101654], [4.881155993737726, 45.817906416941504], [4.883402892254943, 45.81604185087042], [4.888568076725733, 45.817343900652986], [4.892931651567201, 45.81430302297123], [4.891150718135696, 45.8125268389981], [4.886775485581587, 45.81241611117823], [4.884920030218598, 45.809285002502996], [4.87919136642877, 45.811578256593265], [4.87891948080275, 45.80720973929184], [4.87593631674194, 45.81138990872784], [4.877012157933164, 45.80692767538523], [4.872494976503234, 45.80650284776181], [4.873623463741224, 45.81054872095113]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a11e5812fa4ba50bbe9dd335f07ca364 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_46f3e96c561d60e8b3d08350d5202556 = $(`<div id="html_46f3e96c561d60e8b3d08350d5202556" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0007</div>`)[0];
+                popup_a11e5812fa4ba50bbe9dd335f07ca364.setContent(html_46f3e96c561d60e8b3d08350d5202556);
+            
+        
+
+        geo_json_778055c215898f419a92bb6e3f3aba72.bindPopup(popup_a11e5812fa4ba50bbe9dd335f07ca364)
+        ;
+
+        
+    
+    
+            geo_json_778055c215898f419a92bb6e3f3aba72.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_63a84469461aeb1bbdd49ec737438667_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_63a84469461aeb1bbdd49ec737438667_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_63a84469461aeb1bbdd49ec737438667 = L.geoJson(null, {
+                onEachFeature: geo_json_63a84469461aeb1bbdd49ec737438667_onEachFeature,
+            
+                style: geo_json_63a84469461aeb1bbdd49ec737438667_styler,
+        });
+
+        function geo_json_63a84469461aeb1bbdd49ec737438667_add (data) {
+            geo_json_63a84469461aeb1bbdd49ec737438667
+                .addData(data);
+        }
+            geo_json_63a84469461aeb1bbdd49ec737438667_add({"bbox": [4.88527697947307, 45.80803306374587, 4.89326609177211, 45.81276663231901], "features": [{"bbox": [4.88527697947307, 45.80803306374587, 4.89326609177211, 45.81276663231901], "geometry": {"coordinates": [[[4.88527697947307, 45.809005487722224], [4.887417715591195, 45.81276663231901], [4.891075221231767, 45.812506073743926], [4.891267617339213, 45.81106275922893], [4.89326609177211, 45.81205664589714], [4.890143865134822, 45.80803306374587], [4.88527697947307, 45.809005487722224]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_74971bff85f5e62ad01f5deb256617fb = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a77dfb85ed3e749ae2980923269e0500 = $(`<div id="html_a77dfb85ed3e749ae2980923269e0500" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0008</div>`)[0];
+                popup_74971bff85f5e62ad01f5deb256617fb.setContent(html_a77dfb85ed3e749ae2980923269e0500);
+            
+        
+
+        geo_json_63a84469461aeb1bbdd49ec737438667.bindPopup(popup_74971bff85f5e62ad01f5deb256617fb)
+        ;
+
+        
+    
+    
+            geo_json_63a84469461aeb1bbdd49ec737438667.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_d4866bacef4204c054a2db8be2f7c6f9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d4866bacef4204c054a2db8be2f7c6f9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d4866bacef4204c054a2db8be2f7c6f9 = L.geoJson(null, {
+                onEachFeature: geo_json_d4866bacef4204c054a2db8be2f7c6f9_onEachFeature,
+            
+                style: geo_json_d4866bacef4204c054a2db8be2f7c6f9_styler,
+        });
+
+        function geo_json_d4866bacef4204c054a2db8be2f7c6f9_add (data) {
+            geo_json_d4866bacef4204c054a2db8be2f7c6f9
+                .addData(data);
+        }
+            geo_json_d4866bacef4204c054a2db8be2f7c6f9_add({"bbox": [4.889908255616431, 45.812194929702194, 4.897602809292413, 45.818060422829575], "features": [{"bbox": [4.889908255616431, 45.812194929702194, 4.897602809292413, 45.818060422829575], "geometry": {"coordinates": [[[[4.892093869300032, 45.813224245727724], [4.892601276717604, 45.81521292341157], [4.889908255616431, 45.816065587400615], [4.891934795313167, 45.81792544866895], [4.892212462632458, 45.816477780765425], [4.897602809292413, 45.81565554542948], [4.893065089308391, 45.81221140754267], [4.891357108433926, 45.812194929702194], [4.892093869300032, 45.813224245727724]]], [[[4.892795449014271, 45.81756759449354], [4.892654268488747, 45.818060422829575], [4.893612575609585, 45.818052923032816], [4.893128884800182, 45.81722814604096], [4.892795449014271, 45.81756759449354]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3c043b8ca60688d42811cecba0201ef5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_80189b414f8d72e242ef7db1f630ba39 = $(`<div id="html_80189b414f8d72e242ef7db1f630ba39" style="width: 100.0%; height: 100.0%;">Rillieux-la-Pape - 0009</div>`)[0];
+                popup_3c043b8ca60688d42811cecba0201ef5.setContent(html_80189b414f8d72e242ef7db1f630ba39);
+            
+        
+
+        geo_json_d4866bacef4204c054a2db8be2f7c6f9.bindPopup(popup_3c043b8ca60688d42811cecba0201ef5)
+        ;
+
+        
+    
+    
+            geo_json_d4866bacef4204c054a2db8be2f7c6f9.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_a946a8b8a87e5ff989faa306979bfb81_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_a946a8b8a87e5ff989faa306979bfb81_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_a946a8b8a87e5ff989faa306979bfb81 = L.geoJson(null, {
+                onEachFeature: geo_json_a946a8b8a87e5ff989faa306979bfb81_onEachFeature,
+            
+                style: geo_json_a946a8b8a87e5ff989faa306979bfb81_styler,
+        });
+
+        function geo_json_a946a8b8a87e5ff989faa306979bfb81_add (data) {
+            geo_json_a946a8b8a87e5ff989faa306979bfb81
+                .addData(data);
+        }
+            geo_json_a946a8b8a87e5ff989faa306979bfb81_add({"bbox": [4.869782657946479, 45.821234864282545, 4.893793, 45.836061], "features": [{"bbox": [4.869782657946479, 45.821234864282545, 4.893793, 45.836061], "geometry": {"coordinates": [[[[4.872473457775201, 45.823377855672476], [4.874536545301118, 45.8242506170723], [4.873185824582682, 45.82557938928519], [4.875803973112743, 45.82707410819215], [4.8765235148297, 45.82996981517585], [4.878557, 45.827645], [4.883248, 45.828675], [4.884477, 45.834586], [4.893793, 45.836061], [4.887197, 45.828538], [4.879526, 45.826193], [4.880101, 45.822244], [4.876255300278181, 45.821234864282545], [4.872533476173663, 45.821811843117686], [4.872473457775201, 45.823377855672476]]], [[[4.872925432698944, 45.83046967956809], [4.874251, 45.829765], [4.876395151628095, 45.82998410861772], [4.873405935070838, 45.82874601676805], [4.869782657946479, 45.83083211421733], [4.872925432698944, 45.83046967956809]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1ad001ea4fc30a9964fb45705e5cc4ce = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7081bad118142c99e6881d6363f8d019 = $(`<div id="html_7081bad118142c99e6881d6363f8d019" style="width: 100.0%; height: 100.0%;">Sathonay-Camp - 0001</div>`)[0];
+                popup_1ad001ea4fc30a9964fb45705e5cc4ce.setContent(html_7081bad118142c99e6881d6363f8d019);
+            
+        
+
+        geo_json_a946a8b8a87e5ff989faa306979bfb81.bindPopup(popup_1ad001ea4fc30a9964fb45705e5cc4ce)
+        ;
+
+        
+    
+    
+            geo_json_a946a8b8a87e5ff989faa306979bfb81.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_fb2dc6487fae4584ac9ff43eff858c10_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fb2dc6487fae4584ac9ff43eff858c10_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fb2dc6487fae4584ac9ff43eff858c10 = L.geoJson(null, {
+                onEachFeature: geo_json_fb2dc6487fae4584ac9ff43eff858c10_onEachFeature,
+            
+                style: geo_json_fb2dc6487fae4584ac9ff43eff858c10_styler,
+        });
+
+        function geo_json_fb2dc6487fae4584ac9ff43eff858c10_add (data) {
+            geo_json_fb2dc6487fae4584ac9ff43eff858c10
+                .addData(data);
+        }
+            geo_json_fb2dc6487fae4584ac9ff43eff858c10_add({"bbox": [4.865341, 45.824286, 4.8765235148297, 45.83185], "features": [{"bbox": [4.865341, 45.824286, 4.8765235148297, 45.83185], "geometry": {"coordinates": [[[[4.87413804042781, 45.8245005898695], [4.873465618942734, 45.824286], [4.873388351484286, 45.824966316977566], [4.874345543511083, 45.825312588613485], [4.87413804042781, 45.8245005898695]]], [[[4.870389890761501, 45.82715094749814], [4.869013698569058, 45.82720277706346], [4.865341, 45.83185], [4.873405935070838, 45.82874601676805], [4.8765235148297, 45.82996981517585], [4.875803973112743, 45.82707410819215], [4.872189827056006, 45.8244900959288], [4.870389890761501, 45.82715094749814]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cb895c50779f73eada7cb50b90f2d313 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0c98fcd9f09294c35661381c2b97b16b = $(`<div id="html_0c98fcd9f09294c35661381c2b97b16b" style="width: 100.0%; height: 100.0%;">Sathonay-Camp - 0002</div>`)[0];
+                popup_cb895c50779f73eada7cb50b90f2d313.setContent(html_0c98fcd9f09294c35661381c2b97b16b);
+            
+        
+
+        geo_json_fb2dc6487fae4584ac9ff43eff858c10.bindPopup(popup_cb895c50779f73eada7cb50b90f2d313)
+        ;
+
+        
+    
+    
+            geo_json_fb2dc6487fae4584ac9ff43eff858c10.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_f032b7e8127ffa9c0fbec43159030457_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_f032b7e8127ffa9c0fbec43159030457_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_f032b7e8127ffa9c0fbec43159030457 = L.geoJson(null, {
+                onEachFeature: geo_json_f032b7e8127ffa9c0fbec43159030457_onEachFeature,
+            
+                style: geo_json_f032b7e8127ffa9c0fbec43159030457_styler,
+        });
+
+        function geo_json_f032b7e8127ffa9c0fbec43159030457_add (data) {
+            geo_json_f032b7e8127ffa9c0fbec43159030457
+                .addData(data);
+        }
+            geo_json_f032b7e8127ffa9c0fbec43159030457_add({"bbox": [4.86508035187564, 45.814852, 4.877505771407667, 45.83116894688039], "features": [{"bbox": [4.86508035187564, 45.814852, 4.877505771407667, 45.83116894688039], "geometry": {"coordinates": [[[[4.866110730760507, 45.81615663267312], [4.86626153207829, 45.81748520477097], [4.872852966643919, 45.82030022510701], [4.872991191337632, 45.82206471019266], [4.877505771407667, 45.821250495365845], [4.867566, 45.814852], [4.866110730760507, 45.81615663267312]]], [[[4.865309, 45.818964], [4.865789, 45.822999], [4.86508035187564, 45.83116894688039], [4.871165, 45.825787072033904], [4.86965298749287, 45.825072662091515], [4.869948054059499, 45.824051614912925], [4.871149633779392, 45.8251194029761], [4.869151793879273, 45.82042078570995], [4.866419622098324, 45.82103855056287], [4.865576258024555, 45.8176606715523], [4.865309, 45.818964]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_19c34c81cc3d57383dedb62802369164 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6b6f15a0f4abcea00072213e29d04a7d = $(`<div id="html_6b6f15a0f4abcea00072213e29d04a7d" style="width: 100.0%; height: 100.0%;">Sathonay-Camp - 0003</div>`)[0];
+                popup_19c34c81cc3d57383dedb62802369164.setContent(html_6b6f15a0f4abcea00072213e29d04a7d);
+            
+        
+
+        geo_json_f032b7e8127ffa9c0fbec43159030457.bindPopup(popup_19c34c81cc3d57383dedb62802369164)
+        ;
+
+        
+    
+    
+            geo_json_f032b7e8127ffa9c0fbec43159030457.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b0a821e8ca1d44a1432fcdc6d10737b4 = L.geoJson(null, {
+                onEachFeature: geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_onEachFeature,
+            
+                style: geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_styler,
+        });
+
+        function geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_add (data) {
+            geo_json_b0a821e8ca1d44a1432fcdc6d10737b4
+                .addData(data);
+        }
+            geo_json_b0a821e8ca1d44a1432fcdc6d10737b4_add({"bbox": [4.865616, 45.817333, 4.872852966643919, 45.83122883520155], "features": [{"bbox": [4.865616, 45.817333, 4.872852966643919, 45.83122883520155], "geometry": {"coordinates": [[[[4.86687322077562, 45.81745156889643], [4.865616, 45.817333], [4.865638584709649, 45.82066938066175], [4.869151793879273, 45.82042078570995], [4.869683482675198, 45.8227319625998], [4.872533476173663, 45.821811843117686], [4.872852966643919, 45.82030022510701], [4.86687322077562, 45.81745156889643]]], [[[4.871454709962567, 45.83021939428162], [4.871956754156455, 45.829885828882524], [4.872170001798957, 45.829308464517155], [4.870840323517542, 45.830051514723685], [4.871454709962567, 45.83021939428162]]], [[[4.872248473650425, 45.83084194436043], [4.871566939649525, 45.83043329086145], [4.871145155195211, 45.83071615700466], [4.871579, 45.831176], [4.872248473650425, 45.83084194436043]]], [[[4.869292665584841, 45.83122883520155], [4.869816, 45.831073], [4.870694341950636, 45.83075452408931], [4.869782657946479, 45.83083211421733], [4.869292665584841, 45.83122883520155]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4dc33173f7c7139d88cd725b64ebff69 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a4f7ee6a70c64315b4d9f7636d19b4e5 = $(`<div id="html_a4f7ee6a70c64315b4d9f7636d19b4e5" style="width: 100.0%; height: 100.0%;">Sathonay-Camp - 0004</div>`)[0];
+                popup_4dc33173f7c7139d88cd725b64ebff69.setContent(html_a4f7ee6a70c64315b4d9f7636d19b4e5);
+            
+        
+
+        geo_json_b0a821e8ca1d44a1432fcdc6d10737b4.bindPopup(popup_4dc33173f7c7139d88cd725b64ebff69)
+        ;
+
+        
+    
+    
+            geo_json_b0a821e8ca1d44a1432fcdc6d10737b4.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_efbd7860d1d72297d73a27b55f774897_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_efbd7860d1d72297d73a27b55f774897_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_efbd7860d1d72297d73a27b55f774897 = L.geoJson(null, {
+                onEachFeature: geo_json_efbd7860d1d72297d73a27b55f774897_onEachFeature,
+            
+                style: geo_json_efbd7860d1d72297d73a27b55f774897_styler,
+        });
+
+        function geo_json_efbd7860d1d72297d73a27b55f774897_add (data) {
+            geo_json_efbd7860d1d72297d73a27b55f774897
+                .addData(data);
+        }
+            geo_json_efbd7860d1d72297d73a27b55f774897_add({"bbox": [4.869915872141206, 45.82228630148698, 4.874641829375918, 45.82569247632636], "features": [{"bbox": [4.869915872141206, 45.82228630148698, 4.874641829375918, 45.82569247632636], "geometry": {"coordinates": [[[4.869915872141206, 45.82260349675515], [4.871149633779392, 45.8251194029761], [4.869948054059499, 45.824051614912925], [4.870024281947834, 45.82569247632636], [4.874641829375918, 45.824453328201386], [4.872158638235588, 45.82228630148698], [4.869915872141206, 45.82260349675515]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ff6def59fe16ea85599cf62c8ad1e2f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_308cf29749d4c765a1bb185b08e68dac = $(`<div id="html_308cf29749d4c765a1bb185b08e68dac" style="width: 100.0%; height: 100.0%;">Sathonay-Camp - 0005</div>`)[0];
+                popup_ff6def59fe16ea85599cf62c8ad1e2f0.setContent(html_308cf29749d4c765a1bb185b08e68dac);
+            
+        
+
+        geo_json_efbd7860d1d72297d73a27b55f774897.bindPopup(popup_ff6def59fe16ea85599cf62c8ad1e2f0)
+        ;
+
+        
+    
+    
+            geo_json_efbd7860d1d72297d73a27b55f774897.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_8179fbb0c9cb20e6670f0f4d43c42215_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8179fbb0c9cb20e6670f0f4d43c42215_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8179fbb0c9cb20e6670f0f4d43c42215 = L.geoJson(null, {
+                onEachFeature: geo_json_8179fbb0c9cb20e6670f0f4d43c42215_onEachFeature,
+            
+                style: geo_json_8179fbb0c9cb20e6670f0f4d43c42215_styler,
+        });
+
+        function geo_json_8179fbb0c9cb20e6670f0f4d43c42215_add (data) {
+            geo_json_8179fbb0c9cb20e6670f0f4d43c42215
+                .addData(data);
+        }
+            geo_json_8179fbb0c9cb20e6670f0f4d43c42215_add({"bbox": [4.869282398670026, 45.82810992721816, 4.90859, 45.851031], "features": [{"bbox": [4.869282398670026, 45.82810992721816, 4.90859, 45.851031], "geometry": {"coordinates": [[[[4.874559833472225, 45.83223127341603], [4.87465082546592, 45.83284035736633], [4.874957306128201, 45.83289178103265], [4.875054996755449, 45.83215466084527], [4.874559833472225, 45.83223127341603]]], [[[4.872090296110875, 45.83452707107738], [4.87243416393511, 45.835420778033274], [4.872589458333333, 45.83378809722221], [4.872187552109557, 45.831972750277025], [4.869282398670026, 45.83433183395765], [4.872090296110875, 45.83452707107738]]], [[[4.872739171821303, 45.834495123711356], [4.873081480906928, 45.83365491050118], [4.872718686567165, 45.83400347761194], [4.872739171821303, 45.834495123711356]]], [[[4.872856521173546, 45.83517430245168], [4.872457957527716, 45.83543790941995], [4.872760789863761, 45.835979157433755], [4.873113834323207, 45.83589526438148], [4.872856521173546, 45.83517430245168]]], [[[4.874452865398903, 45.83536178717363], [4.87483635777587, 45.8361106064992], [4.875261164106902, 45.83595693078708], [4.875016723786382, 45.835587578232264], [4.874452865398903, 45.83536178717363]]], [[[4.874024437946344, 45.83649822326424], [4.873793329612758, 45.835665620273346], [4.873570646879178, 45.835737574081534], [4.873883469522938, 45.83660528451004], [4.874024437946344, 45.83649822326424]]], [[[4.874427964389406, 45.83746285883859], [4.874965510158227, 45.83789835065891], [4.87510791332138, 45.83766783747759], [4.874826059993685, 45.837139362488166], [4.874427964389406, 45.83746285883859]]], [[[4.872091675911911, 45.84231003969851], [4.873641850379009, 45.84380356618075], [4.876069738161554, 45.8442348718663], [4.872111035775601, 45.84229763452849], [4.872091675911911, 45.84231003969851]]], [[[4.879111, 45.828147], [4.879095148189832, 45.82810992721816], [4.879111141244743, 45.828195023212636], [4.879111, 45.828147]]], [[[4.87488083458695, 45.830366973628486], [4.876285288969213, 45.8311635089148], [4.876798389451027, 45.83096026781486], [4.87647921982952, 45.830090805742486], [4.87488083458695, 45.830366973628486]]], [[[4.876524300278811, 45.83491494449336], [4.876687700596753, 45.834877046123715], [4.876971008908401, 45.83391121659102], [4.875958438189266, 45.834084534788374], [4.876524300278811, 45.83491494449336]]], [[[4.876494579338748, 45.83635828644296], [4.876733706655831, 45.836089423086456], [4.876468699376939, 45.83551459968847], [4.876494579338748, 45.83635828644296]]], [[[4.875688381541244, 45.837998397715275], [4.87564908837143, 45.83850722065609], [4.875817846530956, 45.838529949027745], [4.875851168689369, 45.83802499951753], [4.875688381541244, 45.837998397715275]]], [[[4.877576143780414, 45.83407703135397], [4.877415762711866, 45.83804718644068], [4.883910921185529, 45.84230414740578], [4.876516558285257, 45.84497440511779], [4.877355, 45.85024], [4.885893, 45.84875], [4.89295, 45.851031], [4.897056, 45.850559], [4.901992, 45.847994], [4.90859, 45.841354], [4.90736, 45.839447], [4.908099, 45.835427], [4.894385, 45.836093], [4.884477, 45.834586], [4.883248, 45.828675], [4.879165924067626, 45.8285580654931], [4.877170802393044, 45.830930544269535], [4.877576143780414, 45.83407703135397]]], [[[4.875730684803617, 45.847563369285254], [4.875262328646604, 45.84744192794496], [4.875441739412354, 45.848128559171435], [4.875730684803617, 45.847563369285254]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5698c851d9ef760b4ddb808027ce7100 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5a010d58f123bf0b4595b9404cedcbe4 = $(`<div id="html_5a010d58f123bf0b4595b9404cedcbe4" style="width: 100.0%; height: 100.0%;">Sathonay-Village - 0001</div>`)[0];
+                popup_5698c851d9ef760b4ddb808027ce7100.setContent(html_5a010d58f123bf0b4595b9404cedcbe4);
+            
+        
+
+        geo_json_8179fbb0c9cb20e6670f0f4d43c42215.bindPopup(popup_5698c851d9ef760b4ddb808027ce7100)
+        ;
+
+        
+    
+    
+            geo_json_8179fbb0c9cb20e6670f0f4d43c42215.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+    
+        function geo_json_4df8df5ce57f917f8454b900630dd8e6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4df8df5ce57f917f8454b900630dd8e6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4df8df5ce57f917f8454b900630dd8e6 = L.geoJson(null, {
+                onEachFeature: geo_json_4df8df5ce57f917f8454b900630dd8e6_onEachFeature,
+            
+                style: geo_json_4df8df5ce57f917f8454b900630dd8e6_styler,
+        });
+
+        function geo_json_4df8df5ce57f917f8454b900630dd8e6_add (data) {
+            geo_json_4df8df5ce57f917f8454b900630dd8e6
+                .addData(data);
+        }
+            geo_json_4df8df5ce57f917f8454b900630dd8e6_add({"bbox": [4.863056, 45.82810992721816, 4.883910921185529, 45.84985275786292], "features": [{"bbox": [4.863056, 45.82810992721816, 4.883910921185529, 45.84985275786292], "geometry": {"coordinates": [[[4.869816, 45.831073], [4.863056, 45.832335], [4.866061, 45.835139], [4.86735, 45.839206], [4.876069738161554, 45.8442348718663], [4.873641850379009, 45.84380356618075], [4.87677878370002, 45.84985275786292], [4.876516558285257, 45.84497440511779], [4.883910921185529, 45.84230414740578], [4.877415762711866, 45.83804718644068], [4.878313890822175, 45.83197981128107], [4.877170802393044, 45.830930544269535], [4.879095148189832, 45.82810992721816], [4.877152, 45.829821], [4.873789, 45.829841], [4.869816, 45.831073]], [[4.876285288969213, 45.8311635089148], [4.875146839123895, 45.830577395127854], [4.874387161783407, 45.82984259546583], [4.87647921982952, 45.830090805742486], [4.876285288969213, 45.8311635089148]], [[4.874957306128201, 45.83289178103265], [4.87465082546592, 45.83284035736633], [4.874559833472225, 45.83223127341603], [4.875054996755449, 45.83215466084527], [4.874957306128201, 45.83289178103265]], [[4.872364530810469, 45.83221880380579], [4.87261136100701, 45.8345254872361], [4.87243416393511, 45.835420778033274], [4.872395240351261, 45.833955888615044], [4.869282398670026, 45.83433183395765], [4.872364530810469, 45.83221880380579]], [[4.872739171821303, 45.834495123711356], [4.872718686567165, 45.83400347761194], [4.873081480906928, 45.83365491050118], [4.872739171821303, 45.834495123711356]], [[4.876755917654028, 45.834664938536726], [4.87616474769884, 45.834680266462115], [4.875958438189266, 45.834084534788374], [4.876971008908401, 45.83391121659102], [4.876755917654028, 45.834664938536726]], [[4.872760789863761, 45.835979157433755], [4.872457957527716, 45.83543790941995], [4.873022734325787, 45.83519354818509], [4.873113834323207, 45.83589526438148], [4.872760789863761, 45.835979157433755]], [[4.875261164106902, 45.83595693078708], [4.87483635777587, 45.8361106064992], [4.874452865398903, 45.83536178717363], [4.875016723786382, 45.835587578232264], [4.875261164106902, 45.83595693078708]], [[4.876494579338748, 45.83635828644296], [4.876468699376939, 45.83551459968847], [4.876733706655831, 45.836089423086456], [4.876494579338748, 45.83635828644296]], [[4.873570646879178, 45.835737574081534], [4.873793329612758, 45.835665620273346], [4.873883469522938, 45.83660528451004], [4.873570646879178, 45.835737574081534]], [[4.87439240899383, 45.837680055929], [4.874826059993685, 45.837139362488166], [4.87510791332138, 45.83766783747759], [4.874965510158227, 45.83789835065891], [4.87439240899383, 45.837680055929]], [[4.875608408574035, 45.838148925517395], [4.875851168689369, 45.83802499951753], [4.875861026937133, 45.83851002530689], [4.87564908837143, 45.83850722065609], [4.875608408574035, 45.838148925517395]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_68cc5ac1866c448fc2dc28fff1a3c4f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f7d4f3e827f1752455a87662ef40891f = $(`<div id="html_f7d4f3e827f1752455a87662ef40891f" style="width: 100.0%; height: 100.0%;">Sathonay-Village - 0002</div>`)[0];
+                popup_68cc5ac1866c448fc2dc28fff1a3c4f6.setContent(html_f7d4f3e827f1752455a87662ef40891f);
+            
+        
+
+        geo_json_4df8df5ce57f917f8454b900630dd8e6.bindPopup(popup_68cc5ac1866c448fc2dc28fff1a3c4f6)
+        ;
+
+        
+    
+    
+            geo_json_4df8df5ce57f917f8454b900630dd8e6.addTo(map_c2be2d7496ae785144abf042977aabd9);
+        
+</script>
+</html>

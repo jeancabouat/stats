@@ -1,0 +1,2265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_0037cf7f47fcb33f5bc1878c01ee2437 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_0037cf7f47fcb33f5bc1878c01ee2437" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_0037cf7f47fcb33f5bc1878c01ee2437 = L.map(
+                "map_0037cf7f47fcb33f5bc1878c01ee2437",
+                {
+                    center: [48.858885, 2.34694],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_27dcdd64675fad83f2a3208db4db719b = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e", "detectRetina": false, "maxNativeZoom": 20, "maxZoom": 20, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abcd", "tms": false}
+            );
+        
+    
+            tile_layer_27dcdd64675fad83f2a3208db4db719b.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_8f6546443e24ca33465ffa031252b81d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8f6546443e24ca33465ffa031252b81d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8f6546443e24ca33465ffa031252b81d = L.geoJson(null, {
+                onEachFeature: geo_json_8f6546443e24ca33465ffa031252b81d_onEachFeature,
+            
+                style: geo_json_8f6546443e24ca33465ffa031252b81d_styler,
+        });
+
+        function geo_json_8f6546443e24ca33465ffa031252b81d_add (data) {
+            geo_json_8f6546443e24ca33465ffa031252b81d
+                .addData(data);
+        }
+            geo_json_8f6546443e24ca33465ffa031252b81d_add({"bbox": [2.300893957978705, 48.83009542759424, 2.30950675483751, 48.83406347944501], "features": [{"bbox": [2.300893957978705, 48.83009542759424, 2.30950675483751, 48.83406347944501], "geometry": {"coordinates": [[[[2.304819100045491, 48.83045400366748], [2.303120097482651, 48.830924793529135], [2.307346943473796, 48.83406347944501], [2.30950675483751, 48.83340965497186], [2.307087782539804, 48.83009542759424], [2.304819100045491, 48.83045400366748]]], [[[2.300893957978705, 48.83259045886525], [2.301348528646158, 48.83284565643293], [2.301277091896293, 48.83257153867178], [2.300893957978705, 48.83259045886525]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b9018a07d372958d5f165b7371d2174a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d27f01844e75f8c304c0f6c5141890b0 = $(`<div id="html_d27f01844e75f8c304c0f6c5141890b0" style="width: 100.0%; height: 100.0%;">Paris - 1545</div>`)[0];
+                popup_b9018a07d372958d5f165b7371d2174a.setContent(html_d27f01844e75f8c304c0f6c5141890b0);
+            
+        
+
+        geo_json_8f6546443e24ca33465ffa031252b81d.bindPopup(popup_b9018a07d372958d5f165b7371d2174a)
+        ;
+
+        
+    
+    
+            geo_json_8f6546443e24ca33465ffa031252b81d.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_2841ad7ebe330f3fa842e8e7d6ea918e = L.geoJson(null, {
+                onEachFeature: geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_onEachFeature,
+            
+                style: geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_styler,
+        });
+
+        function geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_add (data) {
+            geo_json_2841ad7ebe330f3fa842e8e7d6ea918e
+                .addData(data);
+        }
+            geo_json_2841ad7ebe330f3fa842e8e7d6ea918e_add({"bbox": [2.303597067100449, 48.831650830561166, 2.307346943473796, 48.834759300899755], "features": [{"bbox": [2.303597067100449, 48.831650830561166, 2.307346943473796, 48.834759300899755], "geometry": {"coordinates": [[[2.303597067100449, 48.832046209434736], [2.305313075106707, 48.834759300899755], [2.307346943473796, 48.83406347944501], [2.305768765790249, 48.831650830561166], [2.303597067100449, 48.832046209434736]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4876f3a2248ac2793bb6fde8ee4012dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d300d5d4ad290d6af3cccff6142cda34 = $(`<div id="html_d300d5d4ad290d6af3cccff6142cda34" style="width: 100.0%; height: 100.0%;">Paris - 1546</div>`)[0];
+                popup_4876f3a2248ac2793bb6fde8ee4012dd.setContent(html_d300d5d4ad290d6af3cccff6142cda34);
+            
+        
+
+        geo_json_2841ad7ebe330f3fa842e8e7d6ea918e.bindPopup(popup_4876f3a2248ac2793bb6fde8ee4012dd)
+        ;
+
+        
+    
+    
+            geo_json_2841ad7ebe330f3fa842e8e7d6ea918e.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_b7ab5982bfc369705b43eef0b5b1d6a6 = L.geoJson(null, {
+                onEachFeature: geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_onEachFeature,
+            
+                style: geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_styler,
+        });
+
+        function geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_add (data) {
+            geo_json_b7ab5982bfc369705b43eef0b5b1d6a6
+                .addData(data);
+        }
+            geo_json_b7ab5982bfc369705b43eef0b5b1d6a6_add({"bbox": [2.300914515629592, 48.826514012507474, 2.307087782539804, 48.83217690388724], "features": [{"bbox": [2.300914515629592, 48.826514012507474, 2.307087782539804, 48.83217690388724], "geometry": {"coordinates": [[[2.300983845113972, 48.8293588469259], [2.300914515629592, 48.831160420884196], [2.303014416488691, 48.83217690388724], [2.303122145731685, 48.830889375889555], [2.307087782539804, 48.83009542759424], [2.302971179503553, 48.826514012507474], [2.302943519413682, 48.82856275817589], [2.300983845113972, 48.8293588469259]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1b118ff58d09188f788a60873abdecf7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ede74b08c95b69709790ff1ed0da2592 = $(`<div id="html_ede74b08c95b69709790ff1ed0da2592" style="width: 100.0%; height: 100.0%;">Paris - 1547</div>`)[0];
+                popup_1b118ff58d09188f788a60873abdecf7.setContent(html_ede74b08c95b69709790ff1ed0da2592);
+            
+        
+
+        geo_json_b7ab5982bfc369705b43eef0b5b1d6a6.bindPopup(popup_1b118ff58d09188f788a60873abdecf7)
+        ;
+
+        
+    
+    
+            geo_json_b7ab5982bfc369705b43eef0b5b1d6a6.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_e5209cbf4be387bb792c120107fee0c5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e5209cbf4be387bb792c120107fee0c5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e5209cbf4be387bb792c120107fee0c5 = L.geoJson(null, {
+                onEachFeature: geo_json_e5209cbf4be387bb792c120107fee0c5_onEachFeature,
+            
+                style: geo_json_e5209cbf4be387bb792c120107fee0c5_styler,
+        });
+
+        function geo_json_e5209cbf4be387bb792c120107fee0c5_add (data) {
+            geo_json_e5209cbf4be387bb792c120107fee0c5
+                .addData(data);
+        }
+            geo_json_e5209cbf4be387bb792c120107fee0c5_add({"bbox": [2.298290399859113, 48.825126, 2.302971179503553, 48.829305743563445], "features": [{"bbox": [2.298290399859113, 48.825126, 2.302971179503553, 48.829305743563445], "geometry": {"coordinates": [[[2.298626400294053, 48.82792654240817], [2.298780121479083, 48.829305743563445], [2.301974784651173, 48.828987438755036], [2.302971179503553, 48.826514012507474], [2.301315, 48.825126], [2.298290399859113, 48.825792485591606], [2.298626400294053, 48.82792654240817]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3a7353c3b3908d9a9b2b6d7f3ba4a188 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2234bd1be66b9bd15b6b4b7e735c620d = $(`<div id="html_2234bd1be66b9bd15b6b4b7e735c620d" style="width: 100.0%; height: 100.0%;">Paris - 1548</div>`)[0];
+                popup_3a7353c3b3908d9a9b2b6d7f3ba4a188.setContent(html_2234bd1be66b9bd15b6b4b7e735c620d);
+            
+        
+
+        geo_json_e5209cbf4be387bb792c120107fee0c5.bindPopup(popup_3a7353c3b3908d9a9b2b6d7f3ba4a188)
+        ;
+
+        
+    
+    
+            geo_json_e5209cbf4be387bb792c120107fee0c5.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_877e3175449594af98e6c03cfba3dc4c_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_877e3175449594af98e6c03cfba3dc4c_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_877e3175449594af98e6c03cfba3dc4c = L.geoJson(null, {
+                onEachFeature: geo_json_877e3175449594af98e6c03cfba3dc4c_onEachFeature,
+            
+                style: geo_json_877e3175449594af98e6c03cfba3dc4c_styler,
+        });
+
+        function geo_json_877e3175449594af98e6c03cfba3dc4c_add (data) {
+            geo_json_877e3175449594af98e6c03cfba3dc4c
+                .addData(data);
+        }
+            geo_json_877e3175449594af98e6c03cfba3dc4c_add({"bbox": [2.288911653141912, 48.825792485591606, 2.300983845113972, 48.830852080689255], "features": [{"bbox": [2.288911653141912, 48.825792485591606, 2.300983845113972, 48.830852080689255], "geometry": {"coordinates": [[[[2.290519455622219, 48.82786588609503], [2.288911653141912, 48.82853846418104], [2.2927246934859, 48.830852080689255], [2.298519249509361, 48.829859946008945], [2.29922832336772, 48.82849819873484], [2.298290399859113, 48.825792485591606], [2.290519455622219, 48.82786588609503]]], [[[2.300431149496431, 48.82839348084122], [2.299296066769223, 48.82911764953847], [2.299138759109767, 48.8293275633308], [2.300983845113972, 48.8293588469259], [2.300431149496431, 48.82839348084122]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c12c25c53712944b7ec26cacd1da93e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8379ac77fdb2ce322d4d79fe9e4cfb9f = $(`<div id="html_8379ac77fdb2ce322d4d79fe9e4cfb9f" style="width: 100.0%; height: 100.0%;">Paris - 1549</div>`)[0];
+                popup_c12c25c53712944b7ec26cacd1da93e6.setContent(html_8379ac77fdb2ce322d4d79fe9e4cfb9f);
+            
+        
+
+        geo_json_877e3175449594af98e6c03cfba3dc4c.bindPopup(popup_c12c25c53712944b7ec26cacd1da93e6)
+        ;
+
+        
+    
+    
+            geo_json_877e3175449594af98e6c03cfba3dc4c.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_7d816790e1e52abc60f01ae406c953a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7d816790e1e52abc60f01ae406c953a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7d816790e1e52abc60f01ae406c953a9 = L.geoJson(null, {
+                onEachFeature: geo_json_7d816790e1e52abc60f01ae406c953a9_onEachFeature,
+            
+                style: geo_json_7d816790e1e52abc60f01ae406c953a9_styler,
+        });
+
+        function geo_json_7d816790e1e52abc60f01ae406c953a9_add (data) {
+            geo_json_7d816790e1e52abc60f01ae406c953a9
+                .addData(data);
+        }
+            geo_json_7d816790e1e52abc60f01ae406c953a9_add({"bbox": [2.300077126715828, 48.82928333661119, 2.305124854913038, 48.834597309944996], "features": [{"bbox": [2.300077126715828, 48.82928333661119, 2.305124854913038, 48.834597309944996], "geometry": {"coordinates": [[[[2.301839356392954, 48.83012475278669], [2.301583625567321, 48.82928333661119], [2.301053969720333, 48.82942665525215], [2.301323195111638, 48.83043883575148], [2.301839356392954, 48.83012475278669]]], [[[2.301576683583178, 48.83145830510536], [2.300077126715828, 48.831400012346016], [2.305124854913038, 48.834597309944996], [2.302936257992629, 48.831450046801834], [2.301576683583178, 48.83145830510536]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b79adce4702fae0ef6ceb88d705db217 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7015cda6cb622ea1425b4c446c1d6fd9 = $(`<div id="html_7015cda6cb622ea1425b4c446c1d6fd9" style="width: 100.0%; height: 100.0%;">Paris - 1550</div>`)[0];
+                popup_b79adce4702fae0ef6ceb88d705db217.setContent(html_7015cda6cb622ea1425b4c446c1d6fd9);
+            
+        
+
+        geo_json_7d816790e1e52abc60f01ae406c953a9.bindPopup(popup_b79adce4702fae0ef6ceb88d705db217)
+        ;
+
+        
+    
+    
+            geo_json_7d816790e1e52abc60f01ae406c953a9.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5cfc17ccaa1b059a728bfff5e6e1541a = L.geoJson(null, {
+                onEachFeature: geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_onEachFeature,
+            
+                style: geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_styler,
+        });
+
+        function geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_add (data) {
+            geo_json_5cfc17ccaa1b059a728bfff5e6e1541a
+                .addData(data);
+        }
+            geo_json_5cfc17ccaa1b059a728bfff5e6e1541a_add({"bbox": [2.296564491922449, 48.8308861112062, 2.303494945869929, 48.83511629482878], "features": [{"bbox": [2.296564491922449, 48.8308861112062, 2.303494945869929, 48.83511629482878], "geometry": {"coordinates": [[[[2.296564491922449, 48.83106049192245], [2.296731469969316, 48.831441234938175], [2.297540726498807, 48.831291161620435], [2.296882995513789, 48.8308861112062], [2.296564491922449, 48.83106049192245]]], [[[2.298745319495171, 48.83200229282978], [2.300028409848776, 48.834888518805734], [2.303494945869929, 48.83511629482878], [2.300077126715828, 48.831400012346016], [2.297343475828639, 48.83207498948487], [2.298745319495171, 48.83200229282978]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_a9d538fcbb7a8717ad8856c4a279eb8d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_39d98cd041672673a9319dca942003a7 = $(`<div id="html_39d98cd041672673a9319dca942003a7" style="width: 100.0%; height: 100.0%;">Paris - 1551</div>`)[0];
+                popup_a9d538fcbb7a8717ad8856c4a279eb8d.setContent(html_39d98cd041672673a9319dca942003a7);
+            
+        
+
+        geo_json_5cfc17ccaa1b059a728bfff5e6e1541a.bindPopup(popup_a9d538fcbb7a8717ad8856c4a279eb8d)
+        ;
+
+        
+    
+    
+            geo_json_5cfc17ccaa1b059a728bfff5e6e1541a.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_5a36d9f392258f4c875600d9442b74a9_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5a36d9f392258f4c875600d9442b74a9_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5a36d9f392258f4c875600d9442b74a9 = L.geoJson(null, {
+                onEachFeature: geo_json_5a36d9f392258f4c875600d9442b74a9_onEachFeature,
+            
+                style: geo_json_5a36d9f392258f4c875600d9442b74a9_styler,
+        });
+
+        function geo_json_5a36d9f392258f4c875600d9442b74a9_add (data) {
+            geo_json_5a36d9f392258f4c875600d9442b74a9
+                .addData(data);
+        }
+            geo_json_5a36d9f392258f4c875600d9442b74a9_add({"bbox": [2.293446377831073, 48.829305743563445, 2.301323195111638, 48.83310316907428], "features": [{"bbox": [2.293446377831073, 48.829305743563445, 2.301323195111638, 48.83310316907428], "geometry": {"coordinates": [[[2.293446377831073, 48.83043214565437], [2.295069861349807, 48.83310316907428], [2.301323195111638, 48.83043883575148], [2.298780121479083, 48.829305743563445], [2.293446377831073, 48.83043214565437]], [[2.297394900949482, 48.83111625712109], [2.296731469969316, 48.831441234938175], [2.296556023371395, 48.831087683460545], [2.296882995513789, 48.8308861112062], [2.297394900949482, 48.83111625712109]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_01be053de9868451be12894965f10083 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_531fd0a7a44fdfe4c7db0ff1b440e0fb = $(`<div id="html_531fd0a7a44fdfe4c7db0ff1b440e0fb" style="width: 100.0%; height: 100.0%;">Paris - 1552</div>`)[0];
+                popup_01be053de9868451be12894965f10083.setContent(html_531fd0a7a44fdfe4c7db0ff1b440e0fb);
+            
+        
+
+        geo_json_5a36d9f392258f4c875600d9442b74a9.bindPopup(popup_01be053de9868451be12894965f10083)
+        ;
+
+        
+    
+    
+            geo_json_5a36d9f392258f4c875600d9442b74a9.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_146263044b27674a19ea1ad5d4d97f06_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_146263044b27674a19ea1ad5d4d97f06_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_146263044b27674a19ea1ad5d4d97f06 = L.geoJson(null, {
+                onEachFeature: geo_json_146263044b27674a19ea1ad5d4d97f06_onEachFeature,
+            
+                style: geo_json_146263044b27674a19ea1ad5d4d97f06_styler,
+        });
+
+        function geo_json_146263044b27674a19ea1ad5d4d97f06_add (data) {
+            geo_json_146263044b27674a19ea1ad5d4d97f06
+                .addData(data);
+        }
+            geo_json_146263044b27674a19ea1ad5d4d97f06_add({"bbox": [2.277889142323709, 48.82978028409261, 2.295190398270952, 48.84336283203883], "features": [{"bbox": [2.277889142323709, 48.82978028409261, 2.295190398270952, 48.84336283203883], "geometry": {"coordinates": [[[[2.291448150957285, 48.8303915], [2.290509202221785, 48.82978028409261], [2.29054119311662, 48.83309889337456], [2.292146915247087, 48.832281603140785], [2.292116086932201, 48.83408708839646], [2.295190398270952, 48.83411393858452], [2.294388197038062, 48.83156030008353], [2.291448150957285, 48.8303915]], [[2.29274767397882, 48.831388064800805], [2.292540578495468, 48.83158674176858], [2.292415563800328, 48.83145166790604], [2.292486321140894, 48.83126501492142], [2.29274767397882, 48.831388064800805]]], [[[2.27819500485437, 48.84336283203883], [2.278619671419075, 48.843345674152324], [2.278295145814987, 48.842862671140566], [2.277889142323709, 48.84321765600317], [2.27819500485437, 48.84336283203883]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f64c13af5a032098675bdc16db366b57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bd02703480db80fca0b3ab085a163ef1 = $(`<div id="html_bd02703480db80fca0b3ab085a163ef1" style="width: 100.0%; height: 100.0%;">Paris - 1553</div>`)[0];
+                popup_f64c13af5a032098675bdc16db366b57.setContent(html_bd02703480db80fca0b3ab085a163ef1);
+            
+        
+
+        geo_json_146263044b27674a19ea1ad5d4d97f06.bindPopup(popup_f64c13af5a032098675bdc16db366b57)
+        ;
+
+        
+    
+    
+            geo_json_146263044b27674a19ea1ad5d4d97f06.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_0d4482dc59458661930aedd0120485b4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0d4482dc59458661930aedd0120485b4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0d4482dc59458661930aedd0120485b4 = L.geoJson(null, {
+                onEachFeature: geo_json_0d4482dc59458661930aedd0120485b4_onEachFeature,
+            
+                style: geo_json_0d4482dc59458661930aedd0120485b4_styler,
+        });
+
+        function geo_json_0d4482dc59458661930aedd0120485b4_add (data) {
+            geo_json_0d4482dc59458661930aedd0120485b4
+                .addData(data);
+        }
+            geo_json_0d4482dc59458661930aedd0120485b4_add({"bbox": [2.294146639017063, 48.8319777610294, 2.299000742586004, 48.83451197069625], "features": [{"bbox": [2.294146639017063, 48.8319777610294, 2.299000742586004, 48.83451197069625], "geometry": {"coordinates": [[[2.295428539455404, 48.83300123798277], [2.294146639017063, 48.83319042149049], [2.29565294569373, 48.83451197069625], [2.299000742586004, 48.83414752342823], [2.298789101129335, 48.8319777610294], [2.295428539455404, 48.83300123798277]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b5c4eb24b3a95e3cc73a544ad7f56cba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_42c42e6fdb49872eee817ac2fcc75b09 = $(`<div id="html_42c42e6fdb49872eee817ac2fcc75b09" style="width: 100.0%; height: 100.0%;">Paris - 1554</div>`)[0];
+                popup_b5c4eb24b3a95e3cc73a544ad7f56cba.setContent(html_42c42e6fdb49872eee817ac2fcc75b09);
+            
+        
+
+        geo_json_0d4482dc59458661930aedd0120485b4.bindPopup(popup_b5c4eb24b3a95e3cc73a544ad7f56cba)
+        ;
+
+        
+    
+    
+            geo_json_0d4482dc59458661930aedd0120485b4.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_58124c54561738c0de47aded621e65ef_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_58124c54561738c0de47aded621e65ef_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_58124c54561738c0de47aded621e65ef = L.geoJson(null, {
+                onEachFeature: geo_json_58124c54561738c0de47aded621e65ef_onEachFeature,
+            
+                style: geo_json_58124c54561738c0de47aded621e65ef_styler,
+        });
+
+        function geo_json_58124c54561738c0de47aded621e65ef_add (data) {
+            geo_json_58124c54561738c0de47aded621e65ef
+                .addData(data);
+        }
+            geo_json_58124c54561738c0de47aded621e65ef_add({"bbox": [2.293153228255649, 48.83379419707006, 2.296745334973591, 48.83721073887044], "features": [{"bbox": [2.293153228255649, 48.83379419707006, 2.296745334973591, 48.83721073887044], "geometry": {"coordinates": [[[2.293153228255649, 48.835723181102836], [2.295781287413029, 48.83721073887044], [2.295217080966845, 48.83615908812053], [2.296745334973591, 48.83549575490266], [2.29402086535032, 48.83379419707006], [2.293153228255649, 48.835723181102836]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ebdefb53456b74a01eece0218a25374a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c073fc1636ad36985fa0371b8dac5fd = $(`<div id="html_9c073fc1636ad36985fa0371b8dac5fd" style="width: 100.0%; height: 100.0%;">Paris - 1555</div>`)[0];
+                popup_ebdefb53456b74a01eece0218a25374a.setContent(html_9c073fc1636ad36985fa0371b8dac5fd);
+            
+        
+
+        geo_json_58124c54561738c0de47aded621e65ef.bindPopup(popup_ebdefb53456b74a01eece0218a25374a)
+        ;
+
+        
+    
+    
+            geo_json_58124c54561738c0de47aded621e65ef.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_dfda7c85d7c0e0f825699707cf1c85a7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_dfda7c85d7c0e0f825699707cf1c85a7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_dfda7c85d7c0e0f825699707cf1c85a7 = L.geoJson(null, {
+                onEachFeature: geo_json_dfda7c85d7c0e0f825699707cf1c85a7_onEachFeature,
+            
+                style: geo_json_dfda7c85d7c0e0f825699707cf1c85a7_styler,
+        });
+
+        function geo_json_dfda7c85d7c0e0f825699707cf1c85a7_add (data) {
+            geo_json_dfda7c85d7c0e0f825699707cf1c85a7
+                .addData(data);
+        }
+            geo_json_dfda7c85d7c0e0f825699707cf1c85a7_add({"bbox": [2.295765201387316, 48.83390042672024, 2.300843484931732, 48.836744454645036], "features": [{"bbox": [2.295765201387316, 48.83390042672024, 2.300843484931732, 48.836744454645036], "geometry": {"coordinates": [[[2.296868399534416, 48.83452061666653], [2.295765201387316, 48.8345445645895], [2.297908680912892, 48.836744454645036], [2.300843484931732, 48.83598037045389], [2.298549363257848, 48.83390042672024], [2.296868399534416, 48.83452061666653]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_6370ff54f69a2b94e5a6b4eddeb272e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_ceb142a3723f4359c251a6f4551b6dba = $(`<div id="html_ceb142a3723f4359c251a6f4551b6dba" style="width: 100.0%; height: 100.0%;">Paris - 1556</div>`)[0];
+                popup_6370ff54f69a2b94e5a6b4eddeb272e6.setContent(html_ceb142a3723f4359c251a6f4551b6dba);
+            
+        
+
+        geo_json_dfda7c85d7c0e0f825699707cf1c85a7.bindPopup(popup_6370ff54f69a2b94e5a6b4eddeb272e6)
+        ;
+
+        
+    
+    
+            geo_json_dfda7c85d7c0e0f825699707cf1c85a7.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_5271063280e2aa9de3cf0102fa7ad21e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5271063280e2aa9de3cf0102fa7ad21e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5271063280e2aa9de3cf0102fa7ad21e = L.geoJson(null, {
+                onEachFeature: geo_json_5271063280e2aa9de3cf0102fa7ad21e_onEachFeature,
+            
+                style: geo_json_5271063280e2aa9de3cf0102fa7ad21e_styler,
+        });
+
+        function geo_json_5271063280e2aa9de3cf0102fa7ad21e_add (data) {
+            geo_json_5271063280e2aa9de3cf0102fa7ad21e
+                .addData(data);
+        }
+            geo_json_5271063280e2aa9de3cf0102fa7ad21e_add({"bbox": [2.295467164501938, 48.83555612679201, 2.298477820364078, 48.83931610007037], "features": [{"bbox": [2.295467164501938, 48.83555612679201, 2.298477820364078, 48.83931610007037], "geometry": {"coordinates": [[[2.295467164501938, 48.83690498523095], [2.295468295803859, 48.83931610007037], [2.298477820364078, 48.83694680109673], [2.296217893537018, 48.83555612679201], [2.295467164501938, 48.83690498523095]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2195ccefb0657a9ec69ac93930624611 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8d18132604ecce4522f1d9951ed9f66c = $(`<div id="html_8d18132604ecce4522f1d9951ed9f66c" style="width: 100.0%; height: 100.0%;">Paris - 1557</div>`)[0];
+                popup_2195ccefb0657a9ec69ac93930624611.setContent(html_8d18132604ecce4522f1d9951ed9f66c);
+            
+        
+
+        geo_json_5271063280e2aa9de3cf0102fa7ad21e.bindPopup(popup_2195ccefb0657a9ec69ac93930624611)
+        ;
+
+        
+    
+    
+            geo_json_5271063280e2aa9de3cf0102fa7ad21e.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_98dad43d592961f8b69859ac2cb97146_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_98dad43d592961f8b69859ac2cb97146_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_98dad43d592961f8b69859ac2cb97146 = L.geoJson(null, {
+                onEachFeature: geo_json_98dad43d592961f8b69859ac2cb97146_onEachFeature,
+            
+                style: geo_json_98dad43d592961f8b69859ac2cb97146_styler,
+        });
+
+        function geo_json_98dad43d592961f8b69859ac2cb97146_add (data) {
+            geo_json_98dad43d592961f8b69859ac2cb97146
+                .addData(data);
+        }
+            geo_json_98dad43d592961f8b69859ac2cb97146_add({"bbox": [2.299278155406351, 48.83450010926781, 2.302768943378124, 48.83876540309102], "features": [{"bbox": [2.299278155406351, 48.83450010926781, 2.302768943378124, 48.83876540309102], "geometry": {"coordinates": [[[2.299278155406351, 48.8364271191205], [2.300203971461023, 48.83876540309102], [2.302768943378124, 48.83526553098438], [2.301479976208122, 48.83450010926781], [2.299278155406351, 48.8364271191205]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ac5e4b5c9fcc7944ee86424d6c4d2646 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5406678a4a1b0d0d2edd776256c1b1f2 = $(`<div id="html_5406678a4a1b0d0d2edd776256c1b1f2" style="width: 100.0%; height: 100.0%;">Paris - 1558</div>`)[0];
+                popup_ac5e4b5c9fcc7944ee86424d6c4d2646.setContent(html_5406678a4a1b0d0d2edd776256c1b1f2);
+            
+        
+
+        geo_json_98dad43d592961f8b69859ac2cb97146.bindPopup(popup_ac5e4b5c9fcc7944ee86424d6c4d2646)
+        ;
+
+        
+    
+    
+            geo_json_98dad43d592961f8b69859ac2cb97146.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf = L.geoJson(null, {
+                onEachFeature: geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_onEachFeature,
+            
+                style: geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_styler,
+        });
+
+        function geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_add (data) {
+            geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf
+                .addData(data);
+        }
+            geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf_add({"bbox": [2.303203656893576, 48.834099949596016, 2.308524658455942, 48.836538702742416], "features": [{"bbox": [2.303203656893576, 48.834099949596016, 2.308524658455942, 48.836538702742416], "geometry": {"coordinates": [[[2.305124854913038, 48.834597309944996], [2.303203656893576, 48.834099949596016], [2.30637002056806, 48.836538702742416], [2.308524658455942, 48.83418912249959], [2.305124854913038, 48.834597309944996]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_167c2532d740cdb657f4a8273c16b50d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a284d61484eb741131b9a8c5b2dbbdc = $(`<div id="html_1a284d61484eb741131b9a8c5b2dbbdc" style="width: 100.0%; height: 100.0%;">Paris - 1559</div>`)[0];
+                popup_167c2532d740cdb657f4a8273c16b50d.setContent(html_1a284d61484eb741131b9a8c5b2dbbdc);
+            
+        
+
+        geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf.bindPopup(popup_167c2532d740cdb657f4a8273c16b50d)
+        ;
+
+        
+    
+    
+            geo_json_d0fd9cefbfcf93cfeaefdb979bed4cbf.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83 = L.geoJson(null, {
+                onEachFeature: geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_onEachFeature,
+            
+                style: geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_styler,
+        });
+
+        function geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_add (data) {
+            geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83
+                .addData(data);
+        }
+            geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83_add({"bbox": [2.300436023097074, 48.83511629482878, 2.305870310947216, 48.839030854919734], "features": [{"bbox": [2.300436023097074, 48.83511629482878, 2.305870310947216, 48.839030854919734], "geometry": {"coordinates": [[[2.301062525379878, 48.83700461138936], [2.300436023097074, 48.839030854919734], [2.305870310947216, 48.83659132436025], [2.303494945869929, 48.83511629482878], [2.301062525379878, 48.83700461138936]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5f70baae340a8b88a0e251b19ac3a56e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d4a38908c9061d1c65196e13bfe40961 = $(`<div id="html_d4a38908c9061d1c65196e13bfe40961" style="width: 100.0%; height: 100.0%;">Paris - 1560</div>`)[0];
+                popup_5f70baae340a8b88a0e251b19ac3a56e.setContent(html_d4a38908c9061d1c65196e13bfe40961);
+            
+        
+
+        geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83.bindPopup(popup_5f70baae340a8b88a0e251b19ac3a56e)
+        ;
+
+        
+    
+    
+            geo_json_7da8f3298bf2c6e67ceb96b4a9f93e83.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_5839578b3862b03d19b6104c7252d396_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_5839578b3862b03d19b6104c7252d396_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_5839578b3862b03d19b6104c7252d396 = L.geoJson(null, {
+                onEachFeature: geo_json_5839578b3862b03d19b6104c7252d396_onEachFeature,
+            
+                style: geo_json_5839578b3862b03d19b6104c7252d396_styler,
+        });
+
+        function geo_json_5839578b3862b03d19b6104c7252d396_add (data) {
+            geo_json_5839578b3862b03d19b6104c7252d396
+                .addData(data);
+        }
+            geo_json_5839578b3862b03d19b6104c7252d396_add({"bbox": [2.302567332787629, 48.836538702742416, 2.30637002056806, 48.84012982687568], "features": [{"bbox": [2.302567332787629, 48.836538702742416, 2.30637002056806, 48.84012982687568], "geometry": {"coordinates": [[[2.303066084234924, 48.8375657782071], [2.302567332787629, 48.84012982687568], [2.304830901869158, 48.83940072963952], [2.30637002056806, 48.836538702742416], [2.303066084234924, 48.8375657782071]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_56642cc7438a7a24c94ceccd089bf04e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e69ca5899d931854bd117d7b25ae91ae = $(`<div id="html_e69ca5899d931854bd117d7b25ae91ae" style="width: 100.0%; height: 100.0%;">Paris - 1561</div>`)[0];
+                popup_56642cc7438a7a24c94ceccd089bf04e.setContent(html_e69ca5899d931854bd117d7b25ae91ae);
+            
+        
+
+        geo_json_5839578b3862b03d19b6104c7252d396.bindPopup(popup_56642cc7438a7a24c94ceccd089bf04e)
+        ;
+
+        
+    
+    
+            geo_json_5839578b3862b03d19b6104c7252d396.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_7d3178b4216aa0cd786d658f1ff25c7a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_7d3178b4216aa0cd786d658f1ff25c7a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_7d3178b4216aa0cd786d658f1ff25c7a = L.geoJson(null, {
+                onEachFeature: geo_json_7d3178b4216aa0cd786d658f1ff25c7a_onEachFeature,
+            
+                style: geo_json_7d3178b4216aa0cd786d658f1ff25c7a_styler,
+        });
+
+        function geo_json_7d3178b4216aa0cd786d658f1ff25c7a_add (data) {
+            geo_json_7d3178b4216aa0cd786d658f1ff25c7a
+                .addData(data);
+        }
+            geo_json_7d3178b4216aa0cd786d658f1ff25c7a_add({"bbox": [2.297717861899263, 48.83677232818773, 2.304226759201326, 48.840210156724375], "features": [{"bbox": [2.297717861899263, 48.83677232818773, 2.304226759201326, 48.840210156724375], "geometry": {"coordinates": [[[[2.298263743175119, 48.83677232818773], [2.297717861899263, 48.83838575152177], [2.302477707196127, 48.84005999175716], [2.302658242637502, 48.83873131486575], [2.300436023097074, 48.839030854919734], [2.298933369144898, 48.83797311387961], [2.30004943668739, 48.83706250847938], [2.298263743175119, 48.83677232818773]]], [[[2.304226759201326, 48.83994952483801], [2.303751684864599, 48.83944958100369], [2.303301905759951, 48.83975800973094], [2.303579015139085, 48.840210156724375], [2.304226759201326, 48.83994952483801]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_26ce2eef60665410737a2a57d9c0522b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e31fe9a7558562a943335be0c3e4598e = $(`<div id="html_e31fe9a7558562a943335be0c3e4598e" style="width: 100.0%; height: 100.0%;">Paris - 1562</div>`)[0];
+                popup_26ce2eef60665410737a2a57d9c0522b.setContent(html_e31fe9a7558562a943335be0c3e4598e);
+            
+        
+
+        geo_json_7d3178b4216aa0cd786d658f1ff25c7a.bindPopup(popup_26ce2eef60665410737a2a57d9c0522b)
+        ;
+
+        
+    
+    
+            geo_json_7d3178b4216aa0cd786d658f1ff25c7a.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_d15992a0b1b7a31eda213a96e5990599_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d15992a0b1b7a31eda213a96e5990599_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d15992a0b1b7a31eda213a96e5990599 = L.geoJson(null, {
+                onEachFeature: geo_json_d15992a0b1b7a31eda213a96e5990599_onEachFeature,
+            
+                style: geo_json_d15992a0b1b7a31eda213a96e5990599_styler,
+        });
+
+        function geo_json_d15992a0b1b7a31eda213a96e5990599_add (data) {
+            geo_json_d15992a0b1b7a31eda213a96e5990599
+                .addData(data);
+        }
+            geo_json_d15992a0b1b7a31eda213a96e5990599_add({"bbox": [2.295386805321758, 48.83793101168589, 2.300273255682395, 48.840652313612566], "features": [{"bbox": [2.295386805321758, 48.83793101168589, 2.300273255682395, 48.840652313612566], "geometry": {"coordinates": [[[2.296429260989727, 48.838853591603055], [2.295386805321758, 48.83951065326324], [2.298045013923936, 48.840652313612566], [2.300273255682395, 48.83959009154312], [2.297726516412178, 48.83793101168589], [2.296429260989727, 48.838853591603055]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_06492036f05b4bfd6de8a2b61214b352 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e69fdf4a1a8b29f2052e2e24430360ce = $(`<div id="html_e69fdf4a1a8b29f2052e2e24430360ce" style="width: 100.0%; height: 100.0%;">Paris - 1563</div>`)[0];
+                popup_06492036f05b4bfd6de8a2b61214b352.setContent(html_e69fdf4a1a8b29f2052e2e24430360ce);
+            
+        
+
+        geo_json_d15992a0b1b7a31eda213a96e5990599.bindPopup(popup_06492036f05b4bfd6de8a2b61214b352)
+        ;
+
+        
+    
+    
+            geo_json_d15992a0b1b7a31eda213a96e5990599.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_26a145e21c7bb6abb48a2b30928031cd_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_26a145e21c7bb6abb48a2b30928031cd_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_26a145e21c7bb6abb48a2b30928031cd = L.geoJson(null, {
+                onEachFeature: geo_json_26a145e21c7bb6abb48a2b30928031cd_onEachFeature,
+            
+                style: geo_json_26a145e21c7bb6abb48a2b30928031cd_styler,
+        });
+
+        function geo_json_26a145e21c7bb6abb48a2b30928031cd_add (data) {
+            geo_json_26a145e21c7bb6abb48a2b30928031cd
+                .addData(data);
+        }
+            geo_json_26a145e21c7bb6abb48a2b30928031cd_add({"bbox": [2.295614125215488, 48.840369108046396, 2.299408532679502, 48.84282761640372], "features": [{"bbox": [2.295614125215488, 48.840369108046396, 2.299408532679502, 48.84282761640372], "geometry": {"coordinates": [[[2.295614125215488, 48.840369108046396], [2.297560072927048, 48.84282761640372], [2.298811869127515, 48.84276168456375], [2.299408532679502, 48.8406282259895], [2.295614125215488, 48.840369108046396]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_5d8dbef10d27dc6166daa9f032400b3c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a940c4cf1e1d0636b1d399fd1a77995e = $(`<div id="html_a940c4cf1e1d0636b1d399fd1a77995e" style="width: 100.0%; height: 100.0%;">Paris - 1564</div>`)[0];
+                popup_5d8dbef10d27dc6166daa9f032400b3c.setContent(html_a940c4cf1e1d0636b1d399fd1a77995e);
+            
+        
+
+        geo_json_26a145e21c7bb6abb48a2b30928031cd.bindPopup(popup_5d8dbef10d27dc6166daa9f032400b3c)
+        ;
+
+        
+    
+    
+            geo_json_26a145e21c7bb6abb48a2b30928031cd.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_517946082fb740cf877ed60cc8c96284_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_517946082fb740cf877ed60cc8c96284_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_517946082fb740cf877ed60cc8c96284 = L.geoJson(null, {
+                onEachFeature: geo_json_517946082fb740cf877ed60cc8c96284_onEachFeature,
+            
+                style: geo_json_517946082fb740cf877ed60cc8c96284_styler,
+        });
+
+        function geo_json_517946082fb740cf877ed60cc8c96284_add (data) {
+            geo_json_517946082fb740cf877ed60cc8c96284
+                .addData(data);
+        }
+            geo_json_517946082fb740cf877ed60cc8c96284_add({"bbox": [2.291955347254401, 48.839846779661016, 2.29719163722494, 48.842879359906604], "features": [{"bbox": [2.291955347254401, 48.839846779661016, 2.29719163722494, 48.842879359906604], "geometry": {"coordinates": [[[[2.291955347254401, 48.84130725214382], [2.292249682761263, 48.8413719412662], [2.292525255069068, 48.8412182948356], [2.291964654451197, 48.841087108375035], [2.291955347254401, 48.84130725214382]]], [[[2.293257360269225, 48.84112770610025], [2.295061008539031, 48.842879359906604], [2.29719163722494, 48.84104165586797], [2.294159406779659, 48.839846779661016], [2.293257360269225, 48.84112770610025]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_7b4e2316122ab03e2a98e9f11672cb59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3251f108e5faab1af8e4df6196fff011 = $(`<div id="html_3251f108e5faab1af8e4df6196fff011" style="width: 100.0%; height: 100.0%;">Paris - 1565</div>`)[0];
+                popup_7b4e2316122ab03e2a98e9f11672cb59.setContent(html_3251f108e5faab1af8e4df6196fff011);
+            
+        
+
+        geo_json_517946082fb740cf877ed60cc8c96284.bindPopup(popup_7b4e2316122ab03e2a98e9f11672cb59)
+        ;
+
+        
+    
+    
+            geo_json_517946082fb740cf877ed60cc8c96284.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_ecf38afaa8531f1b43690baf9b98e69f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_ecf38afaa8531f1b43690baf9b98e69f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_ecf38afaa8531f1b43690baf9b98e69f = L.geoJson(null, {
+                onEachFeature: geo_json_ecf38afaa8531f1b43690baf9b98e69f_onEachFeature,
+            
+                style: geo_json_ecf38afaa8531f1b43690baf9b98e69f_styler,
+        });
+
+        function geo_json_ecf38afaa8531f1b43690baf9b98e69f_add (data) {
+            geo_json_ecf38afaa8531f1b43690baf9b98e69f
+                .addData(data);
+        }
+            geo_json_ecf38afaa8531f1b43690baf9b98e69f_add({"bbox": [2.291273438282356, 48.83816726464933, 2.295658133196684, 48.84121079730043], "features": [{"bbox": [2.291273438282356, 48.83816726464933, 2.295658133196684, 48.84121079730043], "geometry": {"coordinates": [[[2.291760365067033, 48.8399859225921], [2.291273438282356, 48.84107462871235], [2.292788219632479, 48.84121079730043], [2.295658133196684, 48.83974321675884], [2.294304712644208, 48.83816726464933], [2.291760365067033, 48.8399859225921]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_825a3ace3ea745b45248d5ee237abba7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dcf02c51124bea86be98289a41fa0c8a = $(`<div id="html_dcf02c51124bea86be98289a41fa0c8a" style="width: 100.0%; height: 100.0%;">Paris - 1566</div>`)[0];
+                popup_825a3ace3ea745b45248d5ee237abba7.setContent(html_dcf02c51124bea86be98289a41fa0c8a);
+            
+        
+
+        geo_json_ecf38afaa8531f1b43690baf9b98e69f.bindPopup(popup_825a3ace3ea745b45248d5ee237abba7)
+        ;
+
+        
+    
+    
+            geo_json_ecf38afaa8531f1b43690baf9b98e69f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_8ddbf647150d18a02caa5e9047d34bdc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8ddbf647150d18a02caa5e9047d34bdc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8ddbf647150d18a02caa5e9047d34bdc = L.geoJson(null, {
+                onEachFeature: geo_json_8ddbf647150d18a02caa5e9047d34bdc_onEachFeature,
+            
+                style: geo_json_8ddbf647150d18a02caa5e9047d34bdc_styler,
+        });
+
+        function geo_json_8ddbf647150d18a02caa5e9047d34bdc_add (data) {
+            geo_json_8ddbf647150d18a02caa5e9047d34bdc
+                .addData(data);
+        }
+            geo_json_8ddbf647150d18a02caa5e9047d34bdc_add({"bbox": [2.289335441534711, 48.83820793888212, 2.293684358512464, 48.840788516528505], "features": [{"bbox": [2.289335441534711, 48.83820793888212, 2.293684358512464, 48.840788516528505], "geometry": {"coordinates": [[[2.290613845189167, 48.83820793888212], [2.289335441534711, 48.83849832314251], [2.291096935713933, 48.840788516528505], [2.293684358512464, 48.83842238376543], [2.290613845189167, 48.83820793888212]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b11fd0b97d98331f466426fd0cf12d1a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0496a74f21ef30a8212b7a0dc2e630b5 = $(`<div id="html_0496a74f21ef30a8212b7a0dc2e630b5" style="width: 100.0%; height: 100.0%;">Paris - 1567</div>`)[0];
+                popup_b11fd0b97d98331f466426fd0cf12d1a.setContent(html_0496a74f21ef30a8212b7a0dc2e630b5);
+            
+        
+
+        geo_json_8ddbf647150d18a02caa5e9047d34bdc.bindPopup(popup_b11fd0b97d98331f466426fd0cf12d1a)
+        ;
+
+        
+    
+    
+            geo_json_8ddbf647150d18a02caa5e9047d34bdc.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_c3de6d5daa3bee7da38e2434a0a6ee51 = L.geoJson(null, {
+                onEachFeature: geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_onEachFeature,
+            
+                style: geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_styler,
+        });
+
+        function geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_add (data) {
+            geo_json_c3de6d5daa3bee7da38e2434a0a6ee51
+                .addData(data);
+        }
+            geo_json_c3de6d5daa3bee7da38e2434a0a6ee51_add({"bbox": [2.289587399269632, 48.83604692191481, 2.294766483487597, 48.83787229243995], "features": [{"bbox": [2.289587399269632, 48.83604692191481, 2.294766483487597, 48.83787229243995], "geometry": {"coordinates": [[[2.289587399269632, 48.83648756968959], [2.291007031098569, 48.83787229243995], [2.294766483487597, 48.83759715812662], [2.29364650029965, 48.83604692191481], [2.289587399269632, 48.83648756968959]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3c5823082b1c6e3ed462de7def302788 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ff023404bf9b1474dc74cb1be3e455f = $(`<div id="html_5ff023404bf9b1474dc74cb1be3e455f" style="width: 100.0%; height: 100.0%;">Paris - 1568</div>`)[0];
+                popup_3c5823082b1c6e3ed462de7def302788.setContent(html_5ff023404bf9b1474dc74cb1be3e455f);
+            
+        
+
+        geo_json_c3de6d5daa3bee7da38e2434a0a6ee51.bindPopup(popup_3c5823082b1c6e3ed462de7def302788)
+        ;
+
+        
+    
+    
+            geo_json_c3de6d5daa3bee7da38e2434a0a6ee51.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_6a5db738111210d266575da51bca9d2b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6a5db738111210d266575da51bca9d2b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6a5db738111210d266575da51bca9d2b = L.geoJson(null, {
+                onEachFeature: geo_json_6a5db738111210d266575da51bca9d2b_onEachFeature,
+            
+                style: geo_json_6a5db738111210d266575da51bca9d2b_styler,
+        });
+
+        function geo_json_6a5db738111210d266575da51bca9d2b_add (data) {
+            geo_json_6a5db738111210d266575da51bca9d2b
+                .addData(data);
+        }
+            geo_json_6a5db738111210d266575da51bca9d2b_add({"bbox": [2.285699856137751, 48.83520682126948, 2.291072180966848, 48.838386250632794], "features": [{"bbox": [2.285699856137751, 48.83520682126948, 2.291072180966848, 48.838386250632794], "geometry": {"coordinates": [[[2.287832285077947, 48.83520682126948], [2.285699856137751, 48.83640007100538], [2.288302582749222, 48.838386250632794], [2.291072180966848, 48.83814521756383], [2.289440132851921, 48.837363944405766], [2.290317094304672, 48.835384604877305], [2.287832285077947, 48.83520682126948]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_f2e637450e74f259c30a3d405eecaa4c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_30ddfc6ee5c3a8771405e106382243b3 = $(`<div id="html_30ddfc6ee5c3a8771405e106382243b3" style="width: 100.0%; height: 100.0%;">Paris - 1569</div>`)[0];
+                popup_f2e637450e74f259c30a3d405eecaa4c.setContent(html_30ddfc6ee5c3a8771405e106382243b3);
+            
+        
+
+        geo_json_6a5db738111210d266575da51bca9d2b.bindPopup(popup_f2e637450e74f259c30a3d405eecaa4c)
+        ;
+
+        
+    
+    
+            geo_json_6a5db738111210d266575da51bca9d2b.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8e14b573cdd2da1540fe06ae55a1e1e4 = L.geoJson(null, {
+                onEachFeature: geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_onEachFeature,
+            
+                style: geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_styler,
+        });
+
+        function geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_add (data) {
+            geo_json_8e14b573cdd2da1540fe06ae55a1e1e4
+                .addData(data);
+        }
+            geo_json_8e14b573cdd2da1540fe06ae55a1e1e4_add({"bbox": [2.290204285513319, 48.832281603140785, 2.293394515768441, 48.83599994006477], "features": [{"bbox": [2.290204285513319, 48.832281603140785, 2.293394515768441, 48.83599994006477], "geometry": {"coordinates": [[[2.290563271051772, 48.83309802226611], [2.290204285513319, 48.835976847381026], [2.293394515768441, 48.83599994006477], [2.292146915247087, 48.832281603140785], [2.290563271051772, 48.83309802226611]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_537b32147b8e3a40da79cdad768b48e3 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_55a1b72ce7efed1175ea5be6aca8c6d4 = $(`<div id="html_55a1b72ce7efed1175ea5be6aca8c6d4" style="width: 100.0%; height: 100.0%;">Paris - 1570</div>`)[0];
+                popup_537b32147b8e3a40da79cdad768b48e3.setContent(html_55a1b72ce7efed1175ea5be6aca8c6d4);
+            
+        
+
+        geo_json_8e14b573cdd2da1540fe06ae55a1e1e4.bindPopup(popup_537b32147b8e3a40da79cdad768b48e3)
+        ;
+
+        
+    
+    
+            geo_json_8e14b573cdd2da1540fe06ae55a1e1e4.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_83ea8860c2850ed4616f950d1ca86fd7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_83ea8860c2850ed4616f950d1ca86fd7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_83ea8860c2850ed4616f950d1ca86fd7 = L.geoJson(null, {
+                onEachFeature: geo_json_83ea8860c2850ed4616f950d1ca86fd7_onEachFeature,
+            
+                style: geo_json_83ea8860c2850ed4616f950d1ca86fd7_styler,
+        });
+
+        function geo_json_83ea8860c2850ed4616f950d1ca86fd7_add (data) {
+            geo_json_83ea8860c2850ed4616f950d1ca86fd7
+                .addData(data);
+        }
+            geo_json_83ea8860c2850ed4616f950d1ca86fd7_add({"bbox": [2.281860069017125, 48.82853846418104, 2.290509202221785, 48.835384604877305], "features": [{"bbox": [2.281860069017125, 48.82853846418104, 2.290509202221785, 48.835384604877305], "geometry": {"coordinates": [[[[2.285467552533991, 48.83159917503561], [2.28659307770244, 48.829494872814], [2.281860069017125, 48.83144691042226], [2.282836323279002, 48.83306555840834], [2.285467552533991, 48.83159917503561]]], [[[2.286860439856944, 48.82938343708178], [2.288176974465073, 48.83364960793815], [2.2865002622346, 48.83450275065502], [2.290317094304672, 48.835384604877305], [2.290509202221785, 48.82978028409261], [2.288911653141912, 48.82853846418104], [2.286860439856944, 48.82938343708178]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_64336feab0e17c1989cdb843845bd64e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2f86fe0a97679b2f2030096de17a0d6 = $(`<div id="html_b2f86fe0a97679b2f2030096de17a0d6" style="width: 100.0%; height: 100.0%;">Paris - 1571</div>`)[0];
+                popup_64336feab0e17c1989cdb843845bd64e.setContent(html_b2f86fe0a97679b2f2030096de17a0d6);
+            
+        
+
+        geo_json_83ea8860c2850ed4616f950d1ca86fd7.bindPopup(popup_64336feab0e17c1989cdb843845bd64e)
+        ;
+
+        
+    
+    
+            geo_json_83ea8860c2850ed4616f950d1ca86fd7.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_57324084d64912ccca8f05b71a55368f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_57324084d64912ccca8f05b71a55368f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_57324084d64912ccca8f05b71a55368f = L.geoJson(null, {
+                onEachFeature: geo_json_57324084d64912ccca8f05b71a55368f_onEachFeature,
+            
+                style: geo_json_57324084d64912ccca8f05b71a55368f_styler,
+        });
+
+        function geo_json_57324084d64912ccca8f05b71a55368f_add (data) {
+            geo_json_57324084d64912ccca8f05b71a55368f
+                .addData(data);
+        }
+            geo_json_57324084d64912ccca8f05b71a55368f_add({"bbox": [2.280646504727878, 48.82938343708178, 2.288176974465073, 48.836002073400245], "features": [{"bbox": [2.280646504727878, 48.82938343708178, 2.288176974465073, 48.836002073400245], "geometry": {"coordinates": [[[2.282649606638814, 48.83324688976446], [2.280646504727878, 48.83410910647046], [2.280795538349762, 48.83551919019918], [2.288125405897116, 48.836002073400245], [2.2865002622346, 48.83450275065502], [2.288176974465073, 48.83364960793815], [2.286860439856944, 48.82938343708178], [2.282649606638814, 48.83324688976446]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_33af735d6bdd05f8ce71fa237e603b16 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_50f4e287208b5cac4c413e03bc031e02 = $(`<div id="html_50f4e287208b5cac4c413e03bc031e02" style="width: 100.0%; height: 100.0%;">Paris - 1572</div>`)[0];
+                popup_33af735d6bdd05f8ce71fa237e603b16.setContent(html_50f4e287208b5cac4c413e03bc031e02);
+            
+        
+
+        geo_json_57324084d64912ccca8f05b71a55368f.bindPopup(popup_33af735d6bdd05f8ce71fa237e603b16)
+        ;
+
+        
+    
+    
+            geo_json_57324084d64912ccca8f05b71a55368f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_e4c64c6bc7da344d980b42d710cb876f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_e4c64c6bc7da344d980b42d710cb876f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_e4c64c6bc7da344d980b42d710cb876f = L.geoJson(null, {
+                onEachFeature: geo_json_e4c64c6bc7da344d980b42d710cb876f_onEachFeature,
+            
+                style: geo_json_e4c64c6bc7da344d980b42d710cb876f_styler,
+        });
+
+        function geo_json_e4c64c6bc7da344d980b42d710cb876f_add (data) {
+            geo_json_e4c64c6bc7da344d980b42d710cb876f
+                .addData(data);
+        }
+            geo_json_e4c64c6bc7da344d980b42d710cb876f_add({"bbox": [2.281389885014339, 48.83517202250646, 2.288243819480982, 48.83799714888761], "features": [{"bbox": [2.281389885014339, 48.83517202250646, 2.288243819480982, 48.83799714888761], "geometry": {"coordinates": [[[2.282237434563958, 48.836458768937646], [2.286896117269717, 48.83799714888761], [2.288243819480982, 48.83745830278528], [2.285444367650518, 48.83517202250646], [2.281389885014339, 48.835794984771574], [2.282237434563958, 48.836458768937646]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_2f807666498aa4ea006700ad3ce052f0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dbcc8cac4b58aba26beffeed61c66d69 = $(`<div id="html_dbcc8cac4b58aba26beffeed61c66d69" style="width: 100.0%; height: 100.0%;">Paris - 1573</div>`)[0];
+                popup_2f807666498aa4ea006700ad3ce052f0.setContent(html_dbcc8cac4b58aba26beffeed61c66d69);
+            
+        
+
+        geo_json_e4c64c6bc7da344d980b42d710cb876f.bindPopup(popup_2f807666498aa4ea006700ad3ce052f0)
+        ;
+
+        
+    
+    
+            geo_json_e4c64c6bc7da344d980b42d710cb876f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_265c85c0a0e5452d49f22ebf82ed1ed7 = L.geoJson(null, {
+                onEachFeature: geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_onEachFeature,
+            
+                style: geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_styler,
+        });
+
+        function geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_add (data) {
+            geo_json_265c85c0a0e5452d49f22ebf82ed1ed7
+                .addData(data);
+        }
+            geo_json_265c85c0a0e5452d49f22ebf82ed1ed7_add({"bbox": [2.281308958497208, 48.8369826205565, 2.287357242187947, 48.83922554469286], "features": [{"bbox": [2.281308958497208, 48.8369826205565, 2.287357242187947, 48.83922554469286], "geometry": {"coordinates": [[[2.281987134729297, 48.8369826205565], [2.281308958497208, 48.838306581232125], [2.282773571651653, 48.83922554469286], [2.287357242187947, 48.8380641054412], [2.281987134729297, 48.8369826205565]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1e297e01f55a491c60512f33f820d91f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69157ae9f646eaf39a7681aa18ec4c75 = $(`<div id="html_69157ae9f646eaf39a7681aa18ec4c75" style="width: 100.0%; height: 100.0%;">Paris - 1574</div>`)[0];
+                popup_1e297e01f55a491c60512f33f820d91f.setContent(html_69157ae9f646eaf39a7681aa18ec4c75);
+            
+        
+
+        geo_json_265c85c0a0e5452d49f22ebf82ed1ed7.bindPopup(popup_1e297e01f55a491c60512f33f820d91f)
+        ;
+
+        
+    
+    
+            geo_json_265c85c0a0e5452d49f22ebf82ed1ed7.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_efc238b93d499638269ea1b992001e3a_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_efc238b93d499638269ea1b992001e3a_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_efc238b93d499638269ea1b992001e3a = L.geoJson(null, {
+                onEachFeature: geo_json_efc238b93d499638269ea1b992001e3a_onEachFeature,
+            
+                style: geo_json_efc238b93d499638269ea1b992001e3a_styler,
+        });
+
+        function geo_json_efc238b93d499638269ea1b992001e3a_add (data) {
+            geo_json_efc238b93d499638269ea1b992001e3a
+                .addData(data);
+        }
+            geo_json_efc238b93d499638269ea1b992001e3a_add({"bbox": [2.276382963932616, 48.83144691042226, 2.282836323279002, 48.838109971608965], "features": [{"bbox": [2.276382963932616, 48.83144691042226, 2.282836323279002, 48.838109971608965], "geometry": {"coordinates": [[[[2.277344334332639, 48.837051936913454], [2.281739259539619, 48.83796014462151], [2.280646504727878, 48.83410910647046], [2.282836323279002, 48.83306555840834], [2.281860069017125, 48.83144691042226], [2.278754894697919, 48.832234261253916], [2.276382963932616, 48.83493612605368], [2.277344334332639, 48.837051936913454]]], [[[2.276966481921354, 48.838109971608965], [2.277020791303018, 48.8376781675088], [2.276812797442285, 48.8368108723537], [2.276654269769228, 48.83727502995497], [2.276966481921354, 48.838109971608965]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_809d547236644b0c33b29e12b3953f22 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e5f41cef4770dc808c27430568a393b = $(`<div id="html_2e5f41cef4770dc808c27430568a393b" style="width: 100.0%; height: 100.0%;">Paris - 1575</div>`)[0];
+                popup_809d547236644b0c33b29e12b3953f22.setContent(html_2e5f41cef4770dc808c27430568a393b);
+            
+        
+
+        geo_json_efc238b93d499638269ea1b992001e3a.bindPopup(popup_809d547236644b0c33b29e12b3953f22)
+        ;
+
+        
+    
+    
+            geo_json_efc238b93d499638269ea1b992001e3a.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_be40db7385110c229bf74de407fd547b_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_be40db7385110c229bf74de407fd547b_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_be40db7385110c229bf74de407fd547b = L.geoJson(null, {
+                onEachFeature: geo_json_be40db7385110c229bf74de407fd547b_onEachFeature,
+            
+                style: geo_json_be40db7385110c229bf74de407fd547b_styler,
+        });
+
+        function geo_json_be40db7385110c229bf74de407fd547b_add (data) {
+            geo_json_be40db7385110c229bf74de407fd547b
+                .addData(data);
+        }
+            geo_json_be40db7385110c229bf74de407fd547b_add({"bbox": [2.262792, 48.827836, 2.278882677393754, 48.83493612605368], "features": [{"bbox": [2.262792, 48.827836, 2.278882677393754, 48.83493612605368], "geometry": {"coordinates": [[[[2.272846844537806, 48.82796746296295], [2.267826, 48.827836], [2.267339, 48.831532], [2.276382963932616, 48.83493612605368], [2.278882677393754, 48.8332824058119], [2.272846844537806, 48.82796746296295]]], [[[2.264127844457539, 48.8341141201765], [2.262792, 48.833923], [2.263250283169912, 48.83435196740578], [2.264127844457539, 48.8341141201765]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b3bec3a080bc2b28df6e10ae7179b701 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1b13e25d9b63f3b386d528fe874171e3 = $(`<div id="html_1b13e25d9b63f3b386d528fe874171e3" style="width: 100.0%; height: 100.0%;">Paris - 1576</div>`)[0];
+                popup_b3bec3a080bc2b28df6e10ae7179b701.setContent(html_1b13e25d9b63f3b386d528fe874171e3);
+            
+        
+
+        geo_json_be40db7385110c229bf74de407fd547b.bindPopup(popup_b3bec3a080bc2b28df6e10ae7179b701)
+        ;
+
+        
+    
+    
+            geo_json_be40db7385110c229bf74de407fd547b.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_9e24203f2e7ed1a045a6ba418e41d1d8 = L.geoJson(null, {
+                onEachFeature: geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_onEachFeature,
+            
+                style: geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_styler,
+        });
+
+        function geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_add (data) {
+            geo_json_9e24203f2e7ed1a045a6ba418e41d1d8
+                .addData(data);
+        }
+            geo_json_9e24203f2e7ed1a045a6ba418e41d1d8_add({"bbox": [2.263250283169912, 48.83313519567167, 2.282260616774543, 48.843455031429635], "features": [{"bbox": [2.263250283169912, 48.83313519567167, 2.282260616774543, 48.843455031429635], "geometry": {"coordinates": [[[2.269770693801348, 48.83313519567167], [2.267789, 48.834585], [2.263250283169912, 48.83435196740578], [2.272351078103231, 48.843455031429635], [2.274297302809644, 48.84053208003779], [2.276153186036909, 48.84033748837193], [2.276812797442285, 48.8368108723537], [2.276966481921354, 48.838109971608965], [2.282260616774543, 48.838907543023225], [2.277344334332639, 48.837051936913454], [2.276382963932616, 48.83493612605368], [2.269770693801348, 48.83313519567167]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3ff3afab0968a2bad6f68133ed91f532 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4b60e326f3eb7bca7272340384f4db15 = $(`<div id="html_4b60e326f3eb7bca7272340384f4db15" style="width: 100.0%; height: 100.0%;">Paris - 1577</div>`)[0];
+                popup_3ff3afab0968a2bad6f68133ed91f532.setContent(html_4b60e326f3eb7bca7272340384f4db15);
+            
+        
+
+        geo_json_9e24203f2e7ed1a045a6ba418e41d1d8.bindPopup(popup_3ff3afab0968a2bad6f68133ed91f532)
+        ;
+
+        
+    
+    
+            geo_json_9e24203f2e7ed1a045a6ba418e41d1d8.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_bf5717065c11d0cca9cfe216f5131bde_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_bf5717065c11d0cca9cfe216f5131bde_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_bf5717065c11d0cca9cfe216f5131bde = L.geoJson(null, {
+                onEachFeature: geo_json_bf5717065c11d0cca9cfe216f5131bde_onEachFeature,
+            
+                style: geo_json_bf5717065c11d0cca9cfe216f5131bde_styler,
+        });
+
+        function geo_json_bf5717065c11d0cca9cfe216f5131bde_add (data) {
+            geo_json_bf5717065c11d0cca9cfe216f5131bde
+                .addData(data);
+        }
+            geo_json_bf5717065c11d0cca9cfe216f5131bde_add({"bbox": [2.276153186036909, 48.838109971608965, 2.282936651907643, 48.84113824573301], "features": [{"bbox": [2.276153186036909, 48.838109971608965, 2.282936651907643, 48.84113824573301], "geometry": {"coordinates": [[[2.276966481921354, 48.838109971608965], [2.276153186036909, 48.84033748837193], [2.279501403317738, 48.84113824573301], [2.279439748438665, 48.83895368714062], [2.279843621079942, 48.84028978949906], [2.282936651907643, 48.84056413696617], [2.280333393767643, 48.83877835251137], [2.276966481921354, 48.838109971608965]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_800984dbc3d5cdec81c9bac751308c7f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9324ceb6fa7f7d9a7b0a6ce289a7d49e = $(`<div id="html_9324ceb6fa7f7d9a7b0a6ce289a7d49e" style="width: 100.0%; height: 100.0%;">Paris - 1578</div>`)[0];
+                popup_800984dbc3d5cdec81c9bac751308c7f.setContent(html_9324ceb6fa7f7d9a7b0a6ce289a7d49e);
+            
+        
+
+        geo_json_bf5717065c11d0cca9cfe216f5131bde.bindPopup(popup_800984dbc3d5cdec81c9bac751308c7f)
+        ;
+
+        
+    
+    
+            geo_json_bf5717065c11d0cca9cfe216f5131bde.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_cf3776c253e3a13b2f78eb962c4e88fc_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_cf3776c253e3a13b2f78eb962c4e88fc_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_cf3776c253e3a13b2f78eb962c4e88fc = L.geoJson(null, {
+                onEachFeature: geo_json_cf3776c253e3a13b2f78eb962c4e88fc_onEachFeature,
+            
+                style: geo_json_cf3776c253e3a13b2f78eb962c4e88fc_styler,
+        });
+
+        function geo_json_cf3776c253e3a13b2f78eb962c4e88fc_add (data) {
+            geo_json_cf3776c253e3a13b2f78eb962c4e88fc
+                .addData(data);
+        }
+            geo_json_cf3776c253e3a13b2f78eb962c4e88fc_add({"bbox": [2.278882222856649, 48.83969036822708, 2.283972697969542, 48.84255043367523], "features": [{"bbox": [2.278882222856649, 48.83969036822708, 2.283972697969542, 48.84255043367523], "geometry": {"coordinates": [[[[2.283972697969542, 48.840714262690355], [2.283828517004935, 48.84060097764674], [2.283358562425845, 48.84069532458876], [2.283836214651839, 48.84089510308632], [2.283972697969542, 48.840714262690355]]], [[[2.279677126543136, 48.84081687694939], [2.279731505102265, 48.8418845978224], [2.280807292151665, 48.84255043367523], [2.283047443678273, 48.84100439430032], [2.278882222856649, 48.83969036822708], [2.279677126543136, 48.84081687694939]], [[2.27993968406983, 48.84123771121878], [2.280430418126407, 48.84106731916783], [2.280652360769683, 48.84177959094177], [2.280402434045005, 48.84165562728632], [2.27993968406983, 48.84123771121878]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_b6a9fdcd5c50498c0d82355652ad594e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0b96d4dba91233755b7ebe11e302b346 = $(`<div id="html_0b96d4dba91233755b7ebe11e302b346" style="width: 100.0%; height: 100.0%;">Paris - 1579</div>`)[0];
+                popup_b6a9fdcd5c50498c0d82355652ad594e.setContent(html_0b96d4dba91233755b7ebe11e302b346);
+            
+        
+
+        geo_json_cf3776c253e3a13b2f78eb962c4e88fc.bindPopup(popup_b6a9fdcd5c50498c0d82355652ad594e)
+        ;
+
+        
+    
+    
+            geo_json_cf3776c253e3a13b2f78eb962c4e88fc.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_af6b629c1d09350adfcc7f9fd34e053f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_af6b629c1d09350adfcc7f9fd34e053f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_af6b629c1d09350adfcc7f9fd34e053f = L.geoJson(null, {
+                onEachFeature: geo_json_af6b629c1d09350adfcc7f9fd34e053f_onEachFeature,
+            
+                style: geo_json_af6b629c1d09350adfcc7f9fd34e053f_styler,
+        });
+
+        function geo_json_af6b629c1d09350adfcc7f9fd34e053f_add (data) {
+            geo_json_af6b629c1d09350adfcc7f9fd34e053f
+                .addData(data);
+        }
+            geo_json_af6b629c1d09350adfcc7f9fd34e053f_add({"bbox": [2.272351078103231, 48.8404302202214, 2.28066562440756, 48.84538626956056], "features": [{"bbox": [2.272351078103231, 48.8404302202214, 2.28066562440756, 48.84538626956056], "geometry": {"coordinates": [[[[2.28066562440756, 48.84172850521149], [2.280430418126407, 48.84106731916783], [2.279781870083383, 48.84105662083315], [2.280402434045005, 48.84165562728632], [2.28066562440756, 48.84172850521149]]], [[[2.277189766405451, 48.8404302202214], [2.274297302809644, 48.84053208003779], [2.272351078103231, 48.843455031429635], [2.274204269560555, 48.84538626956056], [2.279269384643911, 48.84210966249547], [2.277189766405451, 48.8404302202214]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_0fce1cb367baac42b0da9a9a9cbac0af = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d628a93529dc04b7a7ba07af8d84172c = $(`<div id="html_d628a93529dc04b7a7ba07af8d84172c" style="width: 100.0%; height: 100.0%;">Paris - 1580</div>`)[0];
+                popup_0fce1cb367baac42b0da9a9a9cbac0af.setContent(html_d628a93529dc04b7a7ba07af8d84172c);
+            
+        
+
+        geo_json_af6b629c1d09350adfcc7f9fd34e053f.bindPopup(popup_0fce1cb367baac42b0da9a9a9cbac0af)
+        ;
+
+        
+    
+    
+            geo_json_af6b629c1d09350adfcc7f9fd34e053f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_774a5829a9fdd92f87571d8d7e06d407_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_774a5829a9fdd92f87571d8d7e06d407_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_774a5829a9fdd92f87571d8d7e06d407 = L.geoJson(null, {
+                onEachFeature: geo_json_774a5829a9fdd92f87571d8d7e06d407_onEachFeature,
+            
+                style: geo_json_774a5829a9fdd92f87571d8d7e06d407_styler,
+        });
+
+        function geo_json_774a5829a9fdd92f87571d8d7e06d407_add (data) {
+            geo_json_774a5829a9fdd92f87571d8d7e06d407
+                .addData(data);
+        }
+            geo_json_774a5829a9fdd92f87571d8d7e06d407_add({"bbox": [2.277427282066365, 48.84123249891911, 2.281029306903635, 48.84491428839682], "features": [{"bbox": [2.277427282066365, 48.84123249891911, 2.281029306903635, 48.84491428839682], "geometry": {"coordinates": [[[[2.278555358566164, 48.84232300869973], [2.278474858869123, 48.8437448278661], [2.281029306903635, 48.84491428839682], [2.280807292151665, 48.84255043367523], [2.279479579820159, 48.84123249891911], [2.278555358566164, 48.84232300869973]]], [[[2.277516689860872, 48.842955627553366], [2.277427282066365, 48.843741127309706], [2.278468525487121, 48.84345321276965], [2.277640599083131, 48.84263195155167], [2.277516689860872, 48.842955627553366]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_c402158c849e1d79789b6d3ef18b5f97 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a46cae92be133a73dbf35cd9cbc37cfb = $(`<div id="html_a46cae92be133a73dbf35cd9cbc37cfb" style="width: 100.0%; height: 100.0%;">Paris - 1581</div>`)[0];
+                popup_c402158c849e1d79789b6d3ef18b5f97.setContent(html_a46cae92be133a73dbf35cd9cbc37cfb);
+            
+        
+
+        geo_json_774a5829a9fdd92f87571d8d7e06d407.bindPopup(popup_c402158c849e1d79789b6d3ef18b5f97)
+        ;
+
+        
+    
+    
+            geo_json_774a5829a9fdd92f87571d8d7e06d407.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_1b5897482f7f03fe8253a89bff5ed202_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1b5897482f7f03fe8253a89bff5ed202_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1b5897482f7f03fe8253a89bff5ed202 = L.geoJson(null, {
+                onEachFeature: geo_json_1b5897482f7f03fe8253a89bff5ed202_onEachFeature,
+            
+                style: geo_json_1b5897482f7f03fe8253a89bff5ed202_styler,
+        });
+
+        function geo_json_1b5897482f7f03fe8253a89bff5ed202_add (data) {
+            geo_json_1b5897482f7f03fe8253a89bff5ed202
+                .addData(data);
+        }
+            geo_json_1b5897482f7f03fe8253a89bff5ed202_add({"bbox": [2.274204269560555, 48.83894544119992, 2.287307068813484, 48.851101], "features": [{"bbox": [2.274204269560555, 48.83894544119992, 2.287307068813484, 48.851101], "geometry": {"coordinates": [[[[2.287279966155947, 48.83894544119992], [2.286855199194153, 48.83918226458673], [2.287296696829196, 48.839527784475024], [2.287307068813484, 48.83903338655802], [2.287279966155947, 48.83894544119992]]], [[[2.276822283609532, 48.84328443295829], [2.274204269560555, 48.84538626956056], [2.275174059488048, 48.8463970902149], [2.279336301008196, 48.84457013730332], [2.27759194399526, 48.842463302497016], [2.276822283609532, 48.84328443295829]]], [[[2.281217, 48.851101], [2.28083717622179, 48.84863892990093], [2.278180493268492, 48.84872938453833], [2.278052129549919, 48.84890903347968], [2.281217, 48.851101]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cac02c2f1907f1c5d2a32c6c611b8280 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3a76b648290e49a6a87c387f47824716 = $(`<div id="html_3a76b648290e49a6a87c387f47824716" style="width: 100.0%; height: 100.0%;">Paris - 1582</div>`)[0];
+                popup_cac02c2f1907f1c5d2a32c6c611b8280.setContent(html_3a76b648290e49a6a87c387f47824716);
+            
+        
+
+        geo_json_1b5897482f7f03fe8253a89bff5ed202.bindPopup(popup_cac02c2f1907f1c5d2a32c6c611b8280)
+        ;
+
+        
+    
+    
+            geo_json_1b5897482f7f03fe8253a89bff5ed202.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_874882390c9d1a65153761d0d13fa66e_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_874882390c9d1a65153761d0d13fa66e_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_874882390c9d1a65153761d0d13fa66e = L.geoJson(null, {
+                onEachFeature: geo_json_874882390c9d1a65153761d0d13fa66e_onEachFeature,
+            
+                style: geo_json_874882390c9d1a65153761d0d13fa66e_styler,
+        });
+
+        function geo_json_874882390c9d1a65153761d0d13fa66e_add (data) {
+            geo_json_874882390c9d1a65153761d0d13fa66e
+                .addData(data);
+        }
+            geo_json_874882390c9d1a65153761d0d13fa66e_add({"bbox": [2.275174059488048, 48.843359223988976, 2.28309794777647, 48.84890903347968], "features": [{"bbox": [2.275174059488048, 48.843359223988976, 2.28309794777647, 48.84890903347968], "geometry": {"coordinates": [[[2.281234788855933, 48.844109649279666], [2.281029306903635, 48.84491428839682], [2.275174059488048, 48.8463970902149], [2.278052129549919, 48.84890903347968], [2.279168068926486, 48.84677811042147], [2.28309794777647, 48.84520830415536], [2.282694995617882, 48.843359223988976], [2.281234788855933, 48.844109649279666]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_ecb93b2f385adf36067be44605c3dbef = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_69b7d83eb4f5d8ca2388236fa4175b53 = $(`<div id="html_69b7d83eb4f5d8ca2388236fa4175b53" style="width: 100.0%; height: 100.0%;">Paris - 1583</div>`)[0];
+                popup_ecb93b2f385adf36067be44605c3dbef.setContent(html_69b7d83eb4f5d8ca2388236fa4175b53);
+            
+        
+
+        geo_json_874882390c9d1a65153761d0d13fa66e.bindPopup(popup_ecb93b2f385adf36067be44605c3dbef)
+        ;
+
+        
+    
+    
+            geo_json_874882390c9d1a65153761d0d13fa66e.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_0edf506c7da2acbd59de6b13620d9229_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_0edf506c7da2acbd59de6b13620d9229_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_0edf506c7da2acbd59de6b13620d9229 = L.geoJson(null, {
+                onEachFeature: geo_json_0edf506c7da2acbd59de6b13620d9229_onEachFeature,
+            
+                style: geo_json_0edf506c7da2acbd59de6b13620d9229_styler,
+        });
+
+        function geo_json_0edf506c7da2acbd59de6b13620d9229_add (data) {
+            geo_json_0edf506c7da2acbd59de6b13620d9229
+                .addData(data);
+        }
+            geo_json_0edf506c7da2acbd59de6b13620d9229_add({"bbox": [2.282735197046415, 48.84197536356088, 2.2863685449767, 48.84494578035631], "features": [{"bbox": [2.282735197046415, 48.84197536356088, 2.2863685449767, 48.84494578035631], "geometry": {"coordinates": [[[2.283100562012486, 48.843265895475824], [2.282735197046415, 48.84494578035631], [2.2863685449767, 48.8442480604205], [2.285492845336948, 48.84197536356088], [2.283100562012486, 48.843265895475824]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_4cdc5903d7fb2dc9d1895de93f444301 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0c8065a39734d0b9bed631892015c32 = $(`<div id="html_a0c8065a39734d0b9bed631892015c32" style="width: 100.0%; height: 100.0%;">Paris - 1584</div>`)[0];
+                popup_4cdc5903d7fb2dc9d1895de93f444301.setContent(html_a0c8065a39734d0b9bed631892015c32);
+            
+        
+
+        geo_json_0edf506c7da2acbd59de6b13620d9229.bindPopup(popup_4cdc5903d7fb2dc9d1895de93f444301)
+        ;
+
+        
+    
+    
+            geo_json_0edf506c7da2acbd59de6b13620d9229.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_282d2475bbb91d8d7026d3705302e7af_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_282d2475bbb91d8d7026d3705302e7af_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_282d2475bbb91d8d7026d3705302e7af = L.geoJson(null, {
+                onEachFeature: geo_json_282d2475bbb91d8d7026d3705302e7af_onEachFeature,
+            
+                style: geo_json_282d2475bbb91d8d7026d3705302e7af_styler,
+        });
+
+        function geo_json_282d2475bbb91d8d7026d3705302e7af_add (data) {
+            geo_json_282d2475bbb91d8d7026d3705302e7af
+                .addData(data);
+        }
+            geo_json_282d2475bbb91d8d7026d3705302e7af_add({"bbox": [2.281332854289337, 48.840627027173966, 2.2878027595928, 48.84382958703345], "features": [{"bbox": [2.281332854289337, 48.840627027173966, 2.2878027595928, 48.84382958703345], "geometry": {"coordinates": [[[2.281332854289337, 48.84225793799257], [2.282013941673329, 48.84382958703345], [2.2878027595928, 48.84108770466244], [2.283046561979386, 48.840627027173966], [2.281332854289337, 48.84225793799257]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_3be7a8d54a1fca8828195d0102c4b537 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_fbe48428131e586c8c0cf541a22001ac = $(`<div id="html_fbe48428131e586c8c0cf541a22001ac" style="width: 100.0%; height: 100.0%;">Paris - 1585</div>`)[0];
+                popup_3be7a8d54a1fca8828195d0102c4b537.setContent(html_fbe48428131e586c8c0cf541a22001ac);
+            
+        
+
+        geo_json_282d2475bbb91d8d7026d3705302e7af.bindPopup(popup_3be7a8d54a1fca8828195d0102c4b537)
+        ;
+
+        
+    
+    
+            geo_json_282d2475bbb91d8d7026d3705302e7af.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_6282cf63a51701bcf923cd44b7769934_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6282cf63a51701bcf923cd44b7769934_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6282cf63a51701bcf923cd44b7769934 = L.geoJson(null, {
+                onEachFeature: geo_json_6282cf63a51701bcf923cd44b7769934_onEachFeature,
+            
+                style: geo_json_6282cf63a51701bcf923cd44b7769934_styler,
+        });
+
+        function geo_json_6282cf63a51701bcf923cd44b7769934_add (data) {
+            geo_json_6282cf63a51701bcf923cd44b7769934
+                .addData(data);
+        }
+            geo_json_6282cf63a51701bcf923cd44b7769934_add({"bbox": [2.282260616774543, 48.838907543023225, 2.287485009668019, 48.84096631776227], "features": [{"bbox": [2.282260616774543, 48.838907543023225, 2.287485009668019, 48.84096631776227], "geometry": {"coordinates": [[[2.282284166411809, 48.83981712022589], [2.283261205178164, 48.84068479448797], [2.287485009668019, 48.84096631776227], [2.282260616774543, 48.838907543023225], [2.282284166411809, 48.83981712022589]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_cd61364e4a68d1585d41210ff124cf06 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_975dc8385c9e2eb05996a6b2c742b69b = $(`<div id="html_975dc8385c9e2eb05996a6b2c742b69b" style="width: 100.0%; height: 100.0%;">Paris - 1586</div>`)[0];
+                popup_cd61364e4a68d1585d41210ff124cf06.setContent(html_975dc8385c9e2eb05996a6b2c742b69b);
+            
+        
+
+        geo_json_6282cf63a51701bcf923cd44b7769934.bindPopup(popup_cd61364e4a68d1585d41210ff124cf06)
+        ;
+
+        
+    
+    
+            geo_json_6282cf63a51701bcf923cd44b7769934.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_1d61e884e69210fea3fc9a3ec025508d_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_1d61e884e69210fea3fc9a3ec025508d_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_1d61e884e69210fea3fc9a3ec025508d = L.geoJson(null, {
+                onEachFeature: geo_json_1d61e884e69210fea3fc9a3ec025508d_onEachFeature,
+            
+                style: geo_json_1d61e884e69210fea3fc9a3ec025508d_styler,
+        });
+
+        function geo_json_1d61e884e69210fea3fc9a3ec025508d_add (data) {
+            geo_json_1d61e884e69210fea3fc9a3ec025508d
+                .addData(data);
+        }
+            geo_json_1d61e884e69210fea3fc9a3ec025508d_add({"bbox": [2.282935988611984, 48.838490875204755, 2.288819253123239, 48.84032987680031], "features": [{"bbox": [2.282935988611984, 48.838490875204755, 2.288819253123239, 48.84032987680031], "geometry": {"coordinates": [[[2.284351857433715, 48.838633386493164], [2.282935988611984, 48.83921691746402], [2.285763530422491, 48.84032987680031], [2.287908240002229, 48.8394888800268], [2.288819253123239, 48.838490875204755], [2.284351857433715, 48.838633386493164]], [[2.287296696829196, 48.839527784475024], [2.286855199194153, 48.83918226458673], [2.287195866612644, 48.83895011930346], [2.287307068813484, 48.83903338655802], [2.287296696829196, 48.839527784475024]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_9ff2adf26cd443f74546f947808a96b1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_81e92999587a52a9a9e14d8f787c6778 = $(`<div id="html_81e92999587a52a9a9e14d8f787c6778" style="width: 100.0%; height: 100.0%;">Paris - 1587</div>`)[0];
+                popup_9ff2adf26cd443f74546f947808a96b1.setContent(html_81e92999587a52a9a9e14d8f787c6778);
+            
+        
+
+        geo_json_1d61e884e69210fea3fc9a3ec025508d.bindPopup(popup_9ff2adf26cd443f74546f947808a96b1)
+        ;
+
+        
+    
+    
+            geo_json_1d61e884e69210fea3fc9a3ec025508d.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_4d1d6267042f50fa9774b944d886d29f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_4d1d6267042f50fa9774b944d886d29f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_4d1d6267042f50fa9774b944d886d29f = L.geoJson(null, {
+                onEachFeature: geo_json_4d1d6267042f50fa9774b944d886d29f_onEachFeature,
+            
+                style: geo_json_4d1d6267042f50fa9774b944d886d29f_styler,
+        });
+
+        function geo_json_4d1d6267042f50fa9774b944d886d29f_add (data) {
+            geo_json_4d1d6267042f50fa9774b944d886d29f
+                .addData(data);
+        }
+            geo_json_4d1d6267042f50fa9774b944d886d29f_add({"bbox": [2.286064348044009, 48.838489241178, 2.29044841490531, 48.840337533164984], "features": [{"bbox": [2.286064348044009, 48.838489241178, 2.29044841490531, 48.840337533164984], "geometry": {"coordinates": [[[2.28762433897028, 48.83958311207723], [2.286064348044009, 48.840337533164984], [2.29044841490531, 48.8402934069061], [2.289302323092723, 48.838489241178], [2.28762433897028, 48.83958311207723]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8e8f4b7fc960676fd58aae6e160bf7f8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4cd0b1bd3c1010184ac113c7268b4f68 = $(`<div id="html_4cd0b1bd3c1010184ac113c7268b4f68" style="width: 100.0%; height: 100.0%;">Paris - 1588</div>`)[0];
+                popup_8e8f4b7fc960676fd58aae6e160bf7f8.setContent(html_4cd0b1bd3c1010184ac113c7268b4f68);
+            
+        
+
+        geo_json_4d1d6267042f50fa9774b944d886d29f.bindPopup(popup_8e8f4b7fc960676fd58aae6e160bf7f8)
+        ;
+
+        
+    
+    
+            geo_json_4d1d6267042f50fa9774b944d886d29f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_008e4faaeeef0e5360fabfaadbb2abcf_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_008e4faaeeef0e5360fabfaadbb2abcf_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_008e4faaeeef0e5360fabfaadbb2abcf = L.geoJson(null, {
+                onEachFeature: geo_json_008e4faaeeef0e5360fabfaadbb2abcf_onEachFeature,
+            
+                style: geo_json_008e4faaeeef0e5360fabfaadbb2abcf_styler,
+        });
+
+        function geo_json_008e4faaeeef0e5360fabfaadbb2abcf_add (data) {
+            geo_json_008e4faaeeef0e5360fabfaadbb2abcf
+                .addData(data);
+        }
+            geo_json_008e4faaeeef0e5360fabfaadbb2abcf_add({"bbox": [2.288446444026446, 48.84027567702522, 2.292157505441715, 48.84263373367869], "features": [{"bbox": [2.288446444026446, 48.84027567702522, 2.292157505441715, 48.84263373367869], "geometry": {"coordinates": [[[2.288869311769119, 48.840586906916386], [2.288446444026446, 48.8423773407285], [2.292157505441715, 48.84263373367869], [2.290547552408262, 48.84027567702522], [2.288869311769119, 48.840586906916386]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_1dcdbce2895a20465dfe266bf2b30c14 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d25866c7608591eb6e1e4da109891950 = $(`<div id="html_d25866c7608591eb6e1e4da109891950" style="width: 100.0%; height: 100.0%;">Paris - 1589</div>`)[0];
+                popup_1dcdbce2895a20465dfe266bf2b30c14.setContent(html_d25866c7608591eb6e1e4da109891950);
+            
+        
+
+        geo_json_008e4faaeeef0e5360fabfaadbb2abcf.bindPopup(popup_1dcdbce2895a20465dfe266bf2b30c14)
+        ;
+
+        
+    
+    
+            geo_json_008e4faaeeef0e5360fabfaadbb2abcf.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_d594117da0c430369f3cd08f921e8bb5_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_d594117da0c430369f3cd08f921e8bb5_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_d594117da0c430369f3cd08f921e8bb5 = L.geoJson(null, {
+                onEachFeature: geo_json_d594117da0c430369f3cd08f921e8bb5_onEachFeature,
+            
+                style: geo_json_d594117da0c430369f3cd08f921e8bb5_styler,
+        });
+
+        function geo_json_d594117da0c430369f3cd08f921e8bb5_add (data) {
+            geo_json_d594117da0c430369f3cd08f921e8bb5
+                .addData(data);
+        }
+            geo_json_d594117da0c430369f3cd08f921e8bb5_add({"bbox": [2.28950639551772, 48.84115451928214, 2.295061008539031, 48.845070665433674], "features": [{"bbox": [2.28950639551772, 48.84115451928214, 2.295061008539031, 48.845070665433674], "geometry": {"coordinates": [[[2.291197730554534, 48.84192695028074], [2.291876045263143, 48.84357678770302], [2.28960197493385, 48.844143544094905], [2.28950639551772, 48.845070665433674], [2.295061008539031, 48.842879359906604], [2.293233404620036, 48.84115451928214], [2.291197730554534, 48.84192695028074]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_d602a5dd1ed9b17a903f40605e37e2d9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7bd9f42a6ee6a3cc434284f4d1b7479d = $(`<div id="html_7bd9f42a6ee6a3cc434284f4d1b7479d" style="width: 100.0%; height: 100.0%;">Paris - 1590</div>`)[0];
+                popup_d602a5dd1ed9b17a903f40605e37e2d9.setContent(html_7bd9f42a6ee6a3cc434284f4d1b7479d);
+            
+        
+
+        geo_json_d594117da0c430369f3cd08f921e8bb5.bindPopup(popup_d602a5dd1ed9b17a903f40605e37e2d9)
+        ;
+
+        
+    
+    
+            geo_json_d594117da0c430369f3cd08f921e8bb5.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1 = L.geoJson(null, {
+                onEachFeature: geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_onEachFeature,
+            
+                style: geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_styler,
+        });
+
+        function geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_add (data) {
+            geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1
+                .addData(data);
+        }
+            geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1_add({"bbox": [2.284846700035441, 48.84204791051272, 2.291876045263143, 48.84568802770886], "features": [{"bbox": [2.284846700035441, 48.84204791051272, 2.291876045263143, 48.84568802770886], "geometry": {"coordinates": [[[[2.290503683330448, 48.84386968745656], [2.291876045263143, 48.84357678770302], [2.290446979591709, 48.84204791051272], [2.287285162953859, 48.843954326593], [2.289498656260903, 48.84490110535245], [2.290503683330448, 48.84386968745656]]], [[[2.285520539159629, 48.845605783843006], [2.285377571489078, 48.84480984058175], [2.284995541325458, 48.844861363054285], [2.285369113688992, 48.84568802770886], [2.285520539159629, 48.845605783843006]]], [[[2.284921278915137, 48.845594641203476], [2.285196643779982, 48.845665690952345], [2.28507277418328, 48.84534610739287], [2.284846700035441, 48.84540239342469], [2.284921278915137, 48.845594641203476]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_8502f1da4bb98251ac24aecb9c296c71 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a2a36a481c7617d57f0544a6a4bcd6cc = $(`<div id="html_a2a36a481c7617d57f0544a6a4bcd6cc" style="width: 100.0%; height: 100.0%;">Paris - 1591</div>`)[0];
+                popup_8502f1da4bb98251ac24aecb9c296c71.setContent(html_a2a36a481c7617d57f0544a6a4bcd6cc);
+            
+        
+
+        geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1.bindPopup(popup_8502f1da4bb98251ac24aecb9c296c71)
+        ;
+
+        
+    
+    
+            geo_json_fe95bcd77be5ebcb4c9c7367b71c25e1.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f = L.geoJson(null, {
+                onEachFeature: geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_onEachFeature,
+            
+                style: geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_styler,
+        });
+
+        function geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_add (data) {
+            geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f
+                .addData(data);
+        }
+            geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f_add({"bbox": [2.285977309965805, 48.84132063006027, 2.289586033978098, 48.8446593711137], "features": [{"bbox": [2.285977309965805, 48.84132063006027, 2.289586033978098, 48.8446593711137], "geometry": {"coordinates": [[[[2.289586033978098, 48.84283494191894], [2.289376081495687, 48.84246919663179], [2.28905188390739, 48.84257099780685], [2.289107473211116, 48.84261631009645], [2.289586033978098, 48.84283494191894]]], [[[2.285977309965805, 48.84199170371275], [2.286953480735609, 48.8446593711137], [2.288809528385296, 48.84277570195439], [2.287750947447226, 48.84132063006027], [2.285977309965805, 48.84199170371275]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_fa811fb6822429ec089bd36b1a96e0dd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5de5e9e5eeb2524729a7049c5ddffa61 = $(`<div id="html_5de5e9e5eeb2524729a7049c5ddffa61" style="width: 100.0%; height: 100.0%;">Paris - 1592</div>`)[0];
+                popup_fa811fb6822429ec089bd36b1a96e0dd.setContent(html_5de5e9e5eeb2524729a7049c5ddffa61);
+            
+        
+
+        geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f.bindPopup(popup_fa811fb6822429ec089bd36b1a96e0dd)
+        ;
+
+        
+    
+    
+            geo_json_6aad9bd90408e1aa30ddcb2616ab3d7f.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_8b376d73564d1c82ef4baec22c3c41a1_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_8b376d73564d1c82ef4baec22c3c41a1_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_8b376d73564d1c82ef4baec22c3c41a1 = L.geoJson(null, {
+                onEachFeature: geo_json_8b376d73564d1c82ef4baec22c3c41a1_onEachFeature,
+            
+                style: geo_json_8b376d73564d1c82ef4baec22c3c41a1_styler,
+        });
+
+        function geo_json_8b376d73564d1c82ef4baec22c3c41a1_add (data) {
+            geo_json_8b376d73564d1c82ef4baec22c3c41a1
+                .addData(data);
+        }
+            geo_json_8b376d73564d1c82ef4baec22c3c41a1_add({"bbox": [2.283937075352395, 48.843954326593, 2.28950639551772, 48.846791125674265], "features": [{"bbox": [2.283937075352395, 48.843954326593, 2.28950639551772, 48.846791125674265], "geometry": {"coordinates": [[[[2.284625080677623, 48.84442394817175], [2.284262433970468, 48.84462334187662], [2.283937075352395, 48.844708539454615], [2.285037659125735, 48.84484111634313], [2.284625080677623, 48.84442394817175]]], [[[2.285377571489078, 48.84480984058175], [2.285760766702623, 48.846791125674265], [2.28950639551772, 48.845070665433674], [2.287285162953859, 48.843954326593], [2.285377571489078, 48.84480984058175]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_aa00ed134324817ea900bab98bcc2691 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_261dca4fc5bad73806462ba3f658c25e = $(`<div id="html_261dca4fc5bad73806462ba3f658c25e" style="width: 100.0%; height: 100.0%;">Paris - 1593</div>`)[0];
+                popup_aa00ed134324817ea900bab98bcc2691.setContent(html_261dca4fc5bad73806462ba3f658c25e);
+            
+        
+
+        geo_json_8b376d73564d1c82ef4baec22c3c41a1.bindPopup(popup_aa00ed134324817ea900bab98bcc2691)
+        ;
+
+        
+    
+    
+            geo_json_8b376d73564d1c82ef4baec22c3c41a1.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_447a7c6a9c45d4a05abdb582517f67f8_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_447a7c6a9c45d4a05abdb582517f67f8_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_447a7c6a9c45d4a05abdb582517f67f8 = L.geoJson(null, {
+                onEachFeature: geo_json_447a7c6a9c45d4a05abdb582517f67f8_onEachFeature,
+            
+                style: geo_json_447a7c6a9c45d4a05abdb582517f67f8_styler,
+        });
+
+        function geo_json_447a7c6a9c45d4a05abdb582517f67f8_add (data) {
+            geo_json_447a7c6a9c45d4a05abdb582517f67f8
+                .addData(data);
+        }
+            geo_json_447a7c6a9c45d4a05abdb582517f67f8_add({"bbox": [2.281433922877705, 48.844861363054285, 2.285239865048215, 48.84673320052421], "features": [{"bbox": [2.281433922877705, 48.844861363054285, 2.285239865048215, 48.84673320052421], "geometry": {"coordinates": [[[2.283391616864685, 48.845514311482695], [2.281433922877705, 48.846384281473206], [2.285239865048215, 48.84673320052421], [2.284995541325458, 48.844861363054285], [2.283391616864685, 48.845514311482695]]], "type": "Polygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_375c8f5abf13ffb7829e4d74d8cc8e21 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_6f4b1816f09546c086927ddbbe95a332 = $(`<div id="html_6f4b1816f09546c086927ddbbe95a332" style="width: 100.0%; height: 100.0%;">Paris - 1594</div>`)[0];
+                popup_375c8f5abf13ffb7829e4d74d8cc8e21.setContent(html_6f4b1816f09546c086927ddbbe95a332);
+            
+        
+
+        geo_json_447a7c6a9c45d4a05abdb582517f67f8.bindPopup(popup_375c8f5abf13ffb7829e4d74d8cc8e21)
+        ;
+
+        
+    
+    
+            geo_json_447a7c6a9c45d4a05abdb582517f67f8.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+    
+        function geo_json_396c4979217c6287e99b6ba637287f03_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {"fillColor": "red"};
+            }
+        }
+
+        function geo_json_396c4979217c6287e99b6ba637287f03_onEachFeature(feature, layer) {
+            layer.on({
+            });
+        };
+        var geo_json_396c4979217c6287e99b6ba637287f03 = L.geoJson(null, {
+                onEachFeature: geo_json_396c4979217c6287e99b6ba637287f03_onEachFeature,
+            
+                style: geo_json_396c4979217c6287e99b6ba637287f03_styler,
+        });
+
+        function geo_json_396c4979217c6287e99b6ba637287f03_add (data) {
+            geo_json_396c4979217c6287e99b6ba637287f03
+                .addData(data);
+        }
+            geo_json_396c4979217c6287e99b6ba637287f03_add({"bbox": [2.278180493268492, 48.84484520239369, 2.28408546490009, 48.84987588593206], "features": [{"bbox": [2.278180493268492, 48.84484520239369, 2.28408546490009, 48.84987588593206], "geometry": {"coordinates": [[[[2.283569127440496, 48.84484520239369], [2.282673262651687, 48.84519539143198], [2.282634926505533, 48.84541154204326], [2.283776669308665, 48.84534429637493], [2.283569127440496, 48.84484520239369]]], [[[2.280282507411741, 48.84640084719429], [2.278180493268492, 48.84872938453833], [2.281770884462869, 48.84987588593206], [2.28408546490009, 48.847956582298416], [2.281330693240593, 48.84573277257134], [2.280282507411741, 48.84640084719429]]]], "type": "MultiPolygon"}, "id": "0", "properties": {}, "type": "Feature"}], "type": "FeatureCollection"});
+
+        
+    
+        var popup_91d5a90a6a04dcd4ef700307626190ae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e437020580cd6fd0d721963ce41a094e = $(`<div id="html_e437020580cd6fd0d721963ce41a094e" style="width: 100.0%; height: 100.0%;">Paris - 1595</div>`)[0];
+                popup_91d5a90a6a04dcd4ef700307626190ae.setContent(html_e437020580cd6fd0d721963ce41a094e);
+            
+        
+
+        geo_json_396c4979217c6287e99b6ba637287f03.bindPopup(popup_91d5a90a6a04dcd4ef700307626190ae)
+        ;
+
+        
+    
+    
+            geo_json_396c4979217c6287e99b6ba637287f03.addTo(map_0037cf7f47fcb33f5bc1878c01ee2437);
+        
+</script>
+</html>
