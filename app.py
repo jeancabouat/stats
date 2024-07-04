@@ -1,6 +1,5 @@
 import warnings
 warnings.filterwarnings("ignore")
-
 import pandas as pd
 import streamlit as st
 st.set_page_config(layout="wide")
@@ -26,7 +25,7 @@ df_stats_def_autres = df_stats_def[(df_stats_def['Catégorie'] == 'Autres') | (d
 
     
 # 1.Liste des départements
-file_path = 'output/legis/dataset_dpt_circo_bv_test.csv'
+file_path = 'output/dataset_dpt_circo_bv_test.csv'
 df = pd.read_csv(file_path,low_memory=False)
 df.rename(columns={'codeDepartement': 'id_dep','nomDepartement': 'dep_name'}, inplace=True)
 df['id_dep'] = df['id_dep'].astype(str)
@@ -46,7 +45,7 @@ dpt_id_selected = dpt_selected.split(" - ")[0]
 
 #dpt_id_selected = '14'
 
-file_path_dpt_resultats = 'output/legis/dpt/data/resultats_' + dpt_id_selected + '.csv'
+file_path_dpt_resultats = 'output/dpt/data/resultats_' + dpt_id_selected + '.csv'
 dpt_resultats = pd.read_csv(file_path_dpt_resultats,low_memory=False)
 
 # a. Résultats - Stats descriptives - DPT
@@ -83,7 +82,7 @@ with data_container2:
 
 # a.Carte
 #Read the HTML content from the file
-html_content = read_html_file('output/legis/circo/map/map_' + dpt_id_selected + '.html')
+html_content = read_html_file('output/circo/map/map_' + dpt_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container1 = st.container()
 
@@ -92,7 +91,7 @@ with map_container1:
     st.components.v1.html(html_content,height=500)
 
 # b.Stats des circonscriptions du département sélectionné
-file_path_circo_stats = 'output/legis/circo/data/stats_' + dpt_id_selected + '.csv'
+file_path_circo_stats = 'output/circo/data/stats_' + dpt_id_selected + '.csv'
 df_stats_circo_selected = pd.read_csv(file_path_circo_stats,low_memory=False)
 
 df_stats_circo_demo = df_stats_circo_selected[['Nom de la circonscription','Inscrit_22','pop_légal_19','pop_légal_13','tvar_pop','pop_pole_aav','pop_cour_aav','pop_horsaav','pop_urb','pop_rur_periu','pop_rur_non_periu','age_moyen','dec90','dec75','dec50','dec25','dec10']]
@@ -141,7 +140,7 @@ with st.expander("Statistiques descriptives:"):
         st.dataframe(df_stats_def_autres,hide_index=True)
 
 # c.Résultats des circonscriptions du département sélectionné
-file_path_circo_resultats = 'output/legis/circo/data/resultats_' + dpt_id_selected + '.csv'
+file_path_circo_resultats = 'output/circo/data/resultats_' + dpt_id_selected + '.csv'
 df_resultats_circo_selected = pd.read_csv(file_path_circo_resultats,low_memory=False)
 
     # i. Stats descriptives
@@ -189,7 +188,7 @@ circo_id_selected = str(circo_selected).split(" - ")[0]
 
 # a.Carte
 # Read the HTML content from the file
-html_content2 = read_html_file('output/legis/bv/map/map_' + circo_id_selected + '.html')
+html_content2 = read_html_file('output/bv/map/map_' + circo_id_selected + '.html')
 # Display the HTML content in Streamlit
 map_container2 = st.container()
 with map_container2:
@@ -197,7 +196,7 @@ with map_container2:
     st.components.v1.html(html_content2,height=500)
 
 # b.Résultats des circonscriptions du département sélectionné
-file_path_bv_resultats = 'output/legis/bv/data/resultats_' + circo_id_selected + '.csv'
+file_path_bv_resultats = 'output/bv/data/resultats_' + circo_id_selected + '.csv'
 df_resultats_bv_selected = pd.read_csv(file_path_bv_resultats,low_memory=False)
 
     # i. Stats descriptives
