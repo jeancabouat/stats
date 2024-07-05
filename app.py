@@ -105,7 +105,7 @@ df_stats_circo_niv_vie = df_stats_circo_selected[['Nom de la circonscription','t
 df_stats_circo_rev = df_stats_circo_selected[['Nom de la circonscription','PACT','PPEN','PPAT','PPSOC','PIMPOT']]
 df_stats_circo_autres = df_stats_circo_selected[['Nom de la circonscription','acc_ecole','acc_college','acc_lycee','acc_medecin','acc_dentiste','acc_pharmacie','part_eloig']]
 
-with st.expander("<span style='color:red'>Statistiques descriptives:</span> <i class='fas fa-chart-line'></i>", expanded=False):
+with st.expander(:red[Statistiques descriptives:],icon=":material/analytics:"):
 
     tab1, tab2, tab3, tab4, tab5, tab6, tab7, tab8, tab9, tab10 = st.tabs(["Démographie", "Activité/inactivité:", "Qualification","Secteurs","Logement","Famille","Mobilité","Niveau de vie","Revenus","Autres" ])
     
