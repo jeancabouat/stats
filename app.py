@@ -162,7 +162,7 @@ circo_resultats_details['indicateur']= circo_resultats_details['indicateur'].app
 
 #circo_resultats_details
 
-with st.expander("Circonscriptions - Résultats législatives (top10):"):
+with st.expander(":red[Circonscriptions - Résultats législatives (top10):]",icon=":material/how_to_vote:"):
     groups = circo_resultats_details.groupby('id_circo')
     for name,group in groups:
         tmp_details_circo = group.pivot(index = ['id_circo','id_candidat'], columns='indicateur', values='valeur')
