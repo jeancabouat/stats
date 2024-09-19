@@ -73,7 +73,7 @@ with tab1:
     dpt_resultats_details = dpt_resultats_details.nlargest(10, 'Voix')
     dpt_resultats_details = dpt_resultats_details[['Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
     dpt_resultats_details = dpt_resultats_details.dropna(axis=0, subset=['Nuance candidat'])
-
+    
     data_container2 = st.container()
     with data_container2:
         st.write("Département - Résultats législatives (top10):")
@@ -87,7 +87,10 @@ with tab1:
     html_content = read_html_file('output/circo/map/map_' + dpt_id_selected + '.html')
     # Display the HTML content in Streamlit
     map_container1 = st.container()
-
+    
+    html_content_sk = read_html_file('output/dpt/sankey/sankey_' + dpt_id_selected + '.html')
+    sk_container = st.container()
+    
     with map_container1:
         st.write("Circonscriptions:")
         st.components.v1.html(html_content,height=500)
@@ -95,6 +98,8 @@ with tab1:
 # b.Résultats des circonscriptions du département sélectionné
     file_path_circo_resultats = 'output/circo/data/resultats_' + dpt_id_selected + '.csv'
     df_resultats_circo_selected = pd.read_csv(file_path_circo_resultats,low_memory=False)
+    
+    df_resultats_circo_selected['id_circo'] = df_resultats_circo_selected['id_circo'].apply(lambda x: str(x).zfill(5))
 
     # i. Stats descriptives
     circo_resultats_overview = df_resultats_circo_selected[['libCirco', 'Inscrits', 'Votants', '% Votants', 'Abstentions', '% Abstentions', 'Exprimés', '% Exprimés/inscrits', '% Exprimés/votants', 'Blancs', '% Blancs/inscrits', '% Blancs/votants', 'Nuls', '% Nuls/inscrits', '% Nuls/votants']]
@@ -103,7 +108,12 @@ with tab1:
     with data_container3:
         st.write("Circonscriptions - Elections législatives:")
         st.dataframe(circo_resultats_overview,hide_index=True)
-
+    
+    with sk_container:
+        st.write("Département - Evolution du vote:")
+        #st.write(dpt_id_selected)
+        st.components.v1.html(html_content_sk,height=500)
+    
     # ii. Résultats (top10)
     circo_resultats_details = df_resultats_circo_selected[['id_circo','libCirco','indicateur','valeur']]
     circo_resultats_details['id_candidat'] = circo_resultats_details['indicateur'].str[-2:]
@@ -111,7 +121,8 @@ with tab1:
 
     circo_resultats_details['indicateur'] = circo_resultats_details['indicateur'].apply(lambda x: ''.join([i for i in x if not i.isdigit()]))
     circo_resultats_details['indicateur']= circo_resultats_details['indicateur'].apply(lambda x: x[:-1] if isinstance(x, str) else x)
-
+    
+    
     with st.expander(":red[Circonscriptions - Résultats législatives (top10):]",icon=":material/how_to_vote:"):
         groups = circo_resultats_details.groupby('id_circo')
         for name,group in groups:
@@ -122,7 +133,15 @@ with tab1:
             tmp_details_circo = tmp_details_circo[['Nuance candidat', 'Voix','% Voix/exprimés','% Voix/inscrits']]
             tmp_details_circo = tmp_details_circo.dropna(axis=0, subset=['Nuance candidat'])
             st.write(name)
-            st.dataframe(tmp_details_circo,hide_index=True)   
+            st.dataframe(tmp_details_circo,hide_index=True)
+            
+            html_content_sk_circo = read_html_file('output/circo/sankey/sankey_' + name + '.html')
+            sk_container_circo = st.container()
+            
+            with sk_container_circo:
+                st.write("Circonscription - Evolution du vote:")
+                #st.write(dpt_id_selected)
+                st.components.v1.html(html_content_sk_circo,height=500)
         
 # 2.Stats INSEE des circonscriptions du département sélectionné
 file_path_circo_stats = 'output/circo/data/stats_' + dpt_id_selected + '.csv'
