@@ -161,7 +161,7 @@ df_stats_circo_autres = df_stats_circo_selected[['Nom de la circonscription','ac
 with tab2:
     #with st.expander(":red[Statistiques descriptives:]",icon=":material/analytics:"):
 
-    tab2a, tab2b, tab2c, tab2d, tab2e, tab2f, tab2g, tab2h, tab2i, tab2j = st.tabs(["Démographie", "Activité/inactivité:", "Qualification","Secteurs","Logement","Famille","Mobilité","Niveau de vie","Revenus","Autres" ])
+    tab2a, tab2b, tab2c, tab2d, tab2e, tab2f, tab2g, tab2h, tab2i, tab2j = st.tabs([":man-woman-girl-boy: Démographie", "Activité/inactivité:", "Qualification","Secteurs","Logement","Famille","Mobilité","Niveau de vie","Revenus","Autres" ])
 
     with tab2a:
         st.dataframe(df_stats_circo_demo,hide_index=True)
