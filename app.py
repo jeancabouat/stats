@@ -24,7 +24,7 @@ df_stats_def_niv_vie = df_stats_def[(df_stats_def['Catégorie'] == 'Niveau de vi
 df_stats_def_autres = df_stats_def[(df_stats_def['Catégorie'] == 'Autres') | (df_stats_def['Variable'] == 'Nom de la circonscription')]
 
 
-tab1, tab2, tab3 = st.tabs(["Circonscriptions - Résultats","Circonscriptions - Statistiques INSEE", "Bureaux de vote - Résultats"])
+tab1, tab2, tab3 = st.tabs(["Circonscriptions - Résultats",":bar_chart: Circonscriptions - Statistiques INSEE", "Bureaux de vote - Résultats"])
     
 # 1.1 Liste des départements
 file_path = 'output/dataset_dpt_circo_bv_test.csv'
